@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Stand Out Exterior Cleaning — Brand Tokens ── */
+
+  /* Primary Blues */
+  --color-blue-900: #0A2E5C;
+  --color-blue-800: #0D3A72;
+  --color-blue-700: #0054A6;
+  --color-blue-600: #1A6BC4;
+  --color-blue-500: #2B7DE9;
+  --color-blue-400: #4A9AF0;
+  --color-blue-300: #5BC4F0;
+  --color-blue-200: #A0DBFA;
+  --color-blue-100: #D0EFFD;
+  --color-blue-50: #E8F4FD;
+
+  /* Greens (eco/clean accent) */
+  --color-green-700: #008B6A;
+  --color-green-600: #00A651;
+  --color-green-500: #2BBF6A;
+  --color-green-400: #5DD990;
+  --color-green-100: #E0F5EA;
+
+  /* Orange (CTA only) */
+  --color-orange-600: #E55A2B;
+  --color-orange-500: #FF6B35;
+  --color-orange-400: #FF8A5C;
+
+  /* Surfaces */
+  --color-canvas: #F7FAFC;
+  --color-canvas-warm: #F0F4F8;
+  --color-sky-50: #F0F8FF;
+  --color-sky-100: #E8F4FD;
+  --color-dark-surface: #0A2E5C;
+
+  /* Neutrals */
+  --color-white: #FFFFFF;
+  --color-black: #0A0A0A;
+  --color-gray-900: #1A1A2E;
+  --color-gray-800: #2D2D44;
+  --color-gray-700: #3A3A52;
+  --color-gray-600: #4A5568;
+  --color-gray-500: #6B7B8D;
+  --color-gray-400: #9BA8B5;
+  --color-gray-300: #CBD5E0;
+  --color-gray-200: #E2E8F0;
+  --color-gray-100: #F1F5F9;
+
+  /* Fonts */
+  --font-display: var(--font-bebas), sans-serif;
+  --font-body: var(--font-dm-sans), sans-serif;
+}
+
+/* ── Base ── */
+button, [role="button"] { cursor: pointer; }
+a { cursor: pointer; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  html { font-size: 18px; }
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-gray-900);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── Brand Utilities ── */
+.section-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-blue-500);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  text-transform: uppercase;
+  color: var(--color-blue-900);
+  line-height: 1;
+}
+
+.body-text {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: var(--color-gray-600);
+}
+
+/* ── Card Frost ── */
+.card-frost {
+  background: rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(10, 46, 92, 0.10);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.card-frost::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--color-blue-700);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-blue-300); border-radius: 3px; }
+
+/* ── Selection ── */
+::selection {
+  background: var(--color-blue-300);
+  color: var(--color-blue-900);
+}
+
+/* ── Marquee Animation ── */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+  width: max-content;
+}
