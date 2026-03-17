@@ -1,5 +1,4 @@
 import Hero from "@/components/sections/Hero";
-import StatsBar from "@/components/sections/StatsBar";
 import Services from "@/components/sections/Services";
 import Process from "@/components/sections/Process";
 import WhyUs from "@/components/sections/WhyUs";
@@ -12,7 +11,6 @@ export default function Home() {
   return (
     <main className="w-full min-w-full">
       <Hero />
-      <StatsBar />
       <Services />
       <Process />
       <WhyUs />

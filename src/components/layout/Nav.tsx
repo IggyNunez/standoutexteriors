@@ -1,16 +1,31 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
-import { NAV_LINKS, PHONE, PHONE_HREF } from "@/lib/constants";
+import { NAV_LINKS, PHONE, PHONE_HREF, SOCIAL } from "@/lib/constants";
 
-const EASE = [0.16, 1, 0.3, 1] as const;
+const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
+const DURATION = 0.6;
+
+/* ── Chamfered corners for the mobile drawer card ── */
+const CARD_CLIP = "polygon(16px 0%, calc(100% - 16px) 0%, 100% 16px, 100% calc(100% - 16px), calc(100% - 16px) 100%, 16px 100%, 0% calc(100% - 16px), 0% 16px)";
+
+/* ── Social icons ── */
+function FacebookIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3V2z" />
+    </svg>
+  );
+}
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
-  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const closeMobile = useCallback(() => setMobileOpen(false), []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -19,172 +34,404 @@ export default function Nav() {
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = drawerOpen ? "hidden" : "";
+    const onResize = () => {
+      if (window.innerWidth >= 768) setMobileOpen(false);
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
-  }, [drawerOpen]);
+  }, [mobileOpen]);
 
   return (
     <>
-      {/* ── Desktop / Mobile Top Bar ── */}
-      <header className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-4 px-4">
-        {/* Logo — left on mobile, above pill on desktop when scrolled */}
+      {/* ── Desktop Nav ── */}
+      <motion.nav
+        className="hidden md:block fixed top-0 left-0 right-0 z-[100]"
+        initial={false}
+        animate={{ height: scrolled ? 70 : 120 }}
+        transition={{ duration: DURATION, ease: EASE }}
+        style={{ height: 120 }}
+      >
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: EASE }}
-          className="absolute left-4 top-4 md:left-6 z-50 md:relative md:hidden"
+          className="flex items-center h-full max-w-[1920px] mx-auto px-[clamp(20px,4vw,80px)]"
+          initial={false}
+          animate={{ justifyContent: scrolled ? "center" : "space-between" }}
+          transition={{ duration: DURATION, ease: EASE }}
         >
-          <Link href="/">
-            <Image
-              src="/assets/logo-transparent.png"
-              alt="Stand Out Exterior Cleaning"
-              width={120}
-              height={48}
-              className="drop-shadow-lg"
-              priority
-            />
-          </Link>
+          {/* Big logo — shimmer-bordered frosted pill, collapses on scroll */}
+          <motion.div
+            className="shrink-0"
+            initial={false}
+            animate={{
+              width: scrolled ? 0 : "auto",
+              opacity: scrolled ? 0 : 1,
+            }}
+            transition={{ duration: DURATION, ease: EASE }}
+            style={{ overflow: "hidden" }}
+            aria-hidden={scrolled}
+          >
+            {/* Same spinning conic border as the nav pill */}
+            <div
+              className="nav-pill-border"
+              style={{
+                borderRadius: 9999,
+                padding: "4px",
+                boxShadow: "0 8px 36px rgba(0,0,0,0.4), 0 0 20px rgba(74,154,240,0.25)",
+              }}
+            >
+              <a
+                href="/"
+                tabIndex={scrolled ? -1 : undefined}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  borderRadius: 9999,
+                  background: "rgba(255,255,255,0.95)",
+                  backdropFilter: "blur(16px)",
+                  WebkitBackdropFilter: "blur(16px)",
+                  padding: "10px 22px",
+                }}
+              >
+                <Image
+                  src="/assets/logo-transparent.png"
+                  alt="Stand Out Exterior Cleaning"
+                  width={130}
+                  height={52}
+                  priority
+                />
+              </a>
+            </div>
+          </motion.div>
+
+          {/* Pill — animated conic-gradient shimmer border */}
+          <div
+            className="nav-pill-border"
+            style={{
+              borderRadius: 9999,
+              padding: "3px",
+              boxShadow: "0 4px 24px rgba(0,0,0,0.18)",
+              position: "relative",
+            }}
+          >
+            <motion.div
+              className="flex items-center"
+              style={{ background: "#FFFFFF", borderRadius: 9999 }}
+              initial={false}
+              animate={{
+                paddingLeft: 24,
+                paddingRight: 10,
+                paddingTop: 6,
+                paddingBottom: 6,
+                gap: scrolled ? 2 : 4,
+              }}
+              transition={{ duration: DURATION, ease: EASE }}
+            >
+              {/* Small logo inside pill — appears on scroll */}
+              <motion.a
+                href="/"
+                className="shrink-0 flex items-center justify-center overflow-hidden"
+                initial={false}
+                animate={{
+                  width: scrolled ? 36 : 0,
+                  opacity: scrolled ? 1 : 0,
+                  marginRight: scrolled ? 4 : 0,
+                }}
+                transition={{ duration: DURATION, ease: EASE }}
+                aria-hidden={!scrolled}
+                tabIndex={!scrolled ? -1 : undefined}
+              >
+                <Image
+                  src="/assets/logo-transparent.png"
+                  alt="Stand Out Exterior Cleaning"
+                  width={36}
+                  height={36}
+                  className="w-9 h-9 min-w-[36px] drop-shadow-[0_1px_4px_rgba(0,0,0,0.2)]"
+                />
+              </motion.a>
+
+              {NAV_LINKS.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-[0.7rem] font-bold tracking-[0.06em] uppercase text-blue-900 hover:text-blue-600 px-4 py-2 transition-colors duration-200 whitespace-nowrap"
+                >
+                  {link.label}
+                </Link>
+              ))}
+
+              {/* Social icon */}
+              <a
+                href={SOCIAL.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="text-blue-900/50 hover:text-blue-900 transition-colors"
+              >
+                <FacebookIcon className="w-4 h-4" />
+              </a>
+
+              <Link
+                href="/contact"
+                className="text-[0.68rem] font-extrabold tracking-[0.08em] uppercase text-white bg-orange-500 hover:bg-orange-600 px-5 py-2 rounded-full transition-colors duration-200 ml-1 whitespace-nowrap"
+              >
+                Free Estimate
+              </Link>
+            </motion.div>
+          </div>
+        </motion.div>
+      </motion.nav>
+
+      {/* ── Mobile Nav ── */}
+      <nav className="md:hidden fixed top-0 left-0 right-0 z-[100] px-4 pt-3 flex items-start justify-between">
+        {/* Big logo — shimmer-bordered frosted pill, collapses on scroll */}
+        <motion.div
+          className="shrink-0"
+          initial={false}
+          animate={{
+            width: scrolled ? 0 : "auto",
+            opacity: scrolled ? 0 : 1,
+          }}
+          transition={{ duration: DURATION, ease: EASE }}
+          style={{ overflow: "hidden" }}
+          aria-hidden={scrolled}
+        >
+          <div
+            className="nav-pill-border"
+            style={{
+              borderRadius: 9999,
+              padding: "4px",
+              boxShadow: "0 6px 28px rgba(0,0,0,0.4), 0 0 16px rgba(74,154,240,0.25)",
+            }}
+          >
+            <a
+              href="/"
+              tabIndex={scrolled ? -1 : undefined}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius: 9999,
+                background: "rgba(255,255,255,0.95)",
+                backdropFilter: "blur(16px)",
+                WebkitBackdropFilter: "blur(16px)",
+                padding: "8px 16px",
+              }}
+            >
+              <Image
+                src="/assets/logo-transparent.png"
+                alt="Stand Out Exterior Cleaning"
+                width={90}
+                height={36}
+                priority
+              />
+            </a>
+          </div>
         </motion.div>
 
-        {/* ── Pill Nav ── */}
-        <motion.nav
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1, ease: EASE }}
-          className={`
-            flex items-center gap-2 px-2 py-2 rounded-full
-            bg-white/95 backdrop-blur-xl
-            border-2 border-blue-700/20
-            shadow-[0_4px_24px_rgba(10,46,92,0.10)]
-            transition-all duration-500
-            ${scrolled ? "scale-[0.97]" : ""}
-          `}
+        {/* Pill — animated conic-gradient shimmer border */}
+        <div
+          className="nav-pill-border"
+          style={{
+            borderRadius: 9999,
+            padding: "3px",
+            boxShadow: "0 4px 18px rgba(0,0,0,0.18)",
+            position: "relative",
+          }}
         >
-          {/* Desktop logo inside pill */}
-          <Link href="/" className="hidden md:block pl-2">
-            <Image
-              src="/assets/logo-transparent.png"
-              alt="Stand Out Exterior Cleaning"
-              width={100}
-              height={40}
-              className="drop-shadow-sm"
-              priority
-            />
-          </Link>
-
-          {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-1 px-2">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="px-3 py-2 text-[0.7rem] font-bold tracking-[0.06em] uppercase text-blue-900 hover:text-blue-500 transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-
-          {/* CTA + Phone */}
-          <div className="hidden md:flex items-center gap-2">
-            <a
-              href={PHONE_HREF}
-              className="text-[0.68rem] font-bold tracking-wide text-blue-900 hover:text-blue-700 transition-colors px-3"
-            >
-              {PHONE}
-            </a>
-            <Link
-              href="/contact"
-              className="px-6 py-2.5 bg-orange-500 text-white text-[0.68rem] font-extrabold tracking-[0.08em] uppercase rounded-full border-2 border-blue-900 hover:bg-orange-600 transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(255,107,53,0.3)]"
-            >
-              Free Estimate
-            </Link>
-          </div>
-
-          {/* Mobile Hamburger */}
-          <button
-            onClick={() => setDrawerOpen(!drawerOpen)}
-            className="md:hidden ml-auto p-3 flex flex-col gap-[5px]"
-            aria-label="Toggle menu"
+          <motion.div
+            className="flex items-center justify-between h-[56px] pr-4"
+            style={{ background: "#FFFFFF", borderRadius: 9999 }}
+            initial={false}
+            animate={{
+              paddingLeft: scrolled ? 6 : 16,
+            }}
+            transition={{ duration: DURATION, ease: EASE }}
           >
-            <motion.span
-              animate={drawerOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
-              className="block w-5 h-[2px] bg-blue-900 rounded-full origin-center"
-            />
-            <motion.span
-              animate={drawerOpen ? { opacity: 0 } : { opacity: 1 }}
-              className="block w-5 h-[2px] bg-blue-900 rounded-full"
-            />
-            <motion.span
-              animate={drawerOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
-              className="block w-5 h-[2px] bg-blue-900 rounded-full origin-center"
-            />
-          </button>
-        </motion.nav>
-      </header>
+            {/* Small logo inside pill — appears on scroll */}
+            <motion.a
+              href="/"
+              className="shrink-0 flex items-center justify-center overflow-hidden"
+              initial={false}
+              animate={{
+                width: scrolled ? 44 : 0,
+                opacity: scrolled ? 1 : 0,
+                marginRight: scrolled ? 4 : 0,
+              }}
+              transition={{ duration: DURATION, ease: EASE }}
+              aria-hidden={!scrolled}
+              tabIndex={!scrolled ? -1 : undefined}
+            >
+              <Image
+                src="/assets/logo-transparent.png"
+                alt="Stand Out Exterior Cleaning"
+                width={44}
+                height={44}
+                className="w-[44px] h-[44px] min-w-[44px] drop-shadow-[0_1px_4px_rgba(0,0,0,0.2)]"
+              />
+            </motion.a>
 
-      {/* ── Mobile Drawer ── */}
+            <div className="flex items-center gap-3">
+              {/* Social icon in mobile pill */}
+              <a
+                href={SOCIAL.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="text-blue-900/50 hover:text-blue-900 transition-colors"
+              >
+                <FacebookIcon className="w-[18px] h-[18px]" />
+              </a>
+
+              <button
+                className="flex flex-col justify-center items-center w-10 h-10"
+                onClick={() => setMobileOpen(true)}
+                aria-label="Open menu"
+              >
+                <span className="block w-[20px] h-[2px] bg-blue-900 rounded-full" />
+                <span className="block w-[20px] h-[2px] bg-blue-900 rounded-full mt-[5px]" />
+                <span className="block w-[20px] h-[2px] bg-blue-900 rounded-full mt-[5px]" />
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </nav>
+
+      {/* ── Mobile Drawer — chamfered card ── */}
       <AnimatePresence>
-        {drawerOpen && (
+        {mobileOpen && (
           <>
+            {/* Backdrop */}
             <motion.div
+              className="md:hidden fixed inset-0 z-[200] bg-black/50"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-40 bg-blue-900/40 backdrop-blur-sm"
-              onClick={() => setDrawerOpen(false)}
+              transition={{ duration: 0.3 }}
+              onClick={closeMobile}
             />
+
+            {/* Chamfered card drawer */}
             <motion.div
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
+              className="md:hidden fixed top-1/2 right-3 -translate-y-1/2 z-[201] w-[270px]"
+              style={{
+                background: "#0A2E5C",
+                clipPath: CARD_CLIP,
+                padding: "3px",
+                boxShadow: "0 8px 40px rgba(0,0,0,0.15)",
+              }}
+              initial={{ x: "110%", opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: "110%", opacity: 0 }}
               transition={{ duration: 0.4, ease: EASE }}
-              className="fixed top-0 right-0 bottom-0 z-50 w-[85%] max-w-sm bg-white/97 backdrop-blur-xl border-l-3 border-blue-700 shadow-2xl"
             >
-              <div className="flex flex-col h-full pt-24 px-8 pb-8">
-                <nav className="flex flex-col gap-1">
+              <div
+                className="flex flex-col overflow-hidden"
+                style={{
+                  background: "rgba(255,255,255,0.97)",
+                  backdropFilter: "blur(24px)",
+                  WebkitBackdropFilter: "blur(24px)",
+                }}
+              >
+                {/* Header */}
+                <div className="flex items-center justify-between px-5 pt-3 pb-2">
+                  <a href="/" onClick={closeMobile}>
+                    <Image
+                      src="/assets/logo-transparent.png"
+                      alt="Stand Out Exterior Cleaning"
+                      width={80}
+                      height={32}
+                      className="drop-shadow-sm"
+                    />
+                  </a>
+                  <button
+                    className="flex items-center justify-center w-7 h-7 rounded-full border border-blue-900/20 hover:border-blue-900/40 hover:bg-blue-900/5 transition-all"
+                    onClick={closeMobile}
+                    aria-label="Close menu"
+                  >
+                    <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#0A2E5C" strokeWidth="1.5" strokeLinecap="round">
+                      <line x1="1" y1="1" x2="11" y2="11" />
+                      <line x1="11" y1="1" x2="1" y2="11" />
+                    </svg>
+                  </button>
+                </div>
+
+                <div className="mx-5 h-px bg-blue-900/10" />
+
+                {/* Nav links */}
+                <div className="flex flex-col px-5 pt-2">
                   {NAV_LINKS.map((link, i) => (
                     <motion.div
                       key={link.href}
-                      initial={{ opacity: 0, x: 20 }}
+                      initial={{ opacity: 0, x: 16 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.1 + i * 0.05, ease: EASE }}
+                      transition={{ duration: 0.25, delay: 0.08 + i * 0.04, ease: EASE }}
                     >
                       <Link
                         href={link.href}
-                        onClick={() => setDrawerOpen(false)}
-                        className="block py-3 text-[0.85rem] font-bold tracking-[0.06em] uppercase text-blue-900/75 hover:text-blue-900 transition-colors border-b border-gray-200"
+                        onClick={closeMobile}
+                        className="text-[0.9rem] font-bold tracking-[0.05em] uppercase text-blue-900 hover:text-blue-600 py-[12px] transition-colors flex items-center justify-between"
                       >
                         {link.label}
+                        <svg width="7" height="7" viewBox="0 0 8 8" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" className="opacity-30">
+                          <path d="M2 1l4 3-4 3" />
+                        </svg>
                       </Link>
                     </motion.div>
                   ))}
-                </nav>
-
-                <div className="mt-8 flex flex-col gap-3">
-                  <a
-                    href={PHONE_HREF}
-                    className="flex items-center gap-2 text-blue-900 font-bold text-sm"
-                  >
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-                    {PHONE}
-                  </a>
-                  <Link
-                    href="/contact"
-                    onClick={() => setDrawerOpen(false)}
-                    className="text-center px-6 py-3.5 bg-orange-500 text-white text-[0.72rem] font-extrabold tracking-[0.08em] uppercase rounded-full border-2 border-blue-900 hover:bg-orange-600 transition-all"
-                  >
-                    Get A Free Estimate
-                  </Link>
                 </div>
 
-                <div className="mt-auto flex gap-3">
-                  <a href="#" className="w-10 h-10 rounded-full border-2 border-blue-900/20 flex items-center justify-center text-blue-900/50 hover:text-blue-900 transition-colors">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
-                  </a>
-                  <a href="#" className="w-10 h-10 rounded-full border-2 border-blue-900/20 flex items-center justify-center text-blue-900/50 hover:text-blue-900 transition-colors">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                  </a>
+                {/* Bottom section */}
+                <div className="px-5 pb-4 pt-2">
+                  <div className="h-px bg-blue-900/10 mb-3" />
+
+                  {/* CTA */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2, ease: EASE }}
+                  >
+                    <Link
+                      href="/contact"
+                      onClick={closeMobile}
+                      className="block w-full text-[0.7rem] font-extrabold tracking-[0.08em] uppercase text-white bg-orange-500 hover:bg-orange-600 py-2.5 rounded-full transition-colors text-center"
+                    >
+                      Get A Free Estimate
+                    </Link>
+                  </motion.div>
+
+                  {/* Phone */}
+                  <motion.a
+                    href={PHONE_HREF}
+                    className="block text-[0.9rem] font-extrabold tracking-[0.04em] text-blue-900 text-center mt-2 hover:text-blue-600 transition-colors"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.3 }}
+                  >
+                    {PHONE}
+                  </motion.a>
+
+                  {/* Social row */}
+                  <motion.div
+                    className="flex items-center justify-center gap-3 mt-3"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.35 }}
+                  >
+                    <a
+                      href={SOCIAL.facebook}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Facebook"
+                      className="flex items-center justify-center w-8 h-8 rounded-full border-2 border-blue-900/25 text-blue-900/60 hover:text-blue-900 hover:border-blue-900/50 transition-all"
+                    >
+                      <FacebookIcon className="w-4 h-4" />
+                    </a>
+                  </motion.div>
                 </div>
               </div>
             </motion.div>

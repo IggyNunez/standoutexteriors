@@ -43,19 +43,20 @@ function ServiceDetail({ service, index, reverse }: { service: typeof SERVICES[n
         transition={{ delay: 0.15, duration: 0.8, ease: EASE }}
         className={reverse ? "lg:order-1" : ""}
       >
-        <span className="text-[0.65rem] font-bold tracking-[0.15em] uppercase text-blue-500 bg-blue-50 px-3 py-1 rounded-full">
+        <span className="text-[0.65rem] font-bold tracking-[0.15em] uppercase text-orange-500 bg-orange-50 px-3 py-1 rounded-full">
           {service.label}
         </span>
         <h2 className="font-[family-name:var(--font-display)] text-[clamp(1.6rem,3.5vw,2.4rem)] uppercase text-blue-900 leading-none mt-4 mb-4">
           {service.title}
         </h2>
+        <div className="w-10 h-[2px] bg-orange-500 mb-4" />
         <p className="text-[0.88rem] text-gray-600 leading-relaxed mb-6">
           {service.description}
         </p>
         <ul className="space-y-3 mb-8">
           {service.bullets.map((bullet) => (
             <li key={bullet} className="flex items-start gap-3">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00A651" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5 flex-shrink-0">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF6B35" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5 flex-shrink-0">
                 <polyline points="20 6 9 17 4 12" />
               </svg>
               <span className="text-[0.82rem] text-gray-700">{bullet}</span>
@@ -64,7 +65,7 @@ function ServiceDetail({ service, index, reverse }: { service: typeof SERVICES[n
         </ul>
         <Link
           href="/contact"
-          className="inline-block px-8 py-3.5 bg-orange-500 text-white text-[0.72rem] font-extrabold tracking-[0.08em] uppercase rounded-full border-2 border-blue-900/20 hover:bg-orange-600 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(255,107,53,0.3)] transition-all duration-300"
+          className="inline-block px-8 py-3.5 bg-orange-500 text-white text-[0.72rem] font-extrabold tracking-[0.08em] uppercase rounded-full hover:bg-orange-600 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(255,107,53,0.3)] transition-all duration-300"
         >
           Get A Free Estimate
         </Link>
@@ -81,14 +82,14 @@ export default function ServicesPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900" />
         <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="relative max-w-[1200px] mx-auto px-[clamp(20px,4vw,48px)]">
+        <div className="relative max-w-[1920px] mx-auto px-[clamp(20px,4vw,80px)]">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: EASE }}
             className="mb-4"
           >
-            <span className="text-[0.7rem] font-bold tracking-[0.2em] uppercase text-blue-300">Our Services</span>
+            <span className="text-[0.7rem] font-bold tracking-[0.2em] uppercase text-orange-400">Our Services</span>
           </motion.div>
 
           <motion.h1
@@ -122,7 +123,7 @@ export default function ServicesPage() {
 
       {/* Services Detail */}
       <section className="relative py-24 md:py-32 bg-canvas">
-        <div className="relative max-w-[1200px] mx-auto px-[clamp(20px,4vw,48px)]">
+        <div className="relative max-w-[1920px] mx-auto px-[clamp(20px,4vw,80px)]">
           {SERVICES.map((service, i) => (
             <ServiceDetail
               key={service.slug}
@@ -135,11 +136,18 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-20 bg-blue-900 text-white text-center">
-        <div className="max-w-[600px] mx-auto px-[clamp(20px,4vw,48px)]">
+      <section className="relative py-20 bg-blue-900 text-white text-center overflow-hidden">
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "linear-gradient(135deg, rgba(10,46,92,0.95) 0%, rgba(10,30,60,0.95) 100%)",
+          }}
+        />
+        <div className="relative max-w-[600px] mx-auto px-[clamp(20px,4vw,80px)]">
           <h2 className="font-[family-name:var(--font-display)] text-[clamp(1.8rem,4vw,2.5rem)] uppercase text-white leading-none mb-4">
             Ready To Transform Your Property?
           </h2>
+          <div className="w-10 h-[2px] bg-orange-500 mx-auto mb-4" />
           <p className="text-[0.88rem] text-white/60 mb-8">
             Get a free, no-obligation estimate today.
           </p>

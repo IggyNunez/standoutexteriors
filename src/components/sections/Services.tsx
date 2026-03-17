@@ -1,121 +1,431 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 import { SERVICES } from "@/lib/constants";
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
-const SERVICE_ICONS: Record<string, React.ReactNode> = {
-  home: <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />,
-  road: <><path d="M4 19L20 19" /><path d="M4 15L20 15" /><path d="M4 11L20 11" /><path d="M12 3L12 19" /></>,
-  roof: <><path d="M3 9l9-7 9 7" /><path d="M9 22V12h6v10" /></>,
-  gutter: <><path d="M4 4h16v4H4z" /><path d="M6 8v12" /><path d="M18 8v12" /></>,
-  fence: <><path d="M4 6v14" /><path d="M12 6v14" /><path d="M20 6v14" /><path d="M2 10h20" /><path d="M2 16h20" /></>,
-  paver: <><rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="3" y="14" width="7" height="7" /><rect x="14" y="14" width="7" height="7" /></>,
-  building: <><path d="M6 22V4a2 2 0 012-2h8a2 2 0 012 2v18" /><path d="M6 12H4a2 2 0 00-2 2v6a2 2 0 002 2h2" /><path d="M18 9h2a2 2 0 012 2v9a2 2 0 01-2 2h-2" /><path d="M10 6h4" /><path d="M10 10h4" /><path d="M10 14h4" /><path d="M10 18h4" /></>,
-};
+const FEATURED = SERVICES.slice(0, 2);
+const SMALL = SERVICES.slice(2);
 
+/* ── Arrow icon ── */
+function Arrow({ className = "" }: { className?: string }) {
+  return (
+    <svg width="14" height="14" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <path d="M2 6h8M6 2l4 4-4 4" />
+    </svg>
+  );
+}
+
+/* ═══════════════════════════════════════════════
+   Featured Card — Desktop: hover slide-up
+   ═══════════════════════════════════════════════ */
+function FeaturedCardDesktop({
+  service,
+  delay,
+  isInView,
+}: {
+  service: (typeof SERVICES)[number];
+  delay: number;
+  isInView: boolean;
+}) {
+  return (
+    <motion.div
+      className="hidden md:block relative rounded-2xl overflow-hidden group cursor-pointer"
+      style={{ aspectRatio: "4/3" }}
+      initial={{ opacity: 0, y: 40 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ delay, duration: 0.6, ease: EASE }}
+    >
+      <Image
+        src={service.image}
+        alt={service.imageAlt}
+        fill
+        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+      />
+
+      {/* Dark gradient */}
+      <div
+        className="absolute inset-0 transition-opacity duration-500"
+        style={{
+          background: "linear-gradient(to top, rgba(10,46,92,0.85) 0%, rgba(10,46,92,0.4) 40%, transparent 70%)",
+        }}
+      />
+
+      {/* Hover overlay */}
+      <div
+        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        style={{
+          background: "linear-gradient(to top, rgba(10,46,92,0.95) 0%, rgba(10,46,92,0.75) 50%, rgba(10,46,92,0.5) 100%)",
+        }}
+      />
+
+      {/* Label badge */}
+      <div className="absolute top-5 left-5 z-10">
+        <span className="text-[0.6rem] font-bold tracking-[0.2em] uppercase text-white bg-blue-900 px-3 py-1.5 rounded-full">
+          {service.label}
+        </span>
+      </div>
+
+      {/* Content */}
+      <div className="absolute inset-x-0 bottom-0 z-10 p-6 md:p-8">
+        <h3 className="font-[family-name:var(--font-display)] text-[clamp(1.5rem,2.5vw,2rem)] uppercase text-white leading-tight mb-2 tracking-wide">
+          {service.title}
+        </h3>
+
+        {/* Slide-up content */}
+        <div className="max-h-0 group-hover:max-h-[400px] overflow-hidden transition-all duration-600 ease-[cubic-bezier(0.16,1,0.3,1)]">
+          <div className="pt-2">
+            <div className="h-[2px] w-10 bg-orange-500 mb-4" />
+            <p className="text-[0.9rem] leading-relaxed text-white/80 mb-4">
+              {service.description}
+            </p>
+            {service.bullets && (
+              <ul className="space-y-2 mb-5">
+                {service.bullets.map((b: string) => (
+                  <li key={b} className="flex items-center gap-2 text-[0.82rem] text-white/90">
+                    <span className="w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0" />
+                    {b}
+                  </li>
+                ))}
+              </ul>
+            )}
+            <Link
+              href={`/services#${service.slug}`}
+              className="inline-flex items-center gap-2 text-[0.75rem] font-bold tracking-[0.1em] uppercase text-orange-400 hover:text-white transition-colors"
+            >
+              Learn More
+              <Arrow />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+/* ═══════════════════════════════════════════════
+   Featured Card — Mobile: 3D flip
+   ═══════════════════════════════════════════════ */
+function FeaturedCardMobile({
+  service,
+  delay,
+  isInView,
+}: {
+  service: (typeof SERVICES)[number];
+  delay: number;
+  isInView: boolean;
+}) {
+  const [flipped, setFlipped] = useState(false);
+
+  return (
+    <motion.div
+      className="md:hidden"
+      style={{ perspective: 1200 }}
+      initial={{ opacity: 0, y: 40 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ delay, duration: 0.6, ease: EASE }}
+    >
+      <div
+        className="relative w-full cursor-pointer"
+        style={{ aspectRatio: "3/4" }}
+        onClick={() => setFlipped(!flipped)}
+      >
+        <motion.div
+          className="absolute inset-0"
+          style={{ transformStyle: "preserve-3d" }}
+          animate={{ rotateY: flipped ? 180 : 0 }}
+          transition={{ duration: 0.6, ease: EASE }}
+        >
+          {/* FRONT */}
+          <div
+            className="absolute inset-0 rounded-2xl overflow-hidden"
+            style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
+          >
+            <Image
+              src={service.image}
+              alt={service.imageAlt}
+              fill
+              className="object-cover"
+            />
+            <div
+              className="absolute inset-0"
+              style={{
+                background: "linear-gradient(to top, rgba(10,46,92,0.85) 0%, rgba(10,46,92,0.3) 50%, transparent 70%)",
+              }}
+            />
+            <div className="absolute top-4 left-4">
+              <span className="text-[0.6rem] font-bold tracking-[0.2em] uppercase text-white bg-blue-900 px-3 py-1.5 rounded-full">
+                {service.label}
+              </span>
+            </div>
+            <div className="absolute bottom-5 left-5 right-5">
+              <h3 className="font-[family-name:var(--font-display)] text-[1.6rem] uppercase text-white leading-tight mb-2">
+                {service.title}
+              </h3>
+              <p className="text-[0.65rem] tracking-[0.15em] uppercase text-white/50">
+                Tap to learn more &rarr;
+              </p>
+            </div>
+          </div>
+
+          {/* BACK */}
+          <div
+            className="absolute inset-0 rounded-2xl overflow-hidden flex flex-col justify-center px-6 py-8"
+            style={{
+              backfaceVisibility: "hidden",
+              WebkitBackfaceVisibility: "hidden",
+              transform: "rotateY(180deg)",
+              background: "#0A2E5C",
+            }}
+          >
+            <span className="text-[0.6rem] font-bold tracking-[0.2em] uppercase text-orange-500 mb-2">
+              {service.label}
+            </span>
+            <h3 className="font-[family-name:var(--font-display)] text-[1.5rem] uppercase text-white leading-tight mb-3">
+              {service.title}
+            </h3>
+            <div className="h-[2px] w-10 bg-orange-500 mb-4" />
+            <p className="text-[0.88rem] leading-relaxed text-white/80 mb-4">
+              {service.description}
+            </p>
+            {service.bullets && (
+              <ul className="space-y-2 mb-5">
+                {service.bullets.map((b: string) => (
+                  <li key={b} className="flex items-center gap-2 text-[0.8rem] text-white/90">
+                    <span className="w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0" />
+                    {b}
+                  </li>
+                ))}
+              </ul>
+            )}
+            <Link
+              href={`/services#${service.slug}`}
+              onClick={(e) => e.stopPropagation()}
+              className="inline-flex items-center gap-2 text-[0.75rem] font-bold tracking-[0.1em] uppercase text-orange-400"
+            >
+              Learn More <Arrow />
+            </Link>
+            <p className="text-[0.6rem] tracking-[0.15em] uppercase text-white/30 mt-4">
+              Tap to flip back
+            </p>
+          </div>
+        </motion.div>
+      </div>
+    </motion.div>
+  );
+}
+
+/* ═══════════════════════════════════════════════
+   Small Card — Desktop: hover slide-up
+   ═══════════════════════════════════════════════ */
+function SmallCardDesktop({
+  service,
+  delay,
+  isInView,
+}: {
+  service: (typeof SERVICES)[number];
+  delay: number;
+  isInView: boolean;
+}) {
+  return (
+    <motion.div
+      className="hidden md:block relative rounded-xl overflow-hidden group cursor-pointer"
+      style={{ aspectRatio: "3/4" }}
+      initial={{ opacity: 0, y: 30 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ delay, duration: 0.5, ease: EASE }}
+    >
+      <Image
+        src={service.image}
+        alt={service.imageAlt}
+        fill
+        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+      />
+      <div
+        className="absolute inset-0"
+        style={{
+          background: "linear-gradient(to top, rgba(10,46,92,0.85) 0%, rgba(10,46,92,0.3) 45%, transparent 70%)",
+        }}
+      />
+
+      <div className="absolute inset-x-0 bottom-0 z-10 p-5">
+        <span className="text-[0.55rem] font-bold tracking-[0.2em] uppercase text-orange-500 block mb-1">
+          {service.label}
+        </span>
+        <h4 className="font-[family-name:var(--font-display)] text-[1.2rem] uppercase text-white leading-tight">
+          {service.title}
+        </h4>
+
+        <div className="max-h-0 group-hover:max-h-[60px] overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+          <Link
+            href={`/services#${service.slug}`}
+            className="inline-flex items-center gap-2 text-[0.7rem] font-bold tracking-[0.1em] uppercase text-orange-400 hover:text-white transition-colors mt-3"
+          >
+            Learn More <Arrow />
+          </Link>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+/* ═══════════════════════════════════════════════
+   Small Card — Mobile: tap to flip
+   ═══════════════════════════════════════════════ */
+function SmallCardMobile({
+  service,
+  delay,
+  isInView,
+}: {
+  service: (typeof SERVICES)[number];
+  delay: number;
+  isInView: boolean;
+}) {
+  const [flipped, setFlipped] = useState(false);
+
+  return (
+    <motion.div
+      className="md:hidden"
+      style={{ perspective: 1000 }}
+      initial={{ opacity: 0, y: 30 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ delay, duration: 0.5, ease: EASE }}
+    >
+      <div
+        className="relative w-full cursor-pointer"
+        style={{ aspectRatio: "3/4" }}
+        onClick={() => setFlipped(!flipped)}
+      >
+        <motion.div
+          className="absolute inset-0"
+          style={{ transformStyle: "preserve-3d" }}
+          animate={{ rotateY: flipped ? 180 : 0 }}
+          transition={{ duration: 0.5, ease: EASE }}
+        >
+          {/* FRONT */}
+          <div
+            className="absolute inset-0 rounded-xl overflow-hidden"
+            style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
+          >
+            <Image
+              src={service.image}
+              alt={service.imageAlt}
+              fill
+              className="object-cover"
+            />
+            <div
+              className="absolute inset-0"
+              style={{
+                background: "linear-gradient(to top, rgba(10,46,92,0.85) 0%, rgba(10,46,92,0.3) 50%, transparent 70%)",
+              }}
+            />
+            <div className="absolute bottom-4 left-4 right-4">
+              <span className="text-[0.55rem] font-bold tracking-[0.2em] uppercase text-orange-500 block mb-1">
+                {service.label}
+              </span>
+              <h4 className="font-[family-name:var(--font-display)] text-[1.1rem] uppercase text-white leading-tight">
+                {service.title}
+              </h4>
+            </div>
+          </div>
+
+          {/* BACK */}
+          <div
+            className="absolute inset-0 rounded-xl overflow-hidden flex flex-col justify-center items-center px-5 py-6 text-center"
+            style={{
+              backfaceVisibility: "hidden",
+              WebkitBackfaceVisibility: "hidden",
+              transform: "rotateY(180deg)",
+              background: "#0A2E5C",
+            }}
+          >
+            <span className="text-[0.55rem] font-bold tracking-[0.2em] uppercase text-orange-500 mb-2">
+              {service.label}
+            </span>
+            <h4 className="font-[family-name:var(--font-display)] text-[1.15rem] uppercase text-white leading-tight mb-3">
+              {service.title}
+            </h4>
+            <div className="h-[2px] w-8 bg-orange-500 mb-3" />
+            <Link
+              href={`/services#${service.slug}`}
+              onClick={(e) => e.stopPropagation()}
+              className="inline-flex items-center gap-2 text-[0.7rem] font-bold tracking-[0.1em] uppercase text-orange-400"
+            >
+              Learn More <Arrow />
+            </Link>
+          </div>
+        </motion.div>
+      </div>
+    </motion.div>
+  );
+}
+
+/* ═══════════════════════════════════════════════
+   Main Services Section
+   ═══════════════════════════════════════════════ */
 export default function Services() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "0px 0px -100px 0px" });
 
   return (
-    <section ref={ref} id="services" className="relative py-24 md:py-32 bg-canvas">
-      {/* Subtle decorative element */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-50/50 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/4" />
-
-      <div className="relative max-w-[1200px] mx-auto px-[clamp(20px,4vw,48px)]">
+    <section id="services" className="water-shimmer-light relative py-24 md:py-32 bg-white overflow-hidden" ref={ref}>
+      <div className="relative z-[1] max-w-[1920px] mx-auto px-[clamp(20px,4vw,80px)]">
         {/* Header */}
         <div className="text-center mb-16">
           <motion.div
+            className="mb-4"
             initial={{ opacity: 0, y: 10 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, ease: EASE }}
-            className="mb-4"
           >
             <span className="section-eyebrow text-blue-500">What We Do</span>
           </motion.div>
-
           <motion.h2
+            className="section-title mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.1, duration: 0.6, ease: EASE }}
-            className="section-title mb-4"
+            transition={{ delay: 0.1 }}
           >
             Our Services
           </motion.h2>
-
           <motion.div
+            className="w-16 h-[2px] bg-orange-500 mx-auto mb-6"
             initial={{ scaleX: 0 }}
             animate={isInView ? { scaleX: 1 } : {}}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="w-16 h-[2px] bg-blue-700 mx-auto mb-6"
             style={{ transformOrigin: "left" }}
           />
-
           <motion.p
+            className="text-[1rem] text-gray-500 max-w-[480px] mx-auto"
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="body-text max-w-[520px] mx-auto"
+            transition={{ delay: 0.3 }}
           >
             From gentle soft washes to heavy-duty pressure cleaning, we have the
-            right solution for every surface on your property.
+            right solution for every surface.
           </motion.p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {SERVICES.map((service, i) => (
-            <motion.div
-              key={service.slug}
-              initial={{ opacity: 0, y: 40 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.2 + i * 0.08, duration: 0.6, ease: EASE }}
-            >
-              <Link href={`/services#${service.slug}`} className="group block">
-                <div className="card-frost p-0 overflow-hidden h-full hover:-translate-y-2 transition-all duration-500">
-                  {/* Image */}
-                  <div className="relative h-48 overflow-hidden">
-                    <Image
-                      src={service.image}
-                      alt={service.imageAlt}
-                      fill
-                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent" />
-                    {/* Icon badge */}
-                    <div className="absolute bottom-4 left-4 w-10 h-10 rounded-xl bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-lg">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0A2E5C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        {SERVICE_ICONS[service.icon]}
-                      </svg>
-                    </div>
-                    {/* Label */}
-                    <div className="absolute top-4 right-4">
-                      <span className="text-[0.6rem] font-bold tracking-[0.1em] uppercase text-white/90 bg-blue-900/60 backdrop-blur-sm px-3 py-1 rounded-full">
-                        {service.label}
-                      </span>
-                    </div>
-                  </div>
+        {/* Featured Cards — 2 large */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          {FEATURED.map((service, i) => (
+            <div key={service.title}>
+              <FeaturedCardDesktop service={service} delay={0.1 + i * 0.1} isInView={isInView} />
+              <FeaturedCardMobile service={service} delay={0.1 + i * 0.1} isInView={isInView} />
+            </div>
+          ))}
+        </div>
 
-                  {/* Content */}
-                  <div className="p-6">
-                    <h3 className="font-[family-name:var(--font-display)] text-[clamp(1.2rem,2vw,1.4rem)] uppercase text-blue-900 mb-2 group-hover:text-blue-700 transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="text-[0.82rem] text-gray-600 leading-relaxed line-clamp-2 mb-4">
-                      {service.description}
-                    </p>
-                    <span className="text-[0.72rem] font-bold text-orange-500 tracking-wide uppercase group-hover:text-orange-600 transition-colors">
-                      Learn More &rarr;
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            </motion.div>
+        {/* Small Cards */}
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-5">
+          {SMALL.map((service, i) => (
+            <div key={service.title}>
+              <SmallCardDesktop service={service} delay={0.2 + i * 0.08} isInView={isInView} />
+              <SmallCardMobile service={service} delay={0.2 + i * 0.08} isInView={isInView} />
+            </div>
           ))}
         </div>
       </div>

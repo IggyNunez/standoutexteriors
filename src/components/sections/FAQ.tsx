@@ -1,114 +1,110 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useState, useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { FAQS } from "@/lib/constants";
-
-const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
-
-function AccordionItem({ question, answer, isOpen, onToggle, index, isInView }: {
-  question: string;
-  answer: string;
-  isOpen: boolean;
-  onToggle: () => void;
-  index: number;
-  isInView: boolean;
-}) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ delay: 0.1 + index * 0.05, duration: 0.5, ease: EASE }}
-      className="border-b border-gray-200"
-    >
-      <button
-        onClick={onToggle}
-        className="w-full flex items-center justify-between py-5 text-left group"
-      >
-        <span className="text-[0.88rem] font-semibold text-blue-900 pr-4 group-hover:text-blue-700 transition-colors">
-          {question}
-        </span>
-        <motion.div
-          animate={{ rotate: isOpen ? 45 : 0 }}
-          transition={{ duration: 0.3, ease: EASE }}
-          className="flex-shrink-0 w-8 h-8 rounded-full border border-blue-200 flex items-center justify-center text-blue-700"
-        >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-            <line x1="12" y1="5" x2="12" y2="19" />
-            <line x1="5" y1="12" x2="19" y2="12" />
-          </svg>
-        </motion.div>
-      </button>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: EASE }}
-            className="overflow-hidden"
-          >
-            <p className="pb-5 text-[0.82rem] text-gray-600 leading-relaxed pr-12">
-              {answer}
-            </p>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.div>
-  );
-}
+import { FAQS, PHONE, PHONE_HREF } from "@/lib/constants";
 
 export default function FAQ() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "0px 0px -100px 0px" });
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const isInView = useInView(ref, { once: true, margin: "0px 0px -80px 0px" });
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section ref={ref} id="faq" className="relative py-24 md:py-32 bg-sky-50">
-      <div className="relative max-w-[800px] mx-auto px-[clamp(20px,4vw,48px)]">
+    <section id="faq" className="water-shimmer-light relative py-24 md:py-32 bg-white overflow-hidden" ref={ref}>
+      <div className="relative z-[1] max-w-[900px] mx-auto px-[clamp(20px,4vw,80px)]">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-14">
           <motion.div
+            className="mb-4"
             initial={{ opacity: 0, y: 10 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, ease: EASE }}
-            className="mb-4"
           >
-            <span className="section-eyebrow text-blue-500">FAQ</span>
+            <span className="section-eyebrow text-blue-500">Got Questions?</span>
           </motion.div>
-
           <motion.h2
+            className="section-title mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.1, duration: 0.6, ease: EASE }}
-            className="section-title mb-4"
+            transition={{ delay: 0.1 }}
           >
-            Common Questions
+            Questions We Actually Get
           </motion.h2>
-
           <motion.div
+            className="w-16 h-[2px] bg-orange-500 mx-auto mb-6"
             initial={{ scaleX: 0 }}
             animate={isInView ? { scaleX: 1 } : {}}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="w-16 h-[2px] bg-blue-700 mx-auto"
             style={{ transformOrigin: "left" }}
           />
         </div>
 
         {/* Accordion */}
-        <div className="card-frost p-6 md:p-8">
-          {FAQS.map((faq, i) => (
-            <AccordionItem
-              key={i}
-              question={faq.question}
-              answer={faq.answer}
-              isOpen={openIndex === i}
-              onToggle={() => setOpenIndex(openIndex === i ? null : i)}
-              index={i}
-              isInView={isInView}
-            />
-          ))}
+        <div className="divide-y divide-blue-900/10 border-t border-b border-blue-900/10">
+          {FAQS.map((faq, i) => {
+            const isOpen = openIndex === i;
+            return (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 16 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 0.15 + i * 0.05, duration: 0.4 }}
+              >
+                <button
+                  className="w-full flex items-center justify-between py-5 px-2 text-left cursor-pointer transition-colors hover:bg-sky-50 rounded-lg"
+                  onClick={() => setOpenIndex(isOpen ? null : i)}
+                >
+                  <span className="text-[0.9rem] font-bold text-blue-900 pr-4 leading-snug">
+                    {faq.question}
+                  </span>
+                  <motion.span
+                    className="shrink-0 text-[1.2rem] font-light text-orange-500"
+                    animate={{ rotate: isOpen ? 45 : 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    +
+                  </motion.span>
+                </button>
+
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{
+                        height: { duration: 0.3, ease: [0.16, 1, 0.3, 1] },
+                        opacity: { duration: 0.2 },
+                      }}
+                      className="overflow-hidden"
+                    >
+                      <p className="text-[0.85rem] leading-relaxed text-gray-500 px-2 pb-5">
+                        {faq.answer}
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            );
+          })}
         </div>
+
+        {/* Bottom CTA */}
+        <motion.div
+          className="text-center mt-10"
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ delay: 0.6 }}
+        >
+          <p className="text-[0.9rem] text-gray-400 mb-2">
+            Still have questions?
+          </p>
+          <a
+            href={PHONE_HREF}
+            className="text-[0.95rem] font-bold text-blue-900 hover:text-blue-700 transition-colors"
+          >
+            Call the Team &mdash; {PHONE}
+          </a>
+        </motion.div>
       </div>
     </section>
   );

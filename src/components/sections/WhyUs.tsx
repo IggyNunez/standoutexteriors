@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { WaveTop, WaveBottom } from "@/components/ui/WaveDivider";
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
@@ -74,12 +75,13 @@ export default function WhyUs() {
   const isInView = useInView(ref, { once: true, margin: "0px 0px -100px 0px" });
 
   return (
-    <section ref={ref} className="relative py-24 md:py-32 bg-blue-900 text-white overflow-hidden">
+    <section ref={ref} className="water-shimmer-dark relative py-24 md:py-32 bg-blue-900 text-white overflow-hidden">
+      <WaveTop fill="#ffffff" />
       {/* Decorative orbs */}
       <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-300/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="relative max-w-[1200px] mx-auto px-[clamp(20px,4vw,48px)]">
+      <div className="relative z-[1] max-w-[1920px] mx-auto px-[clamp(20px,4vw,80px)]">
         {/* Header */}
         <div className="text-center mb-16">
           <motion.div
@@ -128,7 +130,7 @@ export default function WhyUs() {
               transition={{ delay: 0.2 + i * 0.08, duration: 0.6, ease: EASE }}
               className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:-translate-y-1 transition-all duration-400"
             >
-              <div className="text-blue-300 mb-4">{reason.icon}</div>
+              <div className="text-orange-400 mb-4">{reason.icon}</div>
               <h3 className="font-[family-name:var(--font-display)] text-[1.2rem] uppercase text-white mb-2">
                 {reason.title}
               </h3>
@@ -139,6 +141,7 @@ export default function WhyUs() {
           ))}
         </div>
       </div>
+      <WaveBottom fill="#ffffff" />
     </section>
   );
 }
