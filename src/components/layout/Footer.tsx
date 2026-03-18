@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import FooterWaveCanvas from "@/components/ui/FooterWaveCanvas";
 import { COMPANY_NAME, PHONE, PHONE_HREF, EMAIL, ADDRESS, NAV_LINKS, SERVICES, SERVICE_AREAS, SOCIAL } from "@/lib/constants";
 
 export default function Footer() {
@@ -10,51 +11,26 @@ export default function Footer() {
       className="relative text-white pt-16 pb-8 overflow-hidden"
       style={{ background: "linear-gradient(170deg, #040f1e 0%, #071828 40%, #061422 100%)" }}
     >
-      {/* ── Radial glow blobs ── */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
+      {/* ── Animated canvas wave (brand colours) ── */}
+      <FooterWaveCanvas />
+
+      {/* ── Radial glow blobs — layered on top of canvas for depth ── */}
+      <div className="absolute inset-0 z-[1] pointer-events-none">
         {/* Top-center green glow behind logo */}
-        <div style={{ position: "absolute", top: "-10%", left: "50%", transform: "translateX(-50%)", width: 700, height: 400, borderRadius: "50%", background: "radial-gradient(ellipse, rgba(0,166,81,0.07) 0%, transparent 70%)" }} />
+        <div style={{ position: "absolute", top: "-10%", left: "50%", transform: "translateX(-50%)", width: 700, height: 400, borderRadius: "50%", background: "radial-gradient(ellipse, rgba(0,166,81,0.09) 0%, transparent 70%)" }} />
         {/* Bottom-left teal pool */}
-        <div style={{ position: "absolute", bottom: "-5%", left: "-5%", width: 600, height: 350, borderRadius: "50%", background: "radial-gradient(ellipse, rgba(43,125,233,0.09) 0%, transparent 70%)" }} />
-        {/* Bottom-right deep blue shimmer */}
-        <div style={{ position: "absolute", bottom: "0%", right: "-8%", width: 500, height: 300, borderRadius: "50%", background: "radial-gradient(ellipse, rgba(126,207,255,0.05) 0%, transparent 70%)" }} />
-      </div>
-
-      {/* ── Water ripple arcs ── */}
-      <div className="absolute inset-0 z-0 pointer-events-none" style={{ opacity: 0.06 }}>
-        <svg width="100%" height="100%" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-          {/* Large concentric arcs — bottom, suggesting water surface horizon */}
-          <ellipse cx="720" cy="700" rx="900" ry="340" fill="none" stroke="white" strokeWidth="1" />
-          <ellipse cx="720" cy="700" rx="750" ry="280" fill="none" stroke="white" strokeWidth="0.8" />
-          <ellipse cx="720" cy="700" rx="580" ry="210" fill="none" stroke="white" strokeWidth="0.6" />
-          <ellipse cx="720" cy="700" rx="400" ry="140" fill="none" stroke="white" strokeWidth="0.5" />
-          {/* Top corner ripples */}
-          <ellipse cx="0" cy="0" rx="280" ry="120" fill="none" stroke="rgba(0,166,81,1)" strokeWidth="0.8" />
-          <ellipse cx="0" cy="0" rx="180" ry="80" fill="none" stroke="rgba(0,166,81,1)" strokeWidth="0.6" />
-          <ellipse cx="1440" cy="600" rx="260" ry="110" fill="none" stroke="rgba(126,207,255,1)" strokeWidth="0.7" />
-          <ellipse cx="1440" cy="600" rx="160" ry="70" fill="none" stroke="rgba(126,207,255,1)" strokeWidth="0.5" />
-        </svg>
-      </div>
-
-      {/* ── Dot grid ── */}
-      <div className="absolute inset-0 z-0 pointer-events-none" style={{ opacity: 0.035 }}>
-        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="footerDots" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
-              <circle cx="1" cy="1" r="1" fill="white" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#footerDots)" />
-        </svg>
+        <div style={{ position: "absolute", bottom: "-5%", left: "-5%", width: 600, height: 350, borderRadius: "50%", background: "radial-gradient(ellipse, rgba(43,125,233,0.1) 0%, transparent 70%)" }} />
+        {/* Bottom-right cyan shimmer */}
+        <div style={{ position: "absolute", bottom: "0%", right: "-8%", width: 500, height: 300, borderRadius: "50%", background: "radial-gradient(ellipse, rgba(126,207,255,0.06) 0%, transparent 70%)" }} />
       </div>
 
       {/* Top green divider */}
       <div
-        className="absolute top-0 left-0 right-0 h-[2px] z-[1]"
+        className="absolute top-0 left-0 right-0 h-[2px] z-[2]"
         style={{ background: "linear-gradient(90deg, transparent, #00A651, rgba(126,207,255,0.6), #00A651, transparent)" }}
       />
 
-      <div className="relative z-10 max-w-[1920px] mx-auto px-[clamp(20px,4vw,80px)]">
+      <div className="relative z-[2] max-w-[1920px] mx-auto px-[clamp(20px,4vw,80px)]">
         {/* Centered logo + tagline */}
         <div className="flex flex-col items-center text-center mb-14">
           <Image
