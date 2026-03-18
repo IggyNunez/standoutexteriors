@@ -11,7 +11,7 @@ const TIMELINE = [
     year: "2020",
     age: "Age 16",
     title: "The Spark",
-    body: "Working at a marina and Harris Teeter, frustrated with low pay and rigid hourly schedules, Ridge decided to bet on himself. He bought his first pressure washer and took on his first jobs that summer — slow and steady, but all his.",
+    body: "Working at a marina and Harris Teeter, frustrated with low pay and rigid hourly schedules, Ridge decided to bet on himself. He bought his first pressure washer and took on his first jobs that summer. Slow and steady, but all his.",
     icon: "💡",
     color: "#FF6B35",
   },
@@ -19,7 +19,7 @@ const TIMELINE = [
     year: "2021",
     age: "High School",
     title: "Building Through School",
-    body: "Balancing classes and growing the business wasn't easy, but Ridge enrolled in online college courses during high school — giving him the flexibility to take more jobs and refine his craft. Every weekend was a chance to learn.",
+    body: "Balancing classes and growing the business wasn't easy, but Ridge enrolled in online college courses during high school, giving him the flexibility to take more jobs and refine his craft. Every weekend was a chance to learn.",
     icon: "📚",
     color: "#2B7DE9",
   },
@@ -27,7 +27,7 @@ const TIMELINE = [
     year: "2022",
     age: "Growing Up",
     title: "Word Spreads",
-    body: "Referrals started rolling in. Neighbors telling neighbors. A 5-star Google review here, a repeat customer there. The business was no longer just a summer job — it was real. Ridge invested in better equipment and expanded services.",
+    body: "Referrals started rolling in. Neighbors telling neighbors. A 5-star Google review here, a repeat customer there. The business was no longer just a summer job. It was real. Ridge invested in better equipment and expanded services.",
     icon: "⭐",
     color: "#7ecfff",
   },
@@ -35,7 +35,7 @@ const TIMELINE = [
     year: "2023",
     age: "App State",
     title: "College & Company",
-    body: "Ridge enrolled at Appalachian State University studying Business Administration — fully online, so he could keep building. Most college students are looking for a job. Ridge was running one.",
+    body: "Ridge enrolled at Appalachian State University studying Business Administration, fully online, so he could keep building. Most college students are looking for a job. Ridge was running one.",
     icon: "🎓",
     color: "#FF6B35",
   },
@@ -43,7 +43,7 @@ const TIMELINE = [
     year: "Today",
     age: "Now",
     title: "Stand Out Exterior Cleaning",
-    body: `500+ properties cleaned. A 5-star reputation across the Lake Norman area. ${COMPANY_NAME} is a locally owned, fully insured operation built on honest work and real results — and we're just getting started.`,
+    body: `500+ properties cleaned. A 5-star reputation across the Lake Norman area. ${COMPANY_NAME} is a locally owned, fully insured operation built on honest work and real results. And we're just getting started.`,
     icon: "🏆",
     color: "#2B7DE9",
   },
@@ -99,7 +99,7 @@ export default function FounderStory() {
             className="font-[family-name:var(--font-display)] uppercase text-blue-900 leading-[0.95] tracking-[0.02em] mb-4"
             style={{ fontSize: "clamp(2rem, 4.5vw, 3.2rem)" }}
           >
-            Started at 16.<br />
+            Founded in 2020.<br />
             <span className="text-orange-500">Built to Last.</span>
           </motion.h2>
 
@@ -109,7 +109,7 @@ export default function FounderStory() {
             transition={{ delay: 0.25, duration: 0.7 }}
             className="text-[0.9rem] text-gray-400 max-w-[500px] mx-auto leading-relaxed"
           >
-            Ridge Curwood didn&apos;t wait for opportunity — he created it. Here&apos;s the story behind Stand Out.
+            Ridge Curwood didn&apos;t wait for opportunity. He created it. Here&apos;s the story behind Stand Out.
           </motion.p>
         </div>
 
@@ -195,7 +195,7 @@ export default function FounderStory() {
             I look forward to serving you.
           </p>
           <p className="text-[0.72rem] font-black tracking-[0.14em] uppercase text-orange-500">
-            — Ridge Curwood, Founder & Owner
+            Ridge Curwood, Founder &amp; Owner
           </p>
         </motion.div>
       </div>
