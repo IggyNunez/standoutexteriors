@@ -57,7 +57,7 @@ export default function AboutContent() {
           {/* Parallax video, dimmed */}
           <motion.div className="absolute inset-0 h-[120%]" style={{ y: imgY }}>
             <video autoPlay muted loop playsInline className="w-full h-full object-cover opacity-25">
-              <source src="/assets/hero-video.mp4" type="video/mp4" />
+              <source src="/assets/about-video.mp4" type="video/mp4" />
             </video>
           </motion.div>
 
@@ -311,7 +311,7 @@ export default function AboutContent() {
         >
           <motion.div className="absolute inset-0 h-[120%]" style={{ y: imgY }}>
             <video autoPlay muted loop playsInline className="w-full h-full object-cover opacity-20">
-              <source src="/assets/hero-video.mp4" type="video/mp4" />
+              <source src="/assets/about-video.mp4" type="video/mp4" />
             </video>
           </motion.div>
 
