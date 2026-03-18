@@ -77,10 +77,10 @@ export default function AboutContent() {
             }} />
           </motion.div>
 
-          {/* Right-side wave mask */}
-          <div className="absolute inset-y-0 right-0 w-20 pointer-events-none"
+          {/* Clean divider line */}
+          <div className="absolute inset-y-0 right-0 w-px pointer-events-none"
             style={{
-              background: "linear-gradient(to right, transparent, white)",
+              background: "rgba(255,255,255,0.12)",
               zIndex: 10,
             }}
           />
