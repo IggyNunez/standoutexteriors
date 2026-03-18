@@ -25,6 +25,83 @@ function GoogleLogo() {
   );
 }
 
+/** Renders one half of a top/bottom composite image as a labelled panel */
+function PhotoPanel({
+  src,
+  alt,
+  half,
+  label,
+  labelVariant,
+}: {
+  src: string;
+  alt: string;
+  /** "top" = before half, "bottom" = after half */
+  half: "top" | "bottom";
+  label: string;
+  labelVariant: "before" | "after";
+}) {
+  const isBefore = labelVariant === "before";
+  return (
+    <div
+      style={{
+        position: "relative",
+        overflow: "hidden",
+        borderRadius: 12,
+        border: "1px solid rgba(255,255,255,0.1)",
+        flex: 1,
+        minHeight: 160,
+      }}
+    >
+      {/* We show a 200%-tall image, shifted up/down to expose only one half */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          overflow: "hidden",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            left: 0,
+            right: 0,
+            height: "200%",
+            top: half === "top" ? 0 : "-100%",
+          }}
+        >
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            style={{ objectFit: "cover", objectPosition: "center center" }}
+            sizes="(max-width: 768px) 50vw, 250px"
+          />
+        </div>
+      </div>
+
+      {/* Label */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: 8,
+          ...(isBefore ? { left: 8 } : { right: 8 }),
+          background: isBefore ? "rgba(0,0,0,0.7)" : "rgba(0,166,81,0.85)",
+          backdropFilter: "blur(6px)",
+          color: isBefore ? "rgba(255,255,255,0.85)" : "white",
+          fontSize: "0.58rem",
+          fontWeight: 700,
+          letterSpacing: "0.14em",
+          textTransform: "uppercase",
+          padding: "3px 8px",
+          borderRadius: 4,
+        }}
+      >
+        {label}
+      </div>
+    </div>
+  );
+}
+
 export default function FeaturedReview() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "0px 0px -80px 0px" });
@@ -50,7 +127,6 @@ export default function FeaturedReview() {
         <div style={{
           position: "absolute", top: 0, left: 0, right: 0, height: 2,
           background: "linear-gradient(90deg, transparent, #00A651, #7ecfff, #00A651, transparent)",
-          borderRadius: "24px 24px 0 0",
         }} />
 
         {/* Featured badge */}
@@ -61,6 +137,7 @@ export default function FeaturedReview() {
           borderRadius: 9999,
           padding: "4px 12px",
           display: "flex", alignItems: "center", gap: 6,
+          zIndex: 1,
         }}>
           <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#00A651", display: "block" }} />
           <span style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#00A651" }}>
@@ -70,24 +147,21 @@ export default function FeaturedReview() {
 
         <div className="flex flex-col lg:flex-row">
 
-          {/* Left — review content */}
-          <div className="flex flex-col justify-between p-8 lg:p-10 lg:w-[44%] lg:shrink-0">
-
-            {/* Stars + Google */}
+          {/* ── Left — review content ── */}
+          <div className="flex flex-col justify-between p-8 lg:p-10 lg:w-[42%] lg:shrink-0">
             <div>
+              {/* Stars + Google */}
               <div className="flex items-center gap-3 mb-5">
                 <div className="flex gap-1">
                   {[...Array(5)].map((_, i) => <StarIcon key={i} />)}
                 </div>
-                <div className="flex items-center gap-1.5 ml-2"
-                  style={{
-                    background: "rgba(255,255,255,0.08)",
-                    border: "1px solid rgba(255,255,255,0.14)",
-                    borderRadius: 9999,
-                    padding: "4px 10px",
-                    display: "flex", alignItems: "center", gap: 6,
-                  }}
-                >
+                <div style={{
+                  background: "rgba(255,255,255,0.08)",
+                  border: "1px solid rgba(255,255,255,0.14)",
+                  borderRadius: 9999,
+                  padding: "4px 10px",
+                  display: "flex", alignItems: "center", gap: 6,
+                }}>
                   <GoogleLogo />
                   <span style={{ fontSize: "0.65rem", fontWeight: 600, color: "rgba(255,255,255,0.7)", letterSpacing: "0.04em" }}>
                     Google Review
@@ -97,17 +171,13 @@ export default function FeaturedReview() {
 
               {/* Big quote mark */}
               <div style={{
-                fontFamily: "Georgia, serif",
-                fontSize: 72,
-                lineHeight: 0.8,
-                color: "rgba(0,166,81,0.2)",
-                marginBottom: 4,
-                userSelect: "none",
+                fontFamily: "Georgia, serif", fontSize: 72, lineHeight: 0.8,
+                color: "rgba(0,166,81,0.2)", marginBottom: 4, userSelect: "none",
               }}>
                 &ldquo;
               </div>
 
-              <p className="italic text-white/85 leading-[1.85]" style={{ fontSize: "clamp(0.9rem, 1.5vw, 1.05rem)" }}>
+              <p className="italic text-white/85 leading-[1.85]" style={{ fontSize: "clamp(0.88rem, 1.4vw, 1rem)" }}>
                 I had a fantastic experience with Stand Out Exteriors! Ridge and his team did an excellent job cleaning my house and replacing the sand before sealing my pavers. They were on time, professional, and their work was top-notch. On top of that, their pricing was very fair. I was so impressed that I&apos;ve already booked them for next year&apos;s pressure washing! Highly recommend Stand Out Exteriors if you want quality service and reliable results.
               </p>
             </div>
@@ -116,20 +186,19 @@ export default function FeaturedReview() {
             <div className="flex items-center gap-4 mt-8 pt-6"
               style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}
             >
-              <div style={{ position: "relative", flexShrink: 0 }}>
-                <Image
-                  src="/assets/layne-veneri.png"
-                  alt="Layne Veneri"
-                  width={52}
-                  height={52}
-                  style={{
-                    borderRadius: "50%",
-                    border: "2px solid rgba(0,166,81,0.5)",
-                    boxShadow: "0 4px 16px rgba(0,0,0,0.3)",
-                    objectFit: "cover",
-                  }}
-                />
-              </div>
+              <Image
+                src="/assets/layne-veneri.png"
+                alt="Layne Veneri"
+                width={52}
+                height={52}
+                style={{
+                  borderRadius: "50%",
+                  border: "2px solid rgba(0,166,81,0.5)",
+                  boxShadow: "0 4px 16px rgba(0,0,0,0.3)",
+                  objectFit: "cover",
+                  flexShrink: 0,
+                }}
+              />
               <div>
                 <strong className="text-white font-bold block" style={{ fontSize: "0.95rem" }}>
                   Layne Veneri
@@ -149,76 +218,70 @@ export default function FeaturedReview() {
             </div>
           </div>
 
-          {/* Right — before/after photos */}
-          <div className="flex flex-col sm:flex-row lg:flex-col gap-3 p-4 lg:p-6 lg:flex-1">
+          {/* ── Right — 2×2 before/after photo grid ── */}
+          <div className="flex flex-col gap-3 p-4 lg:p-6 lg:flex-1">
 
-            {/* Label row */}
-            <div className="hidden lg:flex items-center gap-2 mb-1">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00A651" strokeWidth="2" strokeLinecap="round">
+            {/* Section label */}
+            <div className="flex items-center gap-2">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00A651" strokeWidth="2" strokeLinecap="round">
                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
               </svg>
-              <span style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(255,255,255,0.45)" }}>
-                Real Results — Paver Cleaning, Sanding &amp; Sealing
+              <span style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "rgba(255,255,255,0.4)" }}>
+                Paver Cleaning · Sanding · Sealing — Real Results
               </span>
             </div>
 
-            {/* Photo 1 */}
-            <div className="relative flex-1 rounded-xl overflow-hidden min-h-[220px]"
-              style={{ border: "1px solid rgba(255,255,255,0.1)" }}
-            >
-              <Image
-                src="/assets/layne-before-after.webp"
-                alt="Paver cleaning before and after — Layne Veneri"
-                fill
-                style={{ objectFit: "cover", objectPosition: "center" }}
-                sizes="(max-width: 1024px) 100vw, 400px"
-              />
-              {/* Before/After labels */}
-              <div style={{ position: "absolute", top: 10, left: 10 }}>
-                <span style={{
-                  background: "rgba(0,0,0,0.65)", backdropFilter: "blur(6px)",
-                  color: "rgba(255,255,255,0.8)", fontSize: "0.58rem", fontWeight: 700,
-                  letterSpacing: "0.14em", textTransform: "uppercase",
-                  padding: "3px 8px", borderRadius: 4,
-                }}>Before</span>
+            {/* Row 1 — image 1 split (left/right composite) */}
+            <div className="flex gap-2" style={{ flex: 1, minHeight: 180 }}>
+              {/* layne-before-after.webp is left=before / right=after */}
+              {/* Show full image but crop left half for before, right half for after */}
+              <div style={{ position: "relative", flex: 1, borderRadius: 12, overflow: "hidden", border: "1px solid rgba(255,255,255,0.1)" }}>
+                <div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
+                  <div style={{ position: "absolute", top: 0, bottom: 0, left: 0, width: "200%" }}>
+                    <Image
+                      src="/assets/layne-before-after.webp"
+                      alt="Paver before — Layne Veneri"
+                      fill
+                      style={{ objectFit: "cover", objectPosition: "left center" }}
+                      sizes="200px"
+                    />
+                  </div>
+                </div>
+                <div style={{ position: "absolute", bottom: 8, left: 8, background: "rgba(0,0,0,0.7)", backdropFilter: "blur(6px)", color: "rgba(255,255,255,0.85)", fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "3px 8px", borderRadius: 4 }}>Before</div>
               </div>
-              <div style={{ position: "absolute", top: 10, right: 10 }}>
-                <span style={{
-                  background: "rgba(0,166,81,0.8)", backdropFilter: "blur(6px)",
-                  color: "white", fontSize: "0.58rem", fontWeight: 700,
-                  letterSpacing: "0.14em", textTransform: "uppercase",
-                  padding: "3px 8px", borderRadius: 4,
-                }}>After</span>
+
+              <div style={{ position: "relative", flex: 1, borderRadius: 12, overflow: "hidden", border: "1px solid rgba(255,255,255,0.1)" }}>
+                <div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
+                  <div style={{ position: "absolute", top: 0, bottom: 0, right: 0, width: "200%" }}>
+                    <Image
+                      src="/assets/layne-before-after.webp"
+                      alt="Paver after — Layne Veneri"
+                      fill
+                      style={{ objectFit: "cover", objectPosition: "right center" }}
+                      sizes="200px"
+                    />
+                  </div>
+                </div>
+                <div style={{ position: "absolute", bottom: 8, right: 8, background: "rgba(0,166,81,0.85)", backdropFilter: "blur(6px)", color: "white", fontSize: "0.58rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "3px 8px", borderRadius: 4 }}>After</div>
               </div>
             </div>
 
-            {/* Photo 2 */}
-            <div className="relative flex-1 rounded-xl overflow-hidden min-h-[220px]"
-              style={{ border: "1px solid rgba(255,255,255,0.1)" }}
-            >
-              <Image
+            {/* Row 2 — image 2 split (top/bottom composite) */}
+            <div className="flex gap-2" style={{ flex: 1, minHeight: 180 }}>
+              <PhotoPanel
                 src="/assets/layne-before-after-2.webp"
-                alt="Paver sealing results — Layne Veneri"
-                fill
-                style={{ objectFit: "cover", objectPosition: "center top" }}
-                sizes="(max-width: 1024px) 100vw, 400px"
+                alt="Paver circle before — Layne Veneri"
+                half="top"
+                label="Before"
+                labelVariant="before"
               />
-              <div style={{ position: "absolute", bottom: 10, left: 10 }}>
-                <span style={{
-                  background: "rgba(0,0,0,0.65)", backdropFilter: "blur(6px)",
-                  color: "rgba(255,255,255,0.8)", fontSize: "0.58rem", fontWeight: 700,
-                  letterSpacing: "0.14em", textTransform: "uppercase",
-                  padding: "3px 8px", borderRadius: 4,
-                }}>Before</span>
-              </div>
-              <div style={{ position: "absolute", bottom: 10, right: 10 }}>
-                <span style={{
-                  background: "rgba(0,166,81,0.8)", backdropFilter: "blur(6px)",
-                  color: "white", fontSize: "0.58rem", fontWeight: 700,
-                  letterSpacing: "0.14em", textTransform: "uppercase",
-                  padding: "3px 8px", borderRadius: 4,
-                }}>After</span>
-              </div>
+              <PhotoPanel
+                src="/assets/layne-before-after-2.webp"
+                alt="Paver circle after — Layne Veneri"
+                half="bottom"
+                label="After"
+                labelVariant="after"
+              />
             </div>
 
           </div>
