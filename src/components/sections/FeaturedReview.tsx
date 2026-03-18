@@ -3,6 +3,7 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import rawData from "@/data/google-reviews.json";
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
@@ -357,10 +358,18 @@ export default function FeaturedReview() {
               </motion.div>
             </AnimatePresence>
 
-            {/* Swipe hint */}
-            <p style={{ textAlign: "center", fontSize: "0.6rem", color: "rgba(255,255,255,0.2)", marginTop: 12, letterSpacing: "0.06em" }}>
-              ← swipe to browse {total} reviews →
-            </p>
+            {/* Swipe hint + View All */}
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: 14 }}>
+              <p style={{ fontSize: "0.6rem", color: "rgba(255,255,255,0.2)", letterSpacing: "0.06em", margin: 0 }}>
+                ← swipe →
+              </p>
+              <Link href="/reviews"
+                style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(0,166,81,0.12)", border: "1px solid rgba(0,166,81,0.35)", borderRadius: 9999, padding: "7px 16px", fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#4ade80", textDecoration: "none", transition: "all 0.22s" }}
+                className="hover:bg-[rgba(0,166,81,0.22)]"
+              >
+                View All {total} Reviews →
+              </Link>
+            </div>
           </div>
 
           {/* ── DESKTOP: 2-up grid ── */}
@@ -380,6 +389,16 @@ export default function FeaturedReview() {
               {desktopPageCount > 1 && (
                 <NavControls page={desktopPage} pageCount={desktopPageCount} goTo={goToDesktop} />
               )}
+            </div>
+
+            {/* View All link — desktop */}
+            <div style={{ textAlign: "right", marginBottom: 12, marginTop: -4 }}>
+              <Link href="/reviews"
+                style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(0,166,81,0.1)", border: "1px solid rgba(0,166,81,0.3)", borderRadius: 9999, padding: "7px 18px", fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#4ade80", textDecoration: "none", transition: "all 0.22s" }}
+                className="hover:bg-[rgba(0,166,81,0.2)]"
+              >
+                View All {total} Reviews →
+              </Link>
             </div>
 
             {/* 2-up grid with slide animation */}
