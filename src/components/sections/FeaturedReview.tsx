@@ -238,30 +238,70 @@ function ReviewCard({
   );
 }
 
+/* ─── Nav controls (shared) ─── */
+function NavControls({ page, pageCount, goTo }: { page: number; pageCount: number; goTo: (n: number) => void }) {
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+      <motion.button
+        onClick={() => goTo(Math.max(0, page - 1))}
+        disabled={page === 0}
+        whileHover={page > 0 ? { scale: 1.08 } : {}}
+        whileTap={page > 0 ? { scale: 0.93 } : {}}
+        aria-label="Previous"
+        style={{ width: 30, height: 30, borderRadius: "50%", border: "1px solid rgba(255,255,255,0.18)", background: page === 0 ? "rgba(255,255,255,0.03)" : "rgba(255,255,255,0.09)", cursor: page === 0 ? "default" : "pointer", display: "flex", alignItems: "center", justifyContent: "center", opacity: page === 0 ? 0.3 : 1, transition: "opacity 0.2s" }}
+      >
+        <svg width="11" height="11" viewBox="0 0 14 14" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round"><path d="M9 2L4 7l5 5"/></svg>
+      </motion.button>
+
+      <div style={{ display: "flex", gap: 5 }}>
+        {Array.from({ length: Math.min(pageCount, 7) }).map((_, i) => (
+          <button key={i} onClick={() => goTo(i)} aria-label={`Page ${i + 1}`}
+            style={{ width: i === page ? 18 : 6, height: 6, borderRadius: 9999, background: i === page ? "#00A651" : "rgba(255,255,255,0.2)", border: "none", cursor: "pointer", padding: 0, transition: "width 0.3s, background 0.3s" }} />
+        ))}
+      </div>
+
+      <motion.button
+        onClick={() => goTo(Math.min(pageCount - 1, page + 1))}
+        disabled={page === pageCount - 1}
+        whileHover={page < pageCount - 1 ? { scale: 1.08 } : {}}
+        whileTap={page < pageCount - 1 ? { scale: 0.93 } : {}}
+        aria-label="Next"
+        style={{ width: 30, height: 30, borderRadius: "50%", border: "1px solid rgba(255,255,255,0.18)", background: page === pageCount - 1 ? "rgba(255,255,255,0.03)" : "rgba(255,255,255,0.09)", cursor: page === pageCount - 1 ? "default" : "pointer", display: "flex", alignItems: "center", justifyContent: "center", opacity: page === pageCount - 1 ? 0.3 : 1, transition: "opacity 0.2s" }}
+      >
+        <svg width="11" height="11" viewBox="0 0 14 14" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round"><path d="M5 2l5 5-5 5"/></svg>
+      </motion.button>
+    </div>
+  );
+}
+
 /* ─── Main export ─── */
 export default function FeaturedReview() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "0px 0px -80px 0px" });
 
-  // 2-up carousel: page = index of first visible card
   const total = FEATURED_REVIEWS.length;
-  const perPage = 2;
-  const pageCount = Math.ceil(total / perPage);
-  const [page, setPage] = useState(0);
-  const [dir, setDir] = useState(1); // 1 = forward, -1 = back
 
-  const goTo = (next: number) => {
-    setDir(next > page ? 1 : -1);
-    setPage(next);
-  };
+  // Desktop: 2-up
+  const desktopPerPage = 2;
+  const desktopPageCount = Math.ceil(total / desktopPerPage);
+  const [desktopPage, setDesktopPage] = useState(0);
+  const [desktopDir, setDesktopDir] = useState(1);
+  const goToDesktop = (next: number) => { setDesktopDir(next > desktopPage ? 1 : -1); setDesktopPage(next); };
+  const desktopReviews = FEATURED_REVIEWS.slice(desktopPage * desktopPerPage, desktopPage * desktopPerPage + desktopPerPage);
 
-  const visibleReviews = FEATURED_REVIEWS.slice(page * perPage, page * perPage + perPage);
+  // Mobile: 1-up
+  const [mobilePage, setMobilePage] = useState(0);
+  const [mobileDir, setMobileDir] = useState(1);
+  const goToMobile = (next: number) => { setMobileDir(next > mobilePage ? 1 : -1); setMobilePage(next); };
+  const mobileReview = FEATURED_REVIEWS[mobilePage];
 
   // Lightbox state
   const [lightboxReviewIdx, setLightboxReviewIdx] = useState<number | null>(null);
   const [lightboxPhotoIdx, setLightboxPhotoIdx] = useState(0);
   const lbPhotos = lightboxReviewIdx !== null ? FEATURED_REVIEWS[lightboxReviewIdx].photos : [];
   const lbPhoto = lbPhotos[lightboxPhotoIdx] ?? null;
+
+  const openLightbox = (ri: number, pi: number) => { setLightboxReviewIdx(ri); setLightboxPhotoIdx(pi); };
 
   return (
     <>
@@ -271,92 +311,113 @@ export default function FeaturedReview() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: EASE }}
         >
-          {/* Header row */}
-          <div className="flex items-center justify-between mb-5">
-            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-              <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#00A651" }} />
-              <span style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "rgba(255,255,255,0.45)" }}>
-                Featured Reviews
-              </span>
-              <div style={{ display: "flex", alignItems: "center", gap: 5, background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 9999, padding: "3px 10px" }}>
-                <GoogleLogo />
-                <span style={{ fontSize: "0.58rem", fontWeight: 600, color: "rgba(255,255,255,0.5)" }}>Verified Google Reviews</span>
+          {/* ── MOBILE: 1-up swipeable carousel ── */}
+          <div className="block md:hidden">
+            {/* Mobile header */}
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#00A651" }} />
+                <div style={{ display: "flex", alignItems: "center", gap: 5, background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 9999, padding: "4px 10px" }}>
+                  <GoogleLogo />
+                  <span style={{ fontSize: "0.6rem", fontWeight: 600, color: "rgba(255,255,255,0.5)" }}>Google Reviews</span>
+                </div>
+                <span style={{ fontSize: "0.6rem", color: "rgba(255,255,255,0.3)" }}>{mobilePage + 1} / {total}</span>
               </div>
+              <NavControls page={mobilePage} pageCount={total} goTo={goToMobile} />
             </div>
 
-            {/* Page controls */}
-            {pageCount > 1 && (
-              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                <motion.button
-                  onClick={() => goTo(Math.max(0, page - 1))}
-                  disabled={page === 0}
-                  whileHover={page > 0 ? { scale: 1.08 } : {}}
-                  whileTap={page > 0 ? { scale: 0.93 } : {}}
-                  aria-label="Previous"
-                  style={{ width: 30, height: 30, borderRadius: "50%", border: "1px solid rgba(255,255,255,0.18)", background: page === 0 ? "rgba(255,255,255,0.03)" : "rgba(255,255,255,0.09)", cursor: page === 0 ? "default" : "pointer", display: "flex", alignItems: "center", justifyContent: "center", opacity: page === 0 ? 0.3 : 1, transition: "opacity 0.2s" }}
-                >
-                  <svg width="11" height="11" viewBox="0 0 14 14" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round"><path d="M9 2L4 7l5 5"/></svg>
-                </motion.button>
+            {/* Swipeable single card */}
+            <AnimatePresence mode="wait" custom={mobileDir}>
+              <motion.div
+                key={mobilePage}
+                custom={mobileDir}
+                variants={{
+                  enter: (d: number) => ({ opacity: 0, x: d * 60 }),
+                  center: { opacity: 1, x: 0 },
+                  exit: (d: number) => ({ opacity: 0, x: d * -60 }),
+                }}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{ duration: 0.32, ease: EASE }}
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={0.12}
+                onDragEnd={(_, info) => {
+                  if (info.offset.x < -50 && mobilePage < total - 1) goToMobile(mobilePage + 1);
+                  else if (info.offset.x > 50 && mobilePage > 0) goToMobile(mobilePage - 1);
+                }}
+                className="cursor-grab active:cursor-grabbing"
+              >
+                <ReviewCard
+                  review={mobileReview}
+                  reviewIdx={mobilePage}
+                  onOpenLightbox={openLightbox}
+                />
+              </motion.div>
+            </AnimatePresence>
 
-                <div style={{ display: "flex", gap: 5 }}>
-                  {Array.from({ length: pageCount }).map((_, i) => (
-                    <button key={i} onClick={() => goTo(i)} aria-label={`Page ${i + 1}`}
-                      style={{ width: i === page ? 18 : 6, height: 6, borderRadius: 9999, background: i === page ? "#00A651" : "rgba(255,255,255,0.2)", border: "none", cursor: "pointer", padding: 0, transition: "width 0.3s, background 0.3s" }} />
-                  ))}
-                </div>
-
-                <motion.button
-                  onClick={() => goTo(Math.min(pageCount - 1, page + 1))}
-                  disabled={page === pageCount - 1}
-                  whileHover={page < pageCount - 1 ? { scale: 1.08 } : {}}
-                  whileTap={page < pageCount - 1 ? { scale: 0.93 } : {}}
-                  aria-label="Next"
-                  style={{ width: 30, height: 30, borderRadius: "50%", border: "1px solid rgba(255,255,255,0.18)", background: page === pageCount - 1 ? "rgba(255,255,255,0.03)" : "rgba(255,255,255,0.09)", cursor: page === pageCount - 1 ? "default" : "pointer", display: "flex", alignItems: "center", justifyContent: "center", opacity: page === pageCount - 1 ? 0.3 : 1, transition: "opacity 0.2s" }}
-                >
-                  <svg width="11" height="11" viewBox="0 0 14 14" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round"><path d="M5 2l5 5-5 5"/></svg>
-                </motion.button>
-              </div>
-            )}
+            {/* Swipe hint */}
+            <p style={{ textAlign: "center", fontSize: "0.6rem", color: "rgba(255,255,255,0.2)", marginTop: 12, letterSpacing: "0.06em" }}>
+              ← swipe to browse {total} reviews →
+            </p>
           </div>
 
-          {/* 2-up card grid with slide animation */}
-          <AnimatePresence mode="wait" custom={dir}>
-            <motion.div
-              key={page}
-              custom={dir}
-              variants={{
-                enter: (d: number) => ({ opacity: 0, x: d * 40 }),
-                center: { opacity: 1, x: 0 },
-                exit: (d: number) => ({ opacity: 0, x: d * -40 }),
-              }}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              transition={{ duration: 0.38, ease: EASE }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-5"
-            >
-              {visibleReviews.map((review, i) => {
-                const globalIdx = page * perPage + i;
-                return (
-                  <ReviewCard
-                    key={review.name}
-                    review={review}
-                    reviewIdx={globalIdx}
-                    onOpenLightbox={(ri, pi) => {
-                      setLightboxReviewIdx(ri);
-                      setLightboxPhotoIdx(pi);
-                    }}
-                  />
-                );
-              })}
-              {/* Phantom card if odd total on last page */}
-              {visibleReviews.length < perPage && (
-                <div style={{ borderRadius: 20, border: "1px dashed rgba(255,255,255,0.07)", display: "flex", alignItems: "center", justifyContent: "center", minHeight: 200 }}>
-                  <span style={{ fontSize: "0.7rem", color: "rgba(255,255,255,0.15)", fontStyle: "italic" }}>More reviews coming soon</span>
+          {/* ── DESKTOP: 2-up grid ── */}
+          <div className="hidden md:block">
+            {/* Desktop header row */}
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 20 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#00A651" }} />
+                <span style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "rgba(255,255,255,0.45)" }}>
+                  Featured Reviews
+                </span>
+                <div style={{ display: "flex", alignItems: "center", gap: 5, background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 9999, padding: "3px 10px" }}>
+                  <GoogleLogo />
+                  <span style={{ fontSize: "0.58rem", fontWeight: 600, color: "rgba(255,255,255,0.5)" }}>Verified Google Reviews</span>
                 </div>
+              </div>
+              {desktopPageCount > 1 && (
+                <NavControls page={desktopPage} pageCount={desktopPageCount} goTo={goToDesktop} />
               )}
-            </motion.div>
-          </AnimatePresence>
+            </div>
+
+            {/* 2-up grid with slide animation */}
+            <AnimatePresence mode="wait" custom={desktopDir}>
+              <motion.div
+                key={desktopPage}
+                custom={desktopDir}
+                variants={{
+                  enter: (d: number) => ({ opacity: 0, x: d * 40 }),
+                  center: { opacity: 1, x: 0 },
+                  exit: (d: number) => ({ opacity: 0, x: d * -40 }),
+                }}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{ duration: 0.38, ease: EASE }}
+                className="grid grid-cols-2 gap-5"
+              >
+                {desktopReviews.map((review, i) => {
+                  const globalIdx = desktopPage * desktopPerPage + i;
+                  return (
+                    <ReviewCard
+                      key={review.name + globalIdx}
+                      review={review}
+                      reviewIdx={globalIdx}
+                      onOpenLightbox={openLightbox}
+                    />
+                  );
+                })}
+                {/* Phantom card if odd total on last page */}
+                {desktopReviews.length < desktopPerPage && (
+                  <div style={{ borderRadius: 20, border: "1px dashed rgba(255,255,255,0.07)", display: "flex", alignItems: "center", justifyContent: "center", minHeight: 200 }}>
+                    <span style={{ fontSize: "0.7rem", color: "rgba(255,255,255,0.15)", fontStyle: "italic" }}>More reviews coming soon</span>
+                  </div>
+                )}
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </motion.div>
       </div>
 
