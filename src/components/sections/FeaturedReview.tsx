@@ -215,7 +215,7 @@ function ReviewCard({
       <div style={{ display: "flex", alignItems: "center", gap: 12, paddingTop: 16, borderTop: "1px solid rgba(255,255,255,0.09)" }}>
         {review.avatar ? (
           /* eslint-disable-next-line @next/next/no-img-element */
-          <img src={review.avatar} alt={review.name}
+          <img src={review.avatar} alt={review.name} referrerPolicy="no-referrer"
             style={{ width: 42, height: 42, borderRadius: "50%", border: "2px solid rgba(0,166,81,0.45)", boxShadow: "0 3px 12px rgba(0,0,0,0.3)", objectFit: "cover", flexShrink: 0 }} />
         ) : (
           <div style={{ width: 42, height: 42, borderRadius: "50%", background: "linear-gradient(135deg, #2B7DE9, #7ecfff)", display: "flex", alignItems: "center", justifyContent: "center", border: "2px solid rgba(0,166,81,0.45)", flexShrink: 0 }}>

@@ -203,7 +203,7 @@ function ReviewCard({ review, globalIdx, onOpenLightbox, animDelay = 0 }: {
       <div style={{ display: "flex", alignItems: "center", gap: 10, paddingTop: 14, borderTop: "1px solid rgba(255,255,255,0.08)" }}>
         {review.avatar ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={review.avatar} alt={review.name}
+          <img src={review.avatar} alt={review.name} referrerPolicy="no-referrer"
             style={{ width: 38, height: 38, borderRadius: "50%", border: "2px solid rgba(0,166,81,0.4)", objectFit: "cover", flexShrink: 0 }} />
         ) : (
           <div style={{ width: 38, height: 38, borderRadius: "50%", background: "linear-gradient(135deg,#2B7DE9,#7ecfff)", display: "flex", alignItems: "center", justifyContent: "center", border: "2px solid rgba(0,166,81,0.3)", flexShrink: 0 }}>
