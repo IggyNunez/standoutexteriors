@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { TESTIMONIALS } from "@/lib/constants";
 import { WaveTop, WaveBottom } from "@/components/ui/WaveDivider";
+import FeaturedReview from "@/components/sections/FeaturedReview";
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
@@ -208,6 +209,9 @@ export default function Testimonials() {
             Real reviews from real Lake Norman families.
           </motion.p>
         </div>
+
+        {/* Featured review with before/after photos */}
+        <FeaturedReview />
 
         {/* Desktop: 3-column glassmorphic grid */}
         <div className="hidden md:grid md:grid-cols-3 gap-5">
