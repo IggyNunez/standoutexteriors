@@ -35,7 +35,7 @@ export default function Nav() {
 
   useEffect(() => {
     const onResize = () => {
-      if (window.innerWidth >= 768) setMobileOpen(false);
+      if (window.innerWidth >= 1200) setMobileOpen(false);
     };
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
@@ -50,7 +50,7 @@ export default function Nav() {
     <>
       {/* ── Desktop Nav ── */}
       <motion.nav
-        className="hidden md:block fixed top-0 left-0 right-0 z-[100]"
+        className="hidden min-[1200px]:block fixed top-0 left-0 right-0 z-[100]"
         initial={false}
         animate={{ height: scrolled ? 70 : 120 }}
         transition={{ duration: DURATION, ease: EASE }}
@@ -188,7 +188,7 @@ export default function Nav() {
       </motion.nav>
 
       {/* ── Mobile Nav ── */}
-      <nav className="md:hidden fixed top-0 left-0 right-0 z-[100] px-4 pt-3 flex items-start justify-between">
+      <nav className="min-[1200px]:hidden fixed top-0 left-0 right-0 z-[100] px-4 pt-3 flex items-start justify-between">
         {/* Big logo — shimmer-bordered frosted pill, collapses on scroll */}
         <motion.div
           className="shrink-0"
@@ -309,7 +309,7 @@ export default function Nav() {
           <>
             {/* Backdrop */}
             <motion.div
-              className="md:hidden fixed inset-0 z-[200] bg-black/50"
+              className="min-[1200px]:hidden fixed inset-0 z-[200] bg-black/50"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -319,7 +319,7 @@ export default function Nav() {
 
             {/* Chamfered card drawer */}
             <motion.div
-              className="md:hidden fixed top-1/2 right-3 -translate-y-1/2 z-[201] w-[270px]"
+              className="min-[1200px]:hidden fixed top-1/2 right-3 -translate-y-1/2 z-[201] w-[270px]"
               style={{
                 background: "#0A2E5C",
                 clipPath: CARD_CLIP,
