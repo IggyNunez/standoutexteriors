@@ -203,11 +203,10 @@ export default function AboutContent() {
 
           <motion.div
             className="w-16 h-[2px] mb-8"
-            style={{ background: "#00A651" }}
+            style={{ background: "#00A651", transformOrigin: "left" }}
             initial={{ scaleX: 0 }}
             animate={isInView ? { scaleX: 1 } : {}}
             transition={{ delay: 0.6, duration: 0.6 }}
-            style={{ transformOrigin: "left" }}
           />
 
           {/* Body copy */}
