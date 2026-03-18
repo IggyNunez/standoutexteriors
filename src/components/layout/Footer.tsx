@@ -6,50 +6,52 @@ import { COMPANY_NAME, PHONE, PHONE_HREF, EMAIL, ADDRESS, NAV_LINKS, SERVICES, S
 
 export default function Footer() {
   return (
-    <footer className="relative text-white pt-16 pb-8 overflow-hidden bg-blue-900">
-      {/* Geometric pattern overlay */}
-      <div className="absolute inset-0 z-0 opacity-[0.04]">
-        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="geoPattern" x="0" y="0" width="600" height="650" patternUnits="userSpaceOnUse">
-              {/* Large diamond — top left */}
-              <g transform="translate(120, 80) rotate(45, 0, 0)">
-                <rect width="120" height="120" fill="none" stroke="white" strokeWidth="2" opacity="0.6" />
-                <rect x="20" y="20" width="80" height="80" fill="none" stroke="white" strokeWidth="1.5" opacity="0.4" />
-                <rect x="40" y="40" width="40" height="40" fill="white" opacity="0.15" />
-              </g>
+    <footer
+      className="relative text-white pt-16 pb-8 overflow-hidden"
+      style={{ background: "linear-gradient(170deg, #040f1e 0%, #071828 40%, #061422 100%)" }}
+    >
+      {/* ── Radial glow blobs ── */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        {/* Top-center green glow behind logo */}
+        <div style={{ position: "absolute", top: "-10%", left: "50%", transform: "translateX(-50%)", width: 700, height: 400, borderRadius: "50%", background: "radial-gradient(ellipse, rgba(0,166,81,0.07) 0%, transparent 70%)" }} />
+        {/* Bottom-left teal pool */}
+        <div style={{ position: "absolute", bottom: "-5%", left: "-5%", width: 600, height: 350, borderRadius: "50%", background: "radial-gradient(ellipse, rgba(43,125,233,0.09) 0%, transparent 70%)" }} />
+        {/* Bottom-right deep blue shimmer */}
+        <div style={{ position: "absolute", bottom: "0%", right: "-8%", width: 500, height: 300, borderRadius: "50%", background: "radial-gradient(ellipse, rgba(126,207,255,0.05) 0%, transparent 70%)" }} />
+      </div>
 
-              {/* Medium diamond — right side */}
-              <g transform="translate(440, 300) rotate(45, 0, 0)">
-                <rect width="90" height="90" fill="none" stroke="white" strokeWidth="1.5" opacity="0.5" />
-                <rect x="20" y="20" width="50" height="50" fill="none" stroke="white" strokeWidth="1" opacity="0.3" />
-              </g>
-
-              {/* Small diamond — bottom left */}
-              <g transform="translate(80, 450) rotate(45, 0, 0)">
-                <rect width="60" height="60" fill="none" stroke="white" strokeWidth="1" opacity="0.4" />
-                <rect x="15" y="15" width="30" height="30" fill="white" opacity="0.1" />
-              </g>
-
-              {/* Tiny diamond — top right */}
-              <g transform="translate(500, 80) rotate(45, 0, 0)">
-                <rect width="40" height="40" fill="none" stroke="white" strokeWidth="1" opacity="0.3" />
-              </g>
-
-              {/* Dots cluster — center */}
-              <circle cx="300" cy="200" r="3" fill="white" opacity="0.2" />
-              <circle cx="310" cy="210" r="2" fill="white" opacity="0.15" />
-              <circle cx="295" cy="215" r="2.5" fill="white" opacity="0.18" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#geoPattern)" />
+      {/* ── Water ripple arcs ── */}
+      <div className="absolute inset-0 z-0 pointer-events-none" style={{ opacity: 0.06 }}>
+        <svg width="100%" height="100%" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          {/* Large concentric arcs — bottom, suggesting water surface horizon */}
+          <ellipse cx="720" cy="700" rx="900" ry="340" fill="none" stroke="white" strokeWidth="1" />
+          <ellipse cx="720" cy="700" rx="750" ry="280" fill="none" stroke="white" strokeWidth="0.8" />
+          <ellipse cx="720" cy="700" rx="580" ry="210" fill="none" stroke="white" strokeWidth="0.6" />
+          <ellipse cx="720" cy="700" rx="400" ry="140" fill="none" stroke="white" strokeWidth="0.5" />
+          {/* Top corner ripples */}
+          <ellipse cx="0" cy="0" rx="280" ry="120" fill="none" stroke="rgba(0,166,81,1)" strokeWidth="0.8" />
+          <ellipse cx="0" cy="0" rx="180" ry="80" fill="none" stroke="rgba(0,166,81,1)" strokeWidth="0.6" />
+          <ellipse cx="1440" cy="600" rx="260" ry="110" fill="none" stroke="rgba(126,207,255,1)" strokeWidth="0.7" />
+          <ellipse cx="1440" cy="600" rx="160" ry="70" fill="none" stroke="rgba(126,207,255,1)" strokeWidth="0.5" />
         </svg>
       </div>
 
-      {/* Top orange divider */}
+      {/* ── Dot grid ── */}
+      <div className="absolute inset-0 z-0 pointer-events-none" style={{ opacity: 0.035 }}>
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="footerDots" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+              <circle cx="1" cy="1" r="1" fill="white" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#footerDots)" />
+        </svg>
+      </div>
+
+      {/* Top green divider */}
       <div
         className="absolute top-0 left-0 right-0 h-[2px] z-[1]"
-        style={{ background: "linear-gradient(90deg, transparent, #00A651, transparent)" }}
+        style={{ background: "linear-gradient(90deg, transparent, #00A651, rgba(126,207,255,0.6), #00A651, transparent)" }}
       />
 
       <div className="relative z-10 max-w-[1920px] mx-auto px-[clamp(20px,4vw,80px)]">
