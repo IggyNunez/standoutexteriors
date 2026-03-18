@@ -3,45 +3,54 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import rawData from "@/data/google-reviews.json";
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 /* ─────────────────────────────────────────────────────────────
-   DATA — add more reviews here as they come in
-   (or replace with import from @/data/reviews.json after SerpAPI)
+   Local photo overrides — these reviewers have custom assets
+   we captured; use those instead of the Google-hosted URLs.
 ──────────────────────────────────────────────────────────────── */
-const FEATURED_REVIEWS = [
-  {
-    name: "Layne Veneri",
-    meta: "Local Guide · Denver, NC",
-    ago: "9 months ago",
+const LOCAL_PHOTO_OVERRIDES: Record<string, { avatar?: string; photos?: { src: string; caption: string }[] }> = {
+  "Layne Veneri": {
     avatar: "/assets/layne-veneri.png",
-    text: "I had a fantastic experience with Stand Out Exteriors! Ridge and his team did an excellent job cleaning my house and replacing the sand before sealing my pavers. They were on time, professional, and their work was top-notch. On top of that, their pricing was very fair. I was so impressed that I've already booked them for next year's pressure washing! Highly recommend Stand Out Exteriors if you want quality service and reliable results.",
     photos: [
       { src: "/assets/layne-before-after.webp", caption: "Paver cleaning before & after" },
       { src: "/assets/layne-before-after-2.webp", caption: "Paver circle before & after" },
     ],
   },
-  {
-    name: "Rachel Cartner",
-    meta: "Denver, NC",
-    ago: "a year ago",
+  "Rachel Cartner": {
     avatar: "/assets/rachel-cartner.png",
-    text: "Ridge was very professional, extremely hard worker! Brought a 30 year old almost black concrete driveway back to looking new! His technology system is easy to confirm appointments, reminders and payment!",
-    photos: [
-      { src: "/assets/rachel-before-after.webp", caption: "Driveway cleaning — after" },
-    ],
+    photos: [{ src: "/assets/rachel-before-after.webp", caption: "Driveway cleaning — after" }],
   },
-  {
-    name: "Heidi Erickson",
-    meta: "Denver, NC",
-    ago: "a year ago",
+  "Heidi Erickson": {
     avatar: "/assets/heidi-erickson-avatar.png",
-    text: "Wow! Ridge, Stand Out Exterior Cleaning, did an awesome job. My husband tries to pressure wash the driveway and sidewalks every year, but they have NEVER been this clean! Thank you so much!",
-    photos: [
-      { src: "/assets/heidi-erickson.webp", caption: "Driveway & sidewalk cleaning — after" },
-    ],
+    photos: [{ src: "/assets/heidi-erickson.webp", caption: "Driveway & sidewalk cleaning — after" }],
   },
+};
+
+/* Build the reviews list from JSON, apply overrides, photos-first */
+const ALL_REVIEWS = (rawData.reviews as {
+  name: string; avatar: string | null; isLocalGuide: boolean;
+  rating: number; text: string; ago: string;
+  photos: { src: string; caption: string }[];
+}[]).map((r) => {
+  const override = LOCAL_PHOTO_OVERRIDES[r.name];
+  return {
+    name: r.name,
+    avatar: override?.avatar || r.avatar || null,
+    isLocalGuide: r.isLocalGuide,
+    rating: r.rating,
+    text: r.text,
+    ago: r.ago,
+    photos: override?.photos || r.photos,
+  };
+});
+
+/* Sort: reviews with photos first, then rest — all 5-star */
+const FEATURED_REVIEWS = [
+  ...ALL_REVIEWS.filter(r => r.photos.length > 0),
+  ...ALL_REVIEWS.filter(r => r.photos.length === 0),
 ];
 
 /* ─── Helpers ─── */
@@ -203,13 +212,24 @@ function ReviewCard({
 
       {/* Author */}
       <div style={{ display: "flex", alignItems: "center", gap: 12, paddingTop: 16, borderTop: "1px solid rgba(255,255,255,0.09)" }}>
-        <Image src={review.avatar} alt={review.name} width={42} height={42}
-          style={{ borderRadius: "50%", border: "2px solid rgba(0,166,81,0.45)", boxShadow: "0 3px 12px rgba(0,0,0,0.3)", objectFit: "cover", flexShrink: 0 }} />
+        {review.avatar ? (
+          /* eslint-disable-next-line @next/next/no-img-element */
+          <img src={review.avatar} alt={review.name}
+            style={{ width: 42, height: 42, borderRadius: "50%", border: "2px solid rgba(0,166,81,0.45)", boxShadow: "0 3px 12px rgba(0,0,0,0.3)", objectFit: "cover", flexShrink: 0 }} />
+        ) : (
+          <div style={{ width: 42, height: 42, borderRadius: "50%", background: "linear-gradient(135deg, #2B7DE9, #7ecfff)", display: "flex", alignItems: "center", justifyContent: "center", border: "2px solid rgba(0,166,81,0.45)", flexShrink: 0 }}>
+            <span style={{ fontWeight: 900, color: "white", fontSize: "1rem" }}>{review.name.charAt(0)}</span>
+          </div>
+        )}
         <div>
-          <strong style={{ fontSize: "0.88rem", fontWeight: 700, color: "white", display: "block" }}>{review.name}</strong>
-          <span style={{ fontSize: "0.66rem", color: "rgba(255,255,255,0.38)", letterSpacing: "0.05em" }}>{review.meta}</span>
-          <div style={{ display: "flex", alignItems: "center", gap: 3, marginTop: 2 }}>
-            {[...Array(5)].map((_, i) => <StarIcon key={i} size={9} />)}
+          <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 2 }}>
+            <strong style={{ fontSize: "0.88rem", fontWeight: 700, color: "white" }}>{review.name}</strong>
+            {review.isLocalGuide && (
+              <span style={{ fontSize: "0.52rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", background: "rgba(43,125,233,0.25)", border: "1px solid rgba(43,125,233,0.4)", color: "#7ecfff", padding: "1px 6px", borderRadius: 9999 }}>Local Guide</span>
+            )}
+          </div>
+          <div style={{ display: "flex", alignItems: "center", gap: 3 }}>
+            {[...Array(review.rating)].map((_, i) => <StarIcon key={i} size={9} />)}
             <span style={{ fontSize: "0.58rem", color: "rgba(255,255,255,0.28)", marginLeft: 4 }}>{review.ago}</span>
           </div>
         </div>
