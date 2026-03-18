@@ -2,7 +2,7 @@ import type { NavLink, ServiceCard, ProcessStep, Testimonial, FAQ, HeroStat, CTA
 
 // ── Navigation ──
 export const NAV_LINKS: NavLink[] = [
-  { label: "Services", href: "/#services" },
+  { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
   { label: "Process", href: "/#process" },
   { label: "Reviews", href: "/#reviews" },

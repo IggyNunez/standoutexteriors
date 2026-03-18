@@ -137,9 +137,9 @@ export default function Nav() {
                 className="shrink-0 flex items-center justify-center overflow-hidden"
                 initial={false}
                 animate={{
-                  width: scrolled ? 36 : 0,
+                  width: scrolled ? 72 : 0,
                   opacity: scrolled ? 1 : 0,
-                  marginRight: scrolled ? 4 : 0,
+                  marginRight: scrolled ? 6 : 0,
                 }}
                 transition={{ duration: DURATION, ease: EASE }}
                 aria-hidden={!scrolled}
@@ -148,9 +148,10 @@ export default function Nav() {
                 <Image
                   src="/assets/logo-transparent.png"
                   alt="Stand Out Exterior Cleaning"
-                  width={36}
-                  height={36}
-                  className="w-9 h-9 min-w-[36px] drop-shadow-[0_1px_4px_rgba(0,0,0,0.2)]"
+                  width={72}
+                  height={34}
+                  className="drop-shadow-[0_1px_4px_rgba(0,0,0,0.2)]"
+                  style={{ width: 72, height: "auto" }}
                 />
               </motion.a>
 
@@ -258,7 +259,7 @@ export default function Nav() {
               className="shrink-0 flex items-center justify-center overflow-hidden"
               initial={false}
               animate={{
-                width: scrolled ? 44 : 0,
+                width: scrolled ? 64 : 0,
                 opacity: scrolled ? 1 : 0,
                 marginRight: scrolled ? 4 : 0,
               }}
@@ -269,9 +270,10 @@ export default function Nav() {
               <Image
                 src="/assets/logo-transparent.png"
                 alt="Stand Out Exterior Cleaning"
-                width={44}
-                height={44}
-                className="w-[44px] h-[44px] min-w-[44px] drop-shadow-[0_1px_4px_rgba(0,0,0,0.2)]"
+                width={64}
+                height={30}
+                className="drop-shadow-[0_1px_4px_rgba(0,0,0,0.2)]"
+                style={{ width: 64, height: "auto" }}
               />
             </motion.a>
 
