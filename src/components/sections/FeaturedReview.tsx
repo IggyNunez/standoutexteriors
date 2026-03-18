@@ -31,6 +31,16 @@ const FEATURED_REVIEWS = [
       { src: "/assets/rachel-before-after.webp", caption: "Driveway cleaning — after" },
     ],
   },
+  {
+    name: "Heidi Erickson",
+    meta: "Denver, NC",
+    ago: "a year ago",
+    avatar: "/assets/heidi-erickson-avatar.png",
+    text: "Wow! Ridge, Stand Out Exterior Cleaning, did an awesome job. My husband tries to pressure wash the driveway and sidewalks every year, but they have NEVER been this clean! Thank you so much!",
+    photos: [
+      { src: "/assets/heidi-erickson.webp", caption: "Driveway & sidewalk cleaning — after" },
+    ],
+  },
 ];
 
 /* ─── Sub-components ─── */
