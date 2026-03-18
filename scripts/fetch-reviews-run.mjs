@@ -1,7 +1,28 @@
-import { writeFileSync, mkdirSync } from "fs";
+import { writeFileSync, mkdirSync, readFileSync, existsSync } from "fs";
+import { join, dirname } from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT = join(__dirname, "..");
+
+// Load SERPAPI_KEY from .env.local
+function loadEnv() {
+  const envPath = join(ROOT, ".env.local");
+  if (!existsSync(envPath)) return {};
+  return Object.fromEntries(
+    readFileSync(envPath, "utf-8").split("\n")
+      .filter(l => l.includes("=") && !l.startsWith("#"))
+      .map(l => { const i = l.indexOf("="); return [l.slice(0, i).trim(), l.slice(i + 1).trim().replace(/^["']|["']$/g, "")]; })
+  );
+}
 
 const DATA_ID = "0x440d9c5cfaf7d2dd:0x2de08443031a2dbd";
-const API_KEY = "81054915d0108d7978f2e95639989d79829f1396780df05c11b87beac330780b";
+const API_KEY = loadEnv().SERPAPI_KEY || process.env.SERPAPI_KEY;
+
+if (!API_KEY) {
+  console.error("❌  Missing SERPAPI_KEY — add it to .env.local:\n   SERPAPI_KEY=your_key_here");
+  process.exit(1);
+}
 
 async function fetchAll() {
   const reviews = [];
