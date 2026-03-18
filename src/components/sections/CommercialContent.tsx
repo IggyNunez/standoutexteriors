@@ -16,7 +16,7 @@ const SERVICES = [
       </svg>
     ),
     title: "Soft Washing",
-    desc: "Gentle, effective cleaning for exterior building surfaces — safe for painted masonry, EIFS, and metal panels.",
+    desc: "Gentle, effective cleaning for exterior building surfaces. Safe for painted masonry, EIFS, and metal panels.",
   },
   {
     icon: (
@@ -46,7 +46,7 @@ const SERVICES = [
       </svg>
     ),
     title: "Dumpster Pad Cleaning",
-    desc: "Keep compactor and dumpster areas clean and sanitary — eliminating odors, grease, and bacterial buildup.",
+    desc: "Keep compactor and dumpster areas clean and sanitary. Eliminates odors, grease, and bacterial buildup.",
   },
   {
     icon: (
@@ -76,7 +76,7 @@ const SERVICES = [
       </svg>
     ),
     title: "Gutter Cleaning",
-    desc: "Ensure proper water drainage with thoroughly cleaned gutters and downspouts — protecting your building envelope.",
+    desc: "Ensure proper water drainage with thoroughly cleaned gutters and downspouts. Protects your building envelope.",
   },
   {
     icon: (
@@ -109,7 +109,7 @@ const WHY_US = [
   },
   {
     title: "Transparent Pricing",
-    desc: "Free estimates with no hidden fees. You know exactly what to expect before we start — no surprises.",
+    desc: "Free estimates with no hidden fees. You know exactly what to expect before we start. No surprises.",
     color: "#00A651",
   },
 ];
@@ -200,7 +200,7 @@ export default function CommercialContent() {
               transition={{ delay: 0.25, duration: 0.8 }}
               className="text-[0.95rem] leading-[1.8] text-white/65 mb-4 max-w-[560px]"
             >
-              {COMPANY_NAME} provides professional cleaning solutions for commercial property owners across the Lake Norman area. Fully insured and offering workman&apos;s comp — Certificates of Insurance (COIs) available upon request.
+              {COMPANY_NAME} provides professional cleaning solutions for commercial property owners across the Lake Norman area. Fully insured and offering workman&apos;s comp. Certificates of Insurance (COIs) available upon request.
             </motion.p>
 
             {/* Trust pill */}

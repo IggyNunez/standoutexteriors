@@ -162,7 +162,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
     num: "02",
     icon: "clipboard",
     title: "Custom Plan",
-    desc: "We'll determine the best cleaning method for each surface — soft wash or pressure wash — and schedule your service.",
+    desc: "We'll determine the best cleaning method for each surface, soft wash or pressure wash, and schedule your service.",
   },
   {
     num: "03",
@@ -207,7 +207,7 @@ export const TESTIMONIALS: Testimonial[] = [
     rating: 5,
   },
   {
-    text: "We had our entire fence and patio cleaned and sealed. The pavers look incredible — like they were just installed. Ridge and his team are the real deal. Will be using them for everything.",
+    text: "We had our entire fence and patio cleaned and sealed. The pavers look incredible, like they were just installed. Ridge and his team are the real deal. Will be using them for everything.",
     name: "Jennifer L.",
     location: "Huntersville, NC",
     rating: 5,
@@ -224,7 +224,7 @@ export const TESTIMONIALS: Testimonial[] = [
 export const FAQS: FAQ[] = [
   {
     question: "What's the difference between soft washing and pressure washing?",
-    answer: "Pressure washing uses high water pressure to blast away dirt and grime — great for hard surfaces like concrete driveways and sidewalks. Soft washing uses lower pressure combined with eco-friendly cleaning solutions to safely clean delicate surfaces like roofs, siding, and painted wood without causing damage.",
+    answer: "Pressure washing uses high water pressure to blast away dirt and grime, great for hard surfaces like concrete driveways and sidewalks. Soft washing uses lower pressure combined with eco-friendly cleaning solutions to safely clean delicate surfaces like roofs, siding, and painted wood without causing damage.",
   },
   {
     question: "How often should I get my house washed?",

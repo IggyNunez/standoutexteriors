@@ -191,7 +191,7 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.9 }}
           >
             Professional pressure washing &amp; soft washing for homes and businesses
-            across the Lake Norman area. Free estimates — call today.
+            across the Lake Norman area. Free estimates. Call today.
           </motion.p>
 
           {/* CTA */}

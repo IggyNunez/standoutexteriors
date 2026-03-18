@@ -21,7 +21,7 @@ const VALUES = [
   },
   {
     title: "Right Technique",
-    desc: "Soft wash for roofs & siding, pressure wash for concrete & stone — we know the difference.",
+    desc: "Soft wash for roofs & siding, pressure wash for concrete & stone. We know the difference.",
   },
   {
     title: "Guaranteed Results",
@@ -111,7 +111,7 @@ export default function AboutContent() {
                 style={{ fontSize: "clamp(1.1rem, 2vw, 1.4rem)", maxWidth: 420 }}
               >
                 There&apos;s a difference between a job done and a job done right.
-                We built this company to be the latter — every single time.
+                We built this company to be the latter. Every single time.
               </p>
               <div className="mt-6">
                 <p className="italic text-[1.1rem] text-cyan-300 font-semibold">Ridge Curwood</p>
