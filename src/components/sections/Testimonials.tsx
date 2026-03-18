@@ -9,7 +9,7 @@ const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 function StarIcon() {
   return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="#FF6B35" className="shrink-0">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="#00A651" className="shrink-0">
       <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
     </svg>
   );
@@ -57,7 +57,7 @@ function ReviewCard({ t, index }: { t: (typeof TESTIMONIALS)[number]; index: num
           left: 0,
           right: 0,
           height: 2,
-          background: `linear-gradient(90deg, transparent, rgba(126,207,255,${0.4 + index * 0.1}), rgba(255,107,53,0.4), transparent)`,
+          background: `linear-gradient(90deg, transparent, rgba(126,207,255,${0.4 + index * 0.1}), rgba(0,166,81,0.4), transparent)`,
           borderRadius: "20px 20px 0 0",
         }}
       />
@@ -193,7 +193,7 @@ export default function Testimonials() {
 
           <motion.div
             className="w-16 h-[2px] mx-auto mb-5"
-            style={{ background: "linear-gradient(90deg, transparent, #FF6B35, transparent)" }}
+            style={{ background: "linear-gradient(90deg, transparent, #00A651, transparent)" }}
             initial={{ scaleX: 0 }}
             animate={isInView ? { scaleX: 1 } : {}}
             transition={{ delay: 0.2, duration: 0.6 }}
@@ -254,8 +254,9 @@ export default function Testimonials() {
                 key={i}
                 onClick={() => setCurrent(i)}
                 className={`h-1.5 rounded-full transition-all duration-300 ${
-                  i === current ? "w-6 bg-orange-500" : "w-2 bg-white/20 hover:bg-white/40"
+                  i === current ? "w-6" : "w-2 bg-white/20 hover:bg-white/40"
                 }`}
+                style={i === current ? { background: "#00A651" } : undefined}
                 aria-label={`Go to review ${i + 1}`}
               />
             ))}
@@ -295,7 +296,7 @@ export default function Testimonials() {
                   fontFamily: "var(--font-display), sans-serif",
                   fontSize: "1.5rem",
                   fontWeight: 900,
-                  color: i % 2 === 0 ? "#FF6B35" : "#7ecfff",
+                  color: i % 2 === 0 ? "#00A651" : "#7ecfff",
                   lineHeight: 1,
                 }}
               >

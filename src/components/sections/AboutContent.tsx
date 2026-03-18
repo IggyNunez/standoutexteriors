@@ -151,7 +151,7 @@ export default function AboutContent() {
                       fontFamily: "var(--font-display), sans-serif",
                       fontSize: "clamp(1.6rem, 2.5vw, 2rem)",
                       fontWeight: 900,
-                      color: i % 2 === 0 ? "#FF6B35" : "#7ecfff",
+                      color: i % 2 === 0 ? "#00A651" : "#7ecfff",
                       lineHeight: 1,
                     }}
                   >
@@ -198,11 +198,12 @@ export default function AboutContent() {
             transition={{ delay: 0.5, duration: 0.8, ease: EASE }}
           >
             Quality You Can See,<br />
-            <span className="text-orange-500">Service You Can Trust.</span>
+            <span style={{ color: "#00A651" }}>Service You Can Trust.</span>
           </motion.h2>
 
           <motion.div
-            className="w-16 h-[2px] bg-orange-500 mb-8"
+            className="w-16 h-[2px] mb-8"
+            style={{ background: "#00A651" }}
             initial={{ scaleX: 0 }}
             animate={isInView ? { scaleX: 1 } : {}}
             transition={{ delay: 0.6, duration: 0.6 }}
@@ -357,7 +358,7 @@ export default function AboutContent() {
                     fontFamily: "var(--font-display), sans-serif",
                     fontSize: "1.2rem",
                     fontWeight: 900,
-                    color: i % 2 === 0 ? "#FF6B35" : "#7ecfff",
+                    color: i % 2 === 0 ? "#00A651" : "#7ecfff",
                     lineHeight: 1,
                   }}>
                     {s.val}
@@ -390,10 +391,10 @@ export default function AboutContent() {
             style={{ fontSize: "clamp(1.9rem, 8vw, 2.6rem)" }}
           >
             Quality You Can See,<br />
-            <span className="text-orange-500">Service You Can Trust.</span>
+            <span style={{ color: "#00A651" }}>Service You Can Trust.</span>
           </h2>
 
-          <div className="w-12 h-[2px] bg-orange-500 mb-5" />
+          <div className="w-12 h-[2px] mb-5" style={{ background: "#00A651" }} />
 
           <p className="text-[0.88rem] leading-[1.8] text-gray-500 mb-6">
             Founded by Ridge Curwood, {COMPANY_NAME} was built on a simple principle:

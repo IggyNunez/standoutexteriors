@@ -7,8 +7,8 @@ function ShieldIcon() {
     <svg width="28" height="28" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#FF8C57" />
-          <stop offset="100%" stopColor="#FF6B35" />
+          <stop offset="0%" stopColor="#2BBF6A" />
+          <stop offset="100%" stopColor="#00A651" />
         </linearGradient>
       </defs>
       <path d="M40 8 L64 20 V44 C64 60 40 72 40 72 C40 72 16 60 16 44 V20 Z" fill="url(#shieldGrad)" />
@@ -22,8 +22,8 @@ function SparkleIcon() {
     <svg width="28" height="28" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="sparkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#FF8C57" />
-          <stop offset="100%" stopColor="#FF6B35" />
+          <stop offset="0%" stopColor="#2BBF6A" />
+          <stop offset="100%" stopColor="#00A651" />
         </linearGradient>
       </defs>
       <path d="M40 8 L46 30 H68 L50 44 L56 66 L40 52 L24 66 L30 44 L12 30 H34 Z" fill="url(#sparkGrad)" />
@@ -37,8 +37,8 @@ function HomeIcon() {
     <svg width="28" height="28" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="homeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#FF8C57" />
-          <stop offset="100%" stopColor="#FF6B35" />
+          <stop offset="0%" stopColor="#2BBF6A" />
+          <stop offset="100%" stopColor="#00A651" />
         </linearGradient>
       </defs>
       <path d="M40 12 L68 36 V68 H50 V50 H30 V68 H12 V36 Z" fill="url(#homeGrad)" />

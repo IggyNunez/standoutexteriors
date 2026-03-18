@@ -79,7 +79,7 @@ function FeaturedCardDesktop({
         {/* Slide-up content */}
         <div className="max-h-0 group-hover:max-h-[400px] overflow-hidden transition-all duration-600 ease-[cubic-bezier(0.16,1,0.3,1)]">
           <div className="pt-2">
-            <div className="h-[2px] w-10 bg-orange-500 mb-4" />
+            <div className="h-[2px] w-10 mb-4" style={{ background: "#00A651" }} />
             <p className="text-[0.9rem] leading-relaxed text-white/80 mb-4">
               {service.description}
             </p>
@@ -87,7 +87,7 @@ function FeaturedCardDesktop({
               <ul className="space-y-2 mb-5">
                 {service.bullets.map((b: string) => (
                   <li key={b} className="flex items-center gap-2 text-[0.82rem] text-white/90">
-                    <span className="w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: "#00A651" }} />
                     {b}
                   </li>
                 ))}
@@ -95,7 +95,8 @@ function FeaturedCardDesktop({
             )}
             <Link
               href={`/services#${service.slug}`}
-              className="inline-flex items-center gap-2 text-[0.75rem] font-bold tracking-[0.1em] uppercase text-orange-400 hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 text-[0.75rem] font-bold tracking-[0.1em] uppercase hover:text-white transition-colors"
+              style={{ color: "#00A651" }}
             >
               Learn More
               <Arrow />
@@ -182,13 +183,13 @@ function FeaturedCardMobile({
               background: "#0A2E5C",
             }}
           >
-            <span className="text-[0.6rem] font-bold tracking-[0.2em] uppercase text-orange-500 mb-2">
+            <span className="text-[0.6rem] font-bold tracking-[0.2em] uppercase mb-2" style={{ color: "#00A651" }}>
               {service.label}
             </span>
             <h3 className="font-[family-name:var(--font-display)] text-[1.5rem] uppercase text-white leading-tight mb-3">
               {service.title}
             </h3>
-            <div className="h-[2px] w-10 bg-orange-500 mb-4" />
+            <div className="h-[2px] w-10 mb-4" style={{ background: "#00A651" }} />
             <p className="text-[0.88rem] leading-relaxed text-white/80 mb-4">
               {service.description}
             </p>
@@ -196,7 +197,7 @@ function FeaturedCardMobile({
               <ul className="space-y-2 mb-5">
                 {service.bullets.map((b: string) => (
                   <li key={b} className="flex items-center gap-2 text-[0.8rem] text-white/90">
-                    <span className="w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: "#00A651" }} />
                     {b}
                   </li>
                 ))}
@@ -205,7 +206,8 @@ function FeaturedCardMobile({
             <Link
               href={`/services#${service.slug}`}
               onClick={(e) => e.stopPropagation()}
-              className="inline-flex items-center gap-2 text-[0.75rem] font-bold tracking-[0.1em] uppercase text-orange-400"
+              className="inline-flex items-center gap-2 text-[0.75rem] font-bold tracking-[0.1em] uppercase"
+              style={{ color: "#00A651" }}
             >
               Learn More <Arrow />
             </Link>
@@ -253,7 +255,7 @@ function SmallCardDesktop({
       />
 
       <div className="absolute inset-x-0 bottom-0 z-10 p-5">
-        <span className="text-[0.55rem] font-bold tracking-[0.2em] uppercase text-orange-500 block mb-1">
+        <span className="text-[0.55rem] font-bold tracking-[0.2em] uppercase block mb-1" style={{ color: "#00A651" }}>
           {service.label}
         </span>
         <h4 className="font-[family-name:var(--font-display)] text-[1.2rem] uppercase text-white leading-tight">
@@ -263,7 +265,8 @@ function SmallCardDesktop({
         <div className="max-h-0 group-hover:max-h-[60px] overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
           <Link
             href={`/services#${service.slug}`}
-            className="inline-flex items-center gap-2 text-[0.7rem] font-bold tracking-[0.1em] uppercase text-orange-400 hover:text-white transition-colors mt-3"
+            className="inline-flex items-center gap-2 text-[0.7rem] font-bold tracking-[0.1em] uppercase hover:text-white transition-colors mt-3"
+            style={{ color: "#00A651" }}
           >
             Learn More <Arrow />
           </Link>
@@ -324,7 +327,7 @@ function SmallCardMobile({
               }}
             />
             <div className="absolute bottom-4 left-4 right-4">
-              <span className="text-[0.55rem] font-bold tracking-[0.2em] uppercase text-orange-500 block mb-1">
+              <span className="text-[0.55rem] font-bold tracking-[0.2em] uppercase block mb-1" style={{ color: "#00A651" }}>
                 {service.label}
               </span>
               <h4 className="font-[family-name:var(--font-display)] text-[1.1rem] uppercase text-white leading-tight">
@@ -343,17 +346,18 @@ function SmallCardMobile({
               background: "#0A2E5C",
             }}
           >
-            <span className="text-[0.55rem] font-bold tracking-[0.2em] uppercase text-orange-500 mb-2">
+            <span className="text-[0.55rem] font-bold tracking-[0.2em] uppercase mb-2" style={{ color: "#00A651" }}>
               {service.label}
             </span>
             <h4 className="font-[family-name:var(--font-display)] text-[1.15rem] uppercase text-white leading-tight mb-3">
               {service.title}
             </h4>
-            <div className="h-[2px] w-8 bg-orange-500 mb-3" />
+            <div className="h-[2px] w-8 mb-3" style={{ background: "#00A651" }} />
             <Link
               href={`/services#${service.slug}`}
               onClick={(e) => e.stopPropagation()}
-              className="inline-flex items-center gap-2 text-[0.7rem] font-bold tracking-[0.1em] uppercase text-orange-400"
+              className="inline-flex items-center gap-2 text-[0.7rem] font-bold tracking-[0.1em] uppercase"
+              style={{ color: "#00A651" }}
             >
               Learn More <Arrow />
             </Link>
@@ -392,11 +396,11 @@ export default function Services() {
             Our Services
           </motion.h2>
           <motion.div
-            className="w-16 h-[2px] bg-orange-500 mx-auto mb-6"
+            className="w-16 h-[2px] mx-auto mb-6"
             initial={{ scaleX: 0 }}
             animate={isInView ? { scaleX: 1 } : {}}
             transition={{ delay: 0.2, duration: 0.6 }}
-            style={{ transformOrigin: "left" }}
+            style={{ transformOrigin: "left", background: "#00A651" }}
           />
           <motion.p
             className="text-[1rem] text-gray-500 max-w-[480px] mx-auto"

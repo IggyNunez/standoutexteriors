@@ -32,11 +32,11 @@ export default function Process() {
             Simple As It Should Be
           </motion.h2>
           <motion.div
-            className="w-16 h-[2px] bg-orange-500 mx-auto mb-6"
+            className="w-16 h-[2px] mx-auto mb-6"
             initial={{ scaleX: 0 }}
             animate={isInView ? { scaleX: 1 } : {}}
             transition={{ delay: 0.2, duration: 0.6 }}
-            style={{ transformOrigin: "left" }}
+            style={{ transformOrigin: "left", background: "#00A651" }}
           />
           <motion.p
             className="text-[1rem] text-gray-500 max-w-[560px] mx-auto"
@@ -51,7 +51,7 @@ export default function Process() {
         {/* Steps */}
         <div className="relative">
           {/* Connecting line — desktop only */}
-          <div className="hidden lg:block absolute top-[60px] left-[12%] right-[12%] h-[2px] bg-orange-500/30 z-0" />
+          <div className="hidden lg:block absolute top-[60px] left-[12%] right-[12%] h-[2px] z-0" style={{ background: "rgba(0,166,81,0.3)" }} />
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
             {PROCESS_STEPS.map((step, i) => (
@@ -73,7 +73,7 @@ export default function Process() {
                   {step.title}
                 </h4>
 
-                <div className="w-10 h-[2px] bg-orange-500 mx-auto mb-3" />
+                <div className="w-10 h-[2px] mx-auto mb-3" style={{ background: "#00A651" }} />
 
                 <p className="text-[0.85rem] leading-relaxed text-gray-500">
                   {step.desc}

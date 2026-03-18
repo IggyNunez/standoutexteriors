@@ -169,12 +169,13 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3, ease: EASE }}
           >
             Make Your Property<br />
-            <span className="text-orange-500 block text-[clamp(60px,16vw,222px)] md:text-[clamp(68px,20svh,222px)] leading-[0.9]">Stand Out.</span>
+            <span style={{ color: "#00A651" }} className="block text-[clamp(60px,16vw,222px)] md:text-[clamp(68px,20svh,222px)] leading-[0.9]">Stand Out.</span>
           </motion.h1>
 
           {/* Italic subline */}
           <motion.p
-            className="italic text-[clamp(1.3rem,3.5vw,2.6rem)] md:text-[clamp(1.3rem,3.5svh,2.6rem)] text-orange-400 mb-4 md:mb-[clamp(12px,2svh,32px)] drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]"
+            className="italic text-[clamp(1.3rem,3.5vw,2.6rem)] md:text-[clamp(1.3rem,3.5svh,2.6rem)] mb-4 md:mb-[clamp(12px,2svh,32px)] drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]"
+            style={{ color: "#00A651" }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6, ease: EASE }}

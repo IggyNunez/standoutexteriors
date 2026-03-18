@@ -13,7 +13,7 @@ const TIMELINE = [
     title: "The Spark",
     body: "Working at a marina and Harris Teeter, frustrated with low pay and rigid hourly schedules, Ridge decided to bet on himself. He bought his first pressure washer and took on his first jobs that summer. Slow and steady, but all his.",
     icon: "💡",
-    color: "#FF6B35",
+    color: "#00A651",
   },
   {
     year: "2021",
@@ -37,7 +37,7 @@ const TIMELINE = [
     title: "College & Company",
     body: "Ridge enrolled at Appalachian State University studying Business Administration, fully online, so he could keep building. Most college students are looking for a job. Ridge was running one.",
     icon: "🎓",
-    color: "#FF6B35",
+    color: "#00A651",
   },
   {
     year: "Today",
@@ -100,7 +100,7 @@ export default function FounderStory() {
             style={{ fontSize: "clamp(2rem, 4.5vw, 3.2rem)" }}
           >
             Founded in 2020.<br />
-            <span className="text-orange-500">Built to Last.</span>
+            <span style={{ color: "#00A651" }}>Built to Last.</span>
           </motion.h2>
 
           <motion.p
@@ -194,7 +194,7 @@ export default function FounderStory() {
             Thank you for supporting a locally owned and operated business.
             I look forward to serving you.
           </p>
-          <p className="text-[0.72rem] font-black tracking-[0.14em] uppercase text-orange-500">
+          <p className="text-[0.72rem] font-black tracking-[0.14em] uppercase" style={{ color: "#00A651" }}>
             Ridge Curwood, Founder &amp; Owner
           </p>
         </motion.div>

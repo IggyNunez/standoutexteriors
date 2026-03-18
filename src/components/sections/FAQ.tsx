@@ -30,11 +30,11 @@ export default function FAQ() {
             Questions We Actually Get
           </motion.h2>
           <motion.div
-            className="w-16 h-[2px] bg-orange-500 mx-auto mb-6"
+            className="w-16 h-[2px] mx-auto mb-6"
             initial={{ scaleX: 0 }}
             animate={isInView ? { scaleX: 1 } : {}}
             transition={{ delay: 0.2, duration: 0.6 }}
-            style={{ transformOrigin: "left" }}
+            style={{ transformOrigin: "left", background: "#00A651" }}
           />
         </div>
 
@@ -57,7 +57,8 @@ export default function FAQ() {
                     {faq.question}
                   </span>
                   <motion.span
-                    className="shrink-0 text-[1.2rem] font-light text-orange-500"
+                    className="shrink-0 text-[1.2rem] font-light"
+                  style={{ color: "#00A651" }}
                     animate={{ rotate: isOpen ? 45 : 0 }}
                     transition={{ duration: 0.2 }}
                   >

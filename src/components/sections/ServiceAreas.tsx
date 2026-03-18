@@ -14,7 +14,7 @@ export default function ServiceAreas() {
             <span className="font-[family-name:var(--font-display)] text-[clamp(24px,3vw,36px)] font-bold uppercase text-white tracking-[0.04em] px-6">
               {city}
             </span>
-            <span className="w-2 h-2 rounded-full bg-orange-500 shrink-0" />
+            <span className="w-2 h-2 rounded-full shrink-0" style={{ background: "#00A651" }} />
           </span>
         ))}
       </div>

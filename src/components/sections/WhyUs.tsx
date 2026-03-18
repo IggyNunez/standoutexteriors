@@ -106,8 +106,8 @@ export default function WhyUs() {
             initial={{ scaleX: 0 }}
             animate={isInView ? { scaleX: 1 } : {}}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="w-16 h-[2px] bg-orange-500 mx-auto mb-6"
-            style={{ transformOrigin: "left" }}
+            className="w-16 h-[2px] mx-auto mb-6"
+            style={{ background: "#00A651", transformOrigin: "left" }}
           />
 
           <motion.p
@@ -130,7 +130,7 @@ export default function WhyUs() {
               transition={{ delay: 0.2 + i * 0.08, duration: 0.6, ease: EASE }}
               className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:-translate-y-1 transition-all duration-400"
             >
-              <div className="text-orange-400 mb-4">{reason.icon}</div>
+              <div className="mb-4" style={{ color: "#00A651" }}>{reason.icon}</div>
               <h3 className="font-[family-name:var(--font-display)] text-[1.2rem] uppercase text-white mb-2">
                 {reason.title}
               </h3>

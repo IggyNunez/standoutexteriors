@@ -95,7 +95,7 @@ const WHY_US = [
   {
     title: "Thorough & Reliable",
     desc: "Professional pressure washing that effectively cleans and restores commercial properties. Every job is completed with attention to detail.",
-    color: "#FF6B35",
+    color: "#00A651",
   },
   {
     title: "Safe & Effective",
@@ -110,7 +110,7 @@ const WHY_US = [
   {
     title: "Transparent Pricing",
     desc: "Free estimates with no hidden fees. You know exactly what to expect before we start — no surprises.",
-    color: "#FF6B35",
+    color: "#00A651",
   },
 ];
 
@@ -190,7 +190,7 @@ export default function CommercialContent() {
               style={{ fontSize: "clamp(2.6rem, 6vw, 5rem)" }}
             >
               Keep Your Business<br />
-              <span className="text-orange-500">Looking Its Best.</span>
+              <span style={{ color: "#00A651" }}>Looking Its Best.</span>
             </motion.h1>
 
             {/* Body */}
@@ -291,7 +291,7 @@ export default function CommercialContent() {
               style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
             >
               Our Commercial<br />
-              <span className="text-orange-500">Services.</span>
+              <span style={{ color: "#00A651" }}>Services.</span>
             </motion.h2>
 
             <motion.p
@@ -367,14 +367,14 @@ export default function CommercialContent() {
               style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
             >
               Why Choose Stand Out<br />
-              <span className="text-orange-500">for Commercial Cleaning.</span>
+              <span style={{ color: "#00A651" }}>for Commercial Cleaning.</span>
             </motion.h2>
             <motion.div
               initial={{ scaleX: 0 }}
               animate={whyInView ? { scaleX: 1 } : {}}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="w-16 h-[2px] bg-orange-500 mx-auto"
-              style={{ transformOrigin: "left" }}
+              className="w-16 h-[2px] mx-auto"
+              style={{ background: "#00A651", transformOrigin: "left" }}
             />
           </div>
 
@@ -424,7 +424,7 @@ export default function CommercialContent() {
                 style={{ fontSize: "clamp(1.4rem, 3vw, 2rem)" }}
               >
                 Ready to make the right<br />
-                <span className="text-orange-500">first impression?</span>
+                <span style={{ color: "#00A651" }}>first impression?</span>
               </h3>
               <p className="text-[0.85rem] text-gray-500">
                 Contact us to schedule your commercial cleaning or request a free estimate.

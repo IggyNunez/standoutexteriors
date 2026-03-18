@@ -49,7 +49,7 @@ export default function Footer() {
       {/* Top orange divider */}
       <div
         className="absolute top-0 left-0 right-0 h-[2px] z-[1]"
-        style={{ background: "linear-gradient(90deg, transparent, #FF6B35, transparent)" }}
+        style={{ background: "linear-gradient(90deg, transparent, #00A651, transparent)" }}
       />
 
       <div className="relative z-10 max-w-[1920px] mx-auto px-[clamp(20px,4vw,80px)]">
@@ -87,14 +87,14 @@ export default function Footer() {
         {/* Orange divider */}
         <div
           className="h-px mb-12"
-          style={{ background: "linear-gradient(90deg, transparent, rgba(255,107,53,0.4), transparent)" }}
+          style={{ background: "linear-gradient(90deg, transparent, rgba(0,166,81,0.4), transparent)" }}
         />
 
         {/* Links grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-14">
           {/* Services */}
           <div>
-            <h4 className="font-[family-name:var(--font-display)] text-[0.8rem] font-bold uppercase tracking-[0.18em] mb-5 text-orange-400">
+            <h4 className="font-[family-name:var(--font-display)] text-[0.8rem] font-bold uppercase tracking-[0.18em] mb-5" style={{ color: "#00A651" }}>
               Services
             </h4>
             <ul className="space-y-3">
@@ -115,7 +115,7 @@ export default function Footer() {
 
           {/* Service Areas */}
           <div>
-            <h4 className="font-[family-name:var(--font-display)] text-[0.8rem] font-bold uppercase tracking-[0.18em] mb-5 text-orange-400">
+            <h4 className="font-[family-name:var(--font-display)] text-[0.8rem] font-bold uppercase tracking-[0.18em] mb-5" style={{ color: "#00A651" }}>
               Service Areas
             </h4>
             <ul className="space-y-3">
@@ -130,7 +130,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="font-[family-name:var(--font-display)] text-[0.8rem] font-bold uppercase tracking-[0.18em] mb-5 text-orange-400">
+            <h4 className="font-[family-name:var(--font-display)] text-[0.8rem] font-bold uppercase tracking-[0.18em] mb-5" style={{ color: "#00A651" }}>
               Company
             </h4>
             <ul className="space-y-3">
@@ -146,7 +146,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-[family-name:var(--font-display)] text-[0.8rem] font-bold uppercase tracking-[0.18em] mb-5 text-orange-400">
+            <h4 className="font-[family-name:var(--font-display)] text-[0.8rem] font-bold uppercase tracking-[0.18em] mb-5" style={{ color: "#00A651" }}>
               Get In Touch
             </h4>
             <div className="space-y-3">
