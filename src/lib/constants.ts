@@ -22,7 +22,7 @@ export const TAGLINE = "Denver's Trusted Pressure Washing Experts";
 // ── Social ──
 export const SOCIAL = {
   facebook: "https://www.facebook.com/standoutsolution/",
-  instagram: "#",
+  instagram: "https://www.instagram.com/standoutexterior/",
   nextdoor: "https://nextdoor.com/pages/ridge-curwood-pressure-washing-denver-nc/",
 };
 
