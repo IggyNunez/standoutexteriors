@@ -4,7 +4,14 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { NAV_LINKS, PHONE, PHONE_HREF, SOCIAL } from "@/lib/constants";
+
+/* ── Active link helper ── */
+function isActive(pathname: string, href: string) {
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(href + "/");
+}
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 const DURATION = 0.6;
@@ -24,6 +31,7 @@ function FacebookIcon({ className = "" }: { className?: string }) {
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
 
   const closeMobile = useCallback(() => setMobileOpen(false), []);
 
@@ -155,15 +163,42 @@ export default function Nav() {
                 />
               </motion.a>
 
-              {NAV_LINKS.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-[0.7rem] font-bold tracking-[0.06em] uppercase text-blue-900 hover:text-blue-600 px-4 py-2 transition-colors duration-200 whitespace-nowrap"
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {NAV_LINKS.map((link) => {
+                const active = isActive(pathname, link.href);
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="relative px-4 py-2 whitespace-nowrap group"
+                    style={{ textDecoration: "none" }}
+                  >
+                    {/* Active/hover background pill */}
+                    {active && (
+                      <motion.span
+                        layoutId="desktopActiveNav"
+                        className="absolute inset-0 rounded-full"
+                        style={{ background: "rgba(0,166,81,0.10)" }}
+                        transition={{ type: "spring", stiffness: 380, damping: 35 }}
+                      />
+                    )}
+                    <span
+                      className="relative z-10 text-[0.7rem] font-bold tracking-[0.06em] uppercase transition-colors duration-200"
+                      style={{ color: active ? "#00A651" : "#1e3a5f" }}
+                    >
+                      {link.label}
+                    </span>
+                    {/* Animated underline dot */}
+                    {active && (
+                      <motion.span
+                        layoutId="desktopActiveDot"
+                        className="absolute bottom-[4px] left-1/2 -translate-x-1/2 w-1 h-1 rounded-full"
+                        style={{ background: "#00A651" }}
+                        transition={{ type: "spring", stiffness: 380, damping: 35 }}
+                      />
+                    )}
+                  </Link>
+                );
+              })}
 
               {/* Social icon */}
               <a
@@ -365,26 +400,49 @@ export default function Nav() {
                 <div className="mx-5 h-px bg-blue-900/10" />
 
                 {/* Nav links */}
-                <div className="flex flex-col px-5 pt-2">
-                  {NAV_LINKS.map((link, i) => (
-                    <motion.div
-                      key={link.href}
-                      initial={{ opacity: 0, x: 16 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.25, delay: 0.08 + i * 0.04, ease: EASE }}
-                    >
-                      <Link
-                        href={link.href}
-                        onClick={closeMobile}
-                        className="text-[0.9rem] font-bold tracking-[0.05em] uppercase text-blue-900 hover:text-blue-600 py-[12px] transition-colors flex items-center justify-between"
+                <div className="flex flex-col pt-2">
+                  {NAV_LINKS.map((link, i) => {
+                    const active = isActive(pathname, link.href);
+                    return (
+                      <motion.div
+                        key={link.href}
+                        initial={{ opacity: 0, x: 16 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.25, delay: 0.08 + i * 0.04, ease: EASE }}
+                        className="relative"
                       >
-                        {link.label}
-                        <svg width="7" height="7" viewBox="0 0 8 8" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" className="opacity-30">
-                          <path d="M2 1l4 3-4 3" />
-                        </svg>
-                      </Link>
-                    </motion.div>
-                  ))}
+                        {/* Active left accent bar */}
+                        {active && (
+                          <motion.span
+                            layoutId="mobileActiveBar"
+                            className="absolute left-0 top-1/2 -translate-y-1/2 w-[3px] rounded-r-full"
+                            style={{ background: "#00A651", height: "60%" }}
+                            transition={{ type: "spring", stiffness: 400, damping: 35 }}
+                          />
+                        )}
+                        <Link
+                          href={link.href}
+                          onClick={closeMobile}
+                          className="flex items-center justify-between py-[12px] pl-5 pr-5 transition-all"
+                          style={{
+                            background: active ? "rgba(0,166,81,0.07)" : "transparent",
+                            color: active ? "#00A651" : "#1e3a5f",
+                          }}
+                        >
+                          <span className="text-[0.9rem] font-bold tracking-[0.05em] uppercase">
+                            {link.label}
+                          </span>
+                          <svg
+                            width="7" height="7" viewBox="0 0 8 8" fill="none"
+                            stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"
+                            style={{ opacity: active ? 0.8 : 0.3 }}
+                          >
+                            <path d="M2 1l4 3-4 3" />
+                          </svg>
+                        </Link>
+                      </motion.div>
+                    );
+                  })}
                 </div>
 
                 {/* Bottom section */}
