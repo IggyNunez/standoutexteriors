@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import AboutContent from "@/components/sections/AboutContent";
 import FounderStory from "@/components/sections/FounderStory";
+import InActionGallery from "@/components/sections/InActionGallery";
 import WhyUs from "@/components/sections/WhyUs";
 import CTAContact from "@/components/sections/CTAContact";
 
@@ -15,6 +16,7 @@ export default function AboutPage() {
     <main className="w-full min-w-full">
       <AboutContent />
       <FounderStory />
+      <InActionGallery />
       <WhyUs />
       <CTAContact />
     </main>

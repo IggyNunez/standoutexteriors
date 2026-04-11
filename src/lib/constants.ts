@@ -5,9 +5,8 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Services", href: "/services" },
   { label: "Commercial", href: "/commercial" },
   { label: "About", href: "/about" },
-  { label: "Process", href: "/#process" },
+  { label: "Before & After", href: "/before-after" },
   { label: "Reviews", href: "/reviews" },
-  { label: "FAQ", href: "/#faq" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -48,8 +47,8 @@ export const SERVICES: ServiceCard[] = [
     label: "Residential",
     title: "House Washing",
     description: "Restore your home's curb appeal with our professional soft washing service. We safely remove dirt, algae, mold, and mildew from all siding types including vinyl, brick, stucco, and wood.",
-    image: "/assets/house-washing.jpg",
-    imageAlt: "Professional house washing service in Denver NC",
+    image: "/assets/team/ridge-house-washing-brick-side.webp",
+    imageAlt: "Ridge Curwood soft washing a brick home in Denver NC",
     icon: "home",
     bullets: [
       "Safe for vinyl, brick, stucco & wood siding",
@@ -63,8 +62,8 @@ export const SERVICES: ServiceCard[] = [
     label: "Residential",
     title: "Driveway Cleaning",
     description: "Blast away oil stains, tire marks, mold, and years of built-up grime from your concrete and paver driveways. Our high-pressure cleaning delivers dramatic before-and-after results.",
-    image: "/assets/driveway-cleaning.jpg",
-    imageAlt: "Driveway pressure washing in Denver NC",
+    image: "/assets/team/ridge-driveway-surface-cleaner-flex.webp",
+    imageAlt: "Ridge Curwood surface cleaning a concrete driveway in Lake Norman NC",
     icon: "road",
     bullets: [
       "Removes oil stains, tire marks & grime",
@@ -93,8 +92,8 @@ export const SERVICES: ServiceCard[] = [
     label: "Residential",
     title: "Gutter Cleaning & Brightening",
     description: "Keep your gutters flowing freely and looking brand new. We remove debris, flush downspouts, and brighten oxidized gutter faces to restore their original shine.",
-    image: "/assets/gutter-cleaning.jpg",
-    imageAlt: "Gutter cleaning and brightening service in Denver NC",
+    image: "/assets/team/ridge-gutter-cleaning-bucket.webp",
+    imageAlt: "Ridge Curwood cleaning gutters by hand in Denver NC",
     icon: "gutter",
     bullets: [
       "Complete debris removal & downspout flush",
