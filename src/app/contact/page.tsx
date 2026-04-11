@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/sections/ContactForm";
+import MapSection from "@/components/sections/MapSection";
 
 export const metadata: Metadata = {
   title: "Contact Us — Free Estimate",
@@ -11,6 +12,7 @@ export default function ContactPage() {
   return (
     <main className="w-full min-w-full">
       <ContactForm />
+      <MapSection />
     </main>
   );
 }
