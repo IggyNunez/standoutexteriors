@@ -167,8 +167,8 @@ export const SERVICES: ServiceCard[] = [
     label: "Residential",
     title: "Brick Cleaning",
     description: "Remove mold, mildew, and efflorescence from brick surfaces — and get mortar-splatter cleaned off new construction before it sets. We know the right chemistry for every job.",
-    image: "/assets/team/ridge-house-washing-brick-side.webp",
-    imageAlt: "Soft washing a brick home exterior in Denver NC",
+    image: "/assets/team/ridge-brick-cleaning-wall.webp",
+    imageAlt: "Restored brick wall after mold removal and brick cleaning in Denver NC",
     icon: "brick",
     bullets: [
       "Kills mold spores — not just surface mold",

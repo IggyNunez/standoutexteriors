@@ -58,6 +58,13 @@ const JOBS = [
     afterSide: "bottom",
     alt: "Clean U-Haul storefront after commercial pressure washing",
   },
+  {
+    file: "IMG_5558.JPG",
+    name: "ridge-brick-cleaning-wall",
+    orientation: "vertical",
+    afterSide: "bottom",
+    alt: "Restored brick wall after mold removal and brick cleaning",
+  },
 ];
 
 async function run() {
