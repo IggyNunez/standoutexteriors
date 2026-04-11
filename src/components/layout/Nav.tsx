@@ -241,7 +241,7 @@ export default function Nav() {
 
               <Link
                 href="/contact"
-                className="text-[0.68rem] font-extrabold tracking-[0.08em] uppercase text-white bg-orange-500 hover:bg-orange-600 px-5 py-2 rounded-full transition-colors duration-200 ml-1 whitespace-nowrap"
+                className="text-[0.68rem] font-extrabold tracking-[0.08em] uppercase text-white bg-orange-500 hover:bg-orange-700 px-5 py-2 rounded-full transition-colors duration-200 ml-1 whitespace-nowrap"
               >
                 Free Estimate
               </Link>
@@ -494,7 +494,7 @@ export default function Nav() {
                     <Link
                       href="/contact"
                       onClick={closeMobile}
-                      className="block w-full text-[0.7rem] font-extrabold tracking-[0.08em] uppercase text-white bg-orange-500 hover:bg-orange-600 py-2.5 rounded-full transition-colors text-center"
+                      className="block w-full text-[0.7rem] font-extrabold tracking-[0.08em] uppercase text-white bg-orange-500 hover:bg-orange-700 py-2.5 rounded-full transition-colors text-center"
                     >
                       Get A Free Estimate
                     </Link>

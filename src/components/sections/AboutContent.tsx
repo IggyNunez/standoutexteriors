@@ -42,7 +42,7 @@ export default function AboutContent() {
   const blobY  = useTransform(scrollYProgress, [0, 1], ["-5%", "5%"]);
 
   return (
-    <section ref={sectionRef} className="relative bg-white overflow-hidden">
+    <section ref={sectionRef} className="relative bg-white overflow-hidden pt-[120px] min-[1200px]:pt-[140px]">
 
       {/* ══════════════════════════════════════════
           DESKTOP — Split layout
@@ -283,7 +283,7 @@ export default function AboutContent() {
           >
             <Link
               href="/contact"
-              className="px-8 py-3.5 bg-orange-500 text-white text-[0.72rem] font-extrabold tracking-[0.08em] uppercase rounded-full hover:bg-orange-600 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(255,107,53,0.3)] transition-all duration-300"
+              className="px-8 py-3.5 bg-orange-500 text-white text-[0.72rem] font-extrabold tracking-[0.08em] uppercase rounded-full hover:bg-orange-700 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(255,107,53,0.3)] transition-all duration-300"
             >
               Get A Free Estimate
             </Link>
@@ -442,7 +442,7 @@ export default function AboutContent() {
           </div>
 
           <div className="flex flex-wrap gap-3">
-            <Link href="/contact" className="px-6 py-3 bg-orange-500 text-white text-[0.72rem] font-extrabold tracking-[0.08em] uppercase rounded-full hover:bg-orange-600 transition-all duration-300">
+            <Link href="/contact" className="px-6 py-3 bg-orange-500 text-white text-[0.72rem] font-extrabold tracking-[0.08em] uppercase rounded-full hover:bg-orange-700 transition-all duration-300">
               Get A Free Estimate
             </Link>
             <a href={PHONE_HREF} className="flex items-center gap-2 px-5 py-3 text-blue-900 text-[0.72rem] font-bold tracking-[0.06em] uppercase border-2 border-blue-900/20 rounded-full transition-all duration-300">

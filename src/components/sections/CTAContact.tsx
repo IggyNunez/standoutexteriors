@@ -47,7 +47,7 @@ export default function CTAContact() {
           <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
             <Link
               href="/contact"
-              className="px-10 py-4 bg-orange-500 text-white text-[0.75rem] font-extrabold tracking-[0.08em] uppercase rounded-full border-2 border-white/20 hover:bg-orange-600 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(255,107,53,0.4)] transition-all duration-300"
+              className="px-10 py-4 bg-orange-500 text-white text-[0.75rem] font-extrabold tracking-[0.08em] uppercase rounded-full border-2 border-white/20 hover:bg-orange-700 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(255,107,53,0.4)] transition-all duration-300"
             >
               Request Free Estimate
             </Link>

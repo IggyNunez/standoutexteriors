@@ -134,7 +134,7 @@ function Hero({ service, detail }: Props) {
           >
             <Link
               href="/contact"
-              className="px-8 py-3.5 bg-orange-500 text-white text-[0.72rem] font-extrabold tracking-[0.08em] uppercase rounded-full hover:bg-orange-600 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(255,107,53,0.3)] transition-all duration-300"
+              className="px-8 py-3.5 bg-orange-500 text-white text-[0.72rem] font-extrabold tracking-[0.08em] uppercase rounded-full hover:bg-orange-700 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(255,107,53,0.3)] transition-all duration-300"
             >
               Get a Free Estimate
             </Link>
@@ -535,6 +535,7 @@ function RelatedServices({ detail }: { detail: ServiceDetail }) {
             <Link
               key={s.slug}
               href={`/services/${s.slug}`}
+              aria-label={`Learn more about ${s.title}`}
               className="group relative rounded-2xl overflow-hidden cursor-pointer"
               style={{
                 aspectRatio: "5/4",
@@ -629,7 +630,7 @@ function FinalCTA({ service }: { service: ServiceCard }) {
         <div className="flex flex-wrap gap-3 justify-center">
           <Link
             href="/contact"
-            className="px-8 py-3.5 bg-orange-500 text-white text-[0.72rem] font-extrabold tracking-[0.08em] uppercase rounded-full hover:bg-orange-600 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(255,107,53,0.3)] transition-all duration-300"
+            className="px-8 py-3.5 bg-orange-500 text-white text-[0.72rem] font-extrabold tracking-[0.08em] uppercase rounded-full hover:bg-orange-700 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(255,107,53,0.3)] transition-all duration-300"
           >
             Request Free Estimate
           </Link>

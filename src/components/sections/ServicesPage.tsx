@@ -30,6 +30,7 @@ function ServiceDetail({ service, index, reverse }: { service: typeof SERVICES[n
             src={service.image}
             alt={service.imageAlt}
             fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent" />
@@ -66,7 +67,8 @@ function ServiceDetail({ service, index, reverse }: { service: typeof SERVICES[n
         <div className="flex flex-wrap gap-3">
           <Link
             href={`/services/${service.slug}`}
-            className="inline-block px-8 py-3.5 bg-orange-500 text-white text-[0.72rem] font-extrabold tracking-[0.08em] uppercase rounded-full hover:bg-orange-600 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(255,107,53,0.3)] transition-all duration-300"
+            aria-label={`Learn more about ${service.title}`}
+            className="inline-block px-8 py-3.5 bg-orange-500 text-white text-[0.72rem] font-extrabold tracking-[0.08em] uppercase rounded-full hover:bg-orange-700 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(255,107,53,0.3)] transition-all duration-300"
           >
             Learn More
           </Link>
@@ -162,7 +164,7 @@ export default function ServicesPage() {
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="px-8 py-3.5 bg-orange-500 text-white text-[0.72rem] font-extrabold tracking-[0.08em] uppercase rounded-full border-2 border-white/20 hover:bg-orange-600 hover:-translate-y-0.5 transition-all duration-300"
+              className="px-8 py-3.5 bg-orange-500 text-white text-[0.72rem] font-extrabold tracking-[0.08em] uppercase rounded-full border-2 border-white/20 hover:bg-orange-700 hover:-translate-y-0.5 transition-all duration-300"
             >
               Get A Free Estimate
             </Link>

@@ -22,10 +22,11 @@
   --color-green-400: #5DD990;
   --color-green-100: #E0F5EA;
 
-  /* Orange (CTA only) */
-  --color-orange-600: #E55A2B;
-  --color-orange-500: #FF6B35;
-  --color-orange-400: #FF8A5C;
+  /* Orange (CTA only) — WCAG AA compliant on white text (4.5:1+) */
+  --color-orange-700: #9A3412; /* 7.24:1 — hover state */
+  --color-orange-600: #C2410C; /* 5.06:1 — primary CTA */
+  --color-orange-500: #C2410C; /* 5.06:1 — alias for existing bg-orange-500 usages */
+  --color-orange-400: #FF8A5C; /* accents only, not for text backgrounds */
 
   /* Surfaces */
   --color-canvas: #F7FAFC;
@@ -168,6 +169,34 @@ body {
     #0A2E5C 360deg
   );
   animation: navPillSpin 3.5s linear infinite;
+}
+
+/* ── Timeline logo node — green/teal conic shimmer border ── */
+@property --angle-tl {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes timelineLogoSpin {
+  to { --angle-tl: 360deg; }
+}
+
+.timeline-logo-border {
+  background: conic-gradient(
+    from var(--angle-tl),
+    #00A651 0deg,
+    #2BBF6A 40deg,
+    #7ecfff 80deg,
+    #ffffff 110deg,
+    #7ecfff 140deg,
+    #00A651 175deg,
+    #0A2E5C 210deg,
+    #0A2E5C 290deg,
+    #00A651 330deg,
+    #00A651 360deg
+  );
+  animation: timelineLogoSpin 3s linear infinite;
 }
 
 /* Infinite marquee animation (service areas ticker) */

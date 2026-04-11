@@ -92,7 +92,7 @@ export default function Process() {
         >
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center text-[0.78rem] font-extrabold tracking-[0.08em] uppercase text-white bg-orange-500 hover:bg-orange-600 px-8 py-4 rounded-full transition-all duration-300 shadow-[0_8px_30px_rgba(255,107,53,0.3)] hover:-translate-y-0.5"
+            className="inline-flex items-center justify-center text-[0.78rem] font-extrabold tracking-[0.08em] uppercase text-white bg-orange-500 hover:bg-orange-700 px-8 py-4 rounded-full transition-all duration-300 shadow-[0_8px_30px_rgba(255,107,53,0.3)] hover:-translate-y-0.5"
           >
             Get A Free Estimate
           </Link>

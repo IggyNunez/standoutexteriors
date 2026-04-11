@@ -1,10 +1,31 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { PHONE, PHONE_HREF } from "@/lib/constants";
 import StatsBar from "@/components/sections/StatsBar";
+
+/**
+ * Only load and play the hero background video on desktop. On mobile the 3MB
+ * autoplay video is the single biggest LCP and bandwidth problem — we fall
+ * back to the static `/assets/hero-bg.jpg` poster image (16 KB) instead.
+ *
+ * We use a media query hook with SSR-safe initial state of `false` so mobile
+ * devices NEVER download the video (not even with `preload="none"`), while
+ * desktop users progressively get the video after hydration.
+ */
+function useIsDesktop(): boolean {
+  const [isDesktop, setIsDesktop] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 768px)");
+    const update = () => setIsDesktop(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+  return isDesktop;
+}
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
@@ -50,6 +71,7 @@ const PARTICLES = [
 export default function Hero() {
   const sectionRef = useRef(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const isDesktop = useIsDesktop();
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -68,7 +90,7 @@ export default function Hero() {
     };
     video.addEventListener("timeupdate", onTimeUpdate);
     return () => video.removeEventListener("timeupdate", onTimeUpdate);
-  }, []);
+  }, [isDesktop]);
 
   return (
     <section
@@ -79,18 +101,33 @@ export default function Hero() {
       <div className="absolute inset-0 z-0 overflow-hidden">
         <motion.div
           className="absolute inset-0 w-full h-[120%]"
-          style={{ y: videoY }}
+          style={{
+            y: videoY,
+            // Mobile fallback: static poster image. Same art as the video
+            // first frame, ~16 KB instead of 3 MB.
+            backgroundImage: isDesktop
+              ? undefined
+              : "url('/assets/hero-bg.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+          role="img"
+          aria-label="Stand Out Exterior Cleaning professionals pressure washing a home in Denver NC"
         >
-          <video
-            ref={videoRef}
-            autoPlay
-            muted
-            playsInline
-            className="w-full h-full object-cover"
-            aria-label="Stand Out Exterior Cleaning professionals pressure washing a home in Denver NC"
-          >
-            <source src="/assets/hero-video.mp4" type="video/mp4" />
-          </video>
+          {isDesktop && (
+            <video
+              ref={videoRef}
+              autoPlay
+              muted
+              playsInline
+              preload="auto"
+              poster="/assets/hero-bg.jpg"
+              className="w-full h-full object-cover"
+              aria-label="Stand Out Exterior Cleaning professionals pressure washing a home in Denver NC"
+            >
+              <source src="/assets/hero-video.mp4" type="video/mp4" />
+            </video>
+          )}
         </motion.div>
 
         {/* Base colour tint — cool aqua-blue for "water" feel */}
@@ -203,7 +240,7 @@ export default function Hero() {
           >
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center text-[0.78rem] font-extrabold tracking-[0.08em] uppercase text-white bg-orange-500 hover:bg-orange-600 px-8 py-4 rounded-full transition-all duration-300 shadow-[0_8px_30px_rgba(255,107,53,0.3)] hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center text-[0.78rem] font-extrabold tracking-[0.08em] uppercase text-white bg-orange-500 hover:bg-orange-700 px-8 py-4 rounded-full transition-all duration-300 shadow-[0_8px_30px_rgba(255,107,53,0.3)] hover:-translate-y-0.5"
             >
               Get A Free Estimate
             </Link>

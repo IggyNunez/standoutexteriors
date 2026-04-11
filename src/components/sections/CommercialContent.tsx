@@ -132,7 +132,7 @@ export default function CommercialContent() {
       ══════════════════════════════════════════ */}
       <section
         ref={heroRef}
-        className="relative overflow-hidden pt-[120px] pb-24 md:pt-[160px] md:pb-32"
+        className="relative overflow-hidden pt-[120px] pb-24 min-[1200px]:pt-[160px] min-[1200px]:pb-32"
         style={{ background: "linear-gradient(160deg, #061e38 0%, #0A2E5C 55%, #0d3870 100%)" }}
       >
         {/* Water shimmer blobs */}
@@ -234,7 +234,7 @@ export default function CommercialContent() {
             >
               <Link
                 href="/contact"
-                className="px-8 py-3.5 bg-orange-500 text-white text-[0.72rem] font-extrabold tracking-[0.08em] uppercase rounded-full hover:bg-orange-600 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(255,107,53,0.4)] transition-all duration-300"
+                className="px-8 py-3.5 bg-orange-500 text-white text-[0.72rem] font-extrabold tracking-[0.08em] uppercase rounded-full hover:bg-orange-700 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(255,107,53,0.4)] transition-all duration-300"
               >
                 Get A Free Estimate
               </Link>
@@ -433,7 +433,7 @@ export default function CommercialContent() {
             <div className="flex flex-wrap gap-4 shrink-0">
               <Link
                 href="/contact"
-                className="px-8 py-3.5 bg-orange-500 text-white text-[0.72rem] font-extrabold tracking-[0.08em] uppercase rounded-full hover:bg-orange-600 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(255,107,53,0.35)] transition-all duration-300"
+                className="px-8 py-3.5 bg-orange-500 text-white text-[0.72rem] font-extrabold tracking-[0.08em] uppercase rounded-full hover:bg-orange-700 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(255,107,53,0.35)] transition-all duration-300"
               >
                 Get A Free Estimate
               </Link>

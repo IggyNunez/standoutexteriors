@@ -49,6 +49,7 @@ function FeaturedCardDesktop({
         src={service.image}
         alt={service.imageAlt}
         fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1920px) 50vw, 960px"
         className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
       />
 
@@ -100,6 +101,7 @@ function FeaturedCardDesktop({
             )}
             <Link
               href={`/services/${service.slug}`}
+              aria-label={`Learn more about ${service.title}`}
               className="inline-flex items-center gap-2 text-[0.75rem] font-bold tracking-[0.1em] uppercase hover:text-white transition-colors"
               style={{ color: "#00A651" }}
             >
@@ -155,6 +157,7 @@ function FeaturedCardMobile({
               src={service.image}
               alt={service.imageAlt}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1920px) 50vw, 960px"
               className="object-cover"
             />
             <div
@@ -211,6 +214,7 @@ function FeaturedCardMobile({
             <Link
               href={`/services/${service.slug}`}
               onClick={(e) => e.stopPropagation()}
+              aria-label={`Learn more about ${service.title}`}
               className="inline-flex items-center gap-2 text-[0.75rem] font-bold tracking-[0.1em] uppercase"
               style={{ color: "#00A651" }}
             >
@@ -250,6 +254,7 @@ function SmallCardDesktop({
         src={service.image}
         alt={service.imageAlt}
         fill
+        sizes="(max-width: 768px) 50vw, (max-width: 1920px) 25vw, 480px"
         className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
       />
       <div
@@ -270,6 +275,7 @@ function SmallCardDesktop({
         <div className="max-h-0 group-hover:max-h-[60px] overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
           <Link
             href={`/services/${service.slug}`}
+            aria-label={`Learn more about ${service.title}`}
             className="inline-flex items-center gap-2 text-[0.7rem] font-bold tracking-[0.1em] uppercase hover:text-white transition-colors mt-3"
             style={{ color: "#00A651" }}
           >
@@ -323,6 +329,7 @@ function SmallCardMobile({
               src={service.image}
               alt={service.imageAlt}
               fill
+              sizes="(max-width: 768px) 50vw, (max-width: 1920px) 25vw, 480px"
               className="object-cover"
             />
             <div
@@ -361,6 +368,7 @@ function SmallCardMobile({
             <Link
               href={`/services/${service.slug}`}
               onClick={(e) => e.stopPropagation()}
+              aria-label={`Learn more about ${service.title}`}
               className="inline-flex items-center gap-2 text-[0.7rem] font-bold tracking-[0.1em] uppercase"
               style={{ color: "#00A651" }}
             >
