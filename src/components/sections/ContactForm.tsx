@@ -17,7 +17,9 @@ export default function ContactForm() {
     setStatus("sending");
 
     const form = e.currentTarget;
-    const data: LeadFormData = {
+    // Honeypot — humans won't see or fill this; bots usually will.
+    const company = (form.elements.namedItem("company") as HTMLInputElement | null)?.value ?? "";
+    const data: LeadFormData & { company?: string } = {
       firstName: (form.elements.namedItem("firstName") as HTMLInputElement).value,
       lastName: (form.elements.namedItem("lastName") as HTMLInputElement).value,
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
@@ -25,6 +27,7 @@ export default function ContactForm() {
       address: (form.elements.namedItem("address") as HTMLInputElement).value,
       service: (form.elements.namedItem("service") as HTMLSelectElement).value,
       message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+      company,
     };
 
     try {
@@ -47,7 +50,7 @@ export default function ContactForm() {
   return (
     <section ref={ref} className="relative overflow-hidden">
       {/* Hero banner */}
-      <div className="relative pt-[140px] md:pt-[160px] pb-20 bg-blue-900 text-white overflow-hidden">
+      <div className="relative pt-[120px] min-[1200px]:pt-[160px] pb-20 bg-blue-900 text-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900" />
         <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -168,6 +171,28 @@ export default function ContactForm() {
               transition={{ duration: 0.7, delay: 0.2 }}
             >
               <form onSubmit={handleSubmit} className="card-frost p-8 space-y-6">
+                {/* Honeypot — hidden from users, catches bots */}
+                <div
+                  aria-hidden="true"
+                  style={{
+                    position: "absolute",
+                    left: "-10000px",
+                    top: "auto",
+                    width: 1,
+                    height: 1,
+                    overflow: "hidden",
+                  }}
+                >
+                  <label htmlFor="company">Company (leave blank)</label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="firstName" className="block text-[0.72rem] font-semibold text-blue-900 uppercase tracking-wide mb-2">

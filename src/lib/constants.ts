@@ -147,6 +147,51 @@ export const SERVICES: ServiceCard[] = [
       "Flexible scheduling to minimize disruption",
     ],
   },
+  {
+    slug: "window-cleaning",
+    label: "Residential",
+    title: "Window Cleaning",
+    description: "Crystal-clear, streak-free windows inside and out. Our pure-water system leaves zero spots, zero residue — and restores the view you bought your home for.",
+    image: "/assets/team/ridge-window-cleaning-squeegee-inside.webp",
+    imageAlt: "Ridge Curwood cleaning a large window with a squeegee in Denver NC",
+    icon: "window",
+    bullets: [
+      "Pure-water system — zero streaks, zero residue",
+      "Interior and exterior cleaning available",
+      "Screens wiped and tracks cleaned",
+      "Safe soft-wash approach on delicate glass & frames",
+    ],
+  },
+  {
+    slug: "brick-cleaning",
+    label: "Residential",
+    title: "Brick Cleaning",
+    description: "Remove mold, mildew, and efflorescence from brick surfaces — and get mortar-splatter cleaned off new construction before it sets. We know the right chemistry for every job.",
+    image: "/assets/team/ridge-house-washing-brick-side.webp",
+    imageAlt: "Soft washing a brick home exterior in Denver NC",
+    icon: "brick",
+    bullets: [
+      "Kills mold spores — not just surface mold",
+      "New-construction mortar haze removal",
+      "NMD 80 detergent for mortar breakdown",
+      "Safe on aged brick and masonry joints",
+    ],
+  },
+  {
+    slug: "church-cleaning",
+    label: "Commercial",
+    title: "Church & Steeple Cleaning",
+    description: "Specialized exterior cleaning for churches — steeples, siding, walkways, and stairs. Soft-wash chemistry that kills mold at the root so your congregation stays safe and your building looks its best.",
+    image: "/assets/team/ridge-ladder-gutter-upward.webp",
+    imageAlt: "Exterior church cleaning in Denver NC",
+    icon: "building",
+    bullets: [
+      "Steeples, siding, and high-elevation cleaning",
+      "Soft-wash method prevents surface damage",
+      "Kills mold at the root — not just the surface",
+      "Reduces slip hazards on sidewalks & steps",
+    ],
+  },
 ];
 
 // ── Process Steps ──

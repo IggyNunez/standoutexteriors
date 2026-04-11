@@ -8,6 +8,11 @@ import { SERVICES } from "@/lib/constants";
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
+/**
+ * Homepage services grid — 2 featured cards + 8 small cards (10 total).
+ * Small grid is 4 columns × 2 rows on desktop so every service is still
+ * visible on the homepage without any card feeling like an afterthought.
+ */
 const FEATURED = SERVICES.slice(0, 2);
 const SMALL = SERVICES.slice(2);
 
@@ -94,7 +99,7 @@ function FeaturedCardDesktop({
               </ul>
             )}
             <Link
-              href={`/services#${service.slug}`}
+              href={`/services/${service.slug}`}
               className="inline-flex items-center gap-2 text-[0.75rem] font-bold tracking-[0.1em] uppercase hover:text-white transition-colors"
               style={{ color: "#00A651" }}
             >
@@ -204,7 +209,7 @@ function FeaturedCardMobile({
               </ul>
             )}
             <Link
-              href={`/services#${service.slug}`}
+              href={`/services/${service.slug}`}
               onClick={(e) => e.stopPropagation()}
               className="inline-flex items-center gap-2 text-[0.75rem] font-bold tracking-[0.1em] uppercase"
               style={{ color: "#00A651" }}
@@ -264,7 +269,7 @@ function SmallCardDesktop({
 
         <div className="max-h-0 group-hover:max-h-[60px] overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
           <Link
-            href={`/services#${service.slug}`}
+            href={`/services/${service.slug}`}
             className="inline-flex items-center gap-2 text-[0.7rem] font-bold tracking-[0.1em] uppercase hover:text-white transition-colors mt-3"
             style={{ color: "#00A651" }}
           >
@@ -354,7 +359,7 @@ function SmallCardMobile({
             </h4>
             <div className="h-[2px] w-8 mb-3" style={{ background: "#00A651" }} />
             <Link
-              href={`/services#${service.slug}`}
+              href={`/services/${service.slug}`}
               onClick={(e) => e.stopPropagation()}
               className="inline-flex items-center gap-2 text-[0.7rem] font-bold tracking-[0.1em] uppercase"
               style={{ color: "#00A651" }}
@@ -423,14 +428,25 @@ export default function Services() {
           ))}
         </div>
 
-        {/* Small Cards */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-5">
+        {/* Small Cards — 4 across on desktop, 2 across on mobile */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
           {SMALL.map((service, i) => (
             <div key={service.title}>
               <SmallCardDesktop service={service} delay={0.2 + i * 0.08} isInView={isInView} />
               <SmallCardMobile service={service} delay={0.2 + i * 0.08} isInView={isInView} />
             </div>
           ))}
+        </div>
+
+        {/* See-all link — routes to full services index including window, brick, commercial, churches */}
+        <div className="text-center mt-12">
+          <Link
+            href="/services"
+            className="inline-flex items-center gap-2 text-[0.72rem] font-bold tracking-[0.12em] uppercase text-blue-900 hover:text-green-600 transition-colors"
+          >
+            See All Services
+            <Arrow />
+          </Link>
         </div>
       </div>
     </section>

@@ -19,6 +19,35 @@ export interface ServiceCard {
   bullets: string[];
 }
 
+/**
+ * Deep content for an individual /services/[slug] page.
+ * Keyed by slug in src/lib/service-details.ts
+ */
+export interface ServiceDetail {
+  /** One-word marketing label that appears in the hero eyebrow (e.g. "Soft Washing") */
+  eyebrow: string;
+  /** Big display headline — can be multi-line via \n split handled in the component */
+  heroHeadline: string;
+  /** Optional hero sub-headline / tagline */
+  heroSubline: string;
+  /** Plain-english meta description (used for <meta name="description">) */
+  metaDescription: string;
+  /** SEO-friendly <title> override; if absent we fall back to title + location */
+  metaTitle?: string;
+  /** Ordered body paragraphs — pure prose, no HTML */
+  bodyParagraphs: string[];
+  /** 4–6 short benefits shown in a grid under the body */
+  benefits: { title: string; desc: string }[];
+  /** Ordered process steps — how we do this specific service */
+  process: { title: string; desc: string }[];
+  /** Page-specific FAQs — power FAQPage JSON-LD schema too */
+  faqs: { question: string; answer: string }[];
+  /** Related service slugs to cross-link at the bottom of the page */
+  related: string[];
+  /** Optional surfaces / materials we handle for this service */
+  surfaces?: string[];
+}
+
 export interface ProcessStep {
   num: string;
   icon: string;

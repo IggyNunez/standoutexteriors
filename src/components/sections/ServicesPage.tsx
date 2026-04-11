@@ -63,12 +63,20 @@ function ServiceDetail({ service, index, reverse }: { service: typeof SERVICES[n
             </li>
           ))}
         </ul>
-        <Link
-          href="/contact"
-          className="inline-block px-8 py-3.5 bg-orange-500 text-white text-[0.72rem] font-extrabold tracking-[0.08em] uppercase rounded-full hover:bg-orange-600 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(255,107,53,0.3)] transition-all duration-300"
-        >
-          Get A Free Estimate
-        </Link>
+        <div className="flex flex-wrap gap-3">
+          <Link
+            href={`/services/${service.slug}`}
+            className="inline-block px-8 py-3.5 bg-orange-500 text-white text-[0.72rem] font-extrabold tracking-[0.08em] uppercase rounded-full hover:bg-orange-600 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(255,107,53,0.3)] transition-all duration-300"
+          >
+            Learn More
+          </Link>
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 px-6 py-3.5 text-blue-900 text-[0.72rem] font-bold tracking-[0.06em] uppercase border-2 border-blue-900/20 rounded-full hover:border-blue-900/40 hover:-translate-y-0.5 transition-all duration-300"
+          >
+            Free Estimate
+          </Link>
+        </div>
       </motion.div>
     </div>
   );
@@ -78,7 +86,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative pt-[140px] md:pt-[160px] pb-20 bg-blue-900 text-white overflow-hidden">
+      <section className="relative pt-[120px] min-[1200px]:pt-[160px] pb-20 bg-blue-900 text-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900" />
         <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
 
