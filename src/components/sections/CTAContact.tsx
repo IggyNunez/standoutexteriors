@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
+import { m as motion, useInView } from 'framer-motion';
 import { PHONE, PHONE_HREF, CTA_STATS } from "@/lib/constants";
 
 export default function CTAContact() {
@@ -14,7 +14,7 @@ export default function CTAContact() {
       {/* Background photo */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/assets/hero-bg.jpg')" }}
+        style={{ backgroundImage: "url('/assets/hero-bg.webp')" }}
       />
       {/* Overlay */}
       <div

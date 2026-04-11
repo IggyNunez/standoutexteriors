@@ -3,6 +3,7 @@ import { Bebas_Neue, DM_Sans } from "next/font/google";
 import { LocalBusinessJsonLd } from "@/components/seo/JsonLd";
 import Nav from "@/components/layout/Nav";
 import Footer from "@/components/layout/Footer";
+import MotionProvider from "@/components/layout/MotionProvider";
 import "./globals.css";
 
 const bebasNeue = Bebas_Neue({
@@ -96,19 +97,34 @@ export default function RootLayout({
           name="google-site-verification"
           content="_8rZ_rADJuifVCxDdPlhDYaBL5b86xTmyaRu3p_Zv3I"
         />
-        {/* Preload LCP hero background image with high priority */}
+        {/* Preload LCP hero background image with high priority.
+            Mobile gets a 67 KB tightly-cropped WebP; desktop gets the
+            larger one. The <link> media= attribute lets the browser only
+            fetch the version it needs. */}
         <link
           rel="preload"
           as="image"
-          href="/assets/hero-bg.jpg"
+          href="/assets/hero-bg-mobile.webp"
+          type="image/webp"
+          media="(max-width: 767px)"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/assets/hero-bg.webp"
+          type="image/webp"
+          media="(min-width: 768px)"
           fetchPriority="high"
         />
       </head>
       <body className="antialiased">
         <LocalBusinessJsonLd />
-        <Nav />
-        {children}
-        <Footer />
+        <MotionProvider>
+          <Nav />
+          {children}
+          <Footer />
+        </MotionProvider>
       </body>
     </html>
   );

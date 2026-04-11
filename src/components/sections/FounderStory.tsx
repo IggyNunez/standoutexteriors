@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { m as motion, useInView } from 'framer-motion';
 import Image from "next/image";
 import { COMPANY_NAME } from "@/lib/constants";
 

@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
+import { m as motion, useInView } from 'framer-motion';
 import { PROCESS_STEPS } from "@/lib/constants";
 import { WaveTop, WaveBottom } from "@/components/ui/WaveDivider";
 

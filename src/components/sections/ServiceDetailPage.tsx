@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useInView, AnimatePresence } from "framer-motion";
+import { m as motion, useInView, AnimatePresence } from 'framer-motion';
 import type { ServiceCard, ServiceDetail } from "@/types";
 import { PHONE, PHONE_HREF, SERVICES } from "@/lib/constants";
 

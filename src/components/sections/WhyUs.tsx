@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { m as motion, useInView } from 'framer-motion';
 import { WaveTop, WaveBottom } from "@/components/ui/WaveDivider";
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];

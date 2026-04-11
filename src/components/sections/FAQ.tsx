@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { motion, useInView, AnimatePresence } from "framer-motion";
+import { m as motion, useInView, AnimatePresence } from 'framer-motion';
 import { FAQS, PHONE, PHONE_HREF } from "@/lib/constants";
 
 export default function FAQ() {

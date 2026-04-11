@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
+import { m as motion, useInView } from 'framer-motion';
 import Image from "next/image";
 import { SERVICES } from "@/lib/constants";
 

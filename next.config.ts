@@ -8,6 +8,19 @@ const nextConfig: NextConfig = {
         hostname: "**.googleusercontent.com",
       },
     ],
+    // Drop the upscaled 750/828/1080 widths from the responsive srcset.
+    // None of our above-the-fold images render wider than ~640 CSS px on
+    // mobile or ~960 CSS px on desktop, so the larger widths only waste
+    // bytes (Lighthouse flagged ~115 KB of oversized team photos).
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+  },
+
+  // Tree-shake framer-motion's heavy modular API. Without this, every
+  // `import { motion } from "framer-motion"` pulls in the entire ~70 KB
+  // gzipped runtime. With it, Next only ships the features we actually use.
+  experimental: {
+    optimizePackageImports: ["framer-motion"],
   },
 
   /**

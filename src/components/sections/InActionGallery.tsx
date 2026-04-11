@@ -2,7 +2,7 @@
 
 import { useRef, useState, useCallback, useEffect } from "react";
 import Image from "next/image";
-import { motion, useInView, AnimatePresence } from "framer-motion";
+import { m as motion, useInView, AnimatePresence } from 'framer-motion';
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 

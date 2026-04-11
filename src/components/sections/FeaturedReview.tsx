@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import { motion, useInView, AnimatePresence } from "framer-motion";
+import { m as motion, useInView, AnimatePresence } from 'framer-motion';
 import Image from "next/image";
 import Link from "next/link";
 import rawData from "@/data/google-reviews.json";

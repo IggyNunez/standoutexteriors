@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import { m as motion, useInView } from 'framer-motion';
 import { PHONE, PHONE_HREF, EMAIL, ADDRESS, SERVICES, CTA_STATS } from "@/lib/constants";
 import type { LeadFormData } from "@/types";
 

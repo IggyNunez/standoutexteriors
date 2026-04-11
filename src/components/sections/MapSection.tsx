@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { m as motion, useInView } from 'framer-motion';
 import { ADDRESS, PHONE, PHONE_HREF, COMPANY_NAME, SERVICE_AREAS } from "@/lib/constants";
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];

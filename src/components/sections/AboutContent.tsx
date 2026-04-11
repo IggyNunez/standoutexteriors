@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import Link from "next/link";
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { m as motion, useInView, useScroll, useTransform } from 'framer-motion';
 import { PHONE, PHONE_HREF, COMPANY_NAME } from "@/lib/constants";
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];

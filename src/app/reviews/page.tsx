@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { motion, useInView, AnimatePresence } from "framer-motion";
+import { m as motion, useInView, AnimatePresence } from 'framer-motion';
 import Link from "next/link";
 import Image from "next/image";
 import Nav from "@/components/layout/Nav";
@@ -277,7 +277,7 @@ export default function ReviewsPage() {
         {/* ── HERO ── */}
         <section
           ref={heroRef}
-          style={{ paddingTop: "clamp(100px,14vw,160px)", paddingBottom: "clamp(48px,6vw,80px)", position: "relative", overflow: "hidden" }}
+          style={{ paddingTop: "clamp(120px,14vw,160px)", paddingBottom: "clamp(48px,6vw,80px)", position: "relative", overflow: "hidden" }}
           className="px-[clamp(20px,4vw,80px)]"
         >
           {/* Decorative blobs */}
@@ -348,7 +348,7 @@ export default function ReviewsPage() {
         </section>
 
         {/* ── FILTER BAR ── */}
-        <div style={{ position: "sticky", top: 0, zIndex: 100, background: "rgba(6,30,56,0.95)", backdropFilter: "blur(16px)", WebkitBackdropFilter: "blur(16px)", borderBottom: "1px solid rgba(255,255,255,0.07)", padding: "12px clamp(20px,4vw,80px)" }}>
+        <div style={{ position: "sticky", top: 70, zIndex: 99, background: "rgba(6,30,56,0.95)", backdropFilter: "blur(16px)", WebkitBackdropFilter: "blur(16px)", borderBottom: "1px solid rgba(255,255,255,0.07)", padding: "12px clamp(20px,4vw,80px)" }}>
           <div className="max-w-[1920px] mx-auto flex items-center justify-between gap-4 flex-wrap">
             <div style={{ display: "flex", gap: 8 }}>
               {(["all", "photos"] as const).map(f => (
@@ -397,7 +397,7 @@ export default function ReviewsPage() {
           className="px-[clamp(20px,4vw,80px)] py-20 md:py-28"
         >
           {/* bg photo overlay */}
-          <div className="absolute inset-0 bg-cover bg-center opacity-[0.07]" style={{ backgroundImage: "url('/assets/hero-bg.jpg')" }} />
+          <div className="absolute inset-0 bg-cover bg-center opacity-[0.07]" style={{ backgroundImage: "url('/assets/hero-bg.webp')" }} />
           <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", width: 800, height: 500, borderRadius: "50%", background: "radial-gradient(ellipse,rgba(0,166,81,0.08) 0%,transparent 70%)", pointerEvents: "none" }} />
 
           <ConversionSection />

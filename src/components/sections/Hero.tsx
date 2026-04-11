@@ -2,7 +2,7 @@
 
 import { useRef, useEffect, useState } from "react";
 import Link from "next/link";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { m as motion, useScroll, useTransform } from 'framer-motion';
 import { PHONE, PHONE_HREF } from "@/lib/constants";
 import StatsBar from "@/components/sections/StatsBar";
 
@@ -123,13 +123,9 @@ export default function Hero() {
       {/* ── Video Background ── */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <motion.div
-          className="absolute inset-0 w-full h-[120%]"
+          className="hero-bg-image absolute inset-0 w-full h-[120%]"
           style={{
             y: videoY,
-            // Poster image (16 KB) is always shown — on mobile as the final
-            // background, on desktop as the placeholder until the 13 MB video
-            // finishes loading after the page is fully interactive.
-            backgroundImage: "url('/assets/hero-bg.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -143,7 +139,7 @@ export default function Hero() {
               muted
               playsInline
               preload="auto"
-              poster="/assets/hero-bg.jpg"
+              poster="/assets/hero-bg.webp"
               className="w-full h-full object-cover"
               aria-label="Stand Out Exterior Cleaning professionals pressure washing a home in Denver NC"
             >
@@ -328,6 +324,14 @@ export default function Hero() {
 
       {/* ── CSS keyframe definitions ── */}
       <style>{`
+        .hero-bg-image {
+          background-image: url('/assets/hero-bg-mobile.webp');
+        }
+        @media (min-width: 768px) {
+          .hero-bg-image {
+            background-image: url('/assets/hero-bg.webp');
+          }
+        }
         @keyframes waterShimmer {
           0%   { transform: translate(0px, 0px) scale(1); }
           33%  { transform: translate(30px, -15px) scale(1.1); }
