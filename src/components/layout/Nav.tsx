@@ -128,6 +128,7 @@ export default function Nav() {
                   alt="Stand Out Exterior Cleaning LLC — Pressure Washing in Denver, NC"
                   width={130}
                   height={63}
+                  sizes="130px"
                   priority
                 />
               </a>
@@ -176,6 +177,7 @@ export default function Nav() {
                   alt="Stand Out Exterior Cleaning LLC — Pressure Washing in Denver, NC"
                   width={72}
                   height={35}
+                  sizes="72px"
                   style={{ width: 72, height: "auto" }}
                 />
               </motion.a>
@@ -291,6 +293,7 @@ export default function Nav() {
                 alt="Stand Out Exterior Cleaning LLC — Pressure Washing in Denver, NC"
                 width={90}
                 height={43}
+                sizes="90px"
                 priority
               />
             </a>
@@ -335,6 +338,7 @@ export default function Nav() {
                 alt="Stand Out Exterior Cleaning LLC — Pressure Washing in Denver, NC"
                 width={64}
                 height={31}
+                sizes="64px"
                 style={{ width: 64, height: "auto" }}
               />
             </motion.a>
@@ -418,6 +422,7 @@ export default function Nav() {
                       alt="Stand Out Exterior Cleaning LLC — Pressure Washing in Denver, NC"
                       width={80}
                       height={39}
+                      sizes="80px"
                       className=""
                     />
                   </a>

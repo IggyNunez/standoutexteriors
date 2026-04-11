@@ -38,6 +38,7 @@ export default function Footer() {
             alt={`${COMPANY_NAME} — Pressure Washing in Denver, NC`}
             width={200}
             height={96}
+            sizes="200px"
             className="brightness-110 drop-shadow-lg h-auto w-auto mb-5"
           />
           <p className="text-[0.88rem] leading-relaxed text-white max-w-sm">

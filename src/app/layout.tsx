@@ -96,6 +96,13 @@ export default function RootLayout({
           name="google-site-verification"
           content="_8rZ_rADJuifVCxDdPlhDYaBL5b86xTmyaRu3p_Zv3I"
         />
+        {/* Preload LCP hero background image with high priority */}
+        <link
+          rel="preload"
+          as="image"
+          href="/assets/hero-bg.jpg"
+          fetchPriority="high"
+        />
       </head>
       <body className="antialiased">
         <LocalBusinessJsonLd />
