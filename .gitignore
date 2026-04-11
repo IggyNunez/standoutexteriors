@@ -32,6 +32,16 @@ yarn-error.log*
 .env
 .env*.local
 
+# Raw source imagery — we only commit the compressed WebP outputs in
+# public/assets/before-after/*.webp, not the multi-MB JPG originals.
+/Content/
+/public/assets/before-after/*.jpg
+/public/assets/before-after/*.jpeg
+/public/assets/before-after/*.JPG
+/public/assets/before-after/*.JPEG
+/public/assets/before-after/*.png
+/public/assets/before-after/*.PNG
+
 # vercel
 .vercel
 

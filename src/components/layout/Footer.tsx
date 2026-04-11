@@ -35,7 +35,7 @@ export default function Footer() {
         <div className="flex flex-col items-center text-center mb-14">
           <Image
             src="/assets/logo-transparent.png"
-            alt={COMPANY_NAME}
+            alt={`${COMPANY_NAME} — Pressure Washing in Denver, NC`}
             width={200}
             height={80}
             className="brightness-110 drop-shadow-lg h-auto w-auto mb-5"
