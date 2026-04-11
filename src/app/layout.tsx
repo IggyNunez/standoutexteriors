@@ -92,6 +92,10 @@ export default function RootLayout({
       <head>
         <meta name="geo.region" content="US-NC" />
         <meta name="geo.placename" content="Denver" />
+        <meta
+          name="google-site-verification"
+          content="_8rZ_rADJuifVCxDdPlhDYaBL5b86xTmyaRu3p_Zv3I"
+        />
       </head>
       <body className="antialiased">
         <LocalBusinessJsonLd />

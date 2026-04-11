@@ -28,6 +28,24 @@ function FacebookIcon({ className = "" }: { className?: string }) {
   );
 }
 
+function InstagramIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  );
+}
+
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -88,7 +106,7 @@ export default function Nav() {
               style={{
                 borderRadius: 9999,
                 padding: "4px",
-                boxShadow: "0 8px 36px rgba(0,0,0,0.4), 0 0 20px rgba(74,154,240,0.25)",
+                boxShadow: "0 4px 20px rgba(10,46,92,0.15)",
               }}
             >
               <a
@@ -158,7 +176,6 @@ export default function Nav() {
                   alt="Stand Out Exterior Cleaning"
                   width={72}
                   height={34}
-                  className="drop-shadow-[0_1px_4px_rgba(0,0,0,0.2)]"
                   style={{ width: 72, height: "auto" }}
                 />
               </motion.a>
@@ -200,16 +217,27 @@ export default function Nav() {
                 );
               })}
 
-              {/* Social icon */}
-              <a
-                href={SOCIAL.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                className="text-blue-900/50 hover:text-blue-900 transition-colors"
-              >
-                <FacebookIcon className="w-4 h-4" />
-              </a>
+              {/* Social icons */}
+              <div className="flex items-center gap-2 ml-1 mr-1">
+                <a
+                  href={SOCIAL.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="text-blue-900/50 hover:text-blue-900 transition-colors"
+                >
+                  <FacebookIcon className="w-4 h-4" />
+                </a>
+                <a
+                  href={SOCIAL.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="text-blue-900/50 hover:text-blue-900 transition-colors"
+                >
+                  <InstagramIcon className="w-[18px] h-[18px]" />
+                </a>
+              </div>
 
               <Link
                 href="/contact"
@@ -241,7 +269,7 @@ export default function Nav() {
             style={{
               borderRadius: 9999,
               padding: "4px",
-              boxShadow: "0 6px 28px rgba(0,0,0,0.4), 0 0 16px rgba(74,154,240,0.25)",
+              boxShadow: "0 4px 16px rgba(10,46,92,0.15)",
             }}
           >
             <a
@@ -307,13 +335,12 @@ export default function Nav() {
                 alt="Stand Out Exterior Cleaning"
                 width={64}
                 height={30}
-                className="drop-shadow-[0_1px_4px_rgba(0,0,0,0.2)]"
                 style={{ width: 64, height: "auto" }}
               />
             </motion.a>
 
             <div className="flex items-center gap-3">
-              {/* Social icon in mobile pill */}
+              {/* Social icons in mobile pill */}
               <a
                 href={SOCIAL.facebook}
                 target="_blank"
@@ -322,6 +349,15 @@ export default function Nav() {
                 className="text-blue-900/50 hover:text-blue-900 transition-colors"
               >
                 <FacebookIcon className="w-[18px] h-[18px]" />
+              </a>
+              <a
+                href={SOCIAL.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-blue-900/50 hover:text-blue-900 transition-colors"
+              >
+                <InstagramIcon className="w-[20px] h-[20px]" />
               </a>
 
               <button
@@ -382,7 +418,7 @@ export default function Nav() {
                       alt="Stand Out Exterior Cleaning"
                       width={80}
                       height={32}
-                      className="drop-shadow-sm"
+                      className=""
                     />
                   </a>
                   <button
