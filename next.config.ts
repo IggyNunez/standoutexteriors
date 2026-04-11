@@ -37,9 +37,11 @@ const nextConfig: NextConfig = {
       { source: "/brick-cleaning", destination: "/services/brick-cleaning", permanent: true },
       { source: "/brick-cleaning/", destination: "/services/brick-cleaning", permanent: true },
 
-      // Old /commercial → new /services/commercial-pressure-washing
-      { source: "/commercial", destination: "/services/commercial-pressure-washing", permanent: true },
-      { source: "/commercial/", destination: "/services/commercial-pressure-washing", permanent: true },
+      // NOTE: /commercial is NOT redirected — it's a real hub page on the
+      // new site (see src/app/commercial/page.tsx). Sending traffic to
+      // /services/commercial-pressure-washing would orphan the hub.
+      // Only redirect the trailing-slash variant if anyone lands there.
+      // (Next handles /commercial <-> /commercial/ automatically.)
 
       // Old /churches → new /services/church-cleaning
       { source: "/churches", destination: "/services/church-cleaning", permanent: true },
@@ -63,6 +65,10 @@ const nextConfig: NextConfig = {
 
       { source: "/privacy-policy", destination: "/privacy", permanent: true },
       { source: "/privacy-policy/", destination: "/privacy", permanent: true },
+
+      // Old WP thank-you page — redirect to contact so the backlink/juice is preserved
+      { source: "/thank-you", destination: "/contact", permanent: true },
+      { source: "/thank-you/", destination: "/contact", permanent: true },
     ];
   },
 };

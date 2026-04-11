@@ -86,13 +86,13 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-14">
           {/* Services */}
           <div>
-            <h4 className="font-[family-name:var(--font-display)] text-[0.8rem] font-bold uppercase tracking-[0.18em] mb-5" style={{ color: "#00A651" }}>
+            <h3 className="font-[family-name:var(--font-display)] text-[0.8rem] font-bold uppercase tracking-[0.18em] mb-5" style={{ color: "#00A651" }}>
               Services
-            </h4>
+            </h3>
             <ul className="space-y-3">
               {SERVICES.slice(0, 4).map((s) => (
                 <li key={s.slug}>
-                  <Link href={`/services#${s.slug}`} className="text-[0.85rem] text-white hover:text-white/80 transition-colors">
+                  <Link href={`/services/${s.slug}`} className="text-[0.85rem] text-white hover:text-white/80 transition-colors">
                     {s.title}
                   </Link>
                 </li>
@@ -107,9 +107,9 @@ export default function Footer() {
 
           {/* Service Areas */}
           <div>
-            <h4 className="font-[family-name:var(--font-display)] text-[0.8rem] font-bold uppercase tracking-[0.18em] mb-5" style={{ color: "#00A651" }}>
+            <h3 className="font-[family-name:var(--font-display)] text-[0.8rem] font-bold uppercase tracking-[0.18em] mb-5" style={{ color: "#00A651" }}>
               Service Areas
-            </h4>
+            </h3>
             <ul className="space-y-3">
               {SERVICE_AREAS.slice(0, 6).map((area) => (
                 <li key={area} className="text-[0.85rem] text-white">
@@ -122,9 +122,9 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="font-[family-name:var(--font-display)] text-[0.8rem] font-bold uppercase tracking-[0.18em] mb-5" style={{ color: "#00A651" }}>
+            <h3 className="font-[family-name:var(--font-display)] text-[0.8rem] font-bold uppercase tracking-[0.18em] mb-5" style={{ color: "#00A651" }}>
               Company
-            </h4>
+            </h3>
             <ul className="space-y-3">
               {NAV_LINKS.map((l) => (
                 <li key={l.href}>
@@ -138,9 +138,9 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-[family-name:var(--font-display)] text-[0.8rem] font-bold uppercase tracking-[0.18em] mb-5" style={{ color: "#00A651" }}>
+            <h3 className="font-[family-name:var(--font-display)] text-[0.8rem] font-bold uppercase tracking-[0.18em] mb-5" style={{ color: "#00A651" }}>
               Get In Touch
-            </h4>
+            </h3>
             <div className="space-y-3">
               <a href={PHONE_HREF} className="flex items-center gap-2 text-[0.85rem] text-white hover:text-white/80 transition-colors">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

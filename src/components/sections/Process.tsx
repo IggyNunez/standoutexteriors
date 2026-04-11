@@ -69,9 +69,9 @@ export default function Process() {
                   </span>
                 </div>
 
-                <h4 className="font-[family-name:var(--font-display)] text-[1.2rem] font-[900] uppercase text-blue-900 mb-3 tracking-wide">
+                <h3 className="font-[family-name:var(--font-display)] text-[1.2rem] font-[900] uppercase text-blue-900 mb-3 tracking-wide">
                   {step.title}
-                </h4>
+                </h3>
 
                 <div className="w-10 h-[2px] mx-auto mb-3" style={{ background: "#00A651" }} />
 

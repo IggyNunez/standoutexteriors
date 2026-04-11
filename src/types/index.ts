@@ -79,6 +79,8 @@ export interface LeadFormData {
   phone?: string;
   address?: string;
   service?: string;
+  /** "How did you find us?" attribution field for marketing analytics */
+  source?: string;
   message?: string;
 }
 

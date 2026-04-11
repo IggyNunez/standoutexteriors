@@ -9,7 +9,8 @@
     "lint": "eslint",
     "compress-images": "node scripts/compress-before-after.mjs",
     "compress-team": "node scripts/compress-team-photos.mjs",
-    "compress-service-ba": "node scripts/compress-service-ba.mjs"
+    "compress-service-ba": "node scripts/compress-service-ba.mjs",
+    "generate-favicon": "node scripts/generate-favicon.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.34.3",

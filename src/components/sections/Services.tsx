@@ -263,9 +263,9 @@ function SmallCardDesktop({
         <span className="text-[0.55rem] font-bold tracking-[0.2em] uppercase block mb-1" style={{ color: "#00A651" }}>
           {service.label}
         </span>
-        <h4 className="font-[family-name:var(--font-display)] text-[1.2rem] uppercase text-white leading-tight">
+        <h3 className="font-[family-name:var(--font-display)] text-[1.2rem] uppercase text-white leading-tight">
           {service.title}
-        </h4>
+        </h3>
 
         <div className="max-h-0 group-hover:max-h-[60px] overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
           <Link
@@ -335,9 +335,9 @@ function SmallCardMobile({
               <span className="text-[0.55rem] font-bold tracking-[0.2em] uppercase block mb-1" style={{ color: "#00A651" }}>
                 {service.label}
               </span>
-              <h4 className="font-[family-name:var(--font-display)] text-[1.1rem] uppercase text-white leading-tight">
+              <h3 className="font-[family-name:var(--font-display)] text-[1.1rem] uppercase text-white leading-tight">
                 {service.title}
-              </h4>
+              </h3>
             </div>
           </div>
 
@@ -354,9 +354,9 @@ function SmallCardMobile({
             <span className="text-[0.55rem] font-bold tracking-[0.2em] uppercase mb-2" style={{ color: "#00A651" }}>
               {service.label}
             </span>
-            <h4 className="font-[family-name:var(--font-display)] text-[1.15rem] uppercase text-white leading-tight mb-3">
+            <h3 className="font-[family-name:var(--font-display)] text-[1.15rem] uppercase text-white leading-tight mb-3">
               {service.title}
-            </h4>
+            </h3>
             <div className="h-[2px] w-8 mb-3" style={{ background: "#00A651" }} />
             <Link
               href={`/services/${service.slug}`}

@@ -11,6 +11,7 @@ export default function ContactForm() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "0px 0px -50px 0px" });
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [source, setSource] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -19,6 +20,14 @@ export default function ContactForm() {
     const form = e.currentTarget;
     // Honeypot — humans won't see or fill this; bots usually will.
     const company = (form.elements.namedItem("company") as HTMLInputElement | null)?.value ?? "";
+    const sourceValue = (form.elements.namedItem("source") as HTMLSelectElement).value;
+    const sourceOther = (form.elements.namedItem("sourceOther") as HTMLInputElement | null)?.value ?? "";
+    // If user picked "Other", combine the dropdown + free-text field for reporting
+    const combinedSource =
+      sourceValue === "Other" && sourceOther.trim()
+        ? `Other — ${sourceOther.trim()}`
+        : sourceValue;
+
     const data: LeadFormData & { company?: string } = {
       firstName: (form.elements.namedItem("firstName") as HTMLInputElement).value,
       lastName: (form.elements.namedItem("lastName") as HTMLInputElement).value,
@@ -26,6 +35,7 @@ export default function ContactForm() {
       phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
       address: (form.elements.namedItem("address") as HTMLInputElement).value,
       service: (form.elements.namedItem("service") as HTMLSelectElement).value,
+      source: combinedSource,
       message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
       company,
     };
@@ -250,21 +260,63 @@ export default function ContactForm() {
                   />
                 </div>
 
-                <div>
-                  <label htmlFor="service" className="block text-[0.72rem] font-semibold text-blue-900 uppercase tracking-wide mb-2">
-                    Service Interested In
-                  </label>
-                  <select
-                    id="service" name="service"
-                    className="w-full px-4 py-3 text-[0.85rem] border border-gray-200 rounded-xl bg-white/60 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all"
-                  >
-                    <option value="">Select a service...</option>
-                    {SERVICES.map((s) => (
-                      <option key={s.slug} value={s.title}>{s.title}</option>
-                    ))}
-                    <option value="Other">Other</option>
-                  </select>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="service" className="block text-[0.72rem] font-semibold text-blue-900 uppercase tracking-wide mb-2">
+                      Service Interested In
+                    </label>
+                    <select
+                      id="service" name="service"
+                      className="w-full px-4 py-3 text-[0.85rem] border border-gray-200 rounded-xl bg-white/60 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all"
+                    >
+                      <option value="">Select a service...</option>
+                      {SERVICES.map((s) => (
+                        <option key={s.slug} value={s.title}>{s.title}</option>
+                      ))}
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="source" className="block text-[0.72rem] font-semibold text-blue-900 uppercase tracking-wide mb-2">
+                      How Did You Find Us?
+                    </label>
+                    <select
+                      id="source"
+                      name="source"
+                      value={source}
+                      onChange={(e) => setSource(e.target.value)}
+                      className="w-full px-4 py-3 text-[0.85rem] border border-gray-200 rounded-xl bg-white/60 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all"
+                    >
+                      <option value="">Select an option...</option>
+                      <option value="Google Search">Google Search</option>
+                      <option value="Google Maps">Google Maps</option>
+                      <option value="Facebook">Facebook</option>
+                      <option value="Instagram">Instagram</option>
+                      <option value="Nextdoor">Nextdoor</option>
+                      <option value="Friend or Family Referral">Friend or Family Referral</option>
+                      <option value="Neighbor Referral">Neighbor Referral</option>
+                      <option value="Saw Our Truck / Yard Sign">Saw Our Truck / Yard Sign</option>
+                      <option value="Repeat Customer">Repeat Customer</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
                 </div>
+
+                {/* Conditional "Other" text field — only shows when the user picks Other */}
+                {source === "Other" && (
+                  <div>
+                    <label htmlFor="sourceOther" className="block text-[0.72rem] font-semibold text-blue-900 uppercase tracking-wide mb-2">
+                      Please specify where you found us
+                    </label>
+                    <input
+                      type="text"
+                      id="sourceOther"
+                      name="sourceOther"
+                      className="w-full px-4 py-3 text-[0.85rem] border border-gray-200 rounded-xl bg-white/60 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all"
+                      placeholder="e.g. Angi, Yelp, a local directory, etc."
+                    />
+                  </div>
+                )}
 
                 <div>
                   <label htmlFor="message" className="block text-[0.72rem] font-semibold text-blue-900 uppercase tracking-wide mb-2">

@@ -86,6 +86,10 @@ function buildHtml(lead: LeadFormData) {
               <td style="padding:6px 0;font-size:13px;color:#64748b;vertical-align:top;">Service</td>
               <td style="padding:6px 0;font-size:14px;color:#0A2E5C;font-weight:600;">${esc(lead.service)}</td>
             </tr>` : ""}
+            ${lead.source ? `<tr>
+              <td style="padding:6px 0;font-size:13px;color:#64748b;vertical-align:top;">Found Us Via</td>
+              <td style="padding:6px 0;font-size:14px;color:#00A651;font-weight:700;">${esc(lead.source)}</td>
+            </tr>` : ""}
           </table>
         </td></tr>
 
@@ -129,6 +133,7 @@ function buildText(lead: LeadFormData) {
   if (lead.phone) lines.push(`Phone:   ${lead.phone}`);
   if (lead.address) lines.push(`Address: ${lead.address}`);
   if (lead.service) lines.push(`Service: ${lead.service}`);
+  if (lead.source) lines.push(`Source:  ${lead.source}`);
   if (lead.message) {
     lines.push(``, `Message:`, lead.message);
   }
@@ -164,6 +169,7 @@ export async function POST(request: Request) {
       email: body.email,
       phone: body.phone,
       service: body.service,
+      source: body.source,
       timestamp: new Date().toISOString(),
     });
 
