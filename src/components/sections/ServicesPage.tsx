@@ -67,10 +67,9 @@ function ServiceDetail({ service, index, reverse }: { service: typeof SERVICES[n
         <div className="flex flex-wrap gap-3">
           <Link
             href={`/services/${service.slug}`}
-            aria-label={`Learn more about ${service.title}`}
             className="inline-block px-8 py-3.5 bg-orange-500 text-white text-[0.72rem] font-extrabold tracking-[0.08em] uppercase rounded-full hover:bg-orange-700 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(255,107,53,0.3)] transition-all duration-300"
           >
-            Learn More
+            Learn More<span className="sr-only"> about {service.title}</span>
           </Link>
           <Link
             href="/contact"

@@ -101,11 +101,10 @@ function FeaturedCardDesktop({
             )}
             <Link
               href={`/services/${service.slug}`}
-              aria-label={`Learn more about ${service.title}`}
               className="inline-flex items-center gap-2 text-[0.75rem] font-bold tracking-[0.1em] uppercase hover:text-white transition-colors"
               style={{ color: "#00A651" }}
             >
-              Learn More
+              Learn More<span className="sr-only"> about {service.title}</span>
               <Arrow />
             </Link>
           </div>
@@ -214,11 +213,10 @@ function FeaturedCardMobile({
             <Link
               href={`/services/${service.slug}`}
               onClick={(e) => e.stopPropagation()}
-              aria-label={`Learn more about ${service.title}`}
               className="inline-flex items-center gap-2 text-[0.75rem] font-bold tracking-[0.1em] uppercase"
               style={{ color: "#00A651" }}
             >
-              Learn More <Arrow />
+              Learn More<span className="sr-only"> about {service.title}</span> <Arrow />
             </Link>
             <p className="text-[0.6rem] tracking-[0.15em] uppercase text-white/30 mt-4">
               Tap to flip back
@@ -275,11 +273,10 @@ function SmallCardDesktop({
         <div className="max-h-0 group-hover:max-h-[60px] overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
           <Link
             href={`/services/${service.slug}`}
-            aria-label={`Learn more about ${service.title}`}
             className="inline-flex items-center gap-2 text-[0.7rem] font-bold tracking-[0.1em] uppercase hover:text-white transition-colors mt-3"
             style={{ color: "#00A651" }}
           >
-            Learn More <Arrow />
+            Learn More<span className="sr-only"> about {service.title}</span> <Arrow />
           </Link>
         </div>
       </div>
@@ -368,11 +365,10 @@ function SmallCardMobile({
             <Link
               href={`/services/${service.slug}`}
               onClick={(e) => e.stopPropagation()}
-              aria-label={`Learn more about ${service.title}`}
               className="inline-flex items-center gap-2 text-[0.7rem] font-bold tracking-[0.1em] uppercase"
               style={{ color: "#00A651" }}
             >
-              Learn More <Arrow />
+              Learn More<span className="sr-only"> about {service.title}</span> <Arrow />
             </Link>
           </div>
         </motion.div>

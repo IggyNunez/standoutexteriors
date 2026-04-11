@@ -37,7 +37,7 @@ export default function Footer() {
             src="/assets/logo-transparent.png"
             alt={`${COMPANY_NAME} — Pressure Washing in Denver, NC`}
             width={200}
-            height={80}
+            height={96}
             className="brightness-110 drop-shadow-lg h-auto w-auto mb-5"
           />
           <p className="text-[0.88rem] leading-relaxed text-white max-w-sm">

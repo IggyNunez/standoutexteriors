@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 import { COMPANY_NAME } from "@/lib/constants";
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
@@ -143,12 +144,39 @@ export default function FounderStory() {
 
                   {/* Center dot */}
                   <div className="absolute left-[28px] md:left-1/2 -translate-x-1/2 flex flex-col items-center" style={{ top: 4 }}>
-                    <div
-                      className="w-14 h-14 rounded-full flex items-center justify-center text-xl shadow-lg border-4 border-white"
-                      style={{ background: `linear-gradient(135deg, ${item.color}22, ${item.color}44)`, boxShadow: `0 0 0 4px white, 0 4px 16px ${item.color}33` }}
-                    >
-                      {item.icon}
-                    </div>
+                    {item.year === "Today" ? (
+                      /* Spinning conic-gradient shimmer border for the logo node */
+                      <div
+                        className="timeline-logo-border"
+                        style={{
+                          borderRadius: "9999px",
+                          padding: "3px",
+                          boxShadow: "0 4px 20px rgba(0,166,81,0.35)",
+                        }}
+                      >
+                        <div
+                          className="w-14 h-14 rounded-full flex items-center justify-center bg-white overflow-hidden"
+                        >
+                          <Image
+                            src="/assets/logo-transparent.png"
+                            alt="Stand Out Exterior Cleaning"
+                            width={48}
+                            height={23}
+                            className="w-[42px] h-auto object-contain"
+                          />
+                        </div>
+                      </div>
+                    ) : (
+                      <div
+                        className="w-14 h-14 rounded-full flex items-center justify-center shadow-lg border-4 border-white overflow-hidden"
+                        style={{
+                          background: `linear-gradient(135deg, ${item.color}22, ${item.color}44)`,
+                          boxShadow: `0 0 0 4px white, 0 4px 16px ${item.color}33`,
+                        }}
+                      >
+                        <span className="text-xl">{item.icon}</span>
+                      </div>
+                    )}
                     <div
                       className="mt-2 text-[0.6rem] font-black tracking-[0.1em] uppercase px-2 py-0.5 rounded-full"
                       style={{ background: item.color, color: "white" }}
