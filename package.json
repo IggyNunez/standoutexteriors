@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "compress-images": "node scripts/compress-before-after.mjs",
-    "compress-team": "node scripts/compress-team-photos.mjs"
+    "compress-team": "node scripts/compress-team-photos.mjs",
+    "compress-service-ba": "node scripts/compress-service-ba.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.34.3",

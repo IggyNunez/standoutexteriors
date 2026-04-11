@@ -77,8 +77,8 @@ export const SERVICES: ServiceCard[] = [
     label: "Residential",
     title: "Roof Cleaning",
     description: "Remove unsightly black streaks, algae, and moss from your roof with our low-pressure cleaning method. We extend the life of your shingles without causing any damage.",
-    image: "/assets/roof-cleaning.jpg",
-    imageAlt: "Roof cleaning and moss removal in Denver NC",
+    image: "/assets/team/ridge-roof-cleaning-aerial.webp",
+    imageAlt: "Aerial view of a clean roof after Stand Out Exterior soft washing in Denver NC",
     icon: "roof",
     bullets: [
       "Removes black streaks, algae & moss",
@@ -107,8 +107,8 @@ export const SERVICES: ServiceCard[] = [
     label: "Residential",
     title: "Fence Washing",
     description: "Bring your fences back to life with our professional cleaning service. We handle wood, vinyl, aluminum, and chain-link fences, removing years of weather staining and green growth.",
-    image: "/assets/fence-washing.jpg",
-    imageAlt: "Fence washing and restoration in Denver NC",
+    image: "/assets/team/ridge-fence-washing-white.webp",
+    imageAlt: "Brightened white fence after Stand Out Exterior fence washing in Denver NC",
     icon: "fence",
     bullets: [
       "Wood, vinyl, aluminum & chain-link fences",
@@ -122,8 +122,8 @@ export const SERVICES: ServiceCard[] = [
     label: "Residential",
     title: "Paver Cleaning, Sealing & Sanding",
     description: "Complete paver restoration including deep cleaning, joint re-sanding, and professional sealing. Protect your pavers from moisture damage, weeds, and shifting.",
-    image: "/assets/paver-cleaning.jpg",
-    imageAlt: "Paver cleaning and sealing service in Denver NC",
+    image: "/assets/team/ridge-paver-cleaning-stone-walkway.webp",
+    imageAlt: "Restored stone paver walkway after deep cleaning and sealing in Lake Norman NC",
     icon: "paver",
     bullets: [
       "Deep cleaning removes embedded dirt & stains",
@@ -137,8 +137,8 @@ export const SERVICES: ServiceCard[] = [
     label: "Commercial",
     title: "Commercial Pressure Washing",
     description: "Keep your business looking professional with our commercial pressure washing services. We clean storefronts, sidewalks, parking lots, dumpster pads, and more.",
-    image: "/assets/commercial-washing.jpg",
-    imageAlt: "Commercial pressure washing in Denver NC",
+    image: "/assets/team/ridge-commercial-uhaul-storefront.webp",
+    imageAlt: "Clean commercial storefront after Stand Out Exterior commercial pressure washing in Denver NC",
     icon: "building",
     bullets: [
       "Storefronts, sidewalks & parking lots",
