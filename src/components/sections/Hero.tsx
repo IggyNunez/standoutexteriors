@@ -72,6 +72,10 @@ export default function Hero() {
   const sectionRef = useRef(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const isDesktop = useIsDesktop();
+  // Only fetch the 13 MB hero video AFTER the page finishes initial load +
+  // the browser is idle. This removes the video from the critical request
+  // chain so LCP, FCP, and total payload are unaffected.
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -82,6 +86,25 @@ export default function Hero() {
   const videoY = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
   const waveY = useTransform(scrollYProgress, [0, 1], ["0%", "8%"]);
 
+  // Kick off video download only after page load + idle callback
+  useEffect(() => {
+    if (!isDesktop) return;
+    const start = () => {
+      const ric = (window as Window & { requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number }).requestIdleCallback;
+      if (ric) {
+        ric(() => setShouldLoadVideo(true), { timeout: 2000 });
+      } else {
+        setTimeout(() => setShouldLoadVideo(true), 1200);
+      }
+    };
+    if (document.readyState === "complete") {
+      start();
+    } else {
+      window.addEventListener("load", start, { once: true });
+      return () => window.removeEventListener("load", start);
+    }
+  }, [isDesktop]);
+
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
@@ -90,7 +113,7 @@ export default function Hero() {
     };
     video.addEventListener("timeupdate", onTimeUpdate);
     return () => video.removeEventListener("timeupdate", onTimeUpdate);
-  }, [isDesktop]);
+  }, [shouldLoadVideo]);
 
   return (
     <section
@@ -103,18 +126,17 @@ export default function Hero() {
           className="absolute inset-0 w-full h-[120%]"
           style={{
             y: videoY,
-            // Mobile fallback: static poster image. Same art as the video
-            // first frame, ~16 KB instead of 3 MB.
-            backgroundImage: isDesktop
-              ? undefined
-              : "url('/assets/hero-bg.jpg')",
+            // Poster image (16 KB) is always shown — on mobile as the final
+            // background, on desktop as the placeholder until the 13 MB video
+            // finishes loading after the page is fully interactive.
+            backgroundImage: "url('/assets/hero-bg.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
           role="img"
           aria-label="Stand Out Exterior Cleaning professionals pressure washing a home in Denver NC"
         >
-          {isDesktop && (
+          {isDesktop && shouldLoadVideo && (
             <video
               ref={videoRef}
               autoPlay
@@ -269,7 +291,7 @@ export default function Hero() {
           style={{ display: "block", marginBottom: "-1px" }}
         >
           <motion.path
-            d="M0,40 C240,70 480,10 720,40 C960,70 1200,10 1440,40 L1440,80 L0,80 Z"
+            initial={{ d: "M0,40 C240,70 480,10 720,40 C960,70 1200,10 1440,40 L1440,80 L0,80 Z" }}
             fill="rgba(255,255,255,0.07)"
             animate={{
               d: [
@@ -290,7 +312,7 @@ export default function Hero() {
           style={{ display: "block", marginBottom: "-1px" }}
         >
           <motion.path
-            d="M0,30 C360,55 720,5 1080,30 C1260,42 1380,15 1440,25 L1440,60 L0,60 Z"
+            initial={{ d: "M0,30 C360,55 720,5 1080,30 C1260,42 1380,15 1440,25 L1440,60 L0,60 Z" }}
             fill="white"
             animate={{
               d: [
