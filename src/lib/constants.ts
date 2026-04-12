@@ -13,6 +13,7 @@ export const NAV_LINKS: NavLink[] = [
 export const PHONE = "704-917-9649";
 export const PHONE_HREF = "tel:+17049179649";
 export const EMAIL = "info@standoutexterior.com";
+export const STREET_ADDRESS = "7238 Windy Pine Cir";
 export const ADDRESS = "Denver, NC 28037";
 export const SITE_URL = "https://www.standoutexterior.com";
 export const COMPANY_NAME = "Stand Out Exterior Cleaning LLC";

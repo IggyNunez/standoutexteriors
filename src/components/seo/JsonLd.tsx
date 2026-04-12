@@ -3,6 +3,7 @@ import {
   PHONE,
   EMAIL,
   SITE_URL,
+  STREET_ADDRESS,
   SOCIAL,
   SERVICE_AREAS,
 } from "@/lib/constants";
@@ -18,13 +19,33 @@ export function LocalBusinessJsonLd() {
     url: SITE_URL,
     telephone: PHONE,
     email: EMAIL,
+    description:
+      "Professional pressure washing & soft washing in Denver, NC & the Lake Norman area. House washing, roof cleaning, driveway cleaning, gutter brightening & more.",
+    logo: `${SITE_URL}/assets/logo-transparent.png`,
+    image: `${SITE_URL}/assets/og-home.jpg`,
+    foundingDate: "2023",
     address: {
       "@type": "PostalAddress",
+      streetAddress: STREET_ADDRESS,
       addressLocality: "Denver",
       addressRegion: "NC",
       postalCode: "28037",
       addressCountry: "US",
     },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "08:30",
+        closes: "19:30",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Saturday", "Sunday"],
+        opens: "09:00",
+        closes: "15:00",
+      },
+    ],
     geo: {
       "@type": "GeoCoordinates",
       latitude: 35.531,
@@ -149,6 +170,23 @@ export function BreadcrumbJsonLd({
       name: item.name,
       item: item.url,
     })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+/* ─── WebSite schema (root layout — helps Google understand site name) ── */
+export function WebSiteJsonLd() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Stand Out Exterior Cleaning",
+    url: SITE_URL,
   };
 
   return (

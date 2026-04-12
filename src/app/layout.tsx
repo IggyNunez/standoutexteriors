@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, DM_Sans } from "next/font/google";
-import { LocalBusinessJsonLd } from "@/components/seo/JsonLd";
+import { LocalBusinessJsonLd, WebSiteJsonLd } from "@/components/seo/JsonLd";
 import Nav from "@/components/layout/Nav";
 import Footer from "@/components/layout/Footer";
 import MotionProvider from "@/components/layout/MotionProvider";
@@ -120,6 +120,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <LocalBusinessJsonLd />
+        <WebSiteJsonLd />
         <MotionProvider>
           <Nav />
           {children}
