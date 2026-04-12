@@ -535,7 +535,6 @@ function RelatedServices({ detail }: { detail: ServiceDetail }) {
             <Link
               key={s.slug}
               href={`/services/${s.slug}`}
-              aria-label={`Learn more about ${s.title}`}
               className="group relative rounded-2xl overflow-hidden cursor-pointer"
               style={{
                 aspectRatio: "5/4",

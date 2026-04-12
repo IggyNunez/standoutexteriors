@@ -196,13 +196,13 @@ export default function Nav() {
                       <motion.span
                         layoutId="desktopActiveNav"
                         className="absolute inset-0 rounded-full"
-                        style={{ background: "rgba(0,166,81,0.10)" }}
+                        style={{ background: "rgba(0,109,58,0.12)" }}
                         transition={{ type: "spring", stiffness: 380, damping: 35 }}
                       />
                     )}
                     <span
                       className="relative z-10 text-[0.7rem] font-bold tracking-[0.06em] uppercase transition-colors duration-200"
-                      style={{ color: active ? "#00A651" : "#1e3a5f" }}
+                      style={{ color: active ? "#006D3A" : "#1e3a5f" }}
                     >
                       {link.label}
                     </span>
@@ -211,7 +211,7 @@ export default function Nav() {
                       <motion.span
                         layoutId="desktopActiveDot"
                         className="absolute bottom-[4px] left-1/2 -translate-x-1/2 w-1 h-1 rounded-full"
-                        style={{ background: "#00A651" }}
+                        style={{ background: "#006D3A" }}
                         transition={{ type: "spring", stiffness: 380, damping: 35 }}
                       />
                     )}
@@ -457,7 +457,7 @@ export default function Nav() {
                           <motion.span
                             layoutId="mobileActiveBar"
                             className="absolute left-0 top-1/2 -translate-y-1/2 w-[3px] rounded-r-full"
-                            style={{ background: "#00A651", height: "60%" }}
+                            style={{ background: "#006D3A", height: "60%" }}
                             transition={{ type: "spring", stiffness: 400, damping: 35 }}
                           />
                         )}
@@ -466,8 +466,8 @@ export default function Nav() {
                           onClick={closeMobile}
                           className="flex items-center justify-between py-[12px] pl-5 pr-5 transition-all"
                           style={{
-                            background: active ? "rgba(0,166,81,0.07)" : "transparent",
-                            color: active ? "#00A651" : "#1e3a5f",
+                            background: active ? "rgba(0,109,58,0.09)" : "transparent",
+                            color: active ? "#006D3A" : "#1e3a5f",
                           }}
                         >
                           <span className="text-[0.9rem] font-bold tracking-[0.05em] uppercase">

@@ -8,7 +8,7 @@
   --color-blue-800: #0D3A72;
   --color-blue-700: #0054A6;
   --color-blue-600: #1A6BC4;
-  --color-blue-500: #2B7DE9;
+  --color-blue-500: #1A6BC4; /* 5.27:1 on white — WCAG AA for small text */
   --color-blue-400: #4A9AF0;
   --color-blue-300: #5BC4F0;
   --color-blue-200: #A0DBFA;
@@ -159,7 +159,7 @@ body {
     from var(--angle),
     #0A2E5C 0deg,
     #0A2E5C 55deg,
-    #2B7DE9 80deg,
+    #1A6BC4 80deg,
     #7ecfff 105deg,
     #ffffff 120deg,
     #7ecfff 135deg,
