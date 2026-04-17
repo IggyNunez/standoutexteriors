@@ -60,7 +60,7 @@ export const metadata: Metadata = {
         url: "/assets/og-home.jpg",
         width: 1200,
         height: 630,
-        alt: "Stand Out Exterior Cleaning — professional pressure washing in Denver NC",
+        alt: "Stand Out Exterior Cleaning, professional pressure washing in Denver NC",
       },
     ],
   },
