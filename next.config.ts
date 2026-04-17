@@ -28,27 +28,32 @@ const nextConfig: NextConfig = {
    * /services/[slug] equivalents. These preserve SEO equity from the
    * pre-rebuild site and catch any old links still floating around
    * in directories, email footers, or existing backlinks.
+   *
+   * NOTE: We use `statusCode: 301` (not `permanent: true`) because
+   * `permanent: true` emits a 308. Google honors 308, but 301 is the
+   * canonical "moved permanently" signal for SEO tooling and avoids
+   * edge-cases where crawlers flag 308 chains as redirect errors.
    */
   async redirects() {
     return [
       // ── Old WP service pages → new /services/[slug] ─────────────
-      { source: "/house-washing", destination: "/services/house-washing", permanent: true },
-      { source: "/house-washing/", destination: "/services/house-washing", permanent: true },
+      { source: "/house-washing", destination: "/services/house-washing", statusCode: 301 },
+      { source: "/house-washing/", destination: "/services/house-washing", statusCode: 301 },
 
-      { source: "/roof-cleaning", destination: "/services/roof-cleaning", permanent: true },
-      { source: "/roof-cleaning/", destination: "/services/roof-cleaning", permanent: true },
+      { source: "/roof-cleaning", destination: "/services/roof-cleaning", statusCode: 301 },
+      { source: "/roof-cleaning/", destination: "/services/roof-cleaning", statusCode: 301 },
 
-      { source: "/gutter-cleaning", destination: "/services/gutter-cleaning", permanent: true },
-      { source: "/gutter-cleaning/", destination: "/services/gutter-cleaning", permanent: true },
+      { source: "/gutter-cleaning", destination: "/services/gutter-cleaning", statusCode: 301 },
+      { source: "/gutter-cleaning/", destination: "/services/gutter-cleaning", statusCode: 301 },
 
-      { source: "/window-cleaning", destination: "/services/window-cleaning", permanent: true },
-      { source: "/window-cleaning/", destination: "/services/window-cleaning", permanent: true },
+      { source: "/window-cleaning", destination: "/services/window-cleaning", statusCode: 301 },
+      { source: "/window-cleaning/", destination: "/services/window-cleaning", statusCode: 301 },
 
-      { source: "/driveway-cleaning", destination: "/services/driveway-cleaning", permanent: true },
-      { source: "/driveway-cleaning/", destination: "/services/driveway-cleaning", permanent: true },
+      { source: "/driveway-cleaning", destination: "/services/driveway-cleaning", statusCode: 301 },
+      { source: "/driveway-cleaning/", destination: "/services/driveway-cleaning", statusCode: 301 },
 
-      { source: "/brick-cleaning", destination: "/services/brick-cleaning", permanent: true },
-      { source: "/brick-cleaning/", destination: "/services/brick-cleaning", permanent: true },
+      { source: "/brick-cleaning", destination: "/services/brick-cleaning", statusCode: 301 },
+      { source: "/brick-cleaning/", destination: "/services/brick-cleaning", statusCode: 301 },
 
       // NOTE: /commercial is NOT redirected — it's a real hub page on the
       // new site (see src/app/commercial/page.tsx). Sending traffic to
@@ -57,31 +62,31 @@ const nextConfig: NextConfig = {
       // (Next handles /commercial <-> /commercial/ automatically.)
 
       // Old /churches → new /services/church-cleaning
-      { source: "/churches", destination: "/services/church-cleaning", permanent: true },
-      { source: "/churches/", destination: "/services/church-cleaning", permanent: true },
+      { source: "/churches", destination: "/services/church-cleaning", statusCode: 301 },
+      { source: "/churches/", destination: "/services/church-cleaning", statusCode: 301 },
 
       // ── Old WP non-service pages → new site equivalents ─────────
-      { source: "/our-team", destination: "/about", permanent: true },
-      { source: "/our-team/", destination: "/about", permanent: true },
+      { source: "/our-team", destination: "/about", statusCode: 301 },
+      { source: "/our-team/", destination: "/about", statusCode: 301 },
 
-      { source: "/our-work", destination: "/before-after", permanent: true },
-      { source: "/our-work/", destination: "/before-after", permanent: true },
+      { source: "/our-work", destination: "/before-after", statusCode: 301 },
+      { source: "/our-work/", destination: "/before-after", statusCode: 301 },
 
-      { source: "/contact-us", destination: "/contact", permanent: true },
-      { source: "/contact-us/", destination: "/contact", permanent: true },
+      { source: "/contact-us", destination: "/contact", statusCode: 301 },
+      { source: "/contact-us/", destination: "/contact", statusCode: 301 },
 
-      { source: "/free-quote", destination: "/contact", permanent: true },
-      { source: "/free-quote/", destination: "/contact", permanent: true },
+      { source: "/free-quote", destination: "/contact", statusCode: 301 },
+      { source: "/free-quote/", destination: "/contact", statusCode: 301 },
 
-      { source: "/special-offer", destination: "/contact", permanent: true },
-      { source: "/special-offer/", destination: "/contact", permanent: true },
+      { source: "/special-offer", destination: "/contact", statusCode: 301 },
+      { source: "/special-offer/", destination: "/contact", statusCode: 301 },
 
-      { source: "/privacy-policy", destination: "/privacy", permanent: true },
-      { source: "/privacy-policy/", destination: "/privacy", permanent: true },
+      { source: "/privacy-policy", destination: "/privacy", statusCode: 301 },
+      { source: "/privacy-policy/", destination: "/privacy", statusCode: 301 },
 
       // Old WP thank-you page — redirect to contact so the backlink/juice is preserved
-      { source: "/thank-you", destination: "/contact", permanent: true },
-      { source: "/thank-you/", destination: "/contact", permanent: true },
+      { source: "/thank-you", destination: "/contact", statusCode: 301 },
+      { source: "/thank-you/", destination: "/contact", statusCode: 301 },
     ];
   },
 };
