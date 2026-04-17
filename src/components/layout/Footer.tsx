@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import FooterWaveCanvas from "@/components/ui/FooterWaveCanvas";
 import { COMPANY_NAME, PHONE, PHONE_HREF, EMAIL, ADDRESS, NAV_LINKS, SERVICES, SERVICE_AREAS, SOCIAL } from "@/lib/constants";
+import { CITY_DETAILS } from "@/lib/city-details";
 
 export default function Footer() {
   return (
@@ -35,7 +36,7 @@ export default function Footer() {
         <div className="flex flex-col items-center text-center mb-14">
           <Image
             src="/assets/logo-transparent.png"
-            alt={`${COMPANY_NAME} — Pressure Washing in Denver, NC`}
+            alt={`${COMPANY_NAME}, Pressure Washing in Denver, NC`}
             width={200}
             height={96}
             sizes="200px"
@@ -112,12 +113,33 @@ export default function Footer() {
               Service Areas
             </h3>
             <ul className="space-y-3">
-              {SERVICE_AREAS.slice(0, 6).map((area) => (
-                <li key={area} className="text-[0.85rem] text-white">
-                  {area}, NC
-                </li>
-              ))}
-              <li className="text-white/40 text-[0.78rem] italic">&amp; surrounding areas</li>
+              {SERVICE_AREAS.slice(0, 6).map((area) => {
+                const cityEntry = Object.values(CITY_DETAILS).find(
+                  (c) => c.name === area
+                );
+                return (
+                  <li key={area} className="text-[0.85rem]">
+                    {cityEntry ? (
+                      <Link
+                        href={`/areas/${cityEntry.slug}`}
+                        className="text-white hover:text-white/80 transition-colors"
+                      >
+                        {area}, NC
+                      </Link>
+                    ) : (
+                      <span className="text-white">{area}, NC</span>
+                    )}
+                  </li>
+                );
+              })}
+              <li>
+                <Link
+                  href="/areas"
+                  className="text-[0.85rem] text-blue-300 hover:text-white transition-colors"
+                >
+                  View All &rarr;
+                </Link>
+              </li>
             </ul>
           </div>
 

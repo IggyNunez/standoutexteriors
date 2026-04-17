@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SERVICES, SITE_URL } from "@/lib/constants";
+import { CITY_SLUGS } from "@/lib/city-details";
 
 /**
  * Dynamic sitemap.xml generator.
@@ -68,6 +69,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
+  // Per-city landing pages — local SEO money pages
+  const areasIndex: MetadataRoute.Sitemap = [
+    {
+      url: `${SITE_URL}/areas`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+  ];
+  const cityPages: MetadataRoute.Sitemap = CITY_SLUGS.map((slug) => ({
+    url: `${SITE_URL}/areas/${slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.9,
+  }));
+
   // Legal — low priority but still indexed
   const legal: MetadataRoute.Sitemap = [
     {
@@ -84,5 +101,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  return [...topLevel, ...servicePages, ...legal];
+  return [...topLevel, ...servicePages, ...areasIndex, ...cityPages, ...legal];
 }

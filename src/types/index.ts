@@ -72,6 +72,41 @@ export interface CTAStat {
   label: string;
 }
 
+/**
+ * Per-city landing page content for /areas/[city].
+ * Keyed by URL slug (e.g. "denver-nc") in src/lib/city-details.ts.
+ * Unique copy per city is critical — duplicate content across city
+ * pages triggers Google's low-quality-page filter.
+ */
+export interface CityDetail {
+  /** URL slug — e.g. "denver-nc" (no leading slash) */
+  slug: string;
+  /** Display name — e.g. "Denver" */
+  name: string;
+  /** State abbreviation — e.g. "NC" */
+  state: string;
+  /** County for LocalBusiness schema — e.g. "Lincoln County" */
+  county: string;
+  /** Approximate latitude for GeoCoordinates schema */
+  latitude: number;
+  /** Approximate longitude for GeoCoordinates schema */
+  longitude: number;
+  /** ZIP codes primarily served in this city */
+  zipCodes: string[];
+  /** Local landmarks, neighborhoods, or references that signal authentic local knowledge */
+  landmarks: string[];
+  /** Unique 2–3 sentence intro paragraph — NEVER reused across cities */
+  heroIntro: string;
+  /** Unique body paragraph expanding on local conditions (humidity, pollen, lake homes, etc.) */
+  bodyIntro: string;
+  /** Local pain points this city's homeowners commonly face */
+  localChallenges: { title: string; desc: string }[];
+  /** SEO meta title override */
+  metaTitle: string;
+  /** SEO meta description */
+  metaDescription: string;
+}
+
 export interface LeadFormData {
   firstName: string;
   lastName: string;

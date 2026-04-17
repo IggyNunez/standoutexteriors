@@ -7,7 +7,7 @@ import {
   SOCIAL,
   SERVICE_AREAS,
 } from "@/lib/constants";
-import type { ServiceCard, ServiceDetail } from "@/types";
+import type { CityDetail, ServiceCard, ServiceDetail } from "@/types";
 
 /* ─── LocalBusiness (root layout) ────────────────────────────────────── */
 export function LocalBusinessJsonLd() {
@@ -170,6 +170,59 @@ export function BreadcrumbJsonLd({
       name: item.name,
       item: item.url,
     })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+/* ─── City landing page schema ───────────────────────────────────────── */
+/**
+ * Emits a Service schema pinned to a specific city, with geo coordinates
+ * and areaServed narrowed to that city. This tells Google "this page is
+ * about exterior cleaning, offered specifically in <city>" — the
+ * strongest signal for local-pack rankings.
+ */
+export function CityServiceJsonLd({ city }: { city: CityDetail }) {
+  const url = `${SITE_URL}/areas/${city.slug}`;
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${url}#service`,
+    name: `Pressure Washing in ${city.name}, ${city.state}`,
+    serviceType: "Pressure Washing",
+    description: city.metaDescription,
+    url,
+    provider: {
+      "@type": "ProfessionalService",
+      "@id": `${SITE_URL}/#business`,
+      name: COMPANY_NAME,
+      telephone: PHONE,
+      url: SITE_URL,
+    },
+    areaServed: {
+      "@type": "City",
+      name: `${city.name}, ${city.state}`,
+      containedInPlace: {
+        "@type": "AdministrativeArea",
+        name: city.county,
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: city.latitude,
+        longitude: city.longitude,
+      },
+    },
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+      url,
+    },
   };
 
   return (
