@@ -204,7 +204,7 @@ export const SERVICES: ServiceCard[] = [
     title: "Christmas Light Installation",
     description: "Full-service holiday lighting in the Lake Norman area, custom design, professional installation, mid-season service, takedown, and off-season storage. We provide commercial-grade LED lights (we don't install customer-provided lights) so every display looks magazine-ready year after year.",
     image: "/assets/christmas-lights.jpg",
-    imageAlt: "Two-story home with full roofline Christmas lights, window wreaths, and lit shrubs at night in Denver NC",
+    imageAlt: "Warm-white Christmas lights and evergreen garland on a rooftop at dusk in Denver NC",
     icon: "sparkle",
     bullets: [
       "Rooflines, windows, trees, shrubs & pathways",
