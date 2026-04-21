@@ -193,6 +193,26 @@ export const SERVICES: ServiceCard[] = [
       "Reduces slip hazards on sidewalks & steps",
     ],
   },
+  {
+    // NOTE: placed LAST intentionally. CityLandingPage does
+    // SERVICES.filter(label === "Residential").slice(0, 6) — we want
+    // pressure-washing services to fill those six slots on every city
+    // page, so the Christmas-lights card lands on the dedicated service
+    // page and the full /services index without crowding the cities.
+    slug: "christmas-lights",
+    label: "Residential",
+    title: "Christmas Light Installation",
+    description: "Full-service holiday lighting in the Lake Norman area — custom design, professional installation, mid-season service, takedown, and off-season storage. We provide commercial-grade LED lights (we don't install customer-provided lights) so every display looks magazine-ready year after year.",
+    image: "/assets/christmas-lights.jpg",
+    imageAlt: "Professionally installed Christmas lights on a Denver NC home",
+    icon: "sparkle",
+    bullets: [
+      "Rooflines, windows, trees, shrubs & pathways",
+      "Commercial-grade LED lights included",
+      "Design, install, takedown & storage included",
+      "~20% off for returning customers after year one",
+    ],
+  },
 ];
 
 // ── Process Steps ──
@@ -320,6 +340,7 @@ export const TICKER_ITEMS = [
   "Fence Washing",
   "Paver Sealing",
   "Commercial Cleaning",
+  "Christmas Light Installation",
   "Free Estimates",
   "Lake Norman Area",
   "5-Star Rated",

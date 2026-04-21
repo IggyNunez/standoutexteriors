@@ -41,6 +41,8 @@ export const metadata: Metadata = {
     "paver cleaning and sealing",
     "fence washing Cornelius NC",
     "exterior cleaning Lake Norman",
+    "Christmas light installation Denver NC",
+    "holiday lighting Lake Norman",
     "Stand Out Exterior Cleaning",
     "pressure washing near me",
   ],

@@ -68,6 +68,8 @@ export function LocalBusinessJsonLd() {
       "Brick Cleaning",
       "Commercial Pressure Washing",
       "Church Exterior Cleaning",
+      "Christmas Light Installation",
+      "Holiday Lighting Installation",
     ],
     sameAs: [SOCIAL.facebook, SOCIAL.instagram, SOCIAL.nextdoor],
     priceRange: "$$",

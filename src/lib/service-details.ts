@@ -922,6 +922,117 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     ],
     related: ["commercial-pressure-washing", "roof-cleaning", "house-washing"],
   },
+
+  "christmas-lights": {
+    eyebrow: "Holiday Lighting",
+    heroHeadline: "Christmas Light Installation\nDone For You.",
+    heroSubline:
+      "Full-service holiday lighting across Denver, NC and the Lake Norman area — design, install, service, takedown, and storage included.",
+    metaTitle: "Christmas Light Installation in Denver NC | Holiday Lighting Lake Norman",
+    metaDescription:
+      "Professional Christmas light installation in Denver, NC & Lake Norman. Commercial-grade LED rooflines, trees, windows & pathways. Design, install, takedown & storage included. Fully insured. Book now.",
+    bodyParagraphs: [
+      "Hanging Christmas lights on a two-story roofline is one of those projects that looks easy in November and humbling by the first cold Saturday in December. Between the ladder work, the icy gutters, the bulbs that don't match, and the clip system that won't stay on the shingles, most homeowners either skip the rooflines entirely or spend half a weekend fighting with them. We take the whole thing off your plate: we design the display, install it, service it if anything goes out mid-season, take it down after the holidays, and store the lights in our warehouse so nothing clutters your garage the other ten months of the year.",
+      "Every install is custom-designed around your house — rooflines, peaks, and ridges; window outlines and wreaths; trees, shrubs, and pathway lighting; driveway and walkway accents; and timers or photocell controls so the lights turn on by themselves every night at dusk. Because we provide and install commercial-grade LED lighting (we don't install customer-provided lights), the display looks sharp from the street and holds up to the weather — and because we use the same lights year after year, the cost drops significantly after the first season. Most returning customers see roughly 20% off in year two, and pricing usually simplifies into a single flat annual fee after that.",
+      "We're fully insured and take roof-access safety seriously. Our team uses ladder stabilizers so we don't damage gutters, GOAT ladders and roof hoppers for steep-pitch access, and Cougar Paws for grip on every surface. Bookings are open year-round, but installation slots fill up through the fall — if you're thinking about it for this season, the earlier you reach out, the easier it is to lock in the dates you want. Takedown is included with every install and is typically wrapped up by the end of January at whatever date works best for you.",
+    ],
+    benefits: [
+      {
+        title: "Fully Custom Design",
+        desc: "We walk the property with you, sketch a plan that suits the architecture, and quote based on linear footage and layout — no cookie-cutter kits.",
+      },
+      {
+        title: "Commercial-Grade LEDs",
+        desc: "We provide the lights. They're bright, uniform, and built for outdoor winters — not the big-box strands that fade or half-die by December 20th.",
+      },
+      {
+        title: "Install, Service, Takedown, Storage",
+        desc: "Everything is included: installation, mid-season service calls if a strand goes dark, scheduled takedown after the holidays, and off-season storage.",
+      },
+      {
+        title: "Returning-Customer Pricing",
+        desc: "Year two is roughly 20% less than year one. After that, pricing typically transitions into a simple flat annual fee for ongoing service.",
+      },
+      {
+        title: "Roof & Gutter Safe",
+        desc: "Ladder stabilizers, GOAT ladders, roof hoppers, and Cougar Paws — professional-grade safety gear that protects both our installers and your house.",
+      },
+      {
+        title: "Fully Insured",
+        desc: "Licensed and insured. Happy to send a Certificate of Insurance before we arrive so there's zero liability to you.",
+      },
+    ],
+    process: [
+      {
+        title: "Design Consultation",
+        desc: "Phone call or in-person walk-through. We map out rooflines, peaks, windows, trees, shrubs, and pathways and put together a design plan that fits your style and budget.",
+      },
+      {
+        title: "Custom Quote",
+        desc: "Pricing is based on linear footage and the specific layout of your property. You get a clear written quote — no surprise add-ons after installation.",
+      },
+      {
+        title: "Professional Installation",
+        desc: "We install commercial-grade LED lights with the right clips for your roofing material, run timers or photocells so the lights turn on automatically at dusk, and test the entire display before we leave.",
+      },
+      {
+        title: "Mid-Season Service",
+        desc: "If anything goes out between installation and takedown, we come back and fix it. No extra charge, no 'sorry, we're booked.'",
+      },
+      {
+        title: "Takedown & Storage",
+        desc: "After the holidays — most takedowns are wrapped by the end of January — we remove every strand, label it, and store it in our warehouse so your garage stays clear until next season.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Do I buy the lights, or do you provide them?",
+        answer:
+          "We provide and install commercial-grade LED lighting. We don't install customer-provided lights — partly because warranty and service only works if we control the gear, and partly because the big-box strands don't hold up to a full North Carolina winter. Because we own the lights, the cost comes down significantly in year two and beyond.",
+      },
+      {
+        question: "How is pricing determined?",
+        answer:
+          "Every job is custom-quoted. Most projects are priced based on linear footage — rooflines, peaks, ridges, and any accent areas — and the specific layout of your property. After the first installation, returning customers get roughly 20% off in year two, and pricing usually transitions into a single flat annual fee for ongoing service.",
+      },
+      {
+        question: "What's included in the price?",
+        answer:
+          "Design consultation, the lights themselves (commercial-grade LEDs we provide), professional installation, timer or photocell setup, mid-season service calls if anything stops working, scheduled takedown after the holidays, and off-season storage of the lighting. You get the whole package for one price.",
+      },
+      {
+        question: "When should I book?",
+        answer:
+          "We take bookings and inquiries year-round. Installation itself happens primarily in the fall leading into the holiday season. The earlier you reach out, the more flexibility you have on install dates — by mid-October, premium weekends are usually spoken for.",
+      },
+      {
+        question: "What areas of the house can you light up?",
+        answer:
+          "Rooflines (gutters, peaks, and roof ridges), window outlines and wreaths, trees and shrubs, driveway and pathway lighting, and accent areas. We also set up timers and photocells so the whole display turns on automatically at dusk and off at your preferred time.",
+      },
+      {
+        question: "How do you handle taking the lights down?",
+        answer:
+          "Takedown is included with every installation. We schedule removal at your preference — some customers want their lights up through mid-January for Three Kings' Day or just to enjoy them longer. Most takedowns are completed by the end of January so nothing's still hanging when spring hits.",
+      },
+      {
+        question: "Is it safe for my roof and gutters?",
+        answer:
+          "Yes. We use ladder stabilizers that keep ladders off your gutters (one of the most common sources of Christmas-light damage), and professional roof safety gear — GOAT ladders, roof hoppers, and Cougar Paws — to navigate steep pitches without damaging shingles. We're fully insured on top of that.",
+      },
+      {
+        question: "What if a strand goes out mid-season?",
+        answer:
+          "Call or text us. Mid-season service is included — if anything stops working between installation and takedown, we come back out to fix it. You never have to climb a ladder with a multimeter.",
+      },
+      {
+        question: "Do you service commercial properties too?",
+        answer:
+          "Yes. We handle storefronts, offices, HOA entrances, and other commercial properties across the Lake Norman area. Pricing and scheduling work the same way — custom design, commercial-grade LEDs, full-service install and takedown. Ask about Certificates of Insurance when you reach out.",
+      },
+    ],
+    related: ["house-washing", "gutter-cleaning", "window-cleaning"],
+  },
 };
 
 /** Convenience helper to get a service detail by slug with type safety. */
