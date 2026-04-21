@@ -17,7 +17,63 @@ interface Props {
 /* ─────────────────────────────────────────────────────────────────── */
 /*                      Hero section                                     */
 /* ─────────────────────────────────────────────────────────────────── */
+/**
+ * Per-service hero theming. Christmas-lights gets a warm-white-on-navy
+ * "lit-at-night" treatment: gold eyebrow pill, warm-white accent line,
+ * festive evergreen on the H1 second line, and decorative "fairy light"
+ * orbs twinkling in the background. Everything else stays on-brand
+ * navy/blue so the rest of the page matches the rest of the site.
+ */
+const HERO_THEMES = {
+  default: {
+    accent: "#00A651",      // brand emerald
+    accentSoft: "#7ef0a8",  // soft green for eyebrow text
+    accentBg: "rgba(0,166,81,0.16)",
+    accentBorder: "rgba(0,166,81,0.4)",
+    headlineAccent: "#00A651",
+    rule: "#00A651",
+    twinkle: false,
+  },
+  christmas: {
+    accent: "#E8B84C",      // warm gold (LED-filament gold)
+    accentSoft: "#FFE8B0",  // warm-white glow
+    accentBg: "rgba(232,184,76,0.15)",
+    accentBorder: "rgba(232,184,76,0.5)",
+    headlineAccent: "#2EB67D",  // festive evergreen (distinct from brand emerald)
+    rule: "#E8B84C",
+    twinkle: true,
+  },
+} as const;
+
+/**
+ * Twelve decorative warm-white "fairy light" orbs scattered across the
+ * hero background. Each one pulses on a different offset so the hero
+ * feels subtly alive (like a lit-up string of lights at dusk) without
+ * being distracting. All absolute-positioned and pointer-events: none,
+ * so they have zero impact on layout or interaction.
+ *
+ * Positions are hand-picked — not randomized — so the twinkle pattern
+ * is consistent across SSR and hydration (no flash on load, no CLS).
+ */
+const FAIRY_LIGHTS = [
+  { top: "15%", left: "8%",  size: 6,  delay: 0.0 },
+  { top: "22%", left: "18%", size: 4,  delay: 0.6 },
+  { top: "12%", left: "34%", size: 5,  delay: 1.2 },
+  { top: "26%", left: "46%", size: 3,  delay: 0.3 },
+  { top: "10%", left: "58%", size: 5,  delay: 0.9 },
+  { top: "20%", left: "72%", size: 4,  delay: 1.5 },
+  { top: "30%", left: "86%", size: 6,  delay: 0.4 },
+  { top: "52%", left: "88%", size: 3,  delay: 1.1 },
+  { top: "68%", left: "76%", size: 5,  delay: 0.2 },
+  { top: "74%", left: "14%", size: 4,  delay: 1.3 },
+  { top: "60%", left: "6%",  size: 5,  delay: 0.7 },
+  { top: "44%", left: "24%", size: 3,  delay: 1.8 },
+];
+
 function Hero({ service, detail }: Props) {
+  const theme =
+    service.slug === "christmas-lights" ? HERO_THEMES.christmas : HERO_THEMES.default;
+
   return (
     <section className="relative overflow-hidden bg-[#061e38] text-white pt-[120px] min-[1200px]:pt-[160px] pb-24">
       {/* Background image */}
@@ -33,20 +89,53 @@ function Hero({ service, detail }: Props) {
         <div
           className="absolute inset-0"
           style={{
-            background:
-              "linear-gradient(120deg, rgba(6,30,56,0.88) 0%, rgba(10,46,92,0.76) 45%, rgba(10,46,92,0.3) 100%)",
+            background: theme.twinkle
+              ? // Christmas: deeper, slightly warmer overlay that lets the
+                // lights in the photo glow through at dusk.
+                "linear-gradient(120deg, rgba(6,20,40,0.82) 0%, rgba(8,28,54,0.7) 50%, rgba(10,30,60,0.4) 100%)"
+              : "linear-gradient(120deg, rgba(6,30,56,0.88) 0%, rgba(10,46,92,0.76) 45%, rgba(10,46,92,0.3) 100%)",
           }}
         />
       </div>
 
-      {/* Soft water blobs */}
+      {/* Soft ambient blob — color matches the theme accent */}
       <div
         className="absolute top-[20%] left-[10%] w-[480px] h-[260px] rounded-full pointer-events-none"
         style={{
-          background:
-            "radial-gradient(ellipse, rgba(43,125,233,0.16) 0%, transparent 70%)",
+          background: theme.twinkle
+            ? "radial-gradient(ellipse, rgba(232,184,76,0.14) 0%, transparent 70%)"
+            : "radial-gradient(ellipse, rgba(43,125,233,0.16) 0%, transparent 70%)",
         }}
       />
+
+      {/* Christmas only: decorative fairy-light orbs twinkling across
+          the hero background. Rendered via motion so the pulse is
+          GPU-accelerated; only the opacity animates so there's no
+          layout-affecting work on any frame. */}
+      {theme.twinkle &&
+        FAIRY_LIGHTS.map((light, i) => (
+          <motion.div
+            key={i}
+            aria-hidden
+            className="absolute rounded-full pointer-events-none"
+            style={{
+              top: light.top,
+              left: light.left,
+              width: `${light.size}px`,
+              height: `${light.size}px`,
+              background: "#FFE8B0",
+              boxShadow:
+                "0 0 8px 2px rgba(255,232,176,0.7), 0 0 16px 4px rgba(232,184,76,0.35)",
+            }}
+            animate={{ opacity: [0.35, 1, 0.35] }}
+            transition={{
+              duration: 2.4,
+              delay: light.delay,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
 
       <div className="relative z-[1] max-w-[1920px] mx-auto px-[clamp(20px,4vw,80px)] grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
         <div className="md:col-span-7 lg:col-span-6">
@@ -78,14 +167,19 @@ function Hero({ service, detail }: Props) {
             <span
               className="text-[0.62rem] font-bold tracking-[0.18em] uppercase px-3 py-1.5 rounded-full inline-flex items-center gap-2"
               style={{
-                background: "rgba(0,166,81,0.16)",
-                border: "1px solid rgba(0,166,81,0.4)",
-                color: "#7ef0a8",
+                background: theme.accentBg,
+                border: `1px solid ${theme.accentBorder}`,
+                color: theme.accentSoft,
               }}
             >
               <span
                 className="w-1.5 h-1.5 rounded-full"
-                style={{ background: "#00A651" }}
+                style={{
+                  background: theme.accent,
+                  boxShadow: theme.twinkle
+                    ? "0 0 6px 1px rgba(232,184,76,0.8)"
+                    : "none",
+                }}
               />
               {detail.eyebrow}
             </span>
@@ -101,7 +195,7 @@ function Hero({ service, detail }: Props) {
             {detail.heroHeadline.split("\n").map((line, i) => (
               <span key={i} className="block">
                 {i === 1 ? (
-                  <span style={{ color: "#00A651" }}>{line}</span>
+                  <span style={{ color: theme.headlineAccent }}>{line}</span>
                 ) : (
                   line
                 )}
@@ -114,7 +208,7 @@ function Hero({ service, detail }: Props) {
             animate={{ scaleX: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
             className="w-16 h-[2px] mb-6"
-            style={{ background: "#00A651", transformOrigin: "left" }}
+            style={{ background: theme.rule, transformOrigin: "left" }}
           />
 
           <motion.p
@@ -170,19 +264,69 @@ function BodyCopy({ detail, service }: Props) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "0px 0px -100px 0px" });
 
+  // Christmas-only festive treatment for the "Why It Matters" section:
+  // a very faded hero image watermark in the right side of the section
+  // plus gold eyebrow and festive-red headline accent. Everything else
+  // stays on-brand so the rest of the services keep the same look.
+  const isChristmas = service.slug === "christmas-lights";
+
   return (
-    <section ref={ref} className="bg-white py-24 md:py-28 overflow-hidden">
-      <div className="max-w-[1920px] mx-auto px-[clamp(20px,4vw,80px)]">
+    <section ref={ref} className="relative bg-white py-24 md:py-28 overflow-hidden">
+      {/* Christmas only: faded hero image as decorative watermark on the
+          right half of the section, plus soft warm-gold ambient glow.
+          Opacity kept very low so text contrast stays WCAG AA. */}
+      {isChristmas && (
+        <>
+          <div
+            aria-hidden
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              backgroundImage: `url(${service.image})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center right",
+              backgroundRepeat: "no-repeat",
+              opacity: 0.08,
+              maskImage:
+                "linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 100%)",
+              WebkitMaskImage:
+                "linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 100%)",
+            }}
+          />
+          <div
+            aria-hidden
+            className="absolute top-[10%] right-[-10%] w-[600px] h-[420px] rounded-full pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(ellipse, rgba(232,184,76,0.10) 0%, transparent 70%)",
+            }}
+          />
+        </>
+      )}
+
+      <div className="relative max-w-[1920px] mx-auto px-[clamp(20px,4vw,80px)]">
         {/* Intro paragraphs */}
         <div className="max-w-[760px]">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, ease: EASE }}
-            className="mb-6"
+            className="mb-6 flex items-center gap-2"
           >
-            <span className="text-[0.62rem] font-bold tracking-[0.18em] uppercase text-blue-500">
-              Why It Matters
+            {isChristmas && (
+              <span
+                aria-hidden
+                className="inline-block w-1.5 h-1.5 rounded-full"
+                style={{
+                  background: "#E8B84C",
+                  boxShadow: "0 0 6px 1px rgba(232,184,76,0.8)",
+                }}
+              />
+            )}
+            <span
+              className="text-[0.62rem] font-bold tracking-[0.18em] uppercase"
+              style={{ color: isChristmas ? "#B88830" : "#2B7DE9" }}
+            >
+              {isChristmas ? "The Holiday Difference" : "Why It Matters"}
             </span>
           </motion.div>
           <motion.h2
@@ -194,7 +338,9 @@ function BodyCopy({ detail, service }: Props) {
           >
             {service.title}
             <br />
-            <span style={{ color: "#00A651" }}>Done Right.</span>
+            <span style={{ color: isChristmas ? "#C2352C" : "#00A651" }}>
+              Done Right.
+            </span>
           </motion.h2>
 
           <div className="space-y-5">
