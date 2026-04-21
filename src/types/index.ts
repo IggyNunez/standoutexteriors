@@ -26,7 +26,7 @@ export interface ServiceCard {
 export interface ServiceDetail {
   /** One-word marketing label that appears in the hero eyebrow (e.g. "Soft Washing") */
   eyebrow: string;
-  /** Big display headline — can be multi-line via \n split handled in the component */
+  /** Big display headline, can be multi-line via \n split handled in the component */
   heroHeadline: string;
   /** Optional hero sub-headline / tagline */
   heroSubline: string;
@@ -34,13 +34,13 @@ export interface ServiceDetail {
   metaDescription: string;
   /** SEO-friendly <title> override; if absent we fall back to title + location */
   metaTitle?: string;
-  /** Ordered body paragraphs — pure prose, no HTML */
+  /** Ordered body paragraphs, pure prose, no HTML */
   bodyParagraphs: string[];
   /** 4–6 short benefits shown in a grid under the body */
   benefits: { title: string; desc: string }[];
-  /** Ordered process steps — how we do this specific service */
+  /** Ordered process steps, how we do this specific service */
   process: { title: string; desc: string }[];
-  /** Page-specific FAQs — power FAQPage JSON-LD schema too */
+  /** Page-specific FAQs, power FAQPage JSON-LD schema too */
   faqs: { question: string; answer: string }[];
   /** Related service slugs to cross-link at the bottom of the page */
   related: string[];
@@ -75,17 +75,17 @@ export interface CTAStat {
 /**
  * Per-city landing page content for /areas/[city].
  * Keyed by URL slug (e.g. "denver-nc") in src/lib/city-details.ts.
- * Unique copy per city is critical — duplicate content across city
+ * Unique copy per city is critical, duplicate content across city
  * pages triggers Google's low-quality-page filter.
  */
 export interface CityDetail {
-  /** URL slug — e.g. "denver-nc" (no leading slash) */
+  /** URL slug, e.g. "denver-nc" (no leading slash) */
   slug: string;
-  /** Display name — e.g. "Denver" */
+  /** Display name, e.g. "Denver" */
   name: string;
-  /** State abbreviation — e.g. "NC" */
+  /** State abbreviation, e.g. "NC" */
   state: string;
-  /** County for LocalBusiness schema — e.g. "Lincoln County" */
+  /** County for LocalBusiness schema, e.g. "Lincoln County" */
   county: string;
   /** Approximate latitude for GeoCoordinates schema */
   latitude: number;
@@ -95,7 +95,7 @@ export interface CityDetail {
   zipCodes: string[];
   /** Local landmarks, neighborhoods, or references that signal authentic local knowledge */
   landmarks: string[];
-  /** Unique 2–3 sentence intro paragraph — NEVER reused across cities */
+  /** Unique 2–3 sentence intro paragraph. NEVER reused across cities */
   heroIntro: string;
   /** Unique body paragraph expanding on local conditions (humidity, pollen, lake homes, etc.) */
   bodyIntro: string;

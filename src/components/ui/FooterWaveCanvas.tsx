@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 
 /**
- * Animated canvas wave background — brand colours only.
+ * Animated canvas wave background, brand colours only.
  * Navy base (#040f1e) with green (#00A651) and teal (#7ecfff) accents.
  * Runs at half resolution (SCALE=2) for perf; smoothly interpolated.
  */
@@ -16,7 +16,7 @@ export default function FooterWaveCanvas() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    const SCALE = 3; // render at 1/3 res, upscale — very low CPU
+    const SCALE = 3; // render at 1/3 res, upscale, very low CPU
     let width = 0, height = 0;
     let imageData: ImageData;
     let data: Uint8ClampedArray;

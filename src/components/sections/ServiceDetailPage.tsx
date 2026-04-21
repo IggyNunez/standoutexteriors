@@ -15,12 +15,12 @@ interface Props {
 }
 
 /* ─────────────────────────────────────────────────────────────────── */
-/*  Festive SVG icons — used only on /services/christmas-lights.       */
+/*  Festive SVG icons, used only on /services/christmas-lights.       */
 /*  Everything inline so there's zero extra network cost and icons     */
 /*  inherit currentColor from their parent for easy theming.           */
 /* ─────────────────────────────────────────────────────────────────── */
 const FestiveIcons = {
-  // Classic Edison-bulb Christmas light — the hero brand-mark for this page
+  // Classic Edison-bulb Christmas light, the hero brand-mark for this page
   bulb: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
       <path d="M9 3h6l-1 4a4 4 0 0 1-4 0z" fill="currentColor" fillOpacity="0.2" />
@@ -86,7 +86,7 @@ const FestiveIcons = {
 
 /**
  * Ordered icon set for the Christmas-lights benefits grid. These map
- * 1:1 to SERVICE_DETAILS["christmas-lights"].benefits — reorder both
+ * 1:1 to SERVICE_DETAILS["christmas-lights"].benefits, reorder both
  * arrays together if you change the copy.
  *
  *   0 Custom Design       → sparkles
@@ -107,7 +107,7 @@ const CHRISTMAS_BENEFIT_ICONS = [
 
 /**
  * "String of lights" decorative divider rendered above the Process
- * section on Christmas. Pure SVG — eight bulbs hanging from a gentle
+ * section on Christmas. Pure SVG, eight bulbs hanging from a gentle
  * curved wire. Responsive via viewBox so it scales cleanly to any
  * container width. preserveAspectRatio="none" would stretch the bulbs,
  * so we let the SVG letterbox and use CSS width:100% / height:auto.
@@ -119,7 +119,7 @@ const STRING_OF_LIGHTS = (
     className="w-full h-auto max-w-[520px] mx-auto block"
     aria-hidden="true"
   >
-    {/* The wire — a soft sagging curve */}
+    {/* The wire, a soft sagging curve */}
     <path
       d="M 10 8 Q 150 32 300 24 T 590 12"
       fill="none"
@@ -143,7 +143,7 @@ const STRING_OF_LIGHTS = (
         <line x1={b.cx} y1={b.cy - 4} x2={b.cx} y2={b.cy - 1} stroke="rgba(10,46,92,0.35)" strokeWidth="0.8" />
         {/* Cap */}
         <rect x={b.cx - 2.5} y={b.cy - 1} width="5" height="2" fill="rgba(10,46,92,0.4)" />
-        {/* Bulb — with a soft glow via drop shadow filter-free approach */}
+        {/* Bulb, with a soft glow via drop shadow filter-free approach */}
         <circle cx={b.cx} cy={b.cy + 6} r="5" fill={b.c} opacity="0.9" />
         <circle cx={b.cx} cy={b.cy + 6} r="8" fill={b.c} opacity="0.18" />
       </g>
@@ -189,7 +189,7 @@ const HERO_THEMES = {
  * being distracting. All absolute-positioned and pointer-events: none,
  * so they have zero impact on layout or interaction.
  *
- * Positions are hand-picked — not randomized — so the twinkle pattern
+ * Positions are hand-picked, not randomized, so the twinkle pattern
  * is consistent across SSR and hydration (no flash on load, no CLS).
  */
 const FAIRY_LIGHTS = [
@@ -213,7 +213,7 @@ function Hero({ service, detail }: Props) {
   const isChristmas = service.slug === "christmas-lights";
 
   // Fade the hero video in only AFTER it's loaded enough to play. The
-  // poster <Image> is the LCP anchor — it renders first, paints fast,
+  // poster <Image> is the LCP anchor, it renders first, paints fast,
   // and stays in the DOM so search engines get a real static image
   // (videos don't count as LCP and aren't indexed the same way).
   // Once the video is ready, we fade it in OVER the image. If the
@@ -223,7 +223,7 @@ function Hero({ service, detail }: Props) {
   const [videoReady, setVideoReady] = useState(false);
   useEffect(() => {
     if (!isChristmas || typeof window === "undefined") return;
-    // Respect reduced-motion — users who asked their OS to turn off
+    // Respect reduced-motion, users who asked their OS to turn off
     // animations shouldn't get an autoplaying video loop.
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
     if (mq.matches) return;
@@ -241,7 +241,7 @@ function Hero({ service, detail }: Props) {
 
   return (
     <section className="relative overflow-hidden bg-[#061e38] text-white pt-[120px] min-[1200px]:pt-[160px] pb-24">
-      {/* Background image — the LCP anchor. Renders first, always stays
+      {/* Background image, the LCP anchor. Renders first, always stays
           in the DOM for SEO. On Christmas it's also the fallback if
           the video never loads (slow network, prefers-reduced-motion,
           older browser). */}
@@ -256,7 +256,7 @@ function Hero({ service, detail }: Props) {
         />
 
         {/* Christmas only: looping hero video stacked on top of the
-            poster. Fades in once ready — no layout shift, no LCP
+            poster. Fades in once ready, no layout shift, no LCP
             regression. `preload="none"` so mobile and data-saver
             users don't pay the bandwidth unless the video actually
             plays. `playsInline` + `muted` is required for iOS
@@ -291,7 +291,7 @@ function Hero({ service, detail }: Props) {
         />
       </div>
 
-      {/* Soft ambient blob — color matches the theme accent */}
+      {/* Soft ambient blob, color matches the theme accent */}
       <div
         className="absolute top-[20%] left-[10%] w-[480px] h-[260px] rounded-full pointer-events-none"
         style={{
@@ -481,7 +481,7 @@ function Hero({ service, detail }: Props) {
 }
 
 /* ─────────────────────────────────────────────────────────────────── */
-/*                      Body — Paragraphs + Benefits grid              */
+/*                      Body. Paragraphs + Benefits grid              */
 /* ─────────────────────────────────────────────────────────────────── */
 function BodyCopy({ detail, service }: Props) {
   const ref = useRef(null);
@@ -495,40 +495,43 @@ function BodyCopy({ detail, service }: Props) {
 
   return (
     <section ref={ref} className="relative bg-white py-24 md:py-28 overflow-hidden">
-      {/* Christmas only: faded hero image as decorative watermark on the
-          right half of the section, plus soft warm-gold ambient glow.
-          Opacity kept very low so text contrast stays WCAG AA. */}
+      {/* Christmas only: a soft warm-gold glow in the far corners, just
+          enough to warm the background without distracting from the real
+          showcase image in the column layout below. */}
       {isChristmas && (
         <>
           <div
             aria-hidden
-            className="absolute inset-0 pointer-events-none"
+            className="absolute top-[-10%] right-[-10%] w-[500px] h-[420px] rounded-full pointer-events-none"
             style={{
-              backgroundImage: `url(${service.image})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center right",
-              backgroundRepeat: "no-repeat",
-              opacity: 0.08,
-              maskImage:
-                "linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 100%)",
-              WebkitMaskImage:
-                "linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 100%)",
+              background:
+                "radial-gradient(ellipse, rgba(232,184,76,0.12) 0%, transparent 70%)",
             }}
           />
           <div
             aria-hidden
-            className="absolute top-[10%] right-[-10%] w-[600px] h-[420px] rounded-full pointer-events-none"
+            className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[420px] rounded-full pointer-events-none"
             style={{
               background:
-                "radial-gradient(ellipse, rgba(232,184,76,0.10) 0%, transparent 70%)",
+                "radial-gradient(ellipse, rgba(46,182,125,0.08) 0%, transparent 70%)",
             }}
           />
         </>
       )}
 
       <div className="relative max-w-[1920px] mx-auto px-[clamp(20px,4vw,80px)]">
-        {/* Intro paragraphs */}
-        <div className="max-w-[760px]">
+        {/* On Christmas: two-column magazine layout with the showcase
+            image card on the right. On every other service page: the
+            original single-column narrow copy block, unchanged. */}
+        <div
+          className={
+            isChristmas
+              ? "grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start"
+              : ""
+          }
+        >
+          {/* Intro paragraphs column */}
+          <div className={isChristmas ? "lg:col-span-6 xl:col-span-7" : "max-w-[760px]"}>
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -579,6 +582,159 @@ function BodyCopy({ detail, service }: Props) {
               </motion.p>
             ))}
           </div>
+
+          {/* Christmas only: quick-hit "what's included" pill row under
+              the paragraphs to break up the text and pack in extra
+              festive icons without adding a full section. */}
+          {isChristmas && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.55, duration: 0.6 }}
+              className="mt-10 flex flex-wrap gap-2.5"
+            >
+              {[
+                { label: "Custom Design", icon: FestiveIcons.sparkles },
+                { label: "Commercial-Grade LEDs", icon: FestiveIcons.bulb },
+                { label: "Install + Takedown", icon: FestiveIcons.gift },
+                { label: "Off-Season Storage", icon: FestiveIcons.tree },
+                { label: "Mid-Season Service", icon: FestiveIcons.star },
+                { label: "Fully Insured", icon: FestiveIcons.shield },
+              ].map((item) => (
+                <span
+                  key={item.label}
+                  className="inline-flex items-center gap-2 text-[0.72rem] font-bold tracking-[0.04em] px-3 py-2 rounded-full"
+                  style={{
+                    background: "rgba(232,184,76,0.08)",
+                    border: "1px solid rgba(232,184,76,0.3)",
+                    color: "#5C3A0C",
+                  }}
+                >
+                  <span className="w-3.5 h-3.5 block" style={{ color: "#B88830" }}>
+                    {item.icon}
+                  </span>
+                  {item.label}
+                </span>
+              ))}
+            </motion.div>
+          )}
+          </div>
+
+          {/* Christmas only: showcase image card on the right */}
+          {isChristmas && (
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.25, duration: 0.8, ease: EASE }}
+              className="lg:col-span-6 xl:col-span-5 lg:sticky lg:top-24"
+            >
+              <div className="relative">
+                {/* Gold ticket tag pinned to the top-left corner of the
+                    image card, kept truthful ("Full-Service Display")
+                    since we can't claim this specific house is one of
+                    ours. Once real install photos are available, swap
+                    the label to "Real Install" or the customer's city. */}
+                <div
+                  className="absolute -top-3 -left-3 z-[2] px-4 py-2 rounded-full text-[0.62rem] font-extrabold tracking-[0.18em] uppercase inline-flex items-center gap-2"
+                  style={{
+                    background: "linear-gradient(135deg, #E8B84C 0%, #FFD79A 100%)",
+                    color: "#5C3A0C",
+                    boxShadow: "0 8px 24px rgba(232,184,76,0.45)",
+                  }}
+                >
+                  <span className="w-3 h-3" style={{ color: "#5C3A0C" }}>
+                    {FestiveIcons.star}
+                  </span>
+                  Full-Service Display
+                </div>
+
+                {/* Image card, framed with a gold hairline border + soft
+                    warm shadow so it reads "premium showcase" without
+                    being gaudy. Rounded corners match the benefits grid. */}
+                <div
+                  className="relative rounded-3xl overflow-hidden"
+                  style={{
+                    aspectRatio: "16 / 10",
+                    border: "1px solid rgba(232,184,76,0.35)",
+                    boxShadow:
+                      "0 1px 3px rgba(10,46,92,0.08), 0 24px 60px rgba(10,46,92,0.18), 0 0 0 6px rgba(232,184,76,0.08)",
+                  }}
+                >
+                  <Image
+                    src="/assets/christmas-lights.jpg"
+                    alt="Two-story home with full roofline Christmas lights, wreaths on every window, and lit shrubs in Denver NC"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    className="object-cover"
+                  />
+                  {/* Subtle bottom-fade so the caption chip reads clearly */}
+                  <div
+                    className="absolute inset-x-0 bottom-0 h-[40%] pointer-events-none"
+                    style={{
+                      background:
+                        "linear-gradient(to top, rgba(6,20,40,0.85) 0%, transparent 100%)",
+                    }}
+                  />
+                  {/* Caption chip, identifies what the photo shows in
+                      the vocabulary of the service. */}
+                  <div className="absolute bottom-5 left-5 right-5 flex flex-wrap items-center gap-2">
+                    <span
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[0.62rem] font-bold tracking-[0.12em] uppercase"
+                      style={{
+                        background: "rgba(255,255,255,0.95)",
+                        color: "#5C3A0C",
+                      }}
+                    >
+                      <span className="w-3 h-3" style={{ color: "#E8B84C" }}>
+                        {FestiveIcons.bulb}
+                      </span>
+                      Roofline + Windows
+                    </span>
+                    <span
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[0.62rem] font-bold tracking-[0.12em] uppercase"
+                      style={{
+                        background: "rgba(255,255,255,0.95)",
+                        color: "#5C3A0C",
+                      }}
+                    >
+                      <span className="w-3 h-3" style={{ color: "#2EB67D" }}>
+                        {FestiveIcons.tree}
+                      </span>
+                      Shrubs + Trees
+                    </span>
+                    <span
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[0.62rem] font-bold tracking-[0.12em] uppercase"
+                      style={{
+                        background: "rgba(255,255,255,0.95)",
+                        color: "#5C3A0C",
+                      }}
+                    >
+                      <span className="w-3 h-3" style={{ color: "#C2352C" }}>
+                        {FestiveIcons.wreath}
+                      </span>
+                      Wreaths
+                    </span>
+                  </div>
+                </div>
+
+                {/* Decorative gold ornament pinned to the bottom-right
+                    corner, echoes the step-circle "ornament" styling
+                    in the Process section. */}
+                <div
+                  aria-hidden
+                  className="absolute -bottom-5 -right-5 w-16 h-16 rounded-full flex items-center justify-center"
+                  style={{
+                    background: "linear-gradient(135deg, #E8B84C 0%, #FFD79A 100%)",
+                    boxShadow:
+                      "0 0 0 5px white, 0 0 0 6px rgba(232,184,76,0.4), 0 10px 28px rgba(232,184,76,0.5)",
+                    color: "#5C3A0C",
+                  }}
+                >
+                  <span className="w-8 h-8 block">{FestiveIcons.sparkles}</span>
+                </div>
+              </div>
+            </motion.div>
+          )}
         </div>
 
         {/* Surfaces pill list */}
@@ -610,7 +766,7 @@ function BodyCopy({ detail, service }: Props) {
           </motion.div>
         )}
 
-        {/* Benefits grid — on Christmas, each card gets a hand-picked
+        {/* Benefits grid, on Christmas, each card gets a hand-picked
             festive icon (bulb, sparkles, gift, etc.) and a warm gold
             gradient on the icon tile. On every other service page the
             default blue-gradient checkmark is used exactly as before. */}
@@ -1083,7 +1239,7 @@ function FinalCTA({ service }: { service: ServiceCard }) {
         </h2>
         <p className="text-[0.95rem] md:text-[1rem] text-white/70 leading-[1.7] max-w-[600px] mx-auto mb-10">
           Quick response. Honest pricing. Satisfaction guaranteed. We&apos;ll walk
-          your property, answer every question, and give you an exact number — no
+          your property, answer every question, and give you an exact number, no
           pressure, no contracts.
         </p>
 

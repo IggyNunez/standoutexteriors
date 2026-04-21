@@ -186,7 +186,7 @@ export function BreadcrumbJsonLd({
 /**
  * Emits a Service schema pinned to a specific city, with geo coordinates
  * and areaServed narrowed to that city. This tells Google "this page is
- * about exterior cleaning, offered specifically in <city>" — the
+ * about exterior cleaning, offered specifically in <city>", the
  * strongest signal for local-pack rankings.
  */
 export function CityServiceJsonLd({ city }: { city: CityDetail }) {
@@ -235,7 +235,7 @@ export function CityServiceJsonLd({ city }: { city: CityDetail }) {
   );
 }
 
-/* ─── WebSite schema (root layout — helps Google understand site name) ── */
+/* ─── WebSite schema (root layout, helps Google understand site name) ── */
 export function WebSiteJsonLd() {
   const schema = {
     "@context": "https://schema.org",

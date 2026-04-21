@@ -128,7 +128,7 @@ export default function CommercialContent() {
   return (
     <>
       {/* ══════════════════════════════════════════
-          HERO — dark navy with water shimmer
+          HERO, dark navy with water shimmer
       ══════════════════════════════════════════ */}
       <section
         ref={heroRef}
@@ -336,7 +336,7 @@ export default function CommercialContent() {
       </section>
 
       {/* ══════════════════════════════════════════
-          WHY CHOOSE US — dark panel
+          WHY CHOOSE US, dark panel
       ══════════════════════════════════════════ */}
       <section
         ref={whyRef}

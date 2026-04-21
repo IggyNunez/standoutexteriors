@@ -50,7 +50,7 @@ export default function Process() {
 
         {/* Steps */}
         <div className="relative">
-          {/* Connecting line — desktop only */}
+          {/* Connecting line, desktop only */}
           <div className="hidden lg:block absolute top-[60px] left-[12%] right-[12%] h-[2px] z-0" style={{ background: "rgba(0,166,81,0.3)" }} />
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">

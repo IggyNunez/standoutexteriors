@@ -152,12 +152,12 @@ export const SERVICES: ServiceCard[] = [
     slug: "window-cleaning",
     label: "Residential",
     title: "Window Cleaning",
-    description: "Crystal-clear, streak-free windows inside and out. Our pure-water system leaves zero spots, zero residue — and restores the view you bought your home for.",
+    description: "Crystal-clear, streak-free windows inside and out. Our pure-water system leaves zero spots, zero residue, and restores the view you bought your home for.",
     image: "/assets/team/ridge-window-cleaning-squeegee-inside.webp",
     imageAlt: "Ridge Curwood cleaning a large window with a squeegee in Denver NC",
     icon: "window",
     bullets: [
-      "Pure-water system — zero streaks, zero residue",
+      "Pure-water system, zero streaks, zero residue",
       "Interior and exterior cleaning available",
       "Screens wiped and tracks cleaned",
       "Safe soft-wash approach on delicate glass & frames",
@@ -167,12 +167,12 @@ export const SERVICES: ServiceCard[] = [
     slug: "brick-cleaning",
     label: "Residential",
     title: "Brick Cleaning",
-    description: "Remove mold, mildew, and efflorescence from brick surfaces — and get mortar-splatter cleaned off new construction before it sets. We know the right chemistry for every job.",
+    description: "Remove mold, mildew, and efflorescence from brick surfaces, and get mortar-splatter cleaned off new construction before it sets. We know the right chemistry for every job.",
     image: "/assets/team/ridge-brick-cleaning-wall.webp",
     imageAlt: "Restored brick wall after mold removal and brick cleaning in Denver NC",
     icon: "brick",
     bullets: [
-      "Kills mold spores — not just surface mold",
+      "Kills mold spores, not just surface mold",
       "New-construction mortar haze removal",
       "NMD 80 detergent for mortar breakdown",
       "Safe on aged brick and masonry joints",
@@ -182,29 +182,29 @@ export const SERVICES: ServiceCard[] = [
     slug: "church-cleaning",
     label: "Commercial",
     title: "Church & Steeple Cleaning",
-    description: "Specialized exterior cleaning for churches — steeples, siding, walkways, and stairs. Soft-wash chemistry that kills mold at the root so your congregation stays safe and your building looks its best.",
+    description: "Specialized exterior cleaning for churches, steeples, siding, walkways, and stairs. Soft-wash chemistry that kills mold at the root so your congregation stays safe and your building looks its best.",
     image: "/assets/team/ridge-ladder-gutter-upward.webp",
     imageAlt: "Exterior church cleaning in Denver NC",
     icon: "building",
     bullets: [
       "Steeples, siding, and high-elevation cleaning",
       "Soft-wash method prevents surface damage",
-      "Kills mold at the root — not just the surface",
+      "Kills mold at the root, not just the surface",
       "Reduces slip hazards on sidewalks & steps",
     ],
   },
   {
     // NOTE: placed LAST intentionally. CityLandingPage does
-    // SERVICES.filter(label === "Residential").slice(0, 6) — we want
+    // SERVICES.filter(label === "Residential").slice(0, 6), we want
     // pressure-washing services to fill those six slots on every city
     // page, so the Christmas-lights card lands on the dedicated service
     // page and the full /services index without crowding the cities.
     slug: "christmas-lights",
     label: "Residential",
     title: "Christmas Light Installation",
-    description: "Full-service holiday lighting in the Lake Norman area — custom design, professional installation, mid-season service, takedown, and off-season storage. We provide commercial-grade LED lights (we don't install customer-provided lights) so every display looks magazine-ready year after year.",
+    description: "Full-service holiday lighting in the Lake Norman area, custom design, professional installation, mid-season service, takedown, and off-season storage. We provide commercial-grade LED lights (we don't install customer-provided lights) so every display looks magazine-ready year after year.",
     image: "/assets/christmas-lights.jpg",
-    imageAlt: "Warm-white Christmas lights and evergreen garland on a rooftop at dusk in Denver NC",
+    imageAlt: "Two-story home with full roofline Christmas lights, window wreaths, and lit shrubs at night in Denver NC",
     icon: "sparkle",
     bullets: [
       "Rooflines, windows, trees, shrubs & pathways",

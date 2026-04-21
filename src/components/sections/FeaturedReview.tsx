@@ -9,7 +9,7 @@ import rawData from "@/data/google-reviews.json";
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 /* ─────────────────────────────────────────────────────────────
-   Local photo overrides — these reviewers have custom assets
+   Local photo overrides, these reviewers have custom assets
    we captured; use those instead of the Google-hosted URLs.
 ──────────────────────────────────────────────────────────────── */
 const LOCAL_PHOTO_OVERRIDES: Record<string, { avatar?: string; photos?: { src: string; caption: string }[] }> = {
@@ -22,11 +22,11 @@ const LOCAL_PHOTO_OVERRIDES: Record<string, { avatar?: string; photos?: { src: s
   },
   "Rachel Cartner": {
     avatar: "/assets/rachel-cartner.png",
-    photos: [{ src: "/assets/rachel-before-after.webp", caption: "Driveway cleaning — after" }],
+    photos: [{ src: "/assets/rachel-before-after.webp", caption: "Driveway cleaning, after" }],
   },
   "Heidi Erickson": {
     avatar: "/assets/heidi-erickson-avatar.png",
-    photos: [{ src: "/assets/heidi-erickson.webp", caption: "Driveway & sidewalk cleaning — after" }],
+    photos: [{ src: "/assets/heidi-erickson.webp", caption: "Driveway & sidewalk cleaning, after" }],
   },
 };
 
@@ -48,7 +48,7 @@ const ALL_REVIEWS = (rawData.reviews as {
   };
 });
 
-/* Sort: reviews with photos first, then rest — all 5-star */
+/* Sort: reviews with photos first, then rest, all 5-star */
 const FEATURED_REVIEWS = [
   ...ALL_REVIEWS.filter(r => r.photos.length > 0),
   ...ALL_REVIEWS.filter(r => r.photos.length === 0),
@@ -391,7 +391,7 @@ export default function FeaturedReview() {
               )}
             </div>
 
-            {/* View All link — desktop */}
+            {/* View All link, desktop */}
             <div style={{ textAlign: "right", marginBottom: 12, marginTop: -4 }}>
               <Link href="/reviews"
                 style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(0,166,81,0.1)", border: "1px solid rgba(0,166,81,0.3)", borderRadius: 9999, padding: "7px 18px", fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#4ade80", textDecoration: "none", transition: "all 0.22s" }}

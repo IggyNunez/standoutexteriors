@@ -18,14 +18,14 @@ export default function ContactForm() {
     setStatus("sending");
 
     const form = e.currentTarget;
-    // Honeypot — humans won't see or fill this; bots usually will.
+    // Honeypot, humans won't see or fill this; bots usually will.
     const company = (form.elements.namedItem("company") as HTMLInputElement | null)?.value ?? "";
     const sourceValue = (form.elements.namedItem("source") as HTMLSelectElement).value;
     const sourceOther = (form.elements.namedItem("sourceOther") as HTMLInputElement | null)?.value ?? "";
     // If user picked "Other", combine the dropdown + free-text field for reporting
     const combinedSource =
       sourceValue === "Other" && sourceOther.trim()
-        ? `Other — ${sourceOther.trim()}`
+        ? `Other - ${sourceOther.trim()}`
         : sourceValue;
 
     const data: LeadFormData & { company?: string } = {
@@ -106,7 +106,7 @@ export default function ContactForm() {
       <div className="relative py-24 md:py-32 bg-canvas">
         <div className="relative max-w-[1920px] mx-auto px-[clamp(20px,4vw,80px)]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            {/* Left — text + stats */}
+            {/* Left, text + stats */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -174,14 +174,14 @@ export default function ContactForm() {
               </div>
             </motion.div>
 
-            {/* Right — form */}
+            {/* Right, form */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.2 }}
             >
               <form onSubmit={handleSubmit} className="card-frost p-8 space-y-6">
-                {/* Honeypot — hidden from users, catches bots */}
+                {/* Honeypot, hidden from users, catches bots */}
                 <div
                   aria-hidden="true"
                   style={{
@@ -302,7 +302,7 @@ export default function ContactForm() {
                   </div>
                 </div>
 
-                {/* Conditional "Other" text field — only shows when the user picks Other */}
+                {/* Conditional "Other" text field, only shows when the user picks Other */}
                 {source === "Other" && (
                   <div>
                     <label htmlFor="sourceOther" className="block text-[0.72rem] font-semibold text-blue-900 uppercase tracking-wide mb-2">

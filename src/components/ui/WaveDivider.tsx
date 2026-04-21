@@ -1,4 +1,4 @@
-// Wave divider — animated SVG waves between sections
+// Wave divider, animated SVG waves between sections
 export function WaveBottom({ fill = "#ffffff", className = "" }: { fill?: string; className?: string }) {
   return (
     <div className={`absolute bottom-0 left-0 right-0 pointer-events-none z-10 ${className}`}>

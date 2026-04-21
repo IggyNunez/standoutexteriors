@@ -15,7 +15,7 @@ import { CITY_SLUGS } from "@/lib/city-details";
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
-  // Top priority — money pages
+  // Top priority, money pages
   const topLevel: MetadataRoute.Sitemap = [
     {
       url: SITE_URL,
@@ -61,7 +61,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Each service page — highest-intent SEO pages on the site
+  // Each service page, highest-intent SEO pages on the site
   const servicePages: MetadataRoute.Sitemap = SERVICES.map((s) => ({
     url: `${SITE_URL}/services/${s.slug}`,
     lastModified: now,
@@ -69,7 +69,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  // Per-city landing pages — local SEO money pages
+  // Per-city landing pages, local SEO money pages
   const areasIndex: MetadataRoute.Sitemap = [
     {
       url: `${SITE_URL}/areas`,
@@ -85,7 +85,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  // Legal — low priority but still indexed
+  // Legal, low priority but still indexed
   const legal: MetadataRoute.Sitemap = [
     {
       url: `${SITE_URL}/privacy`,

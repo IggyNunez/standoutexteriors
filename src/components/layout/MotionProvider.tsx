@@ -16,15 +16,15 @@ import type { ReactNode } from "react";
  *   - Scroll-linked values (useScroll, useTransform)
  *   - AnimatePresence exit animations
  *
- * Every component in the tree must use `m.X` instead of `motion.X` — if a
+ * Every component in the tree must use `m.X` instead of `motion.X`, if a
  * component imports `motion` directly it will crash with a helpful
- * "strict mode" error in dev. This is intentional — it stops the full
+ * "strict mode" error in dev. This is intentional, it stops the full
  * runtime from sneaking back in.
  *
  * The extra `<div>` wrapper is necessary because LazyMotion only provides
  * context to its descendants. It has no DOM output of its own so there is
  * zero layout impact, but it does break server-only children from being
- * rendered as server components — that's fine for us since every animated
+ * rendered as server components, that's fine for us since every animated
  * section is already a "use client" island.
  */
 export default function MotionProvider({ children }: { children: ReactNode }) {

@@ -10,7 +10,7 @@ const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
  * Full-width map band at the bottom of /contact.
  * Uses Google Maps' keyless iframe embed (no API key, no billing, no JS).
  *
- * The ?q= parameter accepts a place query — we use the full business
+ * The ?q= parameter accepts a place query, we use the full business
  * address for an exact pin drop.
  */
 const MAP_QUERY = encodeURIComponent("7238 Windy Pine Cir, Denver, NC 28037");
@@ -40,7 +40,7 @@ export default function MapSection() {
       {/* Header strip */}
       <div className="relative z-[1] max-w-[1920px] mx-auto px-[clamp(20px,4vw,80px)] pt-20 pb-10 md:pt-24 md:pb-12">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
-          {/* Left — title block */}
+          {/* Left, title block */}
           <div className="md:col-span-7">
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -79,12 +79,12 @@ export default function MapSection() {
               transition={{ delay: 0.25, duration: 0.6 }}
               className="text-[0.95rem] text-gray-500 leading-[1.7] max-w-[540px]"
             >
-              {COMPANY_NAME} is locally owned and operated in Denver, NC —
+              {COMPANY_NAME} is locally owned and operated in Denver, NC -
               proudly serving the entire Lake Norman and greater Charlotte area.
             </motion.p>
           </div>
 
-          {/* Right — address + CTAs */}
+          {/* Right, address + CTAs */}
           <div className="md:col-span-5">
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -185,7 +185,7 @@ export default function MapSection() {
         </motion.div>
       </div>
 
-      {/* Map iframe — full-width edge-to-edge band */}
+      {/* Map iframe, full-width edge-to-edge band */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -200,7 +200,7 @@ export default function MapSection() {
       >
         <iframe
           src={MAP_SRC}
-          title="Stand Out Exterior Cleaning — Denver, NC"
+          title="Stand Out Exterior Cleaning. Denver, NC"
           width="100%"
           height="100%"
           style={{ border: 0, display: "block" }}

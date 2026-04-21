@@ -8,7 +8,7 @@ import CTAContact from "@/components/sections/CTAContact";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Stand Out Exterior Cleaning LLC — Denver NC's trusted pressure washing and soft washing experts serving the Lake Norman area.",
+    "Learn about Stand Out Exterior Cleaning LLC. Denver NC's trusted pressure washing and soft washing experts serving the Lake Norman area.",
 };
 
 export default function AboutPage() {

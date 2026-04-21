@@ -13,11 +13,11 @@ type Shot = {
   alt: string;
   caption: string;
   category: ShotCategory;
-  /** Orientation hint for masonry — "tall" spans 2 rows on desktop */
+  /** Orientation hint for masonry - "tall" spans 2 rows on desktop */
   orientation: "tall" | "wide" | "square";
 };
 
-/* Curated order — leads with strongest/most action-y shots */
+/* Curated order, leads with strongest/most action-y shots */
 const SHOTS: Shot[] = [
   {
     src: "/assets/team/ridge-house-washing-brick-side.webp",
@@ -29,7 +29,7 @@ const SHOTS: Shot[] = [
   {
     src: "/assets/team/ridge-driveway-surface-cleaner-flex.webp",
     alt: "Ridge flexing next to a surface cleaner after a driveway wash",
-    caption: "Driveway surface cleaning — dramatic before/after",
+    caption: "Driveway surface cleaning, dramatic before/after",
     category: "Driveway",
     orientation: "wide",
   },
@@ -71,7 +71,7 @@ const SHOTS: Shot[] = [
   {
     src: "/assets/team/ridge-driveway-spray-rinse.webp",
     alt: "Ridge rinsing a driveway clean with a pressure wand",
-    caption: "Final rinse — concrete back to original",
+    caption: "Final rinse, concrete back to original",
     category: "Driveway",
     orientation: "wide",
   },
@@ -244,7 +244,7 @@ export default function InActionGallery() {
           })}
         </motion.div>
 
-        {/* Masonry grid — CSS columns */}
+        {/* Masonry grid. CSS columns */}
         <div
           className="columns-2 md:columns-3 lg:columns-4 gap-4 md:gap-5"
           style={{ columnFill: "balance" }}

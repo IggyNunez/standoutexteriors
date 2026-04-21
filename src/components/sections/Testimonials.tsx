@@ -90,7 +90,7 @@ export default function Testimonials() {
         {/* Featured review carousel */}
         <FeaturedReview />
 
-        {/* Trust stats — glassmorphic pills */}
+        {/* Trust stats, glassmorphic pills */}
         <motion.div
           className="flex flex-wrap justify-center gap-4 mt-16"
           initial={{ opacity: 0, y: 20 }}

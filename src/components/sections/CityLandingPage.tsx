@@ -13,7 +13,7 @@ interface Props {
 }
 
 /**
- * City landing page — server-rendered, no client JS.
+ * City landing page, server-rendered, no client JS.
  * Every piece of copy is pulled from CITY_DETAILS so each city page
  * is genuinely unique (avoiding Google's duplicate-doorway penalty).
  *

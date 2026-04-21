@@ -9,7 +9,7 @@ import { SERVICES } from "@/lib/constants";
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 /**
- * Homepage services grid — 2 featured cards + 8 small cards (10 total).
+ * Homepage services grid - 2 featured cards + 8 small cards (10 total).
  * Small grid is 4 columns × 2 rows on desktop so every service is still
  * visible on the homepage without any card feeling like an afterthought.
  */
@@ -26,7 +26,7 @@ function Arrow({ className = "" }: { className?: string }) {
 }
 
 /* ═══════════════════════════════════════════════
-   Featured Card — Desktop: hover slide-up
+   Featured Card. Desktop: hover slide-up
    ═══════════════════════════════════════════════ */
 function FeaturedCardDesktop({
   service,
@@ -115,7 +115,7 @@ function FeaturedCardDesktop({
 }
 
 /* ═══════════════════════════════════════════════
-   Featured Card — Mobile: 3D flip
+   Featured Card. Mobile: 3D flip
    ═══════════════════════════════════════════════ */
 function FeaturedCardMobile({
   service,
@@ -229,7 +229,7 @@ function FeaturedCardMobile({
 }
 
 /* ═══════════════════════════════════════════════
-   Small Card — Desktop: hover slide-up
+   Small Card. Desktop: hover slide-up
    ═══════════════════════════════════════════════ */
 function SmallCardDesktop({
   service,
@@ -285,7 +285,7 @@ function SmallCardDesktop({
 }
 
 /* ═══════════════════════════════════════════════
-   Small Card — Mobile: tap to flip
+   Small Card. Mobile: tap to flip
    ═══════════════════════════════════════════════ */
 function SmallCardMobile({
   service,
@@ -422,7 +422,7 @@ export default function Services() {
           </motion.p>
         </div>
 
-        {/* Featured Cards — 2 large */}
+        {/* Featured Cards - 2 large */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           {FEATURED.map((service, i) => (
             <div key={service.title}>
@@ -432,7 +432,7 @@ export default function Services() {
           ))}
         </div>
 
-        {/* Small Cards — 4 across on desktop, 2 across on mobile */}
+        {/* Small Cards - 4 across on desktop, 2 across on mobile */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
           {SMALL.map((service, i) => (
             <div key={service.title}>
@@ -442,7 +442,7 @@ export default function Services() {
           ))}
         </div>
 
-        {/* See-all link — routes to full services index including window, brick, commercial, churches */}
+        {/* See-all link, routes to full services index including window, brick, commercial, churches */}
         <div className="text-center mt-12">
           <Link
             href="/services"

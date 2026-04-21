@@ -8,7 +8,7 @@ import StatsBar from "@/components/sections/StatsBar";
 
 /**
  * Only load and play the hero background video on desktop. On mobile the 3MB
- * autoplay video is the single biggest LCP and bandwidth problem — we fall
+ * autoplay video is the single biggest LCP and bandwidth problem, we fall
  * back to the static `/assets/hero-bg.jpg` poster image (16 KB) instead.
  *
  * We use a media query hook with SSR-safe initial state of `false` so mobile
@@ -148,7 +148,7 @@ export default function Hero() {
           )}
         </motion.div>
 
-        {/* Base colour tint — cool aqua-blue for "water" feel */}
+        {/* Base colour tint, cool aqua-blue for "water" feel */}
         <div className="absolute inset-0 bg-[#0a2a4a]/50" />
         {/* Depth gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-[#0a3a6a]/10 to-[#061e38]/80" />
@@ -278,7 +278,7 @@ export default function Hero() {
         className="absolute bottom-0 left-0 right-0 z-[5] pointer-events-none"
         style={{ y: waveY }}
       >
-        {/* Back wave — lighter, slower */}
+        {/* Back wave, lighter, slower */}
         <svg
           viewBox="0 0 1440 80"
           xmlns="http://www.w3.org/2000/svg"
@@ -299,7 +299,7 @@ export default function Hero() {
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           />
         </svg>
-        {/* Front wave — solid white, faster */}
+        {/* Front wave, solid white, faster */}
         <svg
           viewBox="0 0 1440 60"
           xmlns="http://www.w3.org/2000/svg"

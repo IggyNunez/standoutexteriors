@@ -15,7 +15,7 @@ export default function Footer() {
       {/* ── Animated canvas wave (brand colours) ── */}
       <FooterWaveCanvas />
 
-      {/* ── Radial glow blobs — layered on top of canvas for depth ── */}
+      {/* ── Radial glow blobs, layered on top of canvas for depth ── */}
       <div className="absolute inset-0 z-[1] pointer-events-none">
         {/* Top-center green glow behind logo */}
         <div style={{ position: "absolute", top: "-10%", left: "50%", transform: "translateX(-50%)", width: 700, height: 400, borderRadius: "50%", background: "radial-gradient(ellipse, rgba(0,166,81,0.09) 0%, transparent 70%)" }} />

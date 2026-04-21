@@ -49,7 +49,7 @@ function buildHtml(lead: LeadFormData) {
 <html>
 <head>
 <meta charset="utf-8">
-<title>New Lead — ${esc(fullName)}</title>
+<title>New Lead - ${esc(fullName)}</title>
 </head>
 <body style="margin:0;padding:0;background:#f5f7fa;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#0A2E5C;">
   <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#f5f7fa;">
@@ -68,7 +68,7 @@ function buildHtml(lead: LeadFormData) {
           <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
             <tr>
               <td style="padding:6px 0;font-size:13px;color:#64748b;width:90px;vertical-align:top;">Name</td>
-              <td style="padding:6px 0;font-size:14px;color:#0A2E5C;font-weight:600;">${esc(fullName) || "—"}</td>
+              <td style="padding:6px 0;font-size:14px;color:#0A2E5C;font-weight:600;">${esc(fullName) || "-"}</td>
             </tr>
             <tr>
               <td style="padding:6px 0;font-size:13px;color:#64748b;vertical-align:top;">Email</td>
@@ -143,12 +143,12 @@ function buildText(lead: LeadFormData) {
 
 export async function POST(request: Request) {
   try {
-    // Parse body. We accept an optional "company" honeypot field — real users
+    // Parse body. We accept an optional "company" honeypot field, real users
     // won't see or fill it; bots happily will. Any non-empty value = discard silently.
     const body = (await request.json()) as LeadFormData & { company?: string };
 
     if (body.company && body.company.trim() !== "") {
-      // Honeypot tripped — pretend success so bots don't learn they were caught.
+      // Honeypot tripped, pretend success so bots don't learn they were caught.
       return NextResponse.json<LeadApiResponse>({
         success: true,
         message: "Thanks! We'll be in touch shortly.",
@@ -163,7 +163,7 @@ export async function POST(request: Request) {
       );
     }
 
-    // Log for Vercel logs — last-resort backup so no lead is ever fully lost
+    // Log for Vercel logs, last-resort backup so no lead is ever fully lost
     console.log("[lead] new submission", {
       name: `${body.firstName} ${body.lastName}`,
       email: body.email,
@@ -175,7 +175,7 @@ export async function POST(request: Request) {
 
     // If Resend isn't configured, surface a clear error instead of silently 200ing
     if (!resend) {
-      console.error("[lead] RESEND_API_KEY is not set — email NOT sent");
+      console.error("[lead] RESEND_API_KEY is not set, email NOT sent");
       return NextResponse.json<LeadApiResponse>(
         {
           success: false,
@@ -186,7 +186,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const subject = `New Lead — ${body.firstName} ${body.lastName}${body.service ? " · " + body.service : ""}`;
+    const subject = `New Lead - ${body.firstName} ${body.lastName}${body.service ? " · " + body.service : ""}`;
 
     const { error } = await resend.emails.send({
       from: RESEND_FROM,

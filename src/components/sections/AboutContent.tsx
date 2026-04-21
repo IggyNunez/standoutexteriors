@@ -45,11 +45,11 @@ export default function AboutContent() {
     <section ref={sectionRef} className="relative bg-white overflow-hidden pt-[120px] min-[1200px]:pt-[140px]">
 
       {/* ══════════════════════════════════════════
-          DESKTOP — Split layout
+          DESKTOP. Split layout
       ══════════════════════════════════════════ */}
       <div className="hidden md:grid md:grid-cols-2 min-h-[90vh]">
 
-        {/* ── Left panel — dark ocean + video ── */}
+        {/* ── Left panel, dark ocean + video ── */}
         <div
           className="relative overflow-hidden"
           style={{ background: "linear-gradient(160deg, #061e38 0%, #0A2E5C 60%, #0d3870 100%)" }}
@@ -166,7 +166,7 @@ export default function AboutContent() {
           </div>
         </div>
 
-        {/* ── Right panel — white content ── */}
+        {/* ── Right panel, white content ── */}
         <div className="flex flex-col justify-center px-[clamp(40px,5vw,80px)] py-24 bg-white">
 
           {/* Eyebrow */}
@@ -301,7 +301,7 @@ export default function AboutContent() {
       </div>
 
       {/* ══════════════════════════════════════════
-          MOBILE — Stacked layout
+          MOBILE. Stacked layout
       ══════════════════════════════════════════ */}
       <div className="md:hidden">
         {/* Dark video panel */}
@@ -337,7 +337,7 @@ export default function AboutContent() {
             <p className="italic text-white/75 text-[1rem] leading-[1.7] max-w-[340px]">
               There&apos;s a difference between a job done and a job done right.
             </p>
-            <p className="italic text-cyan-300 text-[0.9rem] mt-3 font-semibold">— Ridge Curwood</p>
+            <p className="italic text-cyan-300 text-[0.9rem] mt-3 font-semibold">Ridge Curwood</p>
 
             {/* Mini stats row */}
             <div className="flex gap-3 mt-6">

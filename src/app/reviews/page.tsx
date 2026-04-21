@@ -33,11 +33,11 @@ const LOCAL_PHOTO_OVERRIDES: Record<string, { avatar?: string; photos?: { src: s
   },
   "Rachel Cartner": {
     avatar: "/assets/rachel-cartner.png",
-    photos: [{ src: "/assets/rachel-before-after.webp", caption: "Driveway cleaning — after" }],
+    photos: [{ src: "/assets/rachel-before-after.webp", caption: "Driveway cleaning, after" }],
   },
   "Heidi Erickson": {
     avatar: "/assets/heidi-erickson-avatar.png",
-    photos: [{ src: "/assets/heidi-erickson.webp", caption: "Driveway & sidewalk cleaning — after" }],
+    photos: [{ src: "/assets/heidi-erickson.webp", caption: "Driveway & sidewalk cleaning, after" }],
   },
 };
 
@@ -310,7 +310,7 @@ export default function ReviewsPage() {
               style={{ fontSize: "clamp(0.88rem,1.5vw,1.05rem)", color: "rgba(255,255,255,0.6)", maxWidth: 540, margin: "0 auto 36px", lineHeight: 1.65 }}
               initial={{ opacity: 0 }} animate={heroInView ? { opacity: 1 } : {}} transition={{ delay: 0.3 }}
             >
-              Every single review is real, verified on Google. No cherry-picking — just {TOTAL} honest opinions from Lake Norman homeowners.
+              Every single review is real, verified on Google. No cherry-picking, just {TOTAL} honest opinions from Lake Norman homeowners.
             </motion.p>
 
             {/* Stat pills */}
@@ -431,9 +431,9 @@ function ConversionSection() {
   const inView = useInView(ref, { once: true, margin: "0px 0px -60px 0px" });
 
   const reasons = [
-    { icon: "⭐", title: "5.0 Stars — Every Time", desc: "Not a single unhappy customer. Ridge and his team show up, do the work right, and leave your property spotless." },
+    { icon: "⭐", title: "5.0 Stars. Every Time", desc: "Not a single unhappy customer. Ridge and his team show up, do the work right, and leave your property spotless." },
     { icon: "📸", title: "See the Results First", desc: `${WITH_PHOTOS} of our reviews include real before & after photos. The results speak for themselves.` },
-    { icon: "🏡", title: "Your Neighbor Chose Us", desc: "Layne, Rachel, Heidi — these are real Lake Norman homeowners who trust us every year." },
+    { icon: "🏡", title: "Your Neighbor Chose Us", desc: "Layne, Rachel, Heidi, these are real Lake Norman homeowners who trust us every year." },
     { icon: "🔒", title: "No Risk, Free Estimate", desc: "No contracts. No pressure. Just an honest quote and professional service, guaranteed." },
   ];
 

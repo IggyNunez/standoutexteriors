@@ -88,7 +88,7 @@ export default function Nav() {
           animate={{ justifyContent: scrolled ? "center" : "space-between" }}
           transition={{ duration: DURATION, ease: EASE }}
         >
-          {/* Big logo — shimmer-bordered frosted pill, collapses on scroll */}
+          {/* Big logo, shimmer-bordered frosted pill, collapses on scroll */}
           <motion.div
             className="shrink-0"
             initial={false}
@@ -135,7 +135,7 @@ export default function Nav() {
             </div>
           </motion.div>
 
-          {/* Pill — animated conic-gradient shimmer border */}
+          {/* Pill, animated conic-gradient shimmer border */}
           <div
             className="nav-pill-border"
             style={{
@@ -158,7 +158,7 @@ export default function Nav() {
               }}
               transition={{ duration: DURATION, ease: EASE }}
             >
-              {/* Small logo inside pill — appears on scroll */}
+              {/* Small logo inside pill, appears on scroll */}
               <motion.a
                 href="/"
                 className="shrink-0 flex items-center justify-center overflow-hidden"
@@ -254,7 +254,7 @@ export default function Nav() {
 
       {/* ── Mobile Nav ── */}
       <nav className="min-[1200px]:hidden fixed top-0 left-0 right-0 z-[100] px-4 pt-3 flex items-start justify-between">
-        {/* Big logo — shimmer-bordered frosted pill, collapses on scroll */}
+        {/* Big logo, shimmer-bordered frosted pill, collapses on scroll */}
         <motion.div
           className="shrink-0"
           initial={false}
@@ -300,7 +300,7 @@ export default function Nav() {
           </div>
         </motion.div>
 
-        {/* Pill — animated conic-gradient shimmer border */}
+        {/* Pill, animated conic-gradient shimmer border */}
         <div
           className="nav-pill-border"
           style={{
@@ -319,7 +319,7 @@ export default function Nav() {
             }}
             transition={{ duration: DURATION, ease: EASE }}
           >
-            {/* Small logo inside pill — appears on scroll */}
+            {/* Small logo inside pill, appears on scroll */}
             <motion.a
               href="/"
               className="shrink-0 flex items-center justify-center overflow-hidden"
@@ -378,7 +378,7 @@ export default function Nav() {
         </div>
       </nav>
 
-      {/* ── Mobile Drawer — chamfered card ── */}
+      {/* ── Mobile Drawer, chamfered card ── */}
       <AnimatePresence>
         {mobileOpen && (
           <>

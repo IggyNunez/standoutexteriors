@@ -17,11 +17,11 @@ type BAItem = { id: string; src: string; tag: string; label: string };
 /**
  * Build a rich, SEO-friendly alt string for a before-after photo.
  * Includes the service type, the location keyword, and the brand.
- * Example: "House Washing Before & After in Denver, NC — Stand Out Exterior Cleaning"
+ * Example: "House Washing Before & After in Denver, NC. Stand Out Exterior Cleaning"
  */
 function buildPhotoAlt(item: BAItem): string {
   const service = item.label.includes("Before") ? item.label : `${item.label} Before & After`;
-  return `${service} in Denver, NC & Lake Norman — Stand Out Exterior Cleaning`;
+  return `${service} in Denver, NC & Lake Norman. Stand Out Exterior Cleaning`;
 }
 
 const IMAGES: BAItem[] = [
@@ -385,7 +385,7 @@ export default function BeforeAfterPage() {
             initial={{ opacity: 0 }} animate={heroInView ? { opacity: 1 } : {}} transition={{ delay: 0.2, duration: 0.7 }}
             className="text-gray-500 max-w-xl mx-auto leading-relaxed mb-8 text-[0.95rem]"
           >
-            {IMAGES.length} real photos from real properties across Denver &amp; Lake Norman. Every single one is a job we did — no stock photos, no tricks.
+            {IMAGES.length} real photos from real properties across Denver &amp; Lake Norman. Every single one is a job we did, no stock photos, no tricks.
           </motion.p>
 
           <motion.div
@@ -482,7 +482,7 @@ export default function BeforeAfterPage() {
 
             {/* ── Grid area ── */}
             <div className="flex-1 min-w-0">
-              {/* Results count — desktop */}
+              {/* Results count, desktop */}
               <div className="hidden min-[900px]:flex items-center justify-between mb-5">
                 <p className="text-[0.78rem] text-gray-400">
                   Showing <span className="font-bold text-blue-900">{filtered.length}</span> photo{filtered.length !== 1 ? "s" : ""}

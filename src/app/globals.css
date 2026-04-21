@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  /* ── Stand Out Exterior Cleaning — Brand Tokens ── */
+  /* ── Stand Out Exterior Cleaning. Brand Tokens ── */
 
   /* Primary Blues */
   --color-blue-900: #0A2E5C;
   --color-blue-800: #0D3A72;
   --color-blue-700: #0054A6;
   --color-blue-600: #1A6BC4;
-  --color-blue-500: #1A6BC4; /* 5.27:1 on white — WCAG AA for small text */
+  --color-blue-500: #1A6BC4; /* 5.27:1 on white. WCAG AA for small text */
   --color-blue-400: #4A9AF0;
   --color-blue-300: #5BC4F0;
   --color-blue-200: #A0DBFA;
@@ -22,10 +22,10 @@
   --color-green-400: #5DD990;
   --color-green-100: #E0F5EA;
 
-  /* Orange (CTA only) — WCAG AA compliant on white text (4.5:1+) */
-  --color-orange-700: #9A3412; /* 7.24:1 — hover state */
-  --color-orange-600: #C2410C; /* 5.06:1 — primary CTA */
-  --color-orange-500: #C2410C; /* 5.06:1 — alias for existing bg-orange-500 usages */
+  /* Orange (CTA only). WCAG AA compliant on white text (4.5:1+) */
+  --color-orange-700: #9A3412; /* 7.24:1, hover state */
+  --color-orange-600: #C2410C; /* 5.06:1, primary CTA */
+  --color-orange-500: #C2410C; /* 5.06:1, alias for existing bg-orange-500 usages */
   --color-orange-400: #FF8A5C; /* accents only, not for text backgrounds */
 
   /* Surfaces */
@@ -141,7 +141,7 @@ body {
   width: max-content;
 }
 
-/* ── Nav pill — animated conic-gradient shimmer border ── */
+/* ── Nav pill, animated conic-gradient shimmer border ── */
 @property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
@@ -171,7 +171,7 @@ body {
   animation: navPillSpin 3.5s linear infinite;
 }
 
-/* ── Timeline logo node — green/teal conic shimmer border ── */
+/* ── Timeline logo node, green/teal conic shimmer border ── */
 @property --angle-tl {
   syntax: "<angle>";
   initial-value: 0deg;
@@ -211,7 +211,7 @@ body {
   animation-play-state: paused;
 }
 
-/* ── Water shimmer overlay — reusable across sections ── */
+/* ── Water shimmer overlay, reusable across sections ── */
 @keyframes waterDrift {
   0%   { transform: translate(0px, 0px) scale(1); }
   33%  { transform: translate(40px, -20px) scale(1.08); }
