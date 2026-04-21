@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { m as motion, useInView, AnimatePresence } from 'framer-motion';
@@ -212,39 +212,13 @@ function Hero({ service, detail }: Props) {
     service.slug === "christmas-lights" ? HERO_THEMES.christmas : HERO_THEMES.default;
   const isChristmas = service.slug === "christmas-lights";
 
-  // Fade the hero video in only AFTER it's loaded enough to play. The
-  // poster <Image> is the LCP anchor, it renders first, paints fast,
-  // and stays in the DOM so search engines get a real static image
-  // (videos don't count as LCP and aren't indexed the same way).
-  // Once the video is ready, we fade it in OVER the image. If the
-  // video never loads (slow network, data-saver, prefers-reduced-motion,
-  // older browser), the image stays and the page still looks great.
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-  const [videoReady, setVideoReady] = useState(false);
-  useEffect(() => {
-    if (!isChristmas || typeof window === "undefined") return;
-    // Respect reduced-motion, users who asked their OS to turn off
-    // animations shouldn't get an autoplaying video loop.
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (mq.matches) return;
-    const v = videoRef.current;
-    if (!v) return;
-    const onReady = () => setVideoReady(true);
-    v.addEventListener("loadeddata", onReady);
-    // Some browsers fire canplay but not loadeddata for autoplayed loops
-    v.addEventListener("canplay", onReady);
-    return () => {
-      v.removeEventListener("loadeddata", onReady);
-      v.removeEventListener("canplay", onReady);
-    };
-  }, [isChristmas]);
-
   return (
     <section className="relative overflow-hidden bg-[#061e38] text-white pt-[120px] min-[1200px]:pt-[160px] pb-24">
-      {/* Background image, the LCP anchor. Renders first, always stays
-          in the DOM for SEO. On Christmas it's also the fallback if
-          the video never loads (slow network, prefers-reduced-motion,
-          older browser). */}
+      {/* Background image, the LCP anchor. Renders first, stays in the
+          DOM for SEO. The Christmas page is image-only (video was
+          removed per design feedback); the hero photo alone with the
+          twinkling fairy-light orbs already reads as "holiday lights
+          at night" without the extra weight of a video loop. */}
       <div className="absolute inset-0">
         <Image
           src={service.image}
@@ -255,36 +229,12 @@ function Hero({ service, detail }: Props) {
           className="object-cover"
         />
 
-        {/* Christmas only: looping hero video stacked on top of the
-            poster. Fades in once ready, no layout shift, no LCP
-            regression. `preload="none"` so mobile and data-saver
-            users don't pay the bandwidth unless the video actually
-            plays. `playsInline` + `muted` is required for iOS
-            autoplay to work without user interaction. */}
-        {isChristmas && (
-          <video
-            ref={videoRef}
-            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
-            style={{ opacity: videoReady ? 1 : 0 }}
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="none"
-            poster={service.image}
-            aria-hidden
-          >
-            <source src="/assets/video/christmas-hero.webm" type="video/webm" />
-            <source src="/assets/video/christmas-hero.mp4" type="video/mp4" />
-          </video>
-        )}
-
         <div
           className="absolute inset-0"
           style={{
             background: theme.twinkle
               ? // Christmas: deeper, slightly warmer overlay that lets the
-                // lights in the photo/video glow through at dusk.
+                // lights in the photo glow through at dusk.
                 "linear-gradient(120deg, rgba(6,20,40,0.82) 0%, rgba(8,28,54,0.7) 50%, rgba(10,30,60,0.4) 100%)"
               : "linear-gradient(120deg, rgba(6,30,56,0.88) 0%, rgba(10,46,92,0.76) 45%, rgba(10,46,92,0.3) 100%)",
           }}
