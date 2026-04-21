@@ -611,8 +611,8 @@ function BodyCopy({ detail, service }: Props) {
                   }}
                 >
                   <Image
-                    src="/assets/christmas-lights.jpg"
-                    alt="Warm-white Christmas lights and evergreen garland on a rooftop at dusk in Denver NC"
+                    src="/assets/christmas-showcase.jpg"
+                    alt="Two-story home with full roofline Christmas lights, window wreaths, and lit shrubs at night in Denver NC"
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"
                     className="object-cover"
@@ -627,8 +627,8 @@ function BodyCopy({ detail, service }: Props) {
                   />
                   {/* Caption chips identifying what the photo shows
                       in the vocabulary of the service. Matched to the
-                      current close-up garland shot: rooflines, garland,
-                      and commercial-grade warm-white LEDs. */}
+                      full-house showcase shot: rooflines, shrubs/trees,
+                      and window wreaths. */}
                   <div className="absolute bottom-5 left-5 right-5 flex flex-wrap items-center gap-2">
                     <span
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[0.62rem] font-bold tracking-[0.12em] uppercase"
@@ -640,7 +640,7 @@ function BodyCopy({ detail, service }: Props) {
                       <span className="w-3 h-3" style={{ color: "#E8B84C" }}>
                         {FestiveIcons.bulb}
                       </span>
-                      Warm-White LEDs
+                      Roofline + Windows
                     </span>
                     <span
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[0.62rem] font-bold tracking-[0.12em] uppercase"
@@ -652,7 +652,7 @@ function BodyCopy({ detail, service }: Props) {
                       <span className="w-3 h-3" style={{ color: "#2EB67D" }}>
                         {FestiveIcons.tree}
                       </span>
-                      Garland + Greenery
+                      Shrubs + Trees
                     </span>
                     <span
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[0.62rem] font-bold tracking-[0.12em] uppercase"
@@ -664,7 +664,7 @@ function BodyCopy({ detail, service }: Props) {
                       <span className="w-3 h-3" style={{ color: "#C2352C" }}>
                         {FestiveIcons.wreath}
                       </span>
-                      Roofline Install
+                      Wreaths
                     </span>
                   </div>
                 </div>
