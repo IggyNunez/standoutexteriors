@@ -138,8 +138,8 @@ export const SERVICES: ServiceCard[] = [
     label: "Commercial",
     title: "Commercial Pressure Washing",
     description: "Keep your business looking professional with our commercial pressure washing services. We clean storefronts, sidewalks, parking lots, dumpster pads, and more.",
-    image: "/assets/team/ridge-commercial-uhaul-storefront.webp",
-    imageAlt: "Clean commercial storefront after Stand Out Exterior commercial pressure washing in Denver NC",
+    image: "/assets/commercial-washing.jpg",
+    imageAlt: "Pressure washer removing grime from a red brick commercial wall, dramatic before and after in one frame",
     icon: "building",
     bullets: [
       "Storefronts, sidewalks & parking lots",
