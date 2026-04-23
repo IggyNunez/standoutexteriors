@@ -9,12 +9,14 @@ import { SERVICES } from "@/lib/constants";
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 /**
- * Homepage services grid - 2 featured cards + 8 small cards (10 total).
- * Small grid is 4 columns × 2 rows on desktop so every service is still
- * visible on the homepage without any card feeling like an afterthought.
+ * Homepage services grid: 3 featured cards (top row) + 8 small cards
+ * (two rows of 4) for a total of 11 services on the homepage. The
+ * 3-featured layout shows off the three highest-margin residential
+ * services (house, driveway, roof) in a wider hero treatment, then
+ * the remaining 8 fit cleanly into symmetric 4+4 rows below.
  */
-const FEATURED = SERVICES.slice(0, 2);
-const SMALL = SERVICES.slice(2);
+const FEATURED = SERVICES.slice(0, 3);
+const SMALL = SERVICES.slice(3);
 
 /* ── Arrow icon ── */
 function Arrow({ className = "" }: { className?: string }) {
@@ -49,7 +51,7 @@ function FeaturedCardDesktop({
         src={service.image}
         alt={service.imageAlt}
         fill
-        sizes="(max-width: 768px) 100vw, (max-width: 1920px) 50vw, 960px"
+        sizes="(max-width: 768px) 100vw, (max-width: 1920px) 33vw, 640px"
         className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
       />
 
@@ -78,7 +80,7 @@ function FeaturedCardDesktop({
 
       {/* Content */}
       <div className="absolute inset-x-0 bottom-0 z-10 p-6 md:p-8">
-        <h3 className="font-[family-name:var(--font-display)] text-[clamp(1.5rem,2.5vw,2rem)] uppercase text-white leading-tight mb-2 tracking-wide">
+        <h3 className="font-[family-name:var(--font-display)] text-[clamp(1.3rem,2vw,1.7rem)] uppercase text-white leading-tight mb-2 tracking-wide">
           {service.title}
         </h3>
 
@@ -422,8 +424,8 @@ export default function Services() {
           </motion.p>
         </div>
 
-        {/* Featured Cards - 2 large */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        {/* Featured Cards: 3 large on desktop, 1-per-row on mobile */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
           {FEATURED.map((service, i) => (
             <div key={service.title}>
               <FeaturedCardDesktop service={service} delay={0.1 + i * 0.1} isInView={isInView} />
@@ -432,7 +434,7 @@ export default function Services() {
           ))}
         </div>
 
-        {/* Small Cards - 4 across on desktop, 2 across on mobile */}
+        {/* Small Cards: 4 across on desktop (2 rows of 4), 2 across on mobile */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
           {SMALL.map((service, i) => (
             <div key={service.title}>
