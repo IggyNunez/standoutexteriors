@@ -27,20 +27,60 @@ const TO = "dev@ignacionunez.dev";
 const PROJECT_NAME = "standoutexterior-next";
 const PRODUCTION_URL = "https://www.standoutexterior.com";
 
-const MANIFEST_PATH = path.join(process.cwd(), ".lighthouseci", "manifest.json");
+const LHCI_DIR = path.join(process.cwd(), ".lighthouseci");
 
+/**
+ * Parse Lighthouse CI report files directly from `.lighthouseci/`.
+ *
+ * Earlier versions of this script looked for `manifest.json`, which
+ * Lighthouse CI only writes when the upload target is a persistent
+ * server. With `temporary-public-storage` we get individual
+ * `lhr-<hash>.json` files (one per audited URL) but no manifest.
+ *
+ * Each lhr JSON has the full Lighthouse Result at the top level:
+ *   { finalUrl, categories: { performance: { score }, ... }, ... }
+ * We pluck what we need and turn it into the same shape the email
+ * template expects (url + summary { performance, accessibility, ... }).
+ */
 function loadManifest() {
-  if (!fs.existsSync(MANIFEST_PATH)) {
-    console.error(`[digest] manifest not found at ${MANIFEST_PATH}`);
-    console.error("[digest] lhci likely failed before it could emit results");
+  if (!fs.existsSync(LHCI_DIR)) {
+    console.error(`[digest] directory not found at ${LHCI_DIR}`);
     return [];
   }
-  try {
-    return JSON.parse(fs.readFileSync(MANIFEST_PATH, "utf-8"));
-  } catch (err) {
-    console.error("[digest] manifest parse error", err);
+
+  const lhrFiles = fs
+    .readdirSync(LHCI_DIR)
+    .filter((f) => f.startsWith("lhr-") && f.endsWith(".json"));
+
+  if (lhrFiles.length === 0) {
+    console.error(`[digest] no lhr-*.json files found in ${LHCI_DIR}`);
+    console.error(`[digest] contents: ${fs.readdirSync(LHCI_DIR).join(", ")}`);
     return [];
   }
+
+  const entries = [];
+  for (const file of lhrFiles) {
+    try {
+      const lhr = JSON.parse(fs.readFileSync(path.join(LHCI_DIR, file), "utf-8"));
+      const cats = lhr.categories || {};
+      entries.push({
+        url: lhr.finalDisplayedUrl || lhr.finalUrl || lhr.requestedUrl || "",
+        summary: {
+          performance: cats.performance?.score ?? null,
+          accessibility: cats.accessibility?.score ?? null,
+          "best-practices": cats["best-practices"]?.score ?? null,
+          seo: cats.seo?.score ?? null,
+        },
+      });
+    } catch (err) {
+      console.error(`[digest] failed to parse ${file}:`, err.message);
+    }
+  }
+
+  // Sort by URL for stable table order across runs
+  entries.sort((a, b) => a.url.localeCompare(b.url));
+  console.log(`[digest] parsed ${entries.length} Lighthouse results`);
+  return entries;
 }
 
 /** Convert a 0.0–1.0 Lighthouse score into a 0–100 integer + color. */
@@ -128,9 +168,9 @@ function buildHtml(manifest) {
             <span style="color:#E8B84C;">●</span> 75–89 watch ·
             <span style="color:#C2352C;">●</span> &lt;75 fix
             <br><br>
-            Full reports are kept in the GitHub Actions run artifacts for the
-            lighthouse-weekly job (manifest.json contains URLs to each
-            temporary public report).
+            Full interactive reports are uploaded to temporary public storage
+            by Lighthouse CI. Check the GitHub Actions run log for each
+            "Open the report at ..." link.
           </div>
         </td></tr>
 
