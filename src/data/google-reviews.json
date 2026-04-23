@@ -1,586 +1,721 @@
 {
-  "fetchedAt": "2026-03-18T12:50:23.210Z",
-  "total": 124,
+  "fetchedAt": "2026-04-23T13:33:14.663Z",
+  "total": 129,
   "reviews": [
     {
-      "name": "kyle jordan",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJWxvBM7QpPrya625y_bRUXNH-0kipT-meSb0obZlBdLb4Uug=s120-c-rp-mo-br100",
+      "name": "Jeff Parker",
+      "avatar": "/assets/reviews/avatars/c1c396b88898a853.jpg",
       "isLocalGuide": true,
       "reviewCount": 6,
       "rating": 5,
-      "text": "Looked amazing afterwards! Great price",
-      "ago": "a week ago",
-      "isoDate": "2026-03-10T01:12:16Z",
+      "text": "Great job on our drives, walkways and parking pad. Lots of cement that looks new now. These guys are professional, friendly and hard workers. Well worth your time to hire them for any power wash needs.",
+      "ago": "16 hours ago",
+      "isoDate": "2026-04-22T21:08:10Z",
       "photos": [],
       "source": "google"
     },
     {
-      "name": "Nathalie Naslund",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJA20WWp3CN7gAcamol0WSu1GWXVG74x1-xK_Dy3FmYciVVVg=s120-c-rp-mo-ba2-br100",
+      "name": "Aubrey Fox",
+      "avatar": "/assets/reviews/avatars/eddda3922d4b7316.jpg",
       "isLocalGuide": true,
-      "reviewCount": 4,
+      "reviewCount": 3,
+      "rating": 5,
+      "text": "Stand Out did an excellent service on our home today!  The team was quick to provide a reasonable quote and took no time at all to get service scheduled. They were on time professional and through.",
+      "ago": "2 days ago",
+      "isoDate": "2026-04-20T19:29:18Z",
+      "photos": [],
+      "source": "google"
+    },
+    {
+      "name": "Kelli McDevitt",
+      "avatar": "/assets/reviews/avatars/5dc5fe5a7ab2052d.jpg",
+      "isLocalGuide": true,
+      "reviewCount": 2,
+      "rating": 5,
+      "text": "These guys came out as it fit to my schedule, did a thorough and excellent job. Very neat, polite and fast!!! Cleaned my windows inside and out, power washed the house- it all looks brand new!!! Reasonable price too!!! I’ll keep having them back, you should too!!🥳😁",
+      "ago": "3 days ago",
+      "isoDate": "2026-04-19T14:51:15Z",
+      "photos": [],
+      "source": "google"
+    },
+    {
+      "name": "Ed DiMinno",
+      "avatar": "/assets/reviews/avatars/ecf94b4262666f8b.jpg",
+      "isLocalGuide": true,
+      "reviewCount": 6,
+      "rating": 5,
+      "text": "Excellent Job with attention to detail. Knowledgeable, professional and courteous.",
+      "ago": "2 weeks ago",
+      "isoDate": "2026-04-08T19:03:16Z",
+      "photos": [],
+      "source": "google"
+    },
+    {
+      "name": "Lawrence Schilling",
+      "avatar": "/assets/reviews/avatars/eaf08dd1ecc48a50.jpg",
+      "isLocalGuide": true,
+      "reviewCount": 6,
+      "rating": 5,
+      "text": "",
+      "ago": "3 weeks ago",
+      "isoDate": "2026-03-26T21:08:21Z",
+      "photos": [],
+      "source": "google"
+    },
+    {
+      "name": "kyle jordan",
+      "avatar": "/assets/reviews/avatars/d38616d73d477aa9.jpg",
+      "isLocalGuide": true,
+      "reviewCount": 6,
+      "rating": 5,
+      "text": "Looked amazing afterwards! Great price",
+      "ago": "a month ago",
+      "isoDate": "2026-03-10T01:12:16Z",
+      "photos": [
+        {
+          "src": "/assets/reviews/photos/4fb47726a8fc19e1.jpg",
+          "caption": "Customer photo"
+        },
+        {
+          "src": "/assets/reviews/photos/58bfb54888b53d41.jpg",
+          "caption": "Customer photo"
+        }
+      ],
+      "source": "google"
+    },
+    {
+      "name": "Nathalie Naslund",
+      "avatar": "/assets/reviews/avatars/0e76b3acb7512ca1.jpg",
+      "isLocalGuide": true,
+      "reviewCount": 5,
       "rating": 5,
       "text": "Great communication, prompt, very nice, highly recommend.",
-      "ago": "a week ago",
+      "ago": "a month ago",
       "isoDate": "2026-03-09T16:00:31Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Laura Gagel",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLNJOa-ecfQAEDG3To4fFkHpM4Lxrrsi4a0D2ort__eJ0gCqA=s120-c-rp-mo-ba2-br100",
+      "avatar": "/assets/reviews/avatars/a980f9c9a7c42448.jpg",
       "isLocalGuide": true,
       "reviewCount": 22,
       "rating": 5,
       "text": "Ridge and Logan did an excellent job cleaning our roof, soffits and windows! It was a pleasure working with Ridge.  He is a great businessman, and I highly recommend his services!",
-      "ago": "2 weeks ago",
+      "ago": "a month ago",
       "isoDate": "2026-03-01T14:26:43Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Gary Vogel",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJQTESK3857PyjuIbY6U4ksM8JWd_5p5RaleO3mRh3eMgiXyw=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/a7abe4b3d51f547c.jpg",
       "isLocalGuide": true,
       "reviewCount": 4,
       "rating": 5,
       "text": "Great guys that you can count on for any pressure washer, window or christmas light needs!",
-      "ago": "a month ago",
+      "ago": "2 months ago",
       "isoDate": "2026-02-17T17:55:40Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Brian Adams",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJKoQ3fmIm_PW7tmzoXxttijbHR7BZXPan9D9uHHSriXUwc8A=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/435e49ebcff06cd2.jpg",
       "isLocalGuide": true,
-      "reviewCount": 4,
+      "reviewCount": 5,
       "rating": 5,
       "text": "Ridge has been doing my exterior cleaning on my new construction projects going on three years now. He has always shown up on time, been great at communication , and extremely detailed oriented. Highly recommend him",
-      "ago": "a month ago",
+      "ago": "2 months ago",
       "isoDate": "2026-01-29T17:18:10Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Tony Hardin",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLIzD1HuuZaHJl6UhsT1hKyZQj9njc31QVpZEfsW7G399LX5w=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/fb868df3698676ef.jpg",
       "isLocalGuide": true,
       "reviewCount": 5,
       "rating": 5,
       "text": "Cleared and cleaned my driveway professionally and efficiently!  I look forward to using their services again in the future.  I recommend them based on my experience with the company.",
-      "ago": "a month ago",
+      "ago": "2 months ago",
       "isoDate": "2026-01-28T21:33:42Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Peggy Yountz",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocIQ8WR0BGkxZoxQpk6h3XUmbxbfAuy7Az0UE6jKj5OYN1KtEQ=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/e91fbca5086e0e13.jpg",
       "isLocalGuide": true,
       "reviewCount": 11,
       "rating": 5,
       "text": "Deiced my driveway and sidewalk. I highly recommend this company for house and driveway cleaning.",
-      "ago": "a month ago",
+      "ago": "2 months ago",
       "isoDate": "2026-01-28T20:27:36Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Ken Runyon",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJtbhn4enNw6UWbhfrpQ97dVaPfmIXdRPki2IdfYsT00TE8kA=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/04fc743f4e775ced.jpg",
       "isLocalGuide": true,
-      "reviewCount": 11,
+      "reviewCount": 13,
       "rating": 5,
       "text": "Had Stand Out Cleaning treat my roof.  Very conscientious of the landscaping and home.  Ridge did a great job and even guaranteed that the algae and mold on the roof would be completely gone.  Fair price and very friendly.  Highly recommend this company",
-      "ago": "5 months ago",
+      "ago": "6 months ago",
       "isoDate": "2025-10-14T18:33:28Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Douglas Vance",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocKTkAr5byoH4OkBfygwegePBGTUqYPxzmw7FPPm1vvHBkR18Q=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/37d71518cf3d78ff.jpg",
       "isLocalGuide": true,
       "reviewCount": null,
       "rating": 5,
       "text": "",
-      "ago": "5 months ago",
+      "ago": "6 months ago",
       "isoDate": "2025-10-13T19:14:38Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Artur Hofer",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjVdZ5nu1XgYzqeA4J3xCX218zYLR57jwRAF1BrIIe8EqnrN3s61=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/088b7bebaf5bbd60.jpg",
       "isLocalGuide": true,
       "reviewCount": 6,
       "rating": 5,
       "text": "They have done gutter cleaning, exterior washing, and clay removal from brick. Always timely and do their job well!",
-      "ago": "5 months ago",
+      "ago": "6 months ago",
       "isoDate": "2025-10-12T20:12:47Z",
-      "photos": [],
+      "photos": [
+        {
+          "src": "/assets/reviews/photos/73e181338a9f0050.jpg",
+          "caption": "Customer photo"
+        },
+        {
+          "src": "/assets/reviews/photos/a27229fa1e9506ec.jpg",
+          "caption": "Customer photo"
+        }
+      ],
       "source": "google"
     },
     {
       "name": "Yana Swainson",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocK7GVvChnB6XwPP9_x5eT0rQUukMVC4SVH2OScDF3womdGCgw=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/8b914e6903922fb8.jpg",
       "isLocalGuide": true,
-      "reviewCount": 11,
+      "reviewCount": 12,
       "rating": 5,
       "text": "I am SUPER IMPRESS!!!! These guys are ABSOLUTELY AMAZING!!!! Highly professional. My windows are clean. I will certainly use their services again.",
-      "ago": "5 months ago",
+      "ago": "6 months ago",
       "isoDate": "2025-09-30T20:25:32Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "kristina corgan",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocK4Cqt_6F6RThdyd553lmeBOq4_p8fInCOrSi9FZshTtmMT=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/d646864a8eed89a4.jpg",
       "isLocalGuide": true,
       "reviewCount": 2,
       "rating": 5,
       "text": "Punctual,professional and thorough in the entire process! I highly recommend!!",
-      "ago": "5 months ago",
+      "ago": "6 months ago",
       "isoDate": "2025-09-27T19:16:45Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Nancylee23",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocL-aQ-ZoRE4pStonwhLYgWgkv5W97mn1W9dS6Dt-CBeqJTMoQ=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/9f5699bb80ce12ac.jpg",
       "isLocalGuide": true,
       "reviewCount": 6,
       "rating": 5,
       "text": "Ridge and Logan were very thorough! My house is beautiful and CLEAN!",
-      "ago": "5 months ago",
+      "ago": "7 months ago",
       "isoDate": "2025-09-19T14:53:48Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Zachary Meier",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLjnM4UGOM_aKT9aknH8cL1ycn8YY7FLTolelEcHA_2UR29CA=s120-c-rp-mo-ba2-br100",
+      "avatar": "/assets/reviews/avatars/a1fd9871f8270b65.jpg",
       "isLocalGuide": true,
       "reviewCount": 30,
       "rating": 5,
       "text": "The guys at Stand Out did an excellent job getting the driveway, sidewalk and front porch looking brand new. They were timely, polite and worked quickly. Would highly recommend to friends and family",
-      "ago": "6 months ago",
+      "ago": "7 months ago",
       "isoDate": "2025-09-12T14:53:46Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Thom Catlett",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocKDWHFHPMx6a8VWwBMlylsP6iHt9Od1dufgvq5t9Ab9xNPMKA=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/5d08fc6afc2ea702.jpg",
       "isLocalGuide": true,
       "reviewCount": null,
       "rating": 5,
       "text": "",
-      "ago": "6 months ago",
+      "ago": "7 months ago",
       "isoDate": "2025-09-03T18:52:33Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Joyce F",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocIXo5xVhiiD3Xjfrxl4kzwlNue3lwEMZihq4cBUC2--k1_1JQ=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/8d6bd4fd398e346e.jpg",
       "isLocalGuide": true,
       "reviewCount": 2,
       "rating": 5,
       "text": "Great experience! Ridge is very professional and likable! Shows attention to detail and made sure we were pleased with the work. My patio pavers are clean and look brand new. I definitely recommend this company and look forward to working with him again on future projects.",
-      "ago": "6 months ago",
+      "ago": "7 months ago",
       "isoDate": "2025-08-31T18:16:42Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Jim Buchanan",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJ19juPvfBljKivmvAyeIQ6ijlyNhw3nou-5yRKfAX_iiEcmA=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/4669831cd2becdab.jpg",
       "isLocalGuide": true,
       "reviewCount": 7,
       "rating": 5,
       "text": "",
-      "ago": "6 months ago",
+      "ago": "7 months ago",
       "isoDate": "2025-08-30T14:43:43Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Jonathan Wright",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocI95uM660SVpm0rMai0u7BSqfR6d7v9BQvUV6DJYLfJ30Bvyw=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/e6dbd0b0dedac3fa.jpg",
       "isLocalGuide": true,
       "reviewCount": 2,
       "rating": 5,
       "text": "Great Job. Fast and efficient cleaning. No mess and their team was attentive to details. Highly recommend.",
-      "ago": "6 months ago",
+      "ago": "7 months ago",
       "isoDate": "2025-08-27T17:54:08Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Joe Conder",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocK_ZovBJDAjEc7HX8zutBVkH894CaZNzDH7lV2-f-StB6Nb0g=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/a8347c1837e5635b.jpg",
       "isLocalGuide": true,
       "reviewCount": 6,
       "rating": 5,
       "text": "Guys were very prompt and communicative during the whole process. Highly recommended!!",
-      "ago": "6 months ago",
+      "ago": "7 months ago",
       "isoDate": "2025-08-26T18:53:32Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Dave Greenberg",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJxBKnmD_UQhwh49JgNtO01-Pd0UFwGVyq8MXG_deQg6z972w=s120-c-rp-mo-ba3-br100",
+      "avatar": "/assets/reviews/avatars/7581d927b078c73b.jpg",
       "isLocalGuide": true,
-      "reviewCount": 35,
+      "reviewCount": 36,
       "rating": 5,
       "text": "Ridge and Logan are A+++ across the roof!!\n\nProfessional, friendly, reliable, excellent communication, very safety conscious all with very fair pricing! Meet them one time, and you will feel like family! Because they treat you like family!!\nAlready getting estimates for additional roof line projects. Hope to get them on the books for holiday lighting and window washing soon!\n\nCould not give a higher recommendation! And not knowing about the company previously before using them, we couldn’t be more satisfied!",
-      "ago": "6 months ago",
+      "ago": "8 months ago",
       "isoDate": "2025-08-19T14:00:14Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Sabra Anderson",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLWRXtfF-CK0he5LMB3iLb0fUydKcuMLAesY21b2y8YnYcngw=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/442e1f45f699d3ee.jpg",
       "isLocalGuide": true,
-      "reviewCount": 17,
+      "reviewCount": 18,
       "rating": 5,
       "text": "Great service! Our windows are so clean!!",
-      "ago": "7 months ago",
+      "ago": "8 months ago",
       "isoDate": "2025-07-28T20:37:35Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Joann Somerville",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocIVkO6M-yd8BfqbCCZ7O0hnx07mjrsoKX6b5v098FWI4a0NIw=s120-c-rp-mo-ba2-br100",
+      "avatar": "/assets/reviews/avatars/e9387b81e943e4d6.jpg",
       "isLocalGuide": true,
       "reviewCount": 21,
       "rating": 5,
       "text": "Excellent job!!!  On time, so polite!!!  Highly recommend!!!  So happy!!!",
-      "ago": "7 months ago",
+      "ago": "8 months ago",
       "isoDate": "2025-07-28T17:20:35Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Robert F Brigman Jr",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLzyF4spyo7yfKZaed3sHKIEkCdChjzZIWbwvwJ4W-cKQNmHg=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/ab79c81a0030b1aa.jpg",
       "isLocalGuide": true,
-      "reviewCount": 4,
+      "reviewCount": 3,
       "rating": 5,
       "text": "Great job by a fantastic business.  I highly recommend this company.",
-      "ago": "7 months ago",
+      "ago": "8 months ago",
       "isoDate": "2025-07-25T14:59:50Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Sara Lipman",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjURFGcH7DXtsxH4DBu-9AeLT4mpLQmlcwvd9yl3-hR0Yu2F2ME5=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/8ba9ce5100269fdb.jpg",
       "isLocalGuide": true,
       "reviewCount": 9,
       "rating": 5,
       "text": "Ridge and Logan did a FANTASTIC job from start to finish. They were efficient, polite, and went above and beyond in every way. If we had tried to do this, it would have taken considerably longer and would have undoubtedly been an inferior result. Thank you very much!",
-      "ago": "7 months ago",
+      "ago": "9 months ago",
       "isoDate": "2025-07-22T19:50:40Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Cheryl Smith",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocKLVDA6jcPgVD4K0ZaANouoVHbusQH8PYwHz99H6YFhe3laiQ=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/8ce84a8af17682ac.jpg",
       "isLocalGuide": true,
       "reviewCount": 2,
       "rating": 5,
       "text": "Stand Out did exceptional work and my house looks so clean and fresh. They professional and easy to work with. Highly recommend!",
-      "ago": "7 months ago",
+      "ago": "9 months ago",
       "isoDate": "2025-07-19T15:26:47Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Bob Martin",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocKSD-SEpMlOwdcgAhIkXaXM2Z1BKfpboyWxLZ_1ItoxWD3Lfg=s120-c-rp-mo-ba2-br100",
+      "avatar": "/assets/reviews/avatars/a9add9a4b50ff8f2.jpg",
       "isLocalGuide": true,
       "reviewCount": 25,
       "rating": 5,
       "text": "Good work and well priced",
-      "ago": "8 months ago",
+      "ago": "9 months ago",
       "isoDate": "2025-07-14T14:18:03Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Shannon Fichter",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJadq1OO-0_89lFu4SNJEiZHWGMgURP1NsYXPqGyle_5Xgp5g=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/c685b2caa2661367.jpg",
       "isLocalGuide": true,
       "reviewCount": 14,
       "rating": 5,
       "text": "Quality work at a reasonable price, will definitely use again!",
-      "ago": "8 months ago",
+      "ago": "9 months ago",
       "isoDate": "2025-07-11T21:12:56Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Connie Agee",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocIhHJR3QMaUwedkF9x2VpX3w82Omi02NH1KjKVi49ShqnnCPQ=s120-c-rp-mo-ba2-br100",
+      "avatar": "/assets/reviews/avatars/c14c106246dd63e2.jpg",
       "isLocalGuide": true,
       "reviewCount": 15,
       "rating": 5,
       "text": "EXCELLENT experience!  They showed up on time (10 minutes early) and went straight to work! I am THRILLED with the outcome! VERY fair price that included pretreat, pressure washing, soft washing of the house and other sensitive areas, post treat, windows, AND they even moved outdoor furniture and put it back when they were finished.   We are already on the schedule for next year! HIGHLY recommend!",
-      "ago": "8 months ago",
+      "ago": "9 months ago",
       "isoDate": "2025-06-23T20:51:05Z",
-      "photos": [],
+      "photos": [
+        {
+          "src": "/assets/reviews/photos/d70cc2aa7f667c82.jpg",
+          "caption": "Customer photo"
+        },
+        {
+          "src": "/assets/reviews/photos/59a4ad0d9187dbb3.jpg",
+          "caption": "Customer photo"
+        },
+        {
+          "src": "/assets/reviews/photos/e3b038ef09d68b86.jpg",
+          "caption": "Customer photo"
+        },
+        {
+          "src": "/assets/reviews/photos/9c6a9bc966509faf.jpg",
+          "caption": "Customer photo"
+        },
+        {
+          "src": "/assets/reviews/photos/0b274d5cb1de19b8.jpg",
+          "caption": "Customer photo"
+        },
+        {
+          "src": "/assets/reviews/photos/7b5a24c9b17a5902.jpg",
+          "caption": "Customer photo"
+        }
+      ],
       "source": "google"
     },
     {
       "name": "Restoration1 Of Gastonia",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjVpGXlPSX8uw82QTnTttbYAhVliDa8b4ZqOprGsIUYUfq5fYB8=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/713c4685bd14f7ca.jpg",
       "isLocalGuide": true,
       "reviewCount": 5,
       "rating": 5,
       "text": "Great customer service! Communication was excellent and quick to help. Honestly couldn’t ask for more.",
-      "ago": "8 months ago",
+      "ago": "10 months ago",
       "isoDate": "2025-06-20T14:32:15Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Jay F",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocIEGNpVbGpY0MxNDkqjLRBB0Anz0QT-OPgrKHXVgfSTX-vsJw=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/06bb25231eeaa5e2.jpg",
       "isLocalGuide": true,
-      "reviewCount": 2,
+      "reviewCount": 4,
       "rating": 5,
       "text": "Amazing experience with Stand Out Cleaning! I asked for a business card at a gas station and called for a quote. Arrived the same day and on time and gave me a very reasonable quote. Showed up on time (early) for the quote and service. Did an amazing job cleaning my home and windows. Communicated well, was very punctual and professional. Will definitely be my go to for any exterior cleaning in the future.",
-      "ago": "9 months ago",
+      "ago": "10 months ago",
       "isoDate": "2025-06-06T01:14:37Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "William Lane",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjUAHAQQS6G4zE8FYtKCfCHoVX4N9aA6hKJZcEHlgd0tUhlL7F_B=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/946f4925d29e67c4.jpg",
       "isLocalGuide": true,
       "reviewCount": 1,
       "rating": 5,
       "text": "Just bought a house with years of built up dirt, grime, and pollen. Stand Out was very great at communicating and explaining the process of getting the exterior of the house cleaned. I couldn’t be happier with the results!",
-      "ago": "9 months ago",
+      "ago": "10 months ago",
       "isoDate": "2025-06-04T15:02:28Z",
-      "photos": [],
+      "photos": [
+        {
+          "src": "/assets/reviews/photos/898ca35888ebb7e6.jpg",
+          "caption": "Customer photo"
+        }
+      ],
       "source": "google"
     },
     {
       "name": "Pat R.",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocL51cSkseh2PacRuK4-LTs12jh5KsQQfuoUn-c9cBmq6P3HTg=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/e4a0e9eb9792af1a.jpg",
       "isLocalGuide": true,
       "reviewCount": 4,
       "rating": 5,
       "text": "This was my first time using Stand Out for my windows. The team did a GREAT job! I highly recommend them!",
-      "ago": "9 months ago",
+      "ago": "10 months ago",
       "isoDate": "2025-06-01T15:19:43Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Tom Townson",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLXPrGZ01x8-OCN-RNpUFh9_65dDo3W0Ioa7chP5YAR5vTHvg=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/0e114ca6f6f094d2.jpg",
       "isLocalGuide": true,
       "reviewCount": 2,
       "rating": 5,
       "text": "Stand Out Exteriors did a wonderful job cleaning the exterior of our home. We appreciated the soft wash instead of high pressure spray and the results were clean and beautiful. Looked as if we had just had it painted!  Ridge and Logan were prompt, professional and very thorough.  They went the extra mile with our enclosed back porch. We will  use them again without any reservations and highly recommend them.",
-      "ago": "9 months ago",
+      "ago": "10 months ago",
       "isoDate": "2025-05-30T17:03:11Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Marcio Lima",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocI_VWDeGhnNKgb4OuU8VUbRXYeyCc6fVxUGvNcN5hFIWvpn4Q=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/e3d99b2283d6ef46.jpg",
       "isLocalGuide": true,
       "reviewCount": 3,
       "rating": 5,
       "text": "They did a fantastic job! The house and roof look fresh and well cared for. The team arrived right on time and delivered exactly as promised. All the white trimming is spotless, the gutters were thoroughly cleaned, and they even removed a few mold spots. The roof looks like new. They also went the extra mile by helping me with my shutters. Highly recommend their service!",
-      "ago": "9 months ago",
+      "ago": "10 months ago",
       "isoDate": "2025-05-26T13:19:37Z",
-      "photos": [],
+      "photos": [
+        {
+          "src": "/assets/reviews/photos/e202a6f92fd61826.jpg",
+          "caption": "Customer photo"
+        },
+        {
+          "src": "/assets/reviews/photos/d3365f831c497b64.jpg",
+          "caption": "Customer photo"
+        }
+      ],
       "source": "google"
     },
     {
       "name": "Linda Schwarzmueller",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJLhvOzQO4XgDMHVHuvysfnrnRnHQyiEjF0zSQTgvCP63GqdA=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/6652bad075fe5357.jpg",
       "isLocalGuide": true,
       "reviewCount": 6,
       "rating": 5,
       "text": "Ridge was very professional and congenial and did an excellent job. Would highly recommend!",
-      "ago": "9 months ago",
+      "ago": "10 months ago",
       "isoDate": "2025-05-24T15:29:55Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Layne Veneri",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjXmPaR03DSZr0czCmNGDZD9LTZnZIPeep7DDnbMPBBplSD3_QP2vw=s120-c-rp-mo-ba3-br100",
+      "avatar": "/assets/reviews/avatars/b9c353c292013825.jpg",
       "isLocalGuide": true,
       "reviewCount": 30,
       "rating": 5,
       "text": "I had a fantastic experience with Stand Out Exteriors! Ridge and his team did an excellent job cleaning my house and replacing the sand before sealing my pavers. They were on time, professional, and their work was top-notch. On top of that, their pricing was very fair. I was so impressed that I’ve already booked them for next year’s pressure washing! Highly recommend Stand Out Exteriors if you want quality service and reliable results.",
-      "ago": "9 months ago",
+      "ago": "11 months ago",
       "isoDate": "2025-05-19T19:03:43Z",
-      "photos": [],
+      "photos": [
+        {
+          "src": "/assets/reviews/photos/203c73da82877d25.jpg",
+          "caption": "Customer photo"
+        },
+        {
+          "src": "/assets/reviews/photos/c14666ef0fcf7340.jpg",
+          "caption": "Customer photo"
+        }
+      ],
       "source": "google"
     },
     {
       "name": "Dana Smith",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocI60rEdXD7Ss0KC6pPDoWPxRoFl0gTLHFjyXZ602txM5r20aw=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/cfef607e2daa4543.jpg",
       "isLocalGuide": true,
       "reviewCount": 2,
       "rating": 5,
       "text": "Ridge and his team did a terrific job cleaning windows and our entire house. I highly recommend Stand Out Exterior Cleaning and will use them again in the future!",
-      "ago": "10 months ago",
+      "ago": "11 months ago",
       "isoDate": "2025-05-16T19:48:19Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Jim Osman",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjUxvh5A_A9OfNEjYW7gpppn3WS0RvexY5dkfQ3T9nqR4aAjEjc=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/62da4be4c9548f3f.jpg",
       "isLocalGuide": true,
       "reviewCount": 12,
       "rating": 5,
       "text": "Great guys, nice work, good pricing. Would use then again.",
-      "ago": "10 months ago",
+      "ago": "11 months ago",
       "isoDate": "2025-05-14T20:33:09Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "WHITNEY KING",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLyVb1XRJiihL-BjSQgUwktYxxDfrh2kEJ8mGJzuYEoGsvrGg=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/405a6436a89fe919.jpg",
       "isLocalGuide": true,
       "reviewCount": 11,
       "rating": 5,
       "text": "Ridge did an amazing and professional job cleaning our driveway.   It looks so fresh and white! Will def use him in the future!  He was very easy to work with and scheduling was a breeze.",
-      "ago": "10 months ago",
+      "ago": "11 months ago",
       "isoDate": "2025-05-08T23:55:43Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Tobias Pace",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjX33p3t-kqroxFK1WraXsuTeZ87RPfLBI6He8QWvCbPxKPpwvI=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/36a92cd092a5ed5e.jpg",
       "isLocalGuide": true,
       "reviewCount": 6,
       "rating": 5,
-      "text": "I couldn’t be more impressed with the outstanding service provided by Standout Exteriors. From the moment I reached out, their customer service was responsive, professional, and genuinely focused on my needs. The team arrived on time and immediately got to work with impressive efficiency and care.\n\nWhat really stood out to me was their attention to detail. They didn’t cut any corners, and it’s clear they take real pride in their work. They also cleaned out my gutters!\n\nOn top of the excellent results, their pricing was very competitive-great value for the quality of service I received. I highly recommend Standout Exteriors to anyone looking for a reliable, professional, and fairly priced pressure washing service. I’ll definitely be calling them again!",
-      "ago": "10 months ago",
+      "text": "I couldn’t be more impressed with the outstanding service provided by Standout Exteriors. From the moment I reached out, their customer service was responsive, professional, and genuinely focused on my needs. The team arrived on time and immediately got to work with impressive efficiency and care.\n\nWhat really stood out to me was their attention to detail. They didn’t cut any corners, and it’s clear they take real pride in their work. They also cleaned out my gutters!\n\nOn top of the excellent results, their pricing was very competitive—great value for the quality of service I received. I highly recommend Standout Exteriors to anyone looking for a reliable, professional, and fairly priced pressure washing service. I’ll definitely be calling them again!",
+      "ago": "11 months ago",
       "isoDate": "2025-05-06T19:26:47Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Matthew Forrest",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocI07a2O1ykst6MYP1_AaBhndA4gH_AWmHdIA2WGMPD3_kHN6w=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/cab2b2d06905a2d1.jpg",
       "isLocalGuide": true,
       "reviewCount": 1,
       "rating": 5,
       "text": "Showed up when he said he was gonna show up did exactly what he said he was gonna do and did a great job",
-      "ago": "10 months ago",
+      "ago": "11 months ago",
       "isoDate": "2025-04-29T02:28:57Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Carlos Cortez",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLRZ5_raDR9I4BeskP-crXjB3ODo_hNqVw896TRiWE6bZJFLg=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/1d6dbfefa03c481c.jpg",
       "isLocalGuide": true,
       "reviewCount": 1,
       "rating": 5,
       "text": "Stand Out Exteriors did a great job on my house.  We had them clean our house, gutters, and windows.  Friendly, professional, and thorough.  I would recommend them to anyone who wants the job done well.",
-      "ago": "10 months ago",
+      "ago": "11 months ago",
       "isoDate": "2025-04-26T14:55:43Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Carlos Cortez",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocIAtzQPF7oTG8ZqbTWg7fDSqK2w9MLQbU0Xo7KJ0FWBbaQ53w=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/a3cc4ed20206d23f.jpg",
       "isLocalGuide": true,
       "reviewCount": 1,
       "rating": 5,
       "text": "",
-      "ago": "10 months ago",
+      "ago": "11 months ago",
       "isoDate": "2025-04-26T13:55:12Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Corie Pearson",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJ7KRN7N_Iv1AcJVIt435rUXAa6QRQiu7VPTlllgwPSmgxRkA=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/e92af5097e9078e1.jpg",
       "isLocalGuide": true,
       "reviewCount": 3,
       "rating": 5,
       "text": "Friendly, ambitious, hard working, polite, young man. Gave me an estimate the day I called. Prompt scheduling, reliable and on time appointment.  Ridge went out of his way to get the glass roof in the sunroom clean. I highly recommend him.",
-      "ago": "11 months ago",
+      "ago": "a year ago",
       "isoDate": "2025-04-09T19:42:35Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Samantha Evilsizer",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjU1zjpHyulU9tgXBVPnDANht7bUXdgbyAF-y4W-gauYgzkIE8ls=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/3fd1489fa19cd4aa.jpg",
       "isLocalGuide": true,
       "reviewCount": 2,
       "rating": 5,
       "text": "The crew responded quickly to emails, showed up on time, and did a thorough cleaning. Nice guys who cared about doing a great job!",
-      "ago": "11 months ago",
+      "ago": "a year ago",
       "isoDate": "2025-04-08T18:51:45Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Chad Josey",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocKmm5kv1yj0n8GHLnNuowm4GLWdK3_8kHAGWX2dq72oDMpHpOU=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/2574ccc7f94b2210.jpg",
       "isLocalGuide": true,
       "reviewCount": 1,
       "rating": 5,
       "text": "The guys were very nice and well mannered. They did quick but thorough work. Highly recommended!",
-      "ago": "11 months ago",
+      "ago": "a year ago",
       "isoDate": "2025-04-04T16:08:14Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Dave Gunderson",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocIuh7yQZ-mmdrId0jWDxUNrGLF9Ix_gHklRYVYMQ9dDWhJkQw=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/90459cdd605e0584.jpg",
       "isLocalGuide": true,
       "reviewCount": 3,
       "rating": 5,
       "text": "Prompt. Excellent work. Friendly. Neat. Courteous. I could go on but you get the point. Ridge and Logan do great work and are reasonably priced. Highly recommended.",
-      "ago": "11 months ago",
+      "ago": "a year ago",
       "isoDate": "2025-03-29T15:42:59Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Geo A",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLKc5_GqRKuSrZTGzTxtWHesaU9u0lMx9fA0bSLsuIIFbD8bw=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/28ba6c91488d3b65.jpg",
       "isLocalGuide": true,
       "reviewCount": 1,
       "rating": 5,
       "text": "Awesome. Came early and did a fantastic job. So impressed with how they got the red clay stains off and were so careful with detail. Way more thorough than I expected. Wow!",
-      "ago": "11 months ago",
+      "ago": "a year ago",
       "isoDate": "2025-03-22T18:52:35Z",
-      "photos": [],
+      "photos": [
+        {
+          "src": "/assets/reviews/photos/722e81f5a7014f60.jpg",
+          "caption": "Customer photo"
+        },
+        {
+          "src": "/assets/reviews/photos/c73a471d1cfc4a7a.jpg",
+          "caption": "Customer photo"
+        }
+      ],
       "source": "google"
     },
     {
       "name": "Mike Wesolowski",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocK0CYSOXkdii4XXD1zOYexvXG1tl3j7HID7ACXETjcFudaTAQ=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/faf2a270f13015ff.jpg",
       "isLocalGuide": true,
       "reviewCount": 3,
       "rating": 5,
@@ -592,9 +727,9 @@
     },
     {
       "name": "LEE KISER",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocIQUcfvFofTczqvjvbYeil3x7N83c6LLIpdb_H_GGpHaP5vIA=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/eb207f5dbb5bad0d.jpg",
       "isLocalGuide": true,
-      "reviewCount": 11,
+      "reviewCount": 13,
       "rating": 5,
       "text": "Ridge and staff are personable, professional, affordable and do great work. On time as promised. Well done guys !!",
       "ago": "a year ago",
@@ -604,7 +739,7 @@
     },
     {
       "name": "Matt Burton",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocK9bFUZXnkbaCXwTh01mNeFIWwDw7RYefk2u_8ydOcugY103A=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/d56de387f9820edd.jpg",
       "isLocalGuide": true,
       "reviewCount": 3,
       "rating": 5,
@@ -616,7 +751,7 @@
     },
     {
       "name": "Pat Power",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJFEdQ_2EY6cKE-JTWQ3wtjcwi5zqxeAfuzB4_oJojwGNWyYg=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/329fef4495343ce5.jpg",
       "isLocalGuide": true,
       "reviewCount": 4,
       "rating": 5,
@@ -628,7 +763,7 @@
     },
     {
       "name": "Brenda Clay",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjUznlkEY0m-vwkDMHGAtairHBR9eRjDOX97w7MReP4YhLH6B2M=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/1d6c61e90d6063e2.jpg",
       "isLocalGuide": true,
       "reviewCount": 3,
       "rating": 5,
@@ -640,9 +775,9 @@
     },
     {
       "name": "Beth DeMauro",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjUm-rU1QqTr9Qexbpyt2awiTa8yJhCxrrvilD7NlaY5atHETOBd=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/a34f9ae4c872a42e.jpg",
       "isLocalGuide": true,
-      "reviewCount": 7,
+      "reviewCount": 8,
       "rating": 5,
       "text": "Team did a great job - on-time, and reasonably priced! House looks brand new again!",
       "ago": "a year ago",
@@ -652,7 +787,7 @@
     },
     {
       "name": "Larey Smith",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJF9xdXWtsPV2mJpaH6bUwW3vF2jWgnGXn_map1GKPmBRkhvQ=s120-c-rp-mo-ba2-br100",
+      "avatar": "/assets/reviews/avatars/7066bb48634b2c9b.jpg",
       "isLocalGuide": true,
       "reviewCount": 19,
       "rating": 5,
@@ -664,7 +799,7 @@
     },
     {
       "name": "Susan Nixon",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLOwZDg8Q0SGJxETT09CpXMSKghOdR1Ycfx6KnYLIzApDtBZg=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/eb63f42307ff803a.jpg",
       "isLocalGuide": true,
       "reviewCount": 8,
       "rating": 5,
@@ -676,7 +811,7 @@
     },
     {
       "name": "Cin",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJ662Rnzy60Bu7O24WBHS8nv9DDpR7FbKMt_TB1ZxPkgo27Lw=s120-c-rp-mo-ba2-br100",
+      "avatar": "/assets/reviews/avatars/19e0ae74f157e43c.jpg",
       "isLocalGuide": true,
       "reviewCount": 20,
       "rating": 5,
@@ -688,9 +823,9 @@
     },
     {
       "name": "Raymond Fischer",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocKDW4vRpphzLqiHKTkKxJNvOfe2BAvzvF0S3L585L_FLVZgJg=s120-c-rp-mo-ba2-br100",
+      "avatar": "/assets/reviews/avatars/142b0736080e57e8.jpg",
       "isLocalGuide": true,
-      "reviewCount": 25,
+      "reviewCount": 26,
       "rating": 5,
       "text": "Excellent job, on time, friendly and went above and beyond on powerwashing my dock.",
       "ago": "a year ago",
@@ -700,7 +835,7 @@
     },
     {
       "name": "Kenneth Osley",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocISVUjCBCZh2nz0snQVKsuc2wmweqEgfK_9PqyoxPyXGAXrng=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/2ac39753ff538e8f.jpg",
       "isLocalGuide": true,
       "reviewCount": 3,
       "rating": 5,
@@ -712,9 +847,9 @@
     },
     {
       "name": "Scot Mulheron",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJiX7lUly0jcrSc7Xxbu7rkHDoNEowduaLpaS9d_6sTI-fVJg=s120-c-rp-mo-ba2-br100",
+      "avatar": "/assets/reviews/avatars/57787c0268be4d56.jpg",
       "isLocalGuide": true,
-      "reviewCount": 11,
+      "reviewCount": 12,
       "rating": 5,
       "text": "Hires Stand Out Exterior for the first time to soft wash our home and windows and really couldn't be more pleased.  They are fast, efficient, and conscientious.  What would have taken me probably 3 days they were able to complete in 3 and 1/2 hours. Thanks again and I will definitely be calling then again next year",
       "ago": "a year ago",
@@ -724,7 +859,7 @@
     },
     {
       "name": "Holly Cook",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjU6i4EKTH0HPv8K_hRR7ql73Vj05szy7OjkpTQM5Ey67OscGSUH=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/d362b284e1f3b113.jpg",
       "isLocalGuide": true,
       "reviewCount": null,
       "rating": 5,
@@ -736,7 +871,7 @@
     },
     {
       "name": "Brenda Deal",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjXTboaw5rhNHuFcx4YM0ehZaQ9EvIbhTkZl9_nnihE0pZeg9wTt=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/a64bf23fb42bc2f4.jpg",
       "isLocalGuide": true,
       "reviewCount": 6,
       "rating": 5,
@@ -748,7 +883,7 @@
     },
     {
       "name": "Ann Przygocki",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocKkSMWw0_Ib7iR1nAWR6GddMck-adn6MHGU7cwehNkQI9ewfA=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/e51332b4710175c7.jpg",
       "isLocalGuide": true,
       "reviewCount": 1,
       "rating": 5,
@@ -760,7 +895,7 @@
     },
     {
       "name": "Caroline Cass",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjU6DRrm2hQoFXf5AqSF1lxToa39fYjflqq8TdaCGP9MqVCmmbbC=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/6b72e13856d707e6.jpg",
       "isLocalGuide": true,
       "reviewCount": 4,
       "rating": 5,
@@ -772,7 +907,7 @@
     },
     {
       "name": "Jen Orr",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjU7JON40CCcXachyYLJYVUFlq2BZnbodswQ920seme6app3mzc=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/84fcaad808edcf5f.jpg",
       "isLocalGuide": true,
       "reviewCount": 7,
       "rating": 5,
@@ -784,19 +919,28 @@
     },
     {
       "name": "Josh Byrd",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLVao4-FLDQnGEjGGmwseZ3fWaEX8VOSzh0HSJAb0Db0t2Uzw=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/494b95b8fa6134b3.jpg",
       "isLocalGuide": true,
       "reviewCount": 2,
       "rating": 5,
       "text": "Would recommend!  Got rid of all of our build up in our problem areas!",
       "ago": "a year ago",
       "isoDate": "2024-06-01T13:42:45Z",
-      "photos": [],
+      "photos": [
+        {
+          "src": "/assets/reviews/photos/d5c620f21881d259.jpg",
+          "caption": "Customer photo"
+        },
+        {
+          "src": "/assets/reviews/photos/668e0ee231ac0b69.jpg",
+          "caption": "Customer photo"
+        }
+      ],
       "source": "google"
     },
     {
       "name": "Match Director",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocIHyyG1NkXcGZfMD7MYIUHx-tGeDT351zi6ihl_mNOJDvFwVA=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/91f0d953d1044bb4.jpg",
       "isLocalGuide": true,
       "reviewCount": 3,
       "rating": 5,
@@ -808,7 +952,7 @@
     },
     {
       "name": "Benjamin Davis",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJJrTLEGh6WL6T1YfHB-CC4bTPvLTHIVn-NdeneDJIevlf6=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/0635279b0b7e67e3.jpg",
       "isLocalGuide": true,
       "reviewCount": 8,
       "rating": 5,
@@ -820,19 +964,28 @@
     },
     {
       "name": "Willie Fruga",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjVaYqTO0p_78-rfirD3DszI5jNciPpFpQbvuAh1uFX3cZitYtn-=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/ba564d14059d1db1.jpg",
       "isLocalGuide": true,
       "reviewCount": 9,
       "rating": 5,
       "text": "Stand out Exterior Cleaning did an amazing job.  Our home looks new again. The white siding is tough to keep clean and we are pleased with how well the team did. They arrived on time and finished within two hours.  We will definitely give them a call again.",
       "ago": "a year ago",
       "isoDate": "2024-05-21T14:25:10Z",
-      "photos": [],
+      "photos": [
+        {
+          "src": "/assets/reviews/photos/cda4f3c05ef27b3a.jpg",
+          "caption": "Customer photo"
+        },
+        {
+          "src": "/assets/reviews/photos/1d9456cfb8f7c24c.jpg",
+          "caption": "Customer photo"
+        }
+      ],
       "source": "google"
     },
     {
       "name": "James Contreras",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJV5WS_uQZ2By5oHOUgPJ3jNZe5aLyYQT-gUHXB0SnZ5naJlw=s120-c-rp-mo-ba2-br100",
+      "avatar": "/assets/reviews/avatars/c2f37ce4164ae3de.jpg",
       "isLocalGuide": true,
       "reviewCount": 17,
       "rating": 5,
@@ -844,7 +997,7 @@
     },
     {
       "name": "Dean Kochalka",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjXVE2FMIh6yZuIJxbblQO79NqRjdeVs13AnXkKzrFYlkPV9A-xP=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/a09dd51c3662db0f.jpg",
       "isLocalGuide": true,
       "reviewCount": 6,
       "rating": 5,
@@ -856,9 +1009,9 @@
     },
     {
       "name": "Mary Anderson",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJg5xEAhYiQOqBUsK3P2ueVttdXrIYlN9JZ_0IH5UIFWmwpJg=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/7bfd551526136d73.jpg",
       "isLocalGuide": true,
-      "reviewCount": 5,
+      "reviewCount": 6,
       "rating": 5,
       "text": "Ridge was very professional to deal with and did a great job! Would definitely hire him again!",
       "ago": "a year ago",
@@ -868,19 +1021,36 @@
     },
     {
       "name": "Laurie Sojourner",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjV7tl2QuTuRsEZTCxkbDP0Tct7hhhKhcu9AFiUNgGhV44Vkr4g=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/52e161ab6a6c00c6.jpg",
       "isLocalGuide": true,
       "reviewCount": 8,
       "rating": 5,
       "text": "Their pressure washing services are exceptional. From prompt communication to flawless execution, they ensure the job is done right. If you're in Charlotte and seeking top-quality pressure washing services, look no further than Stand Out Exterior Cleaning. They deliver professionalism, quality, and results that truly stand out!",
       "ago": "a year ago",
       "isoDate": "2024-05-16T16:59:02Z",
-      "photos": [],
+      "photos": [
+        {
+          "src": "/assets/reviews/photos/54609cccc664a9f2.jpg",
+          "caption": "Customer photo"
+        },
+        {
+          "src": "/assets/reviews/photos/edc2a0d9f0191313.jpg",
+          "caption": "Customer photo"
+        },
+        {
+          "src": "/assets/reviews/photos/21779ac3d216098b.jpg",
+          "caption": "Customer photo"
+        },
+        {
+          "src": "/assets/reviews/photos/4aa5a4434e09ef1a.jpg",
+          "caption": "Customer photo"
+        }
+      ],
       "source": "google"
     },
     {
       "name": "Willie Gatling",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjUZN4OFAkMle_bgbPUl1CDODtQ-6QZD58RpUXqDVig-ZnS7dtIS=s120-c-rp-mo-ba2-br100",
+      "avatar": "/assets/reviews/avatars/ef874e3ceffdcad3.jpg",
       "isLocalGuide": true,
       "reviewCount": 26,
       "rating": 5,
@@ -892,7 +1062,7 @@
     },
     {
       "name": "Karen Bolick",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJYvnSTInfiyZf29cORswDqU1lz6WuGQ1CM6SWeuXR9URCrMA=s120-c-rp-mo-ba3-br100",
+      "avatar": "/assets/reviews/avatars/7ee84f3aa9d64900.jpg",
       "isLocalGuide": true,
       "reviewCount": 29,
       "rating": 5,
@@ -904,7 +1074,7 @@
     },
     {
       "name": "Matt Phillips",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocIfvB8WBz0QVTaJj2dWr_XK-jJfRAxHJigHzN3q2t8YPfyX6A=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/50d4c80c6a7fba8c.jpg",
       "isLocalGuide": true,
       "reviewCount": 8,
       "rating": 5,
@@ -916,19 +1086,28 @@
     },
     {
       "name": "Gary Niess",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjWj3g6WRADs7ScMqTr0EgnVj_mguh0yel2SuCdIFmUheXsrxHCf=s120-c-rp-mo-ba2-br100",
+      "avatar": "/assets/reviews/avatars/51ca99216835e24c.jpg",
       "isLocalGuide": true,
       "reviewCount": 10,
       "rating": 5,
       "text": "We engaged Ridge.  He was referred by a friend and this was the first time we used his services. We have had many prior companies do our window washing and our power washing. We have a three-story house with skylights. This is the cleanest our windows have ever been including the skylights. the equipment was top-notch and Ridge was meticulous about his work. We have a dock on LAKE NORMAN that is heavily stained, and even though he was not able to use any chemicals because of the environment, it looks like a new dock. Not only did he do an amazing job on the windows and power washing, but his prices were better than any of those people we have retained in the past.",
       "ago": "a year ago",
       "isoDate": "2024-05-06T22:12:11Z",
-      "photos": [],
+      "photos": [
+        {
+          "src": "/assets/reviews/photos/53069484d96b85eb.jpg",
+          "caption": "Customer photo"
+        },
+        {
+          "src": "/assets/reviews/photos/7a26472b1245e0a7.jpg",
+          "caption": "Customer photo"
+        }
+      ],
       "source": "google"
     },
     {
       "name": "Myndie M",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjU8Kq9Sfgz_1xeq2fgfYUdnp84hoyQeEAYvrjFCcvB0STuyYwU=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/90a3e7bdb3a7f1e5.jpg",
       "isLocalGuide": true,
       "reviewCount": 9,
       "rating": 5,
@@ -940,7 +1119,7 @@
     },
     {
       "name": "Sue Lambert",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocKyHt2PR95L1WhXBU13cWwAgSraYQZZvejiXofABAGcEd4i6Q=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/da8f958cd56591d4.jpg",
       "isLocalGuide": true,
       "reviewCount": 6,
       "rating": 5,
@@ -952,9 +1131,9 @@
     },
     {
       "name": "Seagle Penni",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJTPyhFdDOHr-m_gxsq7dtvMsz86N8cUY5BtelWbjajhdJyRQ=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/419894d6beeab7d0.jpg",
       "isLocalGuide": true,
-      "reviewCount": 1,
+      "reviewCount": 2,
       "rating": 5,
       "text": "Very professional and arrived on time. Did a fantastic job.  Everything looked amazing and I will definitely use him again",
       "ago": "a year ago",
@@ -964,7 +1143,7 @@
     },
     {
       "name": "Tyler Michael",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocI5tfiAxPiLaymWgDckxdQssHYqr5EnoFCn7p_fKWvDut8iTg=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/297259420f920490.jpg",
       "isLocalGuide": true,
       "reviewCount": null,
       "rating": 5,
@@ -976,7 +1155,7 @@
     },
     {
       "name": "Todd Sisson",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocKkZ2_HV6soVmB-ZzBx-UbM9kClGi2xmveP8sOAVw1lGmxebA=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/568c97b30d072077.jpg",
       "isLocalGuide": true,
       "reviewCount": 1,
       "rating": 5,
@@ -988,21 +1167,26 @@
     },
     {
       "name": "Jeremy Whitworth",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocISckUEjfdhUYvs8cHtSb9p_EDN3ibwHQEa1N_FbipjAJyF4w=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/a92ce644e581c2e2.jpg",
       "isLocalGuide": true,
       "reviewCount": 5,
       "rating": 5,
       "text": "Stand out exteriors kept in good communication with me after first contact and showed up exactly when he said he would. Very nice guy to deal with and does an extremely good job.  I highly recommend supporting this local business!",
       "ago": "a year ago",
       "isoDate": "2024-04-28T15:12:21Z",
-      "photos": [],
+      "photos": [
+        {
+          "src": "/assets/reviews/photos/aba7502ea631fd71.jpg",
+          "caption": "Customer photo"
+        }
+      ],
       "source": "google"
     },
     {
       "name": "Peter Gordon",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocIeRQaboriDsEVTV3-UB69SSYr9qJg4hFi9PuNgf1x5vOOTcw=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/7d59fc75f2d91822.jpg",
       "isLocalGuide": true,
-      "reviewCount": 4,
+      "reviewCount": 5,
       "rating": 5,
       "text": "Very nice young man. Responsible, timely and very personable!!",
       "ago": "a year ago",
@@ -1012,7 +1196,7 @@
     },
     {
       "name": "Jenna Lesar",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJdFURmT4HwaiJxOwjde9w9GDguDHE268o-tNps0nmBmmHLCw=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/c9cb60ee43a4a768.jpg",
       "isLocalGuide": true,
       "reviewCount": 3,
       "rating": 5,
@@ -1024,7 +1208,7 @@
     },
     {
       "name": "Michael Moss",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjXQC2MygX6es85i9vekGgRmtSIQsy-hi1fQeZirn7YqPgVDdH0x=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/0e5b0ba4ad193d39.jpg",
       "isLocalGuide": true,
       "reviewCount": 1,
       "rating": 5,
@@ -1036,139 +1220,153 @@
     },
     {
       "name": "Turkey Rhyd",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjWpptqu1Jqs8V4Q5Jdet3Avv7P4t3f2ELj0U57kasrEimIqplW6Vg=s120-c-rp-mo-ba3-br100",
+      "avatar": "/assets/reviews/avatars/16d2c67ed7e6c779.jpg",
       "isLocalGuide": true,
       "reviewCount": 32,
       "rating": 5,
       "text": "Very professional,  from the personal, on site, estimate to the careful details of the job.  Excellent  equipment,  prompt execution, and careful handling of outdoor items which had to be moved and returned to their places in order to do porch and deck.  Careful with trees, flowers,  shrubs, and landscape, so as to cause no damage with hoses or cleaning solutions. Fair price.\nWill definitely use again.",
-      "ago": "a year ago",
+      "ago": "2 years ago",
       "isoDate": "2024-04-16T20:50:51Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Heidi Erickson",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjWZ2dl_Tfo-t7YCZAhctsr-n9AdiKJWrvR1QRtbbQ5n6QOzLgo=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/52b5176cb3903248.jpg",
       "isLocalGuide": true,
       "reviewCount": 6,
       "rating": 5,
       "text": "Wow!  Ridge, Stand Out Exterior Cleaning, did an awesome job. My husband tries to pressure wash the driveway and sidewalks every year, but they have NEVER been this clean!  Thank you so much!",
-      "ago": "a year ago",
+      "ago": "2 years ago",
       "isoDate": "2024-04-08T23:54:21Z",
-      "photos": [],
+      "photos": [
+        {
+          "src": "/assets/reviews/photos/8968fc417774673c.jpg",
+          "caption": "Customer photo"
+        },
+        {
+          "src": "/assets/reviews/photos/af0a72d1dcf48134.jpg",
+          "caption": "Customer photo"
+        }
+      ],
       "source": "google"
     },
     {
       "name": "Christina Cura",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJmboybo8Xb_3Hh29l0JfaCLc2RKE9xJw0O0xo4eaSaUIhnvQ=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/ef0f5625dbeef98f.jpg",
       "isLocalGuide": true,
       "reviewCount": 10,
       "rating": 5,
       "text": "Very good job!!! Went above and beyond! Will be getting them to do our home every year!!! Thank you!😊",
-      "ago": "a year ago",
+      "ago": "2 years ago",
       "isoDate": "2024-04-03T22:22:19Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Shane Watts",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjUyQQHfT_8DLByqQ7mZkv-Fgf4wMp01yktLZUdSQKPm910Yrvdq=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/be44114e464d7ecc.jpg",
       "isLocalGuide": true,
-      "reviewCount": 6,
+      "reviewCount": 7,
       "rating": 5,
       "text": "Fast and efficient Service.  Friendly crew and self sufficient.   Thanks Muchly!",
-      "ago": "a year ago",
+      "ago": "2 years ago",
       "isoDate": "2024-04-03T20:31:00Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Aj Supan",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLFrkFIt23gFfJjZhy7ljh9aR6qjTkz7gWtP3Hf43Z3wZcT8A=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/36d679e437dc00c4.jpg",
       "isLocalGuide": true,
       "reviewCount": 3,
       "rating": 5,
       "text": "My house looks fantastic! Very professional, they fit me into a very tight schedule, completed the job right, and in a timely manner! Would recommend them to everyone! Priced very competitively!",
-      "ago": "a year ago",
+      "ago": "2 years ago",
       "isoDate": "2024-03-26T23:07:05Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Rachel Cartner",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjWyLU03OwtglUW430kCqMeFwS2QGNVoD1SVJIXx7p_6NUiOwEM=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/07326b820e2836bd.jpg",
       "isLocalGuide": true,
       "reviewCount": 3,
       "rating": 5,
       "text": "Ridge was very professional, extremely hard worker! Brought a 30 year old almost black concrete driveway back to looking new! His technology system is easy to confirm appointments, reminders and payment!",
-      "ago": "a year ago",
+      "ago": "2 years ago",
       "isoDate": "2024-03-26T18:06:40Z",
-      "photos": [],
+      "photos": [
+        {
+          "src": "/assets/reviews/photos/b5350e3dc58ef39f.jpg",
+          "caption": "Customer photo"
+        }
+      ],
       "source": "google"
     },
     {
       "name": "Johnna Parsons",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJoPG5YLD4EId6ylUxL4MYLkUMXXRzGdbcaMhgNdX4iO7u_Lg=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/d4da84f9d91f8e80.jpg",
       "isLocalGuide": true,
       "reviewCount": 5,
       "rating": 5,
       "text": "Great service and quick with scheduling. House looked great when he finished and the yard/landscaping was untouched! Definitely will use this service again.",
-      "ago": "a year ago",
+      "ago": "2 years ago",
       "isoDate": "2024-03-25T21:54:16Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Jodi Maczka",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLYiIzcBd1JIa7fHvziK4XguAK9ceyowBt_Xir4bq5JjqCLqw=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/cec33e8e8c4f13eb.jpg",
       "isLocalGuide": true,
       "reviewCount": 1,
       "rating": 5,
       "text": "I would highly recommend this young man for all your pressure washing needs.  He spend 4 hours on our house, patio, and driveway and it looks amazing.  We are very pleased with his work😀",
-      "ago": "a year ago",
+      "ago": "2 years ago",
       "isoDate": "2024-03-25T15:51:17Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Dennis Esliger",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLOpWgZfaZpewjaW8tewg1XYis3kIxB16HZocpg_XGUcd1S-ryw=s120-c-rp-mo-ba2-br100",
+      "avatar": "/assets/reviews/avatars/0655715199a8c77f.jpg",
       "isLocalGuide": true,
       "reviewCount": 23,
       "rating": 5,
       "text": "Very professional and knowledgeable, highly recommend. Driveway had numerous stains nearly all cleaned up very well.",
-      "ago": "a year ago",
+      "ago": "2 years ago",
       "isoDate": "2024-03-24T20:25:27Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Andrew Akerblom",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJo8ykjnCGh7Otfei0xH1m8__iRFRRN0n0UxpjEkjHdF1qxqw=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/08a96c06c879c160.jpg",
       "isLocalGuide": true,
       "reviewCount": 6,
       "rating": 5,
       "text": "Ridge was a pleasure to work with and the cleaning turned out better than I thought. Never had our drive way cleaned and it made such an improvement to the curb appeal. I would definitely use them again and refer to anyone that needs a professional pressure washer.",
-      "ago": "a year ago",
+      "ago": "2 years ago",
       "isoDate": "2024-03-20T18:44:02Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Donna O'Neal",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLcEYGfANq-h3SnZxsTrnSFrDJ56A1NTah0lhEaIKr3uuHWpA=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/2ef3b6dc6ad1b4c1.jpg",
       "isLocalGuide": true,
       "reviewCount": 4,
       "rating": 5,
       "text": "Looks much better!  Good job!!",
-      "ago": "a year ago",
+      "ago": "2 years ago",
       "isoDate": "2024-03-20T15:03:46Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Kyle",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJqE0IFQpopBpdIyrjh5sNSz92BioLwp6Q-73jjTndCvXlc4aA=s120-c-rp-mo-ba3-br100",
+      "avatar": "/assets/reviews/avatars/8f5a751ea7198033.jpg",
       "isLocalGuide": true,
       "reviewCount": 21,
       "rating": 5,
@@ -1180,9 +1378,9 @@
     },
     {
       "name": "Matthew Comley",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJuywVtQHOI-t0yoq26elSvy-6D5OoKTrAEcjsRRJzhIDnB3Q=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/bb7de2414ea501bd.jpg",
       "isLocalGuide": true,
-      "reviewCount": 5,
+      "reviewCount": 4,
       "rating": 5,
       "text": "10/10 highly recommended! Ridge cleaned our exterior along with our screened in patio, and removed gutter debris from our 2 story house.",
       "ago": "2 years ago",
@@ -1192,21 +1390,26 @@
     },
     {
       "name": "Shannon Russell",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjVRlG3nXbwtRty9geRF1csxIYRoktqRVqktMMBt7CSLf43kF3d8=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/505c641bc2f84ba0.jpg",
       "isLocalGuide": true,
       "reviewCount": 12,
       "rating": 5,
       "text": "Ridge did an amazing job on my gutters, exterior home cleaning and drive/walkways! He was kind, respectful, on time and reasonably priced! I would definitely hire Stand Out Exterior Cleaning again!",
       "ago": "2 years ago",
       "isoDate": "2024-02-22T15:08:01Z",
-      "photos": [],
+      "photos": [
+        {
+          "src": "/assets/reviews/photos/da88dbf4071bbf22.jpg",
+          "caption": "Customer photo"
+        }
+      ],
       "source": "google"
     },
     {
       "name": "rhonda atwell",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJD0lJ2Ye-SNYj7khDek-7Nqrz2E8ZQeHRpsucK2np65u0ujg=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/c5e897e6136d6c70.jpg",
       "isLocalGuide": true,
-      "reviewCount": 5,
+      "reviewCount": 6,
       "rating": 5,
       "text": "Ridge cleaned the exterior of our gutters. They were very dirty and he made them look like new. We were very impressed with his work ethics. He is a very hard working young man. We were also impressed with his professional manner. We will call on him for our future needs. We highly recommend him. Great job. The price was also very acceptable .",
       "ago": "2 years ago",
@@ -1216,7 +1419,7 @@
     },
     {
       "name": "Linda Nixon",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocIY4Bt_Dpgh7dcIyJ85vbAhqzw_pRIS01n69wE7SlERxtHQSA=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/f331a2ae1eb05104.jpg",
       "isLocalGuide": true,
       "reviewCount": 3,
       "rating": 5,
@@ -1228,9 +1431,9 @@
     },
     {
       "name": "kel & don hannam",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJHbzhJmYV5plkYBg4sDZ7HGghbLxETF-05qVGEF_HzbCRCDw=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/6368197f53a52a45.jpg",
       "isLocalGuide": true,
-      "reviewCount": 9,
+      "reviewCount": 11,
       "rating": 5,
       "text": "Ridge was on time and did a great job from start to finish. Our house looks brand new!",
       "ago": "2 years ago",
@@ -1240,7 +1443,7 @@
     },
     {
       "name": "Marshall Scarborough",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocKC5e2fG0bjGQNhFy90u-u0RjAeQExvVvW-H8DZ4jTyXoMq5Q=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/1d516c47fc44dbf3.jpg",
       "isLocalGuide": true,
       "reviewCount": 8,
       "rating": 5,
@@ -1252,7 +1455,7 @@
     },
     {
       "name": "Charles Blotnick",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJVv4B3e6r5IEV0osOpLw1v9M_PYnfHO4MNfBtejGy1ImYWJA=s120-c-rp-mo-ba2-br100",
+      "avatar": "/assets/reviews/avatars/dd8950b4d244b8f0.jpg",
       "isLocalGuide": true,
       "reviewCount": 11,
       "rating": 5,
@@ -1264,7 +1467,7 @@
     },
     {
       "name": "Youngsil LEE",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjWRrsrPiHOvPcws3AafkdSaLnulqbgyBD-WxryPm3HG1hLn7nA=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/bfb72cae1d37e64f.jpg",
       "isLocalGuide": true,
       "reviewCount": 9,
       "rating": 5,
@@ -1276,7 +1479,7 @@
     },
     {
       "name": "Michael Chapman",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjWsgRyYpK3ey-fKIhtZlgc98r-pCvv15fUAN8iSBnLTgS4XTCY=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/155b162754d34d34.jpg",
       "isLocalGuide": true,
       "reviewCount": 3,
       "rating": 5,
@@ -1288,7 +1491,7 @@
     },
     {
       "name": "Katy Short",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjV77joOayxaBHU8kcdSCother17MGIDsVDMQAFw6FpIDTrxnnbj=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/a3a37f1453d4f18c.jpg",
       "isLocalGuide": true,
       "reviewCount": 2,
       "rating": 5,
@@ -1300,7 +1503,7 @@
     },
     {
       "name": "Rochelle Gawrysiak",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocIXs9YrmJBx_eR4uZqGZ4x49R71lDj0aplya0qyLRCzVbxnMw=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/4d87982e62178cf6.jpg",
       "isLocalGuide": true,
       "reviewCount": 2,
       "rating": 5,
@@ -1312,19 +1515,24 @@
     },
     {
       "name": "Larry Thacker",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocIiunye8lckf2sP8WBRzwtn6WDsxBfxdLuqI_Fxmh_y3sZO3g=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/6677a1a0500dc221.jpg",
       "isLocalGuide": true,
       "reviewCount": 9,
       "rating": 5,
       "text": "Reg did a fantastic job on our house and patio furniture.   He was professional, timely and did exactly what he said he would do!   Definitely recommend for anyone looking to have their home pressure washed.   Will be using him again in the fall too!",
       "ago": "2 years ago",
       "isoDate": "2023-05-24T14:40:24Z",
-      "photos": [],
+      "photos": [
+        {
+          "src": "/assets/reviews/photos/23e3630ea14f8236.jpg",
+          "caption": "Customer photo"
+        }
+      ],
       "source": "google"
     },
     {
       "name": "Joey Handy",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJUB_C5gdOfLqzPfmDVGEuvtpAw80Wf8JHMxXkcDDElcqioeA=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/1358a265e81baeaa.jpg",
       "isLocalGuide": true,
       "reviewCount": 9,
       "rating": 5,
@@ -1336,7 +1544,7 @@
     },
     {
       "name": "Laneenterprizes",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjW-inEHThGhFVZzQLhiXqDPYD8LO4pFi4j0al-hToiBlSqSG9_-=s120-c-rp-mo-ba3-br100",
+      "avatar": "/assets/reviews/avatars/237fd9de47e8ce0c.jpg",
       "isLocalGuide": true,
       "reviewCount": 32,
       "rating": 5,
@@ -1348,43 +1556,48 @@
     },
     {
       "name": "Mitchell Lynch",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJ9D4qmE59wz6PLi9KZEkxCHsekzzkW9TrrzKkIrMhvSX3JaA=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/6ccb19829426efb9.jpg",
       "isLocalGuide": true,
       "reviewCount": 6,
       "rating": 5,
       "text": "Stand Out Exterior Cleaning did an awesome job on our pool deck and cushions. We will be using them every year. Very impressed.",
-      "ago": "2 years ago",
+      "ago": "3 years ago",
       "isoDate": "2023-04-13T20:33:28Z",
-      "photos": [],
+      "photos": [
+        {
+          "src": "/assets/reviews/photos/52cc8e8b0cc0cee1.jpg",
+          "caption": "Customer photo"
+        }
+      ],
       "source": "google"
     },
     {
       "name": "Elaine Foster",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjUEj_1HyZaBG7YO-eVw_F53sHt7vVGysDr5qlz6OAHKKsP3TqT4=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/425ab0a20612ea25.jpg",
       "isLocalGuide": true,
       "reviewCount": 4,
       "rating": 5,
       "text": "A+\nOn time, did a great job cleaning my gutters and cleaning up afterwards.\nDefinitely will call again  with gutters or spray washing.",
-      "ago": "2 years ago",
+      "ago": "3 years ago",
       "isoDate": "2023-04-11T14:56:04Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Stacie Dennehy",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocIgrBVT8hoHJnhIV3MvmLAduGV1CFWd8gF6RXL_RWv3PlpH=s120-c-rp-mo-ba3-br100",
+      "avatar": "/assets/reviews/avatars/5a4ee85d39b1ffb0.jpg",
       "isLocalGuide": true,
-      "reviewCount": 22,
+      "reviewCount": 23,
       "rating": 5,
       "text": "Ridge is awesome! Polite, respectful of property, hard worker and fair pricing. He did an awesome job an will be using him from now on. I highly recommend him. He also is super super super honest- I asked him to also check to see if my gutters needed to be cleaned and he was so honest and told me that they could wait. You do not find anyone more honest and dependable. Will always always be using him 100%. Thank you!",
-      "ago": "Edited a year ago",
+      "ago": "Edited 2 years ago",
       "isoDate": "2023-03-25T19:26:38Z",
       "photos": [],
       "source": "google"
     },
     {
       "name": "Tom Avery",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocKAuxMZkJNVEo_T9I-T-4B1mTyFCPylhlKUDcz9lPrFM8pdaA=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/00f92d5fc69e078b.jpg",
       "isLocalGuide": true,
       "reviewCount": 2,
       "rating": 5,
@@ -1396,7 +1609,7 @@
     },
     {
       "name": "Trenton Reel",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLuc5bVEbpohlFUiM9WtUwKhRhE0vUsLh_6AQB2Y7vIlazXyg=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/7f344ac1d741aa92.jpg",
       "isLocalGuide": true,
       "reviewCount": 1,
       "rating": 5,
@@ -1408,7 +1621,7 @@
     },
     {
       "name": "Wojtek M.",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjX8fniJreG1BdpaG_PPYgPqU9VaqTD0JA2L5aO0wA5G25WBmG85=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/6d16c3d0edfd8820.jpg",
       "isLocalGuide": true,
       "reviewCount": 7,
       "rating": 5,
@@ -1420,7 +1633,7 @@
     },
     {
       "name": "Nikki Green",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLPuPYMqWrfJUCFqfBEbHVyI0EswhDjn0eE6X5MbveZOhJL5A=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/1a99774085cb2a48.jpg",
       "isLocalGuide": true,
       "reviewCount": 4,
       "rating": 5,
@@ -1432,7 +1645,7 @@
     },
     {
       "name": "Carl Dent",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjWl2D-xZgvGQcqjhFX60Or7oIPIe0mDSFzEsAFAxveGc3rsf09r=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/03960c6d1a993c23.jpg",
       "isLocalGuide": true,
       "reviewCount": 2,
       "rating": 5,
@@ -1444,7 +1657,7 @@
     },
     {
       "name": "Jim Medaglia",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjWph9LmXr7REmlpO9nKB2o8De6c5X2FmfCIUdAW1CLp5kwkjATEhw=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/cbb59fa888cf8368.jpg",
       "isLocalGuide": true,
       "reviewCount": 3,
       "rating": 5,
@@ -1456,7 +1669,7 @@
     },
     {
       "name": "Laurence Carstensen",
-      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjUFq1tkQ2boMvCSaaRdNBf8i-Jt6xWrF6937023yozh5ScQQzI=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/ced8fbad2ae9f52f.jpg",
       "isLocalGuide": true,
       "reviewCount": 4,
       "rating": 5,
@@ -1468,9 +1681,9 @@
     },
     {
       "name": "Chris Laurenson",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJ65-nLJkKbEySVIwmIYZBp-_hYXJQO8G6SohhM_35O0AAqgQ=s120-c-rp-mo-ba2-br100",
+      "avatar": "/assets/reviews/avatars/d199c29c1c71d591.jpg",
       "isLocalGuide": true,
-      "reviewCount": 18,
+      "reviewCount": 19,
       "rating": 5,
       "text": "This Company did a wonderful job. Ridge was very courteous, very professional, and reliable.   Our 26 year old driveway looks like new.",
       "ago": "3 years ago",
@@ -1480,9 +1693,9 @@
     },
     {
       "name": "Peter Hathaway",
-      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLFLyTmP05Oetc_iYyobmLj5pJ73YfEwpEAP0xB0L0oHdK5Og=s120-c-rp-mo-br100",
+      "avatar": "/assets/reviews/avatars/e031137e11d2137c.jpg",
       "isLocalGuide": true,
-      "reviewCount": 5,
+      "reviewCount": 6,
       "rating": 4,
       "text": "Engaged Ridge and his team to pressure wash house, roof, and back deck.  All areas were very dirty.  Everything came out very clean.  However, chemicals used on house resulted in several burned spots in front grass and several shrubs to be killed.  When I shared this feedback with Ridge he offered to replace or repair the grass and shrubs that were damaged during the process.",
       "ago": "a year ago",
