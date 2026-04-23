@@ -1,0 +1,40 @@
+{
+  "ci": {
+    "collect": {
+      "url": [
+        "https://www.standoutexterior.com/",
+        "https://www.standoutexterior.com/services",
+        "https://www.standoutexterior.com/services/house-washing",
+        "https://www.standoutexterior.com/services/roof-cleaning",
+        "https://www.standoutexterior.com/services/driveway-cleaning",
+        "https://www.standoutexterior.com/services/christmas-lights",
+        "https://www.standoutexterior.com/commercial",
+        "https://www.standoutexterior.com/about",
+        "https://www.standoutexterior.com/reviews",
+        "https://www.standoutexterior.com/contact"
+      ],
+      "numberOfRuns": 1,
+      "settings": {
+        "preset": "desktop",
+        "chromeFlags": "--no-sandbox --disable-gpu --headless=new"
+      }
+    },
+    "assert": {
+      "preset": "lighthouse:recommended",
+      "assertions": {
+        "categories:performance": ["warn", { "minScore": 0.85 }],
+        "categories:accessibility": ["error", { "minScore": 0.9 }],
+        "categories:best-practices": ["warn", { "minScore": 0.9 }],
+        "categories:seo": ["error", { "minScore": 0.95 }],
+
+        "uses-responsive-images": "off",
+        "csp-xss": "off",
+        "unused-javascript": "off",
+        "total-byte-weight": "off"
+      }
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    }
+  }
+}

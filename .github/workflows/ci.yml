@@ -1,0 +1,64 @@
+name: CI
+
+# ─────────────────────────────────────────────────────────────────────
+# Runs on every pull request + every push to master.
+# Blocks merges that don't typecheck or build.
+# This is also the green-signal Renovate waits for before auto-merging.
+#
+# Reusable across projects: copy this file verbatim into any Next.js
+# repo. The only thing that needs changing is the Node version (match
+# whatever your project actually uses — see .nvmrc or package.json engines).
+# ─────────────────────────────────────────────────────────────────────
+
+on:
+  pull_request:
+    branches: [master, main]
+  push:
+    branches: [master, main]
+  # Lets me re-run CI manually from the Actions tab if GitHub flakes.
+  workflow_dispatch:
+
+# Auto-cancel stale runs if a newer commit lands on the same PR/branch.
+# Saves billed minutes and keeps the Actions tab readable.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Typecheck & build
+    runs-on: ubuntu-latest
+    # 10 minutes is enough for a clean build on even the biggest site in
+    # my portfolio. If a project legitimately needs longer, bump here.
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          # Cache npm install output keyed on package-lock.json so
+          # repeat runs don't re-download node_modules every time.
+          cache: npm
+
+      - name: Install dependencies
+        # `npm ci` is the reproducible install — fails hard if
+        # package-lock.json is out of sync with package.json.
+        run: npm ci
+
+      - name: TypeScript typecheck
+        run: npx tsc --noEmit
+
+      - name: Next.js production build
+        # We run the full build, not just `next lint`, because the build
+        # catches a class of errors the linter won't (dynamic route
+        # generation, static export issues, missing env vars, etc).
+        run: npm run build
+        env:
+          # Most production builds need env vars defined. Supply dummies
+          # here so the build doesn't fail on a missing key. Real values
+          # live in Vercel's project settings.
+          RESEND_API_KEY: dummy-ci-key

@@ -1,0 +1,54 @@
+name: Weekly Lighthouse
+
+# ─────────────────────────────────────────────────────────────────────
+# Runs every Monday at 6 AM US-Eastern (10:00 UTC during EDT, 11:00 UTC
+# during EST — cron doesn't understand DST, so we split the difference
+# and run at 10:30 UTC; close enough either way).
+#
+# Audits the 10 most important pages on the live Vercel production URL,
+# posts the scores as a GitHub Actions job summary, and emails a digest
+# to dev@ignacionunez.dev via Resend.
+#
+# If any score drops below its threshold, the job fails → GitHub emails
+# me automatically about the failure, on top of the weekly digest.
+# ─────────────────────────────────────────────────────────────────────
+
+on:
+  schedule:
+    - cron: "30 10 * * 1" # Mondays at 10:30 UTC
+  workflow_dispatch: # Lets me trigger a run on-demand from the Actions tab
+
+jobs:
+  lighthouse:
+    name: Lighthouse audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install Lighthouse CI
+        run: npm install -g @lhci/cli@0.14.x
+
+      - name: Run Lighthouse against production
+        id: lhci
+        # `autorun` boots Chrome, runs the audit on every URL in the
+        # config file, uploads the report to LHCI's temporary public
+        # storage, and writes a summary to $GITHUB_STEP_SUMMARY.
+        run: lhci autorun --config=./.lighthouserc.json
+        # Don't fail the step immediately so the digest email still
+        # fires on regressions — we'll fail the *job* at the end.
+        continue-on-error: true
+
+      - name: Send weekly digest email
+        if: always() # run even if lhci step failed
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        run: node .github/scripts/lighthouse-digest.mjs
