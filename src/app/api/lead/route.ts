@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import type { LeadFormData, LeadApiResponse } from "@/types";
+import { analyzeLead } from "@/lib/spam-filter";
+import { getClientIp, rateLimitCheck } from "@/lib/rate-limit";
 
 /**
  * POST /api/lead
@@ -14,10 +16,21 @@ import type { LeadFormData, LeadApiResponse } from "@/types";
  * Sender domain:
  *   - Sends from leads@updates.standoutexterior.com
  *     (subdomain must be verified in the Resend dashboard)
+ *
+ * Spam protection layers (in order of cheapness / evaluation order):
+ *   1. Honeypot      — hidden "company" field. Bots fill it; real users don't.
+ *   2. Rate limit    — 1 req / 5 min / IP, 3 req / hr / IP (src/lib/rate-limit.ts).
+ *   3. Content scan  — scored verdict of clean/quarantine/reject based on
+ *                      disposable email, SEO-pitch phrases, suspicious
+ *                      metadata (src/lib/spam-filter.ts).
+ *   4. Quarantine    — submissions flagged "quarantine" still get delivered
+ *                      but to LEAD_QUARANTINE_INBOX instead of the main
+ *                      inbox, so Ridge can review without clutter.
  */
 
 const RESEND_FROM = "Stand Out Exterior Leads <leads@updates.standoutexterior.com>";
 const LEAD_INBOX = "standoutexterior@gmail.com";
+const LEAD_QUARANTINE_INBOX = "standoutexterior+spam@gmail.com";
 const DEV_BCC = "dev@ignacionunez.dev";
 
 // Initialize Resend once at module load. If the env var is missing we still
@@ -141,21 +154,27 @@ function buildText(lead: LeadFormData) {
   return lines.join("\n");
 }
 
+/** Identical "success" response for every silent-drop path so bots
+ *  can't distinguish between honeypot-tripped, rate-limited, and
+ *  spam-rejected — they all look like a normal accepted submission. */
+const FAKE_SUCCESS: LeadApiResponse = {
+  success: true,
+  message: "Thanks! We'll be in touch shortly.",
+};
+
 export async function POST(request: Request) {
   try {
     // Parse body. We accept an optional "company" honeypot field, real users
     // won't see or fill it; bots happily will. Any non-empty value = discard silently.
     const body = (await request.json()) as LeadFormData & { company?: string };
 
+    // ── Layer 1: honeypot ─────────────────────────────────────────
     if (body.company && body.company.trim() !== "") {
-      // Honeypot tripped, pretend success so bots don't learn they were caught.
-      return NextResponse.json<LeadApiResponse>({
-        success: true,
-        message: "Thanks! We'll be in touch shortly.",
-      });
+      console.log("[lead] honeypot tripped", { email: body.email });
+      return NextResponse.json<LeadApiResponse>(FAKE_SUCCESS);
     }
 
-    // Minimum validation
+    // Minimum validation before spending CPU on spam analysis
     if (!body.firstName || !body.lastName || !body.email) {
       return NextResponse.json<LeadApiResponse>(
         { success: false, message: "First name, last name, and email are required." },
@@ -163,13 +182,47 @@ export async function POST(request: Request) {
       );
     }
 
-    // Log for Vercel logs, last-resort backup so no lead is ever fully lost
+    // ── Layer 2: rate limit ───────────────────────────────────────
+    // Catches bots flooding the form AND real users who double-click
+    // submit. We return a fake-success to bots so they can't iterate;
+    // the frontend treats it exactly like a normal accepted submission.
+    const ip = getClientIp(request);
+    const rl = rateLimitCheck(ip);
+    if (!rl.allowed) {
+      console.warn("[lead] rate-limited", {
+        ip,
+        reason: rl.reason,
+        retryAfterMs: rl.retryAfterMs,
+        email: body.email,
+      });
+      return NextResponse.json<LeadApiResponse>(FAKE_SUCCESS);
+    }
+
+    // ── Layer 3: content / metadata spam analysis ────────────────
+    const spam = analyzeLead(body);
+    if (spam.verdict === "reject") {
+      // Hard reject — looks like clearly malicious traffic. Silently 200
+      // so the spammer can't iterate on rejection failures.
+      console.warn("[lead] spam REJECTED", {
+        email: body.email,
+        score: spam.score,
+        reasons: spam.reasons,
+      });
+      return NextResponse.json<LeadApiResponse>(FAKE_SUCCESS);
+    }
+
+    // Log every submission for Vercel logs. `verdict` and `score` are
+    // included so we can tune thresholds from real data.
     console.log("[lead] new submission", {
       name: `${body.firstName} ${body.lastName}`,
       email: body.email,
       phone: body.phone,
       service: body.service,
       source: body.source,
+      verdict: spam.verdict,
+      score: spam.score,
+      reasons: spam.reasons,
+      ip,
       timestamp: new Date().toISOString(),
     });
 
@@ -186,16 +239,42 @@ export async function POST(request: Request) {
       );
     }
 
-    const subject = `New Lead - ${body.firstName} ${body.lastName}${body.service ? " · " + body.service : ""}`;
+    // ── Layer 4: quarantine routing ──────────────────────────────
+    // Suspicious but not definitely-spam submissions go to the
+    // quarantine inbox so Ridge's main inbox stays clean. The
+    // subject line is prefixed with [QUARANTINE] and the reasons
+    // are listed at the top of the email body for quick review.
+    const isQuarantined = spam.verdict === "quarantine";
+    const recipient = isQuarantined ? LEAD_QUARANTINE_INBOX : LEAD_INBOX;
+    const subjectPrefix = isQuarantined ? "[QUARANTINE] " : "";
+    const subject = `${subjectPrefix}New Lead - ${body.firstName} ${body.lastName}${body.service ? " · " + body.service : ""}`;
+
+    // Prepend a spam-analysis banner to the email body when
+    // quarantined so Ridge can see at a glance WHY it was flagged.
+    const quarantineBanner = isQuarantined
+      ? `<div style="background:#fff4e5;border:1px solid #f59e0b;border-left:4px solid #f59e0b;padding:12px 16px;margin:0 0 16px 0;font-size:13px;color:#78350f;border-radius:6px;">
+          <strong>⚠ Flagged as likely spam (score ${spam.score})</strong><br>
+          ${spam.reasons.map((r) => `· ${esc(r)}`).join("<br>")}
+         </div>`
+      : "";
+
+    const html = quarantineBanner
+      ? buildHtml(body).replace(
+          "<!-- Contact info -->",
+          `<tr><td style="padding:0 32px;">${quarantineBanner}</td></tr>\n        <!-- Contact info -->`,
+        )
+      : buildHtml(body);
 
     const { error } = await resend.emails.send({
       from: RESEND_FROM,
-      to: [LEAD_INBOX],
-      bcc: [DEV_BCC],
+      to: [recipient],
+      bcc: isQuarantined ? undefined : [DEV_BCC],
       replyTo: body.email,
       subject,
-      html: buildHtml(body),
-      text: buildText(body),
+      html,
+      text: isQuarantined
+        ? `[QUARANTINED — score ${spam.score}]\nReasons: ${spam.reasons.join("; ")}\n\n${buildText(body)}`
+        : buildText(body),
     });
 
     if (error) {
@@ -210,6 +289,9 @@ export async function POST(request: Request) {
       );
     }
 
+    // Always return the same "success" message to the frontend, whether
+    // the lead landed in the main inbox or quarantine. No user-facing
+    // leak that their submission was flagged.
     return NextResponse.json<LeadApiResponse>({
       success: true,
       message: "Thank you! We'll get back to you shortly.",
