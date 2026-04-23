@@ -1,0 +1,23 @@
+name: Weekly Health Check
+
+on:
+  schedule:
+    - cron: "0 9 * * 1" # Mondays at 09:00 UTC (5 AM ET)
+  workflow_dispatch:
+
+jobs:
+  health:
+    name: Crawl sitemap + test contact form + scan error text
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Run health check
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          SITE_URL: "https://www.standoutexterior.com/"
+        run: node .github/scripts/phase2/health-check.mjs

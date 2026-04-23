@@ -1,0 +1,23 @@
+name: Monthly NAP Audit
+
+on:
+  schedule:
+    - cron: "0 13 1 * *" # 1st of every month at 13:00 UTC (9 AM ET)
+  workflow_dispatch:
+
+jobs:
+  audit:
+    name: NAP consistency check + email reminder
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Run NAP audit
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          SITE_URL: "https://www.standoutexterior.com/"
+        run: node .github/scripts/phase2/nap-audit.mjs
