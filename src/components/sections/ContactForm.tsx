@@ -102,12 +102,8 @@ export default function ContactForm() {
       <div className="relative py-24 md:py-32 bg-canvas">
         <div className="relative max-w-[1920px] mx-auto px-[clamp(20px,4vw,80px)]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            {/* Left, text + stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.7 }}
-            >
+            {/* Left, text + stats — no entrance animation; this column contains the LCP h2 */}
+            <div>
               <span className="text-[0.7rem] font-bold tracking-[0.2em] uppercase text-orange-500 block mb-3">Contact Us</span>
               <h2 className="font-[family-name:var(--font-display)] text-[clamp(2rem,4vw,3rem)] font-bold uppercase leading-[1.1] tracking-wide text-blue-900 mb-6">
                 Ready to Transform Your Property?
@@ -168,7 +164,7 @@ export default function ContactForm() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Right, form */}
             <motion.div

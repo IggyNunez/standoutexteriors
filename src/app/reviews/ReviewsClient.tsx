@@ -358,7 +358,7 @@ export default function ReviewsClient() {
             <div style={{ display: "flex", gap: 8 }}>
               {(["all", "photos"] as const).map(f => (
                 <button key={f} onClick={() => setFilter(f)}
-                  style={{ padding: "7px 18px", borderRadius: 9999, border: "1px solid", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", cursor: "pointer", transition: "all 0.22s", background: filter === f ? "#00A651" : "rgba(255,255,255,0.06)", borderColor: filter === f ? "#00A651" : "rgba(255,255,255,0.15)", color: "white" }}>
+                  style={{ padding: "7px 18px", borderRadius: 9999, border: "1px solid", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", cursor: "pointer", transition: "all 0.22s", background: filter === f ? "#006B33" : "rgba(255,255,255,0.06)", borderColor: filter === f ? "#006B33" : "rgba(255,255,255,0.15)", color: "white" }}>
                   {f === "all" ? `All (${TOTAL})` : `With Photos (${WITH_PHOTOS})`}
                 </button>
               ))}
