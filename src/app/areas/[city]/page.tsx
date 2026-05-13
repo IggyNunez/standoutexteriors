@@ -68,10 +68,10 @@ export default async function Page({ params }: RouteParams) {
   ];
 
   return (
-    <>
+    <main className="w-full min-w-full">
       <CityServiceJsonLd city={city} />
       <BreadcrumbJsonLd items={breadcrumbs} />
       <CityLandingPage city={city} />
-    </>
+    </main>
   );
 }

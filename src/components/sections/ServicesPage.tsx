@@ -32,6 +32,8 @@ function ServiceDetail({ service, index, reverse }: { service: typeof SERVICES[n
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover"
+            priority={index === 0}
+            fetchPriority={index === 0 ? "high" : "auto"}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent" />
         </div>

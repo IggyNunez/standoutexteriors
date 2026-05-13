@@ -181,7 +181,7 @@ export default function AboutContent() {
               style={{
                 background: "rgba(74,154,240,0.08)",
                 border: "1px solid rgba(74,154,240,0.2)",
-                color: "#2B7DE9",
+                color: "#1A6BC4",
               }}
             >
               <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
@@ -378,7 +378,7 @@ export default function AboutContent() {
             style={{
               background: "rgba(74,154,240,0.08)",
               border: "1px solid rgba(74,154,240,0.2)",
-              color: "#2B7DE9",
+              color: "#1A6BC4",
             }}
           >
             <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
