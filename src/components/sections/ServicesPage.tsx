@@ -18,10 +18,10 @@ function ServiceDetail({ service, index, reverse }: { service: typeof SERVICES[n
       id={service.slug}
       className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center scroll-mt-32 ${index > 0 ? "mt-24 md:mt-32" : ""}`}
     >
-      {/* Image */}
+      {/* Image — skip entrance animation on the first row (LCP element) */}
       <motion.div
-        initial={{ opacity: 0, x: reverse ? 40 : -40 }}
-        animate={isInView ? { opacity: 1, x: 0 } : {}}
+        initial={index === 0 ? false : { opacity: 0, x: reverse ? 40 : -40 }}
+        animate={index === 0 ? undefined : isInView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 0.8, ease: EASE }}
         className={`relative ${reverse ? "lg:order-2" : ""}`}
       >
@@ -39,10 +39,10 @@ function ServiceDetail({ service, index, reverse }: { service: typeof SERVICES[n
         </div>
       </motion.div>
 
-      {/* Content */}
+      {/* Content — skip entrance animation on the first row (above the fold) */}
       <motion.div
-        initial={{ opacity: 0, x: reverse ? -40 : 40 }}
-        animate={isInView ? { opacity: 1, x: 0 } : {}}
+        initial={index === 0 ? false : { opacity: 0, x: reverse ? -40 : 40 }}
+        animate={index === 0 ? undefined : isInView ? { opacity: 1, x: 0 } : {}}
         transition={{ delay: 0.15, duration: 0.8, ease: EASE }}
         className={reverse ? "lg:order-1" : ""}
       >

@@ -300,13 +300,11 @@ export default function ReviewsClient() {
               </span>
             </motion.div>
 
-            <motion.h1
-              className="font-[family-name:var(--font-display)] text-[clamp(2.4rem,6vw,4.5rem)] uppercase font-[900] text-white leading-[1] tracking-[0.03em] mb-4"
-              initial={{ opacity: 0, y: 24 }} animate={heroInView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.1, ease: EASE }}
-            >
+            {/* No entrance animation — this h1 is the LCP element */}
+            <h1 className="font-[family-name:var(--font-display)] text-[clamp(2.4rem,6vw,4.5rem)] uppercase font-[900] text-white leading-[1] tracking-[0.03em] mb-4">
               What Our Customers<br />
               <span style={{ color: "#00A651" }}>Are Saying</span>
-            </motion.h1>
+            </h1>
 
             <motion.div
               style={{ width: 64, height: 2, margin: "0 auto 20px", background: "linear-gradient(90deg,transparent,#00A651,transparent)" }}

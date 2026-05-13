@@ -74,14 +74,10 @@ export default function ContactForm() {
             <span className="text-[0.7rem] font-bold tracking-[0.2em] uppercase text-orange-400">Get Started</span>
           </motion.div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1, duration: 0.6, ease: EASE }}
-            className="font-[family-name:var(--font-display)] text-[clamp(2.5rem,6vw,4rem)] uppercase text-white leading-none mb-4"
-          >
+          {/* No entrance animation — this h1 is the LCP element */}
+          <h1 className="font-[family-name:var(--font-display)] text-[clamp(2.5rem,6vw,4rem)] uppercase text-white leading-none mb-4">
             Get Your Free Estimate
-          </motion.h1>
+          </h1>
 
           <motion.div
             initial={{ scaleX: 0 }}
