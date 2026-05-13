@@ -399,7 +399,7 @@ export default function BeforeAfterClient() {
             ].map((s) => (
               <div key={s.label} className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[0.75rem] font-bold"
                 style={{ background: "rgba(10,46,92,0.05)", border: "1px solid rgba(10,46,92,0.1)", color: "#0A2E5C" }}>
-                <span style={{ color: "#00A651" }}>{s.value}</span>{s.label}
+                <span style={{ color: "#006B33" }}>{s.value}</span>{s.label}
               </div>
             ))}
           </motion.div>
@@ -425,7 +425,7 @@ export default function BeforeAfterClient() {
 
             {/* Active tag pill */}
             {activeTag !== "All" && (
-              <div className="flex items-center gap-2 px-3 py-2 rounded-xl text-[0.72rem] font-bold" style={{ background: "rgba(0,166,81,0.1)", color: "#00A651", border: "1px solid rgba(0,166,81,0.2)" }}>
+              <div className="flex items-center gap-2 px-3 py-2 rounded-xl text-[0.72rem] font-bold" style={{ background: "rgba(0,166,81,0.1)", color: "#006B33", border: "1px solid rgba(0,166,81,0.2)" }}>
                 {activeTag}
                 <button onClick={() => setActiveTag("All")} className="w-4 h-4 rounded-full bg-green-100 flex items-center justify-center hover:bg-green-200 transition-colors">
                   <svg width="8" height="8" viewBox="0 0 10 10" fill="none" stroke="#00A651" strokeWidth="2" strokeLinecap="round">

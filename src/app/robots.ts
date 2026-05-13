@@ -10,6 +10,8 @@ import { SITE_URL } from "@/lib/constants";
  * discover every page on the first pass.
  */
 export default function robots(): MetadataRoute.Robots {
+  // No `host` directive — it's a non-standard Yandex-only field that
+  // Lighthouse's robots-txt audit flags as invalid.
   return {
     rules: [
       {
@@ -19,6 +21,5 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,
-    host: SITE_URL,
   };
 }
