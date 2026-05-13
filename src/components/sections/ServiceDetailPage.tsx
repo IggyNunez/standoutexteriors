@@ -500,7 +500,7 @@ function BodyCopy({ detail, service }: Props) {
             )}
             <span
               className="text-[0.62rem] font-bold tracking-[0.18em] uppercase"
-              style={{ color: isChristmas ? "#B88830" : "#2B7DE9" }}
+              style={{ color: isChristmas ? "#8B6420" : "#1A6BC4" }}
             >
               {isChristmas ? "The Holiday Difference" : "Why It Matters"}
             </span>
@@ -833,7 +833,7 @@ function Process({ detail, service }: Props) {
             )}
             <span
               className="text-[0.62rem] font-bold tracking-[0.18em] uppercase"
-              style={{ color: isChristmas ? "#B88830" : "#2B7DE9" }}
+              style={{ color: isChristmas ? "#8B6420" : "#1A6BC4" }}
             >
               {isChristmas ? "Our Holiday Process" : "Our Process"}
             </span>
@@ -945,7 +945,7 @@ function FaqSection({ detail, service }: Props) {
             )}
             <span
               className="text-[0.62rem] font-bold tracking-[0.18em] uppercase"
-              style={{ color: isChristmas ? "#B88830" : "#2B7DE9" }}
+              style={{ color: isChristmas ? "#8B6420" : "#1A6BC4" }}
             >
               {isChristmas ? "Holiday FAQ" : "Questions"}
             </span>
@@ -1084,7 +1084,7 @@ function RelatedServices({ detail, service }: Props) {
             )}
             <span
               className="text-[0.62rem] font-bold tracking-[0.18em] uppercase"
-              style={{ color: isChristmas ? "#B88830" : "#2B7DE9" }}
+              style={{ color: isChristmas ? "#8B6420" : "#1A6BC4" }}
             >
               {isChristmas ? "Pair It With" : "Related Services"}
             </span>

@@ -23,7 +23,7 @@ export default function AreasIndexPage() {
   );
 
   return (
-    <>
+    <main className="w-full min-w-full">
       <BreadcrumbJsonLd items={breadcrumbs} />
 
       {/* Hero */}
@@ -45,7 +45,7 @@ export default function AreasIndexPage() {
             Based in Denver, NC, we serve homes and businesses throughout
             Lincoln, Mecklenburg, Iredell, and Catawba counties. Click your
             city below for the services we offer locally, or call{" "}
-            <a href={PHONE_HREF} className="text-[#7ecfff] hover:underline">
+            <a href={PHONE_HREF} className="text-[#7ecfff] underline underline-offset-2">
               {PHONE}
             </a>{" "}
             for a free estimate.
@@ -63,7 +63,7 @@ export default function AreasIndexPage() {
                 href={`/areas/${city.slug}`}
                 className="group block p-7 rounded-2xl border border-[#061e38]/10 bg-white hover:shadow-lg hover:border-[#2b7de9]/40 transition-all"
               >
-                <span className="text-[0.62rem] font-bold tracking-[0.18em] uppercase text-[#2b7de9]">
+                <span className="text-[0.62rem] font-bold tracking-[0.18em] uppercase text-[#1A6BC4]">
                   {city.county}
                 </span>
                 <h2 className="font-[family-name:var(--font-bebas)] text-[clamp(1.6rem,2.5vw,2.25rem)] leading-tight tracking-tight mt-2 mb-3 text-[#061e38]">
@@ -75,7 +75,7 @@ export default function AreasIndexPage() {
                 <p className="text-xs font-bold text-[#061e38]/60 uppercase tracking-wider">
                   ZIP {city.zipCodes.join(", ")}
                 </p>
-                <span className="mt-4 inline-flex items-center gap-1.5 text-[#2b7de9] text-sm font-bold">
+                <span className="mt-4 inline-flex items-center gap-1.5 text-[#1A6BC4] text-sm font-bold">
                   See {city.name} details
                   <span aria-hidden>→</span>
                 </span>
@@ -106,6 +106,6 @@ export default function AreasIndexPage() {
           )}
         </div>
       </section>
-    </>
+    </main>
   );
 }

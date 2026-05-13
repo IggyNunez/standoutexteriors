@@ -216,16 +216,11 @@ export default function Hero() {
             </span>
           </motion.div>
 
-          {/* Main heading */}
-          <motion.h1
-            className="font-[family-name:var(--font-display)] text-[clamp(42px,8vw,110px)] md:text-[clamp(48px,10svh,110px)] font-[900] uppercase leading-[0.95] text-white mb-4 md:mb-[clamp(12px,1.5svh,24px)] tracking-[0.03em]"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: EASE }}
-          >
+          {/* Main heading — no entrance animation: this is the LCP element */}
+          <h1 className="font-[family-name:var(--font-display)] text-[clamp(42px,8vw,110px)] md:text-[clamp(48px,10svh,110px)] font-[900] uppercase leading-[0.95] text-white mb-4 md:mb-[clamp(12px,1.5svh,24px)] tracking-[0.03em]">
             Make Your Property<br />
             <span style={{ color: "#00A651" }} className="block text-[clamp(60px,16vw,222px)] md:text-[clamp(68px,20svh,222px)] leading-[0.9]">Stand Out.</span>
-          </motion.h1>
+          </h1>
 
           {/* Italic subline */}
           <motion.p

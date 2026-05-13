@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { m as motion, useInView } from 'framer-motion';
 import { ADDRESS, PHONE, PHONE_HREF, COMPANY_NAME, SERVICE_AREAS } from "@/lib/constants";
 
@@ -20,6 +20,24 @@ const DIRECTIONS_URL = `https://www.google.com/maps/dir/?api=1&destination=${MAP
 export default function MapSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "0px 0px -100px 0px" });
+
+  // Defer iframe mount until user scrolls map into view (skips Maps JS on initial paint)
+  const mapWrapRef = useRef<HTMLDivElement | null>(null);
+  const [shouldLoadMap, setShouldLoadMap] = useState(false);
+  useEffect(() => {
+    if (!mapWrapRef.current || shouldLoadMap) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]?.isIntersecting) {
+          setShouldLoadMap(true);
+          io.disconnect();
+        }
+      },
+      { rootMargin: "200px" }
+    );
+    io.observe(mapWrapRef.current);
+    return () => io.disconnect();
+  }, [shouldLoadMap]);
 
   return (
     <section
@@ -77,7 +95,7 @@ export default function MapSection() {
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ delay: 0.25, duration: 0.6 }}
-              className="text-[0.95rem] text-gray-500 leading-[1.7] max-w-[540px]"
+              className="text-[0.95rem] text-gray-700 leading-[1.7] max-w-[540px]"
             >
               {COMPANY_NAME} is locally owned and operated in Denver, NC -
               proudly serving the entire Lake Norman and greater Charlotte area.
@@ -187,6 +205,7 @@ export default function MapSection() {
 
       {/* Map iframe, full-width edge-to-edge band */}
       <motion.div
+        ref={mapWrapRef}
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ delay: 0.4, duration: 0.8, ease: EASE }}
@@ -198,16 +217,25 @@ export default function MapSection() {
           background: "#e5e7eb",
         }}
       >
-        <iframe
-          src={MAP_SRC}
-          title="Stand Out Exterior Cleaning. Denver, NC"
-          width="100%"
-          height="100%"
-          style={{ border: 0, display: "block" }}
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          allowFullScreen
-        />
+        {shouldLoadMap ? (
+          <iframe
+            src={MAP_SRC}
+            title="Stand Out Exterior Cleaning. Denver, NC"
+            width="100%"
+            height="100%"
+            style={{ border: 0, display: "block" }}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
+        ) : (
+          <div
+            className="w-full h-full flex items-center justify-center text-blue-900/60 text-sm"
+            aria-label="Map loading"
+          >
+            Map loading...
+          </div>
+        )}
       </motion.div>
     </section>
   );

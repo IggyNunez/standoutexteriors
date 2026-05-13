@@ -126,7 +126,7 @@ export default function CityLandingPage({ city }: Props) {
             </div>
             <aside className="md:col-span-5">
               <div className="p-6 rounded-2xl border border-[#061e38]/10 bg-[#f6fafd]">
-                <h3 className="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-[#2b7de9] mb-4">
+                <h3 className="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-[#1A6BC4] mb-4">
                   {city.name} Neighborhoods We Serve
                 </h3>
                 <ul className="grid grid-cols-1 gap-2 text-[#061e38] text-sm">
@@ -139,7 +139,7 @@ export default function CityLandingPage({ city }: Props) {
                 </ul>
                 {city.zipCodes.length > 0 && (
                   <div className="mt-5 pt-5 border-t border-[#061e38]/10">
-                    <p className="text-xs text-[#061e38]/60 uppercase font-bold tracking-wider mb-1">
+                    <p className="text-xs text-[#061e38]/80 uppercase font-bold tracking-wider mb-1">
                       ZIP Codes Served
                     </p>
                     <p className="text-[#061e38] font-bold">
@@ -157,7 +157,7 @@ export default function CityLandingPage({ city }: Props) {
       <section className="py-20 bg-[#f6fafd]">
         <div className="max-w-[1200px] mx-auto px-[clamp(20px,4vw,80px)]">
           <div className="max-w-[720px] mb-12">
-            <span className="text-[0.62rem] font-bold tracking-[0.18em] uppercase text-[#2b7de9]">
+            <span className="text-[0.62rem] font-bold tracking-[0.18em] uppercase text-[#1A6BC4]">
               What we see in {city.name}
             </span>
             <h2 className="font-[family-name:var(--font-bebas)] text-[clamp(1.8rem,3.5vw,3rem)] leading-tight tracking-tight mt-3 text-[#061e38]">
@@ -187,7 +187,7 @@ export default function CityLandingPage({ city }: Props) {
       <section className="py-20 bg-white">
         <div className="max-w-[1200px] mx-auto px-[clamp(20px,4vw,80px)]">
           <div className="max-w-[720px] mb-12">
-            <span className="text-[0.62rem] font-bold tracking-[0.18em] uppercase text-[#2b7de9]">
+            <span className="text-[0.62rem] font-bold tracking-[0.18em] uppercase text-[#1A6BC4]">
               Services in {city.name}, {city.state}
             </span>
             <h2 className="font-[family-name:var(--font-bebas)] text-[clamp(1.8rem,3.5vw,3rem)] leading-tight tracking-tight mt-3 text-[#061e38]">
@@ -218,7 +218,7 @@ export default function CityLandingPage({ city }: Props) {
                   <p className="text-[#061e38]/70 text-sm leading-relaxed line-clamp-3">
                     {s.description}
                   </p>
-                  <span className="mt-3 inline-flex items-center gap-1.5 text-[#2b7de9] text-sm font-bold">
+                  <span className="mt-3 inline-flex items-center gap-1.5 text-[#1A6BC4] text-sm font-bold">
                     See details
                     <span aria-hidden>→</span>
                   </span>

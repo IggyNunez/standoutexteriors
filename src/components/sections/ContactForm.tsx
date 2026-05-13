@@ -116,7 +116,7 @@ export default function ContactForm() {
               <h2 className="font-[family-name:var(--font-display)] text-[clamp(2rem,4vw,3rem)] font-bold uppercase leading-[1.1] tracking-wide text-blue-900 mb-6">
                 Ready to Transform Your Property?
               </h2>
-              <p className="text-[0.95rem] leading-relaxed text-gray-500 mb-10">
+              <p className="text-[0.95rem] leading-relaxed text-gray-700 mb-10">
                 Professional pressure washing &amp; soft washing for your home or
                 business. No contracts, no pressure. Just cleaner properties.
               </p>
@@ -127,7 +127,7 @@ export default function ContactForm() {
                     <strong className="font-[family-name:var(--font-display)] text-2xl font-bold text-orange-500 block">
                       {stat.value}
                     </strong>
-                    <span className="text-[0.82rem] text-gray-500">
+                    <span className="text-[0.82rem] text-gray-700">
                       {stat.label}
                     </span>
                   </div>
@@ -143,7 +143,7 @@ export default function ContactForm() {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-[0.68rem] text-gray-500 uppercase tracking-wide">Phone</div>
+                    <div className="text-[0.68rem] text-gray-700 uppercase tracking-wide">Phone</div>
                     <div className="text-[0.88rem] font-semibold">{PHONE}</div>
                   </div>
                 </a>
@@ -155,7 +155,7 @@ export default function ContactForm() {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-[0.68rem] text-gray-500 uppercase tracking-wide">Email</div>
+                    <div className="text-[0.68rem] text-gray-700 uppercase tracking-wide">Email</div>
                     <div className="text-[0.88rem] font-semibold">{EMAIL}</div>
                   </div>
                 </a>
@@ -167,7 +167,7 @@ export default function ContactForm() {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-[0.68rem] text-gray-500 uppercase tracking-wide">Location</div>
+                    <div className="text-[0.68rem] text-gray-700 uppercase tracking-wide">Location</div>
                     <div className="text-[0.88rem] font-semibold text-blue-900">{ADDRESS}</div>
                   </div>
                 </div>
