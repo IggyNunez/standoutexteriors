@@ -372,14 +372,14 @@ export default function BeforeAfterClient() {
             </span>
           </motion.div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }} animate={heroInView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.08, duration: 0.7, ease: EASE }}
+          {/* No entrance animation — this h1 is the LCP element */}
+          <h1
             className="font-[family-name:var(--font-display)] uppercase text-blue-900 leading-[0.95] tracking-[0.02em] mb-5"
             style={{ fontSize: "clamp(2.4rem, 6vw, 4.5rem)" }}
           >
             Before &amp; After<br />
             <span style={{ color: "#00A651" }}>The Stand Out Difference</span>
-          </motion.h1>
+          </h1>
 
           <motion.p
             initial={{ opacity: 0 }} animate={heroInView ? { opacity: 1 } : {}} transition={{ delay: 0.2, duration: 0.7 }}
