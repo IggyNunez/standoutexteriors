@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import CommercialContent from "@/components/sections/CommercialContent";
 import CTAContact from "@/components/sections/CTAContact";
+import { SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Commercial Pressure Washing | Denver & Lake Norman NC",
   description:
     "Professional commercial pressure washing for businesses across the Lake Norman area. Fully insured, COIs available. Storefronts, parking lots, dumpster pads, sidewalks & more.",
+  alternates: { canonical: `${SITE_URL}/commercial` },
 };
 
 export default function CommercialPage() {
