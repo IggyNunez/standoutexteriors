@@ -1,0 +1,31 @@
+name: Weekly SEO Opportunities
+
+# Pulls Search Console query data, ranks "opportunity keywords"
+# (ranking just off page one with low CTR), writes
+# data/seo-opportunities.json, and emails the shortlist. These are the
+# best topics for the silent blog. Runs before the blog routine each week.
+
+on:
+  schedule:
+    - cron: "0 12 * * 1" # Mondays 12:00 UTC (8 AM ET)
+  workflow_dispatch:
+
+jobs:
+  opportunities:
+    name: Find opportunity keywords + email shortlist
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: Find opportunities + email
+        env:
+          GOOGLE_OAUTH_CLIENT_ID: ${{ secrets.GOOGLE_OAUTH_CLIENT_ID }}
+          GOOGLE_OAUTH_CLIENT_SECRET: ${{ secrets.GOOGLE_OAUTH_CLIENT_SECRET }}
+          GOOGLE_OAUTH_REFRESH_TOKEN: ${{ secrets.GOOGLE_OAUTH_REFRESH_TOKEN }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          LEAD_INBOX_CC: ${{ secrets.LEAD_INBOX_CC }}
+        run: node .github/scripts/phase2/seo-opportunities.mjs
