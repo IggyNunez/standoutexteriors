@@ -57,3 +57,6 @@ BRAND.md
 brand-guide.html
 brand-guide.pdf
 /assets/
+
+# Claude Code local config, worktrees, and caches
+.claude/
