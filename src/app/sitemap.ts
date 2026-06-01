@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SERVICES, SITE_URL } from "@/lib/constants";
 import { CITY_SLUGS } from "@/lib/city-details";
+import { BLOG_POSTS } from "@/lib/blog-posts";
 
 /**
  * Dynamic sitemap.xml generator.
@@ -85,6 +86,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
+  // Silent SEO blog posts. Crawlable and indexed for long-tail and local
+  // search, but intentionally NOT linked from nav, footer, or any index.
+  const blogPosts: MetadataRoute.Sitemap = BLOG_POSTS.map((p) => ({
+    url: `${SITE_URL}/blog/${p.slug}`,
+    lastModified: p.updatedAt ? new Date(p.updatedAt) : new Date(p.publishedAt),
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
   // Legal, low priority but still indexed
   const legal: MetadataRoute.Sitemap = [
     {
@@ -101,5 +111,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  return [...topLevel, ...servicePages, ...areasIndex, ...cityPages, ...legal];
+  return [
+    ...topLevel,
+    ...servicePages,
+    ...areasIndex,
+    ...cityPages,
+    ...blogPosts,
+    ...legal,
+  ];
 }

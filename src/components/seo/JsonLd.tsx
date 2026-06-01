@@ -235,6 +235,64 @@ export function CityServiceJsonLd({ city }: { city: CityDetail }) {
   );
 }
 
+/* ─── BlogPosting schema (silent SEO blog) ───────────────────────────── */
+/**
+ * Emits an Article/BlogPosting schema for a /blog/[slug] post. The blog is
+ * not linked anywhere in the UI, but this structured data helps Google
+ * understand the page as a dated, authored article tied to the business.
+ */
+export function ArticleJsonLd({
+  url,
+  headline,
+  description,
+  image,
+  datePublished,
+  dateModified,
+}: {
+  url: string;
+  headline: string;
+  description: string;
+  image: string;
+  datePublished: string;
+  dateModified?: string;
+}) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `${url}#article`,
+    mainEntityOfPage: url,
+    url,
+    headline,
+    description,
+    image: image.startsWith("http") ? image : `${SITE_URL}${image}`,
+    datePublished,
+    dateModified: dateModified ?? datePublished,
+    author: {
+      "@type": "Organization",
+      name: COMPANY_NAME,
+      url: SITE_URL,
+    },
+    publisher: {
+      "@type": "ProfessionalService",
+      "@id": `${SITE_URL}/#business`,
+      name: COMPANY_NAME,
+      telephone: PHONE,
+      url: SITE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/assets/logo-transparent.png`,
+      },
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
 /* ─── WebSite schema (root layout, helps Google understand site name) ── */
 export function WebSiteJsonLd() {
   const schema = {
