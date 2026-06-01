@@ -1,0 +1,52 @@
+name: Blog Published Notification
+
+# Fires when a new/changed blog post lands on master (the weekly blog
+# routine writes + merges its own PR). Emails the live post link via
+# Resend so the operator gets a per-client notification with a URL.
+#
+# Layout-agnostic: extracts the newly-added slug/title/keyword from the
+# commit diff, so it works whether posts are one-file-per-post
+# (src/content/blog/*.ts) or all in one data file (src/lib/blog-posts.ts).
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "src/content/blog/**"
+      - "src/lib/blog-posts.ts"
+
+jobs:
+  notify:
+    name: Email the live blog link
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 2
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: Extract the new post's slug/title/keyword from the diff
+        id: post
+        run: |
+          # Look at lines ADDED in this push across the blog sources.
+          DIFF=$(git diff HEAD~1 HEAD -- 'src/content/blog/*.ts' 'src/lib/blog-posts.ts' | grep '^+' || true)
+          SLUG=$(echo "$DIFF" | grep -oE 'slug:\s*["'"'"'`][^"'"'"'`]+' | head -1 | sed -E 's/.*["'"'"'`]//')
+          TITLE=$(echo "$DIFF" | grep -oE 'title:\s*["'"'"'`][^"'"'"'`]+' | head -1 | sed -E 's/.*["'"'"'`]//')
+          KW=$(echo "$DIFF" | grep -oE 'targetKeyword:\s*["'"'"'`][^"'"'"'`]+' | head -1 | sed -E 's/.*["'"'"'`]//')
+          echo "slug=$SLUG" >> "$GITHUB_OUTPUT"
+          echo "title=$TITLE" >> "$GITHUB_OUTPUT"
+          echo "keyword=$KW" >> "$GITHUB_OUTPUT"
+          echo "Detected slug=$SLUG title=$TITLE"
+
+      - name: Email live link
+        if: steps.post.outputs.slug != ''
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          POST_SLUG: ${{ steps.post.outputs.slug }}
+          POST_TITLE: ${{ steps.post.outputs.title }}
+          POST_KEYWORD: ${{ steps.post.outputs.keyword }}
+        run: node .github/scripts/phase2/blog-notify.mjs
