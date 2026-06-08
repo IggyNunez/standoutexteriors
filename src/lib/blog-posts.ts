@@ -307,6 +307,129 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  // ── Post 3 ──────────────────────────────────────────────────────────────
+  // NOTE: images skipped - OPENAI_API_KEY was not set in the build environment.
+  {
+    slug: "roof-cleaning-mooresville-nc",
+    title: "Roof Cleaning in Mooresville, NC: A Homeowner's Guide",
+    metaDescription:
+      "Black streaks on your Mooresville, NC roof? A local guide to soft washing, how often to clean, and what lake humidity does to your shingles.",
+    h1: "Roof Cleaning in Mooresville, NC: What Local Homeowners Need to Know",
+    publishedAt: "2026-06-08",
+    targetKeyword: "roof cleaning mooresville nc",
+    heroImage: "/assets/team/ridge-roof-cleaning-aerial.webp",
+    heroImageAlt:
+      "Aerial view of a freshly soft-washed roof in Mooresville NC with algae and black streaks removed",
+    eyebrow: "Roof Cleaning Guide",
+    heroSubline:
+      "A practical look at why Mooresville roofs grow black streaks and algae faster than you'd expect, how soft washing clears them safely, and when to call a local pro.",
+    intro: [
+      "If you own a home in Mooresville, NC, chances are good you have noticed dark streaks or greenish patches spreading across your roof. They appear gradually, then multiply every wet season until half the roof looks stained. Most homeowners assume it is dirt or aging shingles. It is usually neither.",
+      "This guide explains what is actually growing on your Mooresville roof, why the Lake Norman area is especially prone to it, how soft washing clears it safely without damaging your shingles, and how often you should clean to protect the investment over the life of the home.",
+    ],
+    sections: [
+      {
+        heading: "Why Mooresville roofs grow black streaks and algae",
+        paragraphs: [
+          "The dark streaks spreading across roofs throughout Mooresville and the wider Lake Norman corridor are almost always caused by a cyanobacterium called Gloeocapsa magma. It arrives as airborne spores, takes hold on asphalt shingles, and spreads in a dark biological film that feeds on the limestone filler in the shingle mat. Left alone, it grows from streak to near-full coverage within a few seasons.",
+        ],
+        bullets: [
+          "Lake Norman humidity. The lake keeps the air consistently moist, especially on properties within a mile or two of the shoreline. Algae and moss thrive in damp conditions, and a humid Mooresville summer is close to ideal growing weather for roof organisms.",
+          "Shade from mature hardwoods and pines. A large share of Mooresville lots sit under established tree canopy. Shaded roof sections stay wet longer after rain, giving spores more time to anchor and spread before the surface dries out.",
+          "North-facing slopes. The north side of any roof gets less direct sun and stays damper than the south side, which is why algae almost always appears there first and grows fastest.",
+          "Pine needle accumulation. Needles that blow onto the roof hold moisture against the shingles and accelerate growth in the areas where they collect, particularly in roof valleys and near the ridge.",
+          "Airborne spore circulation. In neighborhoods near the water along Brawley School Road, Langtree, and The Point, the combination of humid air and dense canopy keeps spores circulating all spring and summer.",
+        ],
+      },
+      {
+        heading: "Soft washing versus pressure washing a roof",
+        paragraphs: [
+          "The single most important thing to understand about roof cleaning is that high-pressure washing damages shingles. An asphalt shingle's protective layer is a coating of ceramic granules bonded to the mat. A pressure washer strips those granules off in seconds, shortens the shingle's functional lifespan significantly, and voids most manufacturer warranties. This is not a risk worth taking for any exterior cleaning job on a roof.",
+          "Soft washing uses low-pressure delivery to apply a biodegradable cleaning solution - typically a sodium hypochlorite blend - that kills algae, lichen, and moss at the biological root rather than blasting the surface. Once dead, the growth rinses away cleanly with a gentle rinse pass and a rain or two. The shingles stay intact, the granules stay in place, and the warranty stays valid.",
+          [
+            "Soft washing is the method recommended by the Asphalt Roofing Manufacturers Association, and it is the only method we use on every Mooresville roof we service. See our full ",
+            { text: "roof cleaning service page", href: "/services/roof-cleaning" },
+            " for the complete process breakdown.",
+          ],
+        ],
+      },
+      {
+        heading: "How often should you clean your roof in Mooresville?",
+        paragraphs: [
+          "For most Mooresville homes, a roof cleaning every two to three years keeps the algae and moss from getting a serious foothold. Cleaned on that schedule, the biological film never builds deep enough to stain the shingle mat itself, and each subsequent wash stays straightforward.",
+          "If your home sits close to the water - on or near Lake Norman, Lake Davidson, or any of the smaller coves around Davidson and Mooresville - plan on cleaning every one to two years. Near-water properties see consistently higher humidity levels, which means faster biological growth on every exterior surface, including the roof.",
+          [
+            "Homes under heavy tree cover are in the same camp. If you can already see green or black growth from the street, the roof is behind schedule and cleaning sooner protects the shingle warranty and slows the spread. Our ",
+            { text: "before and after gallery", href: "/before-after" },
+            " shows how quickly a Mooresville roof transforms with a proper soft wash.",
+          ],
+        ],
+      },
+      {
+        heading: "Warning signs your Mooresville roof needs cleaning",
+        paragraphs: [
+          "You do not always need to wait for the calendar. These are the most common signs we see on Mooresville roofs that are ready for a cleaning:",
+        ],
+        bullets: [
+          "Dark streaks or a black discoloration running down the slope, typically starting on the north-facing sections first.",
+          "Green, fuzzy moss patches forming in shaded roof valleys, near the gutters, or around a chimney or skylight.",
+          "A gray or chalky overall look across sections that were darker and more uniform when the shingles were new.",
+          "Visible growth concentrating where debris collects, including around any low-slope transition, pipe boot, or roof penetration.",
+          "Granule loss accelerating, visible as a rough texture fading from the shingle surface and granules collecting in gutters.",
+        ],
+      },
+      {
+        heading: "DIY versus hiring a local pro",
+        paragraphs: [
+          "Cleaning your own roof is possible for a confident homeowner with the right chemistry and a ground-level delivery system, but it carries real risk. Walking on a wet, algae-covered roof is slippery, and a fall from even a single-story pitch is a serious injury. On steeper rooflines and two-story homes, the margin for error essentially disappears.",
+          [
+            "Beyond the safety factor, getting the chemistry right matters. Too weak a solution and the algae returns within a few months. Too strong without proper prep and you risk runoff into the gutters, downspouts, and onto landscaping. A local pro brings the right concentration, correct delivery pressure, and the judgment to protect plants and gutters during the job. If you want to compare cleaning methods side by side, our ",
+            { text: "house washing service", href: "/services/house-washing" },
+            " page explains the soft-wash approach we use across all exterior surfaces.",
+          ],
+        ],
+      },
+      {
+        heading: "What our Mooresville roof cleaning includes",
+        paragraphs: [
+          [
+            "Our ",
+            { text: "roof cleaning service", href: "/services/roof-cleaning" },
+            " uses a low-pressure soft wash system applied in overlapping passes so every section of the roof gets treated evenly. We pre-rinse the landscaping and gutters before application, apply our biodegradable cleaning blend, let it dwell to kill the growth at the root, and rinse the roof, gutters, and plant beds below. We serve Mooresville weekly and work the neighborhoods along Brawley School Road, the Langtree corridor, and the communities close to Lake Norman. Full details about how we serve the area are on our ",
+            { text: "Mooresville, NC service page", href: "/areas/mooresville-nc" },
+            ".",
+          ],
+          [
+            "If you are not sure whether your roof needs a cleaning or just want an honest look from someone who has seen a few hundred Mooresville roofs up close, we are happy to help. ",
+            { text: "Request a free estimate", href: "/contact" },
+            " and we will give you a straight assessment and an exact number before any work starts.",
+          ],
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does roof cleaning cost in Mooresville, NC?",
+        answer:
+          "Price depends on the size and pitch of the roof and how much growth has built up. We give every Mooresville homeowner a free, no-obligation estimate so you know the exact number before we start. Call 704-917-9649 or request a quote online.",
+      },
+      {
+        question: "Will soft washing damage my roof shingles or void my warranty?",
+        answer:
+          "No. Soft washing uses low pressure and a biodegradable cleaning solution, not a high-pressure wand. High-pressure washing strips shingle granules and voids manufacturer warranties. Soft washing is the method the Asphalt Roofing Manufacturers Association recommends, and it is the only method we use on every roof job.",
+      },
+      {
+        question: "How long does a roof cleaning last in Mooresville?",
+        answer:
+          "Most Mooresville roofs stay clean for two to three years after a soft wash. Homes near Lake Norman or under heavy shade may see regrowth start within one to two years due to higher ambient humidity and longer damp periods after rain. We will tell you what schedule makes sense for your specific property.",
+      },
+      {
+        question: "What causes the black streaks on my roof?",
+        answer:
+          "Almost always Gloeocapsa magma, a cyanobacterium that grows in the limestone filler of asphalt shingles. It arrives as airborne spores and spreads in a dark biological film. The streaks are common across the entire Lake Norman area because the lake keeps ambient humidity high enough for algae to thrive on most roof surfaces year-round.",
+      },
+    ],
+  },
 ];
 
 /** All blog post slugs. */
