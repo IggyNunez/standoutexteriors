@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Bebas_Neue, DM_Sans } from "next/font/google";
 import { LocalBusinessJsonLd, WebSiteJsonLd } from "@/components/seo/JsonLd";
 import Nav from "@/components/layout/Nav";
@@ -128,6 +129,20 @@ export default function RootLayout({
           {children}
           <Footer />
         </MotionProvider>
+
+        {/* Google Ads global site tag. The lead-form conversion fires from
+            ContactForm.tsx on a successful /api/lead submission. Loaded
+            afterInteractive so it never blocks the LCP hero. */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-10894480187"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-gtag" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-10894480187');`}
+        </Script>
       </body>
     </html>
   );

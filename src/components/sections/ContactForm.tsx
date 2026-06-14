@@ -7,6 +7,12 @@ import type { LeadFormData } from "@/types";
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 export default function ContactForm() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "0px 0px -50px 0px" });
@@ -49,6 +55,15 @@ export default function ContactForm() {
       if (res.ok) {
         setStatus("success");
         form.reset();
+        // Fire the Google Ads "Form Submission" conversion. Only on a
+        // confirmed res.ok (a real lead that reached /api/lead), so it
+        // tracks genuine submissions, not page views or failed sends.
+        // Tag is loaded globally in layout.tsx (AW-10894480187).
+        if (typeof window !== "undefined" && typeof window.gtag === "function") {
+          window.gtag("event", "conversion", {
+            send_to: "AW-10894480187/8sSpCLHUkoAcELum8soo",
+          });
+        }
       } else {
         setStatus("error");
       }
