@@ -562,6 +562,132 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  // ── Post 5 ──────────────────────────────────────────────────────────────
+  // NOTE: images skipped - OPENAI_API_KEY was not set in the build environment.
+  {
+    slug: "house-washing-huntersville-nc",
+    title: "House Washing in Huntersville, NC | Stand Out Exterior",
+    metaDescription:
+      "HOA notice for dirty siding? We soft wash vinyl, brick, and Hardie homes in Skybrook, Northstone, and Birkdale Village. Free estimates. 704-917-9649.",
+    h1: "House Washing in Huntersville, NC: What Local Homeowners Need to Know",
+    publishedAt: "2026-06-15",
+    targetKeyword: "house washing huntersville nc",
+    heroImage: "/assets/team/ridge-house-washing-brick-side.webp",
+    heroImageAlt:
+      "Soft washing a brick home exterior in Huntersville NC, removing algae and mildew from siding",
+    eyebrow: "House Washing Guide",
+    heroSubline:
+      "A practical look at why Huntersville siding goes green faster than you expect, how soft washing clears it without damaging your panels, and how to stay ahead of HOA letters.",
+    intro: [
+      "House washing in Huntersville, NC gets put off more than almost any other home maintenance job, and it is easy to understand why. The siding looks acceptable from the driveway, the algae builds in gradually, and it is not until you park on the street and look up at the roofline that you realize the entire north elevation has gone green. By that point, your HOA may already have noticed.",
+      "Huntersville is one of the faster-growing corners of Mecklenburg County, and most of its established neighborhoods, including Skybrook, Northstone, Wynfield, and Birkdale, have appearance covenants. A lot of the 28078 homeowners we work with come to us after receiving a 30-day notice. This guide walks through what makes Huntersville siding dirty, how soft washing clears it safely, and how to get in front of the problem before it turns into a fine.",
+    ],
+    sections: [
+      {
+        heading: "Why Huntersville siding gets dirty faster than you expect",
+        paragraphs: [
+          "The mix of Mecklenburg County humidity, mature tree cover, and HOA-era construction creates conditions where algae and mildew establish themselves faster than most homeowners expect. A few local factors stack up against the siding:",
+        ],
+        bullets: [
+          "HOA construction materials. Skybrook, Northstone, and Wynfield were built largely in the 2000s with vinyl and Hardie plank siding. Both materials hold onto biological film once it gets a foothold, and neither sheds it without intervention.",
+          "Heavy pollen season. Spring in Mecklenburg drops a thick coat of pollen on every exterior surface. On siding and under gutters it combines with moisture and sticks, turning into a grimy paste that feeds mold and mildew.",
+          "Shade from established tree canopy. Mature oaks along Gilead Road and the older lots near Latta Plantation keep north-facing elevations damp for days after a rain, giving algae more time to anchor before the surface dries.",
+          "New-construction residue. Rosedale and the newer subdivisions north of 28078 often carry mortar haze on brick fronts and concrete film on paver driveways from the build-out. That residue creates a staining base that compounds with pollen and algae season by season.",
+          "Active HOA compliance programs. Because Skybrook, Northstone, and Wynfield enforce appearance standards, dirty siding that would go unnoticed for years in a no-covenant neighborhood gets flagged at the two-year mark here instead.",
+        ],
+      },
+      {
+        heading: "Soft washing versus pressure washing siding",
+        paragraphs: [
+          "The most important thing to know before cleaning any Huntersville home is that pressure washing and soft washing are two completely different tools. Pointing a pressure washer at vinyl siding or Hardie plank is one of the fastest ways to create a costly repair bill.",
+          "Pressure washing uses high-force water to physically blast material off a surface. On concrete driveways and pavers, that is the right call. On vinyl siding, Hardie plank, stucco, or painted wood, it drives water behind the panels, cracks vinyl, strips paint, and forces moisture into the wall cavity. The algae that gets blasted off the surface also survives if the root structure is not killed, which means it comes back within weeks.",
+          [
+            "Soft washing uses low-pressure delivery to apply a biodegradable cleaning solution that kills algae, mold, and mildew at the biological root before a gentle rinse removes the dead growth. It does not come back in six weeks because it is dead, not just displaced. Our ",
+            { text: "house washing service", href: "/services/house-washing" },
+            " handles all siding types found in Huntersville neighborhoods on that basis, vinyl, brick, Hardie plank, and stucco.",
+          ],
+        ],
+      },
+      {
+        heading: "HOA compliance: what Huntersville neighborhoods require",
+        paragraphs: [
+          "This is the section most Huntersville homeowners actually need. Skybrook, Northstone, and Wynfield run active compliance programs. A 30-day notice for dirty or algae-stained siding is common, and the fine schedule in most Mecklenburg HOAs escalates if the property is not brought into compliance before the reinspection.",
+          [
+            "We schedule around those deadlines. When a Huntersville homeowner calls with a notice in hand, we prioritize the appointment so there is time to clean and dry the siding before the reinspection date. We work the 28078 ZIP every week and are familiar with what each neighborhood's compliance team looks for. Full details on how we serve the Huntersville area are on our ",
+            { text: "Huntersville, NC service page", href: "/areas/huntersville-nc" },
+            ". If you need to move quickly, ",
+            { text: "contact us", href: "/contact" },
+            " and we will get you scheduled fast.",
+          ],
+        ],
+      },
+      {
+        heading: "How often should you wash your house in Huntersville?",
+        paragraphs: [
+          "For most 28078 homes, once a year is the right baseline. An annual soft wash prevents the biological film from building deep enough to stain the siding material itself, keeps the HOA satisfied, and costs far less than siding replacement on a home that has been allowed to degrade for five years.",
+          "If your home sits under heavy tree cover, faces north on any elevation, or backs up to a wooded lot, plan on every nine months. Shaded areas recolonize faster than open, sun-exposed walls. Missing one of those cleanings in a shaded spot is what turns a standard soft wash into a two-pass job that takes twice as long.",
+          [
+            "The difference between a freshly washed Huntersville home and a neglected one is visible from 50 feet. Our ",
+            { text: "before and after gallery", href: "/before-after" },
+            " shows examples from homes in Skybrook and Northstone where the exterior went from green-streaked and flagged by the HOA to clean and approved in a single visit.",
+          ],
+        ],
+      },
+      {
+        heading: "Warning signs your Huntersville siding needs cleaning now",
+        paragraphs: [
+          "You do not have to wait for the calendar or for an HOA letter. These are the signals we most often see on Huntersville homes that are past due:",
+        ],
+        bullets: [
+          "Green or black streaking on north-facing walls and in the corners where two elevations meet.",
+          "Yellow or gray film on horizontal trim, window sills, and porch ceilings that does not rinse off with a garden hose.",
+          "Tiger striping on gutter faces, the dark vertical streaks caused by oxidation and runoff that drips down from the trough.",
+          "Soft, fuzzy green patches on brick joints near the foundation, where moisture wicks up from the soil.",
+          "Any visible mold or mildew on soffits or fascia boards, which can spread into the wood if left untreated.",
+          "An HOA 30-day letter. That is the most unambiguous signal, and the clock is already running.",
+        ],
+      },
+      {
+        heading: "What our Huntersville house washing includes",
+        paragraphs: [
+          [
+            "Our ",
+            { text: "house washing service", href: "/services/house-washing" },
+            " is a complete soft wash of every siding surface: vinyl, brick, stucco, Hardie plank, and painted wood. We wet down the landscaping before applying any chemistry, apply our biodegradable cleaning solution to all elevations, let it dwell long enough to kill the growth at the root, and rinse the house and the plant beds below. We are a locally owned company based in Denver, NC, and we work Huntersville every week.",
+          ],
+          [
+            "Most Huntersville homeowners have us handle the gutters at the same visit. Gutter faces pick up the same tiger striping as siding, and clogged troughs spill water back onto freshly cleaned siding the next time it rains. Our ",
+            { text: "gutter cleaning and brightening service", href: "/services/gutter-cleaning" },
+            " pairs naturally with any house wash. If you want an exact number before we start, ",
+            { text: "request a free estimate", href: "/contact" },
+            " and we will walk the property with you and give you a quote with no pressure and no contracts.",
+          ],
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does house washing cost in Huntersville, NC?",
+        answer:
+          "Pricing depends on the square footage, the number of stories, and how much biological buildup has developed. We give every Huntersville homeowner a free, no-obligation estimate before any work starts. Call 704-917-9649 or request a quote online.",
+      },
+      {
+        question: "Can soft washing damage my vinyl or Hardie siding?",
+        answer:
+          "No. Soft washing uses low pressure and a biodegradable cleaning solution, not a high-pressure wand. High pressure is what damages siding: it cracks vinyl, drives water behind panels, and strips paint from wood trim. Soft washing cleans the surface without any of those risks.",
+      },
+      {
+        question: "How long does a house wash take in Huntersville?",
+        answer:
+          "Most single-family homes in Skybrook, Northstone, and similar Huntersville neighborhoods take between one and two hours for a complete soft wash. Larger homes or properties with heavy buildup may take a little longer. We will give you a time estimate when we provide the quote.",
+      },
+      {
+        question: "Will a house washing satisfy my HOA requirements in Huntersville?",
+        answer:
+          "In nearly every case, yes. Soft washing removes the algae, mildew, and discoloration that HOA compliance teams flag. We know the 28078 neighborhoods and their standards, and we schedule the job so there is buffer time before your reinspection deadline.",
+      },
+    ],
+  },
 ];
 
 /** All blog post slugs. */
