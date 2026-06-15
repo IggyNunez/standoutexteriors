@@ -430,6 +430,138 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  // ── Post 4 ──────────────────────────────────────────────────────────────
+  {
+    slug: "roof-cleaning-denver-nc",
+    title: "Roof Cleaning in Denver, NC: A Local Homeowner's Guide",
+    metaDescription:
+      "Black streaks on your Denver, NC roof? A local guide to soft washing, how often to clean, and why Lake Norman humidity and tree cover speed up roof algae.",
+    h1: "Roof Cleaning in Denver, NC: What Local Homeowners Need to Know",
+    publishedAt: "2026-06-15",
+    targetKeyword: "roof cleaning denver nc",
+    heroImage: "/assets/team/ridge-roof-cleaning-aerial-full.webp",
+    heroImageAlt:
+      "Aerial view of a soft-washed asphalt shingle roof in Denver NC with black algae streaks removed",
+    eyebrow: "Roof Cleaning Guide",
+    heroSubline:
+      "A practical, local look at why Denver roofs streak and grow algae so fast, how soft washing clears it without harming your shingles, and how often to clean.",
+    intro: [
+      "If you own a home in Denver, NC, take a look at your roof from the street the next time you pull in. If you see dark streaks running down the slope, or green and black patches spreading across the shingles, you are looking at a living problem, not just dirt. It shows up slowly, then seems to take over a whole section of roof in a couple of wet seasons.",
+      "This guide explains what is actually growing on Denver roofs, why our corner of Lincoln County is so hard on shingles, how soft washing clears the growth safely, how often a 28037 home should be cleaned, and when it makes sense to hand the job to a local pro instead of climbing up there yourself.",
+    ],
+    sections: [
+      {
+        heading: "Why Denver, NC roofs streak and grow algae so fast",
+        paragraphs: [
+          "The dark streaks you see on roofs all over Denver and the wider Lake Norman area are almost always a cyanobacterium called Gloeocapsa magma. It arrives on the wind as airborne spores, settles on asphalt shingles, and feeds on the limestone filler in the shingle mat. Left alone, it spreads from a few thin streaks to most of the roof within a handful of seasons. Several local conditions speed that up:",
+        ],
+        bullets: [
+          "Lake Norman humidity. The lake keeps the air damp, especially on lots within a mile or two of the shoreline near Westport and Sailview. Algae and moss love steady moisture, and a Denver summer is close to ideal growing weather.",
+          "Heavy tree cover. Many Denver lots, particularly the older ones around East Lincoln and Verdict Ridge, sit under mature oaks and pines. Shaded roof sections stay wet long after a rain, giving spores more time to take hold.",
+          "North-facing slopes. The north side of any roof gets the least sun and dries the slowest, which is why the streaks almost always start there and spread fastest.",
+          "Pine needle buildup. Needles that collect in valleys and along the ridge hold moisture against the shingles and feed growth right where debris piles up.",
+          "Cedar shake in older neighborhoods. Parts of Verdict Ridge and East Lincoln still have cedar shake, which grows moss readily and needs a gentler soft-wash mix than asphalt.",
+        ],
+      },
+      {
+        heading: "Soft washing versus pressure washing a roof",
+        paragraphs: [
+          "The single most important thing to know about roof cleaning is that high-pressure washing damages shingles. The protective layer on an asphalt shingle is a coating of ceramic granules bonded to the mat, and a pressure washer strips those granules off in seconds. That shortens the life of the roof and voids most manufacturer warranties. It is not a risk worth taking to clean a roof.",
+          [
+            "Soft washing uses low-pressure delivery to apply a biodegradable cleaning solution that kills the algae, lichen, and moss at the root instead of blasting the surface. Once the growth is dead, it rinses away cleanly and the next rain or two finishes the job. The shingles stay intact and the warranty stays valid. It is the method the Asphalt Roofing Manufacturers Association recommends, and the only one we use on Denver roofs. Our full ",
+            { text: "roof cleaning service page", href: "/services/roof-cleaning" },
+            " walks through the complete process.",
+          ],
+        ],
+      },
+      {
+        heading: "How often should you clean your roof in Denver?",
+        paragraphs: [
+          "For most Denver homes, a roof cleaning every two to five years keeps algae and moss from getting a serious foothold. On that schedule the biological film never builds deep enough to stain the shingle mat itself, and each later cleaning stays straightforward.",
+          "If your home sits close to the water, on or near the Lake Norman shoreline, plan on the shorter end of that range, every two to three years. Near-water lots see consistently higher humidity, which means faster growth on every exterior surface, the roof included.",
+          [
+            "Homes under heavy oak and pine cover are in the same camp. If you can already see green or black growth from the street, the roof is overdue, and cleaning sooner protects the shingle warranty and slows the spread. If you are not sure what your roof needs, we are happy to take a look during a ",
+            { text: "free estimate", href: "/contact" },
+            ".",
+          ],
+        ],
+      },
+      {
+        heading: "Warning signs your Denver roof needs cleaning",
+        paragraphs: [
+          "You do not have to wait for the calendar. These are the signs we see most often on Denver roofs that have gone too long between cleanings:",
+        ],
+        bullets: [
+          "Dark streaks or black discoloration running down the slope, usually starting on the north-facing sections.",
+          "Green, fuzzy moss patches in shaded valleys, near the gutters, or around a chimney or skylight.",
+          "A gray, chalky look across sections that were darker and more uniform when the shingles were newer.",
+          "Visible growth concentrating where pine needles and leaves collect, including valleys and roof penetrations.",
+          "Shingle granules collecting in the gutters and downspouts, a sign the surface is wearing.",
+        ],
+      },
+      {
+        heading: "Why it matters for Lake Norman area homes",
+        paragraphs: [
+          "A streaked roof is not just an eyesore. Gloeocapsa magma feeds on the shingle itself, and moss holds moisture against the deck and wedges shingles apart as it grows, both of which shorten the life of the roof. A roof replacement on an average Denver home runs many thousands of dollars, so a periodic cleaning that adds years to the shingles you already have is some of the cheapest protection available.",
+          [
+            "The same humidity and shade that streak the roof tend to green up the rest of the exterior too. If the roof is stained, the siding usually is not far behind, so a lot of Denver homeowners pair roof cleaning with a ",
+            { text: "professional house washing", href: "/services/house-washing" },
+            " to reset the whole exterior at once. The pine needles that feed roof algae also clog gutters, so it is worth checking those while the crew is up there.",
+          ],
+        ],
+      },
+      {
+        heading: "DIY versus hiring a local pro",
+        paragraphs: [
+          "Cleaning your own roof is possible for a confident homeowner with the right chemistry and a ground-level delivery system, but it carries real risk. Walking a wet, algae-covered roof is slippery, and a fall from even a single-story pitch is a serious injury. On the steep rooflines and two-story homes common on Denver lake lots, the margin for error essentially disappears.",
+          [
+            "Getting the chemistry right matters just as much. Too weak a mix and the algae is back within months. Too strong without proper prep and the runoff can scorch landscaping or pool in the gutters. A local pro brings the correct concentration, the right delivery pressure, and the judgment to protect plants, gutters, and downspouts during the job. For most homes past a simple one-story ranch, hiring it out is the smarter call. Our ",
+            { text: "before and after gallery", href: "/before-after" },
+            " shows how dramatically a proper soft wash changes a roof.",
+          ],
+        ],
+      },
+      {
+        heading: "What our Denver roof cleaning includes",
+        paragraphs: [
+          [
+            "Our ",
+            { text: "roof cleaning service", href: "/services/roof-cleaning" },
+            " is a low-pressure soft wash applied in overlapping passes so every section of the roof gets treated evenly. We pre-rinse the landscaping and gutters before application, apply our biodegradable cleaning blend, let it dwell to kill the growth at the root, then rinse the roof, gutters, and plant beds below. We are a locally owned company based right here in Denver, working the 28037 ZIP every week, from modest ranches in Smithstone to tall lakefront rooflines near the shoreline.",
+          ],
+          [
+            "If you want the full background on how we serve the area, see our ",
+            { text: "Denver, NC service page", href: "/areas/denver-nc" },
+            ". If you just want an honest look from someone who has been on a few hundred Denver roofs, ",
+            { text: "request a free estimate", href: "/contact" },
+            " and we will give you a straight assessment and an exact number before any work starts.",
+          ],
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does roof cleaning cost in Denver, NC?",
+        answer:
+          "Price depends on the size and pitch of the roof and how much growth has built up. We give every Denver homeowner a free, no-obligation estimate, so you know the exact number before we start. Call 704-917-9649 or request a quote online.",
+      },
+      {
+        question: "Will soft washing damage my shingles or void my warranty?",
+        answer:
+          "No. Soft washing uses low pressure and a biodegradable cleaning solution, not a high-pressure wand. High-pressure washing is what strips shingle granules and voids manufacturer warranties. Soft washing is the method the Asphalt Roofing Manufacturers Association recommends, and it is the only method we use on every roof job.",
+      },
+      {
+        question: "How long does a roof cleaning last in Denver?",
+        answer:
+          "Most Denver roofs stay clean for two to five years after a soft wash. Homes near the Lake Norman shoreline or under heavy oak and pine cover may see regrowth start within two to three years because of the higher humidity and longer damp periods after rain. We will tell you what schedule makes sense for your specific roof.",
+      },
+      {
+        question: "What causes the black streaks on my roof?",
+        answer:
+          "Almost always Gloeocapsa magma, a cyanobacterium that grows in the limestone filler of asphalt shingles. It arrives as airborne spores and spreads in a dark biological film. The streaks are common across Denver and the entire Lake Norman area because the lake keeps ambient humidity high enough for algae to thrive on most roofs year-round.",
+      },
+    ],
+  },
 ];
 
 /** All blog post slugs. */
