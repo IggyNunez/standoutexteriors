@@ -688,6 +688,136 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  // ── Post 6 ──────────────────────────────────────────────────────────────
+  {
+    slug: "window-cleaning-denver-nc",
+    title: "Window Cleaning in Denver, NC: A Local Homeowner's Guide",
+    metaDescription:
+      "Why Denver, NC windows spot up so fast, what pure-water cleaning does that paper towels cannot, how often to clean, and when to hire a local pro.",
+    h1: "Window Cleaning in Denver, NC: What Local Homeowners Need to Know",
+    publishedAt: "2026-06-22",
+    targetKeyword: "window cleaning denver nc",
+    heroImage: "/assets/team/ridge-window-cleaning-lakeside.webp",
+    heroImageAlt:
+      "Ridge Curwood cleaning the exterior windows of a lakeside home in Denver NC",
+    eyebrow: "Window Cleaning Guide",
+    heroSubline:
+      "A practical, local look at why Denver windows cloud over so fast, why pure-water cleaning beats a squeegee and a bottle, and how often a lake-area home should be done.",
+    intro: [
+      "You picked your Denver, NC home in part for what you could see out the windows, whether that is a stand of pines, a quiet cul-de-sac, or a slice of Lake Norman. Then a season goes by and the glass quietly fogs over with pollen, sprinkler spots, and a gray film you stop noticing until the afternoon sun hits it. At that point a paper towel and a bottle of cleaner usually just smear it around.",
+      "This guide walks through what actually dirties windows in the 28037 area, why hard-water spotting is such a stubborn local problem, how a professional pure-water system gets glass truly spot free, how often a Denver home should be cleaned, and when it makes sense to hand the job to a pro instead of balancing on a ladder yourself.",
+    ],
+    sections: [
+      {
+        heading: "Why Denver, NC windows cloud over so fast",
+        paragraphs: [
+          "Denver sits in a humid, tree-heavy pocket of Lincoln County right off Lake Norman, and that mix is hard on glass. A few local factors stack up faster than most homeowners expect:",
+        ],
+        bullets: [
+          "Heavy spring pollen. Denver's pollen season coats every pane in a fine yellow film. Mixed with morning dew it dries into a streaky haze that a dry wipe just pushes around.",
+          "Sprinkler and hard-water spotting. Irrigation heads that clip the glass leave mineral deposits behind every cycle. Our well and municipal water both carry enough dissolved minerals to etch faint rings into the glass if they sit too long.",
+          "Lake Norman mist and humidity. Damp air off the water keeps dust and pollen stuck to the glass instead of letting it blow off, especially on lots near Westport and the shoreline.",
+          "Pine sap and tree debris. The loblolly pines and oaks shading older lots around East Lincoln and Verdict Ridge drop sap, pollen, and fine grit that bond to the glass and the frames.",
+          "Red-clay dust. Runoff and road dust off our clay soil settle into the bottom corners of the glass and into the tracks, where they turn to a gritty paste.",
+        ],
+      },
+      {
+        heading: "Pure water versus paper towels and a bottle",
+        paragraphs: [
+          "The reason store-bought cleaner and a rag never quite get there comes down to what is left behind. Spray cleaners contain soaps and surfactants that leave a thin residue at the edges of each pane, and that residue attracts dust and dries into the streaks you see the next sunny morning. Worse, tap water carries dissolved minerals that dry into spots the moment the glass air-dries.",
+          "A professional pure-water system solves both problems. Ordinary water is run through reverse-osmosis and deionization filters until its total dissolved solids reading is essentially zero. That purified water is scrubbed across the glass with a soft brush on a carbon-fiber pole, then rinsed. Because there are no minerals and no soap in the water, the glass dries on its own with no spots, no streaks, and no residue along the edges to catch the next round of pollen.",
+          [
+            "It is also far safer. The extension poles reach second and third-story windows from the ground, so there is no ladder leaned against the siding of a two-story Denver home. Our full ",
+            { text: "window cleaning service", href: "/services/window-cleaning" },
+            " uses this pure-water method on every exterior pane, with a traditional microfiber and squeegee finish on the interior glass.",
+          ],
+        ],
+      },
+      {
+        heading: "How often should you clean windows in Denver?",
+        paragraphs: [
+          "For most Denver homes, twice a year is the right baseline: once in spring to clear off the pollen and oak flowers, and once in fall to wash away summer dust and the mildew film that our humidity grows on the glass and frames. That schedule keeps the windows clear through the two seasons that dirty them the most.",
+          "If your home sits close to the water, backs up to woods, or runs its irrigation near the glass, plan on three cleanings a year. Lake mist, heavy tree cover, and sprinkler overspray all put film and mineral spotting back on the glass faster, and catching it before the spots etch in keeps each cleaning straightforward.",
+          [
+            "Homes near a gravel drive or a busy road like NC-16 or NC-73 pick up road dust quickly too. If you are not sure what your windows need, we are happy to take a look during a ",
+            { text: "free estimate", href: "/contact" },
+            ".",
+          ],
+        ],
+      },
+      {
+        heading: "Warning signs your windows are overdue",
+        paragraphs: [
+          "You do not have to wait for the calendar. These are the signs we see most often on Denver homes that have gone too long between cleanings:",
+        ],
+        bullets: [
+          "A gray or yellow haze that only shows up when the afternoon sun hits the glass at an angle.",
+          "Hard, cloudy rings or spots from sprinkler overspray that do not wipe off with a damp cloth.",
+          "Grit and dead bugs collecting in the bottom tracks and corners of the frames.",
+          "Green or black mildew building up in the rubber seals and along the bottom edge of the glass.",
+          "Streaks that reappear within a day of a do-it-yourself cleaning, a sign of soap residue and mineral spotting.",
+          "Pollen so heavy in spring that you can write your name on the glass.",
+        ],
+      },
+      {
+        heading: "Why clean glass matters for Lake Norman area homes",
+        paragraphs: [
+          "Clean windows are not only about the view. The mineral deposits left by sprinkler overspray are mildly abrasive, and if they sit on the glass through enough wet and dry cycles they begin to etch the surface permanently. Caught early, that spotting wipes away. Left for years, it can become a haze no cleaning will fully remove, so regular cleaning quietly protects the glass itself.",
+          [
+            "The same pollen, mildew, and lake humidity that film your windows tend to green up the rest of the exterior at the same pace. A lot of Denver homeowners pair a window cleaning with a ",
+            { text: "professional house washing", href: "/services/house-washing" },
+            ", since washing the siding after the windows leaves the whole exterior looking finished. If your gutter faces are streaked too, it is worth handling those in the same visit.",
+          ],
+        ],
+      },
+      {
+        heading: "DIY versus hiring a local pro",
+        paragraphs: [
+          "Plenty of Denver homeowners clean their own ground-floor windows, and for a single-story ranch with easy access that is perfectly reasonable. The trouble starts higher up. Reaching second and third-story glass means a ladder leaned against the house, often on the uneven, clay-heavy grade of a lake lot, and a fall from that height is a serious injury, not a minor one.",
+          "A pro also gets a genuinely different result. The pure-water system leaves no soap residue to streak, removes hard-water spotting that a household cleaner cannot touch, and reaches every pane safely from the ground. Add in the time it takes to do a whole house of windows by hand, inside and out, and hiring it out usually makes sense once you are past the easy ground-floor panes.",
+        ],
+      },
+      {
+        heading: "What our Denver window cleaning includes",
+        paragraphs: [
+          [
+            "Our ",
+            { text: "window cleaning service", href: "/services/window-cleaning" },
+            " is a full pure-water exterior wash of every pane and frame, with the interior glass cleaned by microfiber and squeegee when you book inside and out. We brush and rinse the exterior with spot-free purified water, wipe the frames and sills, and clean tracks and wipe screens on request so the whole window feels new, not just the glass.",
+          ],
+          [
+            "We are a locally owned company based right here in Denver, working the 28037 ZIP every week, from modest ranches in Smithstone to tall lakefront windows near the shoreline. If you want the full background on how we serve the area, see our ",
+            { text: "Denver, NC service page", href: "/areas/denver-nc" },
+            ". To get an exact number before any work starts, ",
+            { text: "request a free estimate", href: "/contact" },
+            " and we will walk the property with you with no pressure and no contracts.",
+          ],
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does window cleaning cost in Denver, NC?",
+        answer:
+          "It depends on the number of windows, the number of stories, and whether you want interior and exterior or exterior only. We give every Denver homeowner a free, no-obligation estimate so you know the exact number before we start. Call 704-917-9649 or request a quote online.",
+      },
+      {
+        question: "Why is pure-water cleaning better than soap and a squeegee?",
+        answer:
+          "Pure water has no minerals to dry into spots and no soap to leave a residue at the edges of the glass, so the windows dry completely streak free. It also lets us clean second and third-story windows safely from the ground with an extension pole instead of a ladder against the house.",
+      },
+      {
+        question: "How often should I clean my windows in Denver?",
+        answer:
+          "Twice a year is the right baseline for most homes, once in spring after the pollen and once in fall. Homes near Lake Norman, under heavy tree cover, or with irrigation near the glass often benefit from a third cleaning because mist, debris, and sprinkler spotting build up faster.",
+      },
+      {
+        question: "Can you remove hard-water spots from sprinklers?",
+        answer:
+          "In most cases, yes. Fresh mineral spotting from sprinkler overspray comes off well with our treatment. Spots that have been baked onto the glass for years may have etched the surface, in which case they lighten significantly rather than disappear. We tell you what to expect before we start.",
+      },
+    ],
+  },
 ];
 
 /** All blog post slugs. */
