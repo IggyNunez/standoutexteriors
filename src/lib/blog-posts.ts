@@ -818,6 +818,131 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  // ── Post 7 ──────────────────────────────────────────────────────────────
+  // NOTE: images skipped - OPENAI_API_KEY was not set in the build environment.
+  {
+    slug: "driveway-cleaning-cornelius-nc",
+    title: "Driveway Cleaning in Cornelius, NC: A Homeowner's Guide",
+    metaDescription:
+      "Red clay stains, mold, and pollen turn Cornelius, NC driveways grimy fast. A local guide to pressure washing your driveway and when to call a pro.",
+    h1: "Driveway Cleaning in Cornelius, NC: What Local Homeowners Need to Know",
+    publishedAt: "2026-06-22",
+    targetKeyword: "driveway cleaning cornelius nc",
+    heroImage: "/assets/team/ridge-driveway-surface-cleaner-action.webp",
+    heroImageAlt:
+      "Ridge Curwood running a surface cleaner across a concrete driveway in a Cornelius NC neighborhood",
+    eyebrow: "Driveway Cleaning Guide",
+    heroSubline:
+      "A practical look at why Cornelius driveways stain so fast, how a surface cleaner and the right chemistry fix it, and how often a 28031 driveway needs to be done.",
+    intro: [
+      "If you own a home in Cornelius, NC, your concrete driveway is fighting a set of problems that most homeowners in drier parts of the state simply do not deal with. The Lake Norman humidity that makes this area so livable through a mild Carolina winter is the same humidity that keeps mold and algae growing on hard surfaces twelve months a year. Add in the red-clay soil that runoff deposits after every rain, the heavy spring pollen, and the traffic grime that builds up near the I-77 corridor, and a Cornelius driveway can go from clean to noticeably stained in a single season.",
+      "This guide walks through what actually causes that buildup, the right way to pressure wash a concrete driveway without leaving stripes or etching lines into the slab, how often a 28031 home should be cleaned, and when it makes more sense to hire a local pro than to rent a machine and do it yourself.",
+    ],
+    sections: [
+      {
+        heading: "Why Cornelius driveways get dirty so fast",
+        paragraphs: [
+          "Cornelius sits in northern Mecklenburg County where lake humidity, clay-heavy soil, and steady suburban growth all work against clean hard surfaces. Several local factors stack up and accelerate driveway staining:",
+        ],
+        bullets: [
+          "Red-clay runoff. Every rainstorm washes fine clay sediment off the surrounding soil and onto the driveway surface. The clay works into the pores of the concrete and dries pink-orange. On stamped concrete and pavers in neighborhoods like The Peninsula and Antiquity, that tint looks especially bad against light-colored stone.",
+          "Mold and mildew from lake humidity. Lake Norman keeps the air consistently damp, especially overnight and after rain. North-facing driveways and sections shaded by mature tree cover stay wet long enough for mold and algae to establish a dark, slippery film.",
+          "Spring pollen. Cornelius gets the same heavy yellow pollen as the rest of Mecklenburg County each spring. On a flat concrete surface, pollen settles into the texture of the slab and mixes with moisture to form a grimy paste.",
+          "I-77 road grit. Properties near the I-77 corridor from Westmoreland Road north through the Davidson Landing area accumulate a fine layer of road dust and tire rubber that darkens the slab and works into paver joints.",
+          "New-construction concrete film. Cornelius has grown quickly, and many driveways installed in the past five years still carry residual concrete film, form-release compound, and bleed-water staining from the original pour. That residue looks dull and uneven and needs a proper cleaning to open up the surface.",
+        ],
+      },
+      {
+        heading: "Pressure washing versus soft washing: which does your driveway need?",
+        paragraphs: [
+          "The most important thing to understand before cleaning any exterior surface is the difference between pressure washing and soft washing. Getting this wrong is the most common way homeowners damage their own property.",
+          "Pressure washing uses high-force water to physically remove grime from hard, durable surfaces. A concrete driveway, a brick paver patio, and most stone fall into this category. The right tool for these surfaces is a commercial surface cleaner, a round spinning head that scrubs the full width of the slab in even, overlapping passes. That is what removes clay, mold, and pollen without leaving the zebra stripes a point-tip wand creates.",
+          [
+            "Soft washing is the right call for anything that water can get behind or damage: vinyl siding, Hardie plank, roofs, and stucco. Pointing a pressure wand at siding can crack panels, drive water into wall cavities, and strip paint from wood trim. For the house itself, we always switch to a low-pressure soft wash. See our ",
+            { text: "house washing service", href: "/services/house-washing" },
+            " page for details on how that side of the job works.",
+          ],
+        ],
+      },
+      {
+        heading: "How often should you clean your driveway in Cornelius?",
+        paragraphs: [
+          "For most Cornelius homes, once a year is the right baseline. An annual pressure wash keeps the clay film, mold, and pollen from building into the deeper stains that take multiple passes and more aggressive chemistry to remove. It also keeps the surface safe: the mold and algae that grow on shaded concrete are genuinely slippery when wet, and a driveway that goes green is a real hazard in the rainy months.",
+          [
+            "If your driveway sits under heavy shade from the mature oaks and hardwoods common in the older Cornelius neighborhoods near Jetton Park and Catawba Avenue, plan on cleaning every six to eight months. Shade keeps the surface wet longer after each rain, which means faster mold growth and heavier clay buildup between cleanings. Our ",
+            { text: "driveway cleaning service", href: "/services/driveway-cleaning" },
+            " is calibrated for exactly these kinds of conditions.",
+          ],
+          "Driveways made of concrete pavers or stamped concrete warrant a slightly different schedule. Paver joints fill with organic debris faster than a flat slab, and the joint sand that holds pavers together erodes if the surface stays clogged for too long. Annual cleaning and periodic polymeric sand replacement keeps the system intact and the surface looking like new rather than weathered.",
+        ],
+      },
+      {
+        heading: "Warning signs your Cornelius driveway needs cleaning",
+        paragraphs: [
+          "You do not have to wait for the calendar. These are the signs we see most often on Cornelius driveways that are ready for service:",
+        ],
+        bullets: [
+          "A pink-orange or gray film across the full surface that does not rinse off with a garden hose.",
+          "Dark, slick spots in the shaded section of the driveway, especially near tree canopy, that feel slippery underfoot when wet.",
+          "Green or black mold spreading from the edges of the slab or from the expansion joints inward.",
+          "Heavy spring pollen that has turned into a stuck, grimy paste after the first rain.",
+          "Oil, rust, or tire marks in the garage apron section that have darkened over multiple seasons.",
+          "Paver joints that have started to sink or separate, a sign organic debris is pushing the joint sand loose.",
+          "Neighbors whose driveways look noticeably cleaner from the street.",
+        ],
+      },
+      {
+        heading: "DIY versus hiring a local pro",
+        paragraphs: [
+          "Plenty of Cornelius homeowners rent a pressure washer and clean their own driveway, and for a simple, flat slab in good shape that can work out fine. The trouble shows up in three places: a point-tip wand leaves visible stripes across the concrete that do not go away, too much pressure can etch lines into the surface permanently, and the temptation to point that same machine at the siding or the roof leads to damage that costs more to fix than a professional cleaning would have cost.",
+          [
+            "A local pro brings a commercial surface cleaner that produces an even, stripe-free finish, the right pre-treatment chemistry to lift clay and kill mold at the root instead of just wetting the surface, and the judgment to know which surfaces get pressure and which need a different approach. For most Cornelius homes, hiring it out saves money once you factor in the rental cost, chemicals, and time. Check our ",
+            { text: "before and after gallery", href: "/before-after" },
+            " to see the difference a commercial surface cleaner makes compared to a standard rented machine.",
+          ],
+        ],
+      },
+      {
+        heading: "What our Cornelius driveway cleaning includes",
+        paragraphs: [
+          [
+            "Our ",
+            { text: "driveway cleaning service", href: "/services/driveway-cleaning" },
+            " is a complete reset for your concrete or paver surface. We pre-treat the driveway with biodegradable chemistry to break down clay, kill mold at the root, and loosen oil and tire residue. Then we run a commercial surface cleaner in overlapping passes for an even, stripe-free finish across the full slab. We hand-detail the edges, the garage apron, and the expansion joints, and flush the perimeter so debris ends up in the street rather than in your landscaping.",
+          ],
+          [
+            "We are a locally owned company working the Lake Norman area every week, including Cornelius and the 28031 ZIP. For full details on how we serve this part of Mecklenburg County, see our ",
+            { text: "Cornelius, NC service page", href: "/areas/cornelius-nc" },
+            ". When we are already at the property, most homeowners also have us look at the house siding, since the same clay and mold that hit the driveway tend to green up the north elevation at the same pace. To get an exact number before any work starts, ",
+            { text: "request a free estimate", href: "/contact" },
+            " and we will walk the property with you with no pressure and no contracts.",
+          ],
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does driveway cleaning cost in Cornelius, NC?",
+        answer:
+          "Pricing depends on the square footage, the surface type (concrete, pavers, or stamped), and how much buildup has accumulated. We give every Cornelius homeowner a free, no-obligation estimate so you know the exact number before we start. Call 704-917-9649 or request a quote online.",
+      },
+      {
+        question: "Will pressure washing damage my concrete or paver driveway?",
+        answer:
+          "Not when it is done correctly. The key is using a commercial surface cleaner rather than a point-tip wand, which prevents stripes and controls the pressure so the surface is cleaned without etching. On pavers, we take care to preserve the joint sand and can replace it with polymeric sand after cleaning if the joints have eroded.",
+      },
+      {
+        question: "How do you remove red-clay stains from a Cornelius driveway?",
+        answer:
+          "Clay stains respond best to a pre-treatment that breaks down the iron oxide before the pressure pass. We apply the right chemistry to stained areas first, let it dwell, then surface-clean the full slab. Most red-clay film comes up completely. Very old, deeply set staining may lighten significantly rather than disappear entirely, and we will tell you what to expect before we start.",
+      },
+      {
+        question: "Can you clean both concrete and brick pavers in Cornelius?",
+        answer:
+          "Yes. We clean concrete driveways, brick and concrete pavers, stamped concrete, and stone walkways throughout the Cornelius and Lake Norman area. Pavers get a slightly different process since we protect the joint sand, and we can replace polymeric sand after cleaning if the joints have eroded.",
+      },
+    ],
+  },
 ];
 
 /** All blog post slugs. */
