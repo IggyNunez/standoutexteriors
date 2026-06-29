@@ -1069,6 +1069,131 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  // ── Post 9 ──────────────────────────────────────────────────────────────
+  // NOTE: images skipped - OPENAI_API_KEY was not set in the build environment.
+  {
+    slug: "house-washing-mooresville-nc",
+    title: "House Washing in Mooresville, NC | Stand Out Exterior",
+    metaDescription:
+      "Algae and mildew turning Mooresville, NC siding green? A local guide to soft washing vinyl, brick, and Hardie homes along Lake Norman. Free estimates.",
+    h1: "House Washing in Mooresville, NC: What Local Homeowners Need to Know",
+    publishedAt: "2026-06-29",
+    targetKeyword: "house washing mooresville nc",
+    heroImage: "/assets/team/ridge-house-washing-brick-side.webp",
+    heroImageAlt:
+      "Soft washing a brick home exterior in Mooresville NC, removing algae and mildew from siding",
+    eyebrow: "House Washing Guide",
+    heroSubline:
+      "A practical, local look at why Mooresville siding goes green faster than you expect, how soft washing clears it safely, and how often a Lake Norman home should be done.",
+    intro: [
+      "If you own a home in Mooresville, NC, the algae and mildew creeping up your north-facing siding are not a sign that something is wrong with the material. They are a sign that the Lake Norman climate is doing what it always does: keeping surfaces damp long enough for biological growth to take hold. Left alone, that green-black film builds season by season until the whole north elevation looks stained.",
+      "This guide walks through what makes Mooresville siding dirty so fast, why soft washing is the right method for every siding type in this climate, how often a 28115 home should be washed, the warning signs that mean it is time to act, and what to look for when you hire a local crew.",
+    ],
+    sections: [
+      {
+        heading: "Why Mooresville siding gets dirty faster than you expect",
+        paragraphs: [
+          "Mooresville sits at the southern end of Lake Norman, and the lake drives the local microclimate in ways that work directly against clean exterior surfaces. Several factors stack up and accelerate siding staining throughout the 28115 ZIP:",
+        ],
+        bullets: [
+          "Lake Norman humidity. The lake keeps the air consistently damp, especially overnight and in the mornings. Algae and mildew thrive in steady moisture, and a Mooresville siding panel that stays wet for hours after a rain is close to ideal growing conditions.",
+          "Shade from mature tree canopy. Properties along Brawley School Road, Langtree Road, and the older neighborhoods near Lake Davidson sit under established hardwood and pine canopy. Shaded elevations dry far more slowly after rain, giving biological growth more time to anchor before the surface finally dries out.",
+          "North-facing walls. The north side of any home gets the least direct sun and stays damp the longest after each rain or morning dew. This is almost always where growth starts and spreads fastest on a Mooresville home.",
+          "Heavy spring pollen. Iredell County's pollen season drops a thick coat on every exterior surface. On vertical siding the pollen mixes with morning moisture and sticks, creating a paste that feeds mold and mildew through the warmer months.",
+          "Red-clay soil and runoff. Mooresville's clay-heavy soil washes off in every storm and sprinkles fine sediment onto lower siding elevations and the foundation skirting, compounding biological buildup with a mineral stain.",
+        ],
+      },
+      {
+        heading: "Soft washing versus pressure washing siding",
+        paragraphs: [
+          "The most important thing to understand before cleaning any siding is that pressure washing and soft washing are two completely different tools. Using the wrong one on siding is one of the fastest ways to create a costly repair bill.",
+          "Pressure washing uses high-force water to physically blast material off a surface. On concrete driveways and brick pavers, that is the right call. On vinyl siding, Hardie plank, painted wood, brick veneer, or stucco, high pressure drives water behind the panels, cracks vinyl, strips paint from trim, forces moisture into the wall cavity, and can dislodge mortar in older brick joints. The algae that gets blasted off also survives because the root structure is not killed, which means it comes back within weeks.",
+          [
+            "Soft washing uses low-pressure delivery to apply a biodegradable cleaning solution that kills algae, mold, and mildew at the biological root before a gentle rinse removes the dead growth. It does not come back quickly because the organism is dead, not just displaced. Our ",
+            { text: "house washing service", href: "/services/house-washing" },
+            " uses this method on all siding types found in Mooresville: vinyl, brick, Hardie plank, stucco, and painted wood.",
+          ],
+        ],
+      },
+      {
+        heading: "How often should you wash your house in Mooresville?",
+        paragraphs: [
+          "For most Mooresville homes, once a year is the right baseline. An annual soft wash prevents the biological film from building deep enough to stain the siding material itself, keeps the exterior looking sharp, and costs far less than a siding replacement on a home that has been allowed to degrade for multiple seasons.",
+          "If your home sits close to the water - within a half mile of Lake Norman, Lake Davidson, or any of the smaller coves along the Mooresville shoreline - plan on every nine to twelve months. Near-water properties see consistently higher humidity levels, which means faster biological growth on every exterior surface.",
+          [
+            "Homes under heavy tree cover, especially north-facing elevations that get significant shade from mature hardwoods, are in the same camp. If you can already see green or black growth from the street, the house is past due, and cleaning sooner protects the siding and keeps the problem from spreading to the soffit and fascia above. Our ",
+            { text: "before and after gallery", href: "/before-after" },
+            " shows several Mooresville homes where a single soft wash took the exterior from heavily stained to clean in one visit.",
+          ],
+        ],
+      },
+      {
+        heading: "Warning signs your Mooresville siding needs cleaning now",
+        paragraphs: [
+          "You do not have to wait for the calendar. These are the signs we see most often on Mooresville homes that are past due for a cleaning:",
+        ],
+        bullets: [
+          "Green or black streaking on north-facing walls, in corners where two elevations meet, or in the shadow of an overhang or porch roof.",
+          "Yellow or gray film on horizontal trim, window sills, and porch ceilings that does not rinse off with a garden hose.",
+          "Tiger striping on gutter faces: the dark vertical streaks caused by oxidation and runoff dripping down from the trough.",
+          "Soft, fuzzy green patches on brick joints near the foundation, where moisture wicks up from the soil.",
+          "Any visible mold or mildew on soffits or fascia boards, which signals the biological growth has already reached the wood and can spread into the structure if left alone.",
+          "Black or gray staining on the siding around attic vents or window frames, where moisture regularly condenses and provides a steady food source for algae.",
+        ],
+      },
+      {
+        heading: "What a professional soft wash does that a garden hose cannot",
+        paragraphs: [
+          "A garden hose and a scrub brush can rinse loose debris off the surface but cannot kill the biological root system living inside the siding texture. The algae and mildew film on a Mooresville home goes down into the microscopic pores of the panel material. Without the right chemistry, the growth is disturbed but not dead, and it recolonizes the surface faster than it colonized the first time.",
+          "A professional soft wash applies a biodegradable cleaning blend at the correct concentration, lets it dwell long enough to kill the growth at the root, then rinses the siding and all the plant beds and hardscape below. The result is a clean that lasts a full season or longer, not a rinsed surface that turns green again in six weeks.",
+          [
+            "Getting the chemistry right also matters for the landscaping. Too strong a solution without proper prep can damage plants. We wet down the beds, shrubs, and lawn before application and rinse them again after, so the cleaning protects the house without harming what is growing around it. You can read more about the full process on our ",
+            { text: "house washing service page", href: "/services/house-washing" },
+            ".",
+          ],
+        ],
+      },
+      {
+        heading: "What our Mooresville house washing includes",
+        paragraphs: [
+          [
+            "Our ",
+            { text: "house washing service", href: "/services/house-washing" },
+            " is a complete soft wash of every siding surface: vinyl, brick, Hardie plank, stucco, and painted wood. We wet down the landscaping before applying any chemistry, apply our biodegradable cleaning solution to all elevations, let it dwell long enough to kill the growth at the root, and rinse the house and the plant beds below. We are a locally owned company based in Denver, NC, and we serve Mooresville and the 28115 ZIP every week, from the older neighborhoods along Brawley School Road to the newer developments near Langtree and The Point.",
+          ],
+          [
+            "Most Mooresville homeowners add gutter cleaning to the same visit. The same humidity and tree canopy that stain the siding also fill the gutters with organic debris, and a clogged trough spills water back onto freshly cleaned siding the next time it rains. Full details about how we serve the area are on our ",
+            { text: "Mooresville, NC service page", href: "/areas/mooresville-nc" },
+            ". To get an exact number before any work starts, ",
+            { text: "request a free estimate", href: "/contact" },
+            " and we will walk the property with you and give you a quote with no pressure and no contracts.",
+          ],
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does house washing cost in Mooresville, NC?",
+        answer:
+          "Pricing depends on the square footage, the number of stories, the siding material, and how much biological buildup has developed. We give every Mooresville homeowner a free, no-obligation estimate before any work starts. Call 704-917-9649 or request a quote online.",
+      },
+      {
+        question: "Will soft washing damage my vinyl or Hardie siding?",
+        answer:
+          "No. Soft washing uses low pressure and a biodegradable cleaning solution, not a high-pressure wand. High pressure is what damages siding: it cracks vinyl, drives water behind panels, and strips paint from wood trim. Soft washing cleans the surface without any of those risks.",
+      },
+      {
+        question: "Can you remove algae and mildew from brick siding in Mooresville?",
+        answer:
+          "Yes. Brick veneer and full brick fronts pick up the same biological growth as vinyl and Hardie siding in the Lake Norman humidity. We adjust the cleaning solution and dwell time for brick so the mortar joints are protected while the growth is killed. Most brick comes back looking close to its original color.",
+      },
+      {
+        question: "How long does a house wash take in Mooresville?",
+        answer:
+          "Most single-family homes in Mooresville take between one and two hours for a complete soft wash of all elevations. Larger homes or properties with heavy buildup may take a bit longer. We will give you a time estimate when we provide the quote.",
+      },
+    ],
+  },
 ];
 
 /** All blog post slugs. */
