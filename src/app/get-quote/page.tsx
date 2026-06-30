@@ -3,7 +3,7 @@ import { SITE_URL } from "@/lib/constants";
 import QuoteHero from "@/components/sections/QuoteHero";
 import WhyUs from "@/components/sections/WhyUs";
 import InActionGallery from "@/components/sections/InActionGallery";
-import FeaturedReview from "@/components/sections/FeaturedReview";
+import Testimonials from "@/components/sections/Testimonials";
 import QuoteFinalCTA from "@/components/sections/QuoteFinalCTA";
 
 /**
@@ -31,7 +31,7 @@ export default function GetQuotePage() {
       <QuoteHero />
       <WhyUs />
       <InActionGallery />
-      <FeaturedReview />
+      <Testimonials />
       <QuoteFinalCTA />
     </main>
   );
