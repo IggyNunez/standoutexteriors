@@ -1326,6 +1326,132 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  // ── Post 11 ─────────────────────────────────────────────────────────────
+  // NOTE: images skipped - OPENAI_API_KEY was not set in the build environment.
+  {
+    slug: "fence-washing-denver-nc",
+    title: "Fence Washing in Denver, NC | Stand Out Exterior",
+    metaDescription:
+      "Vinyl, wood, and aluminum fences in Denver, NC green up fast from lake humidity. A local guide to soft washing, how often to clean, and when to call a pro.",
+    h1: "Fence Washing in Denver, NC: What Local Homeowners Need to Know",
+    publishedAt: "2026-07-06",
+    targetKeyword: "fence washing denver nc",
+    heroImage: "/assets/team/ridge-fence-washing-white.webp",
+    heroImageAlt:
+      "Ridge Curwood soft washing a white vinyl fence in Denver NC, removing algae and green film",
+    eyebrow: "Fence Washing Guide",
+    heroSubline:
+      "A practical, local look at why Denver fences green up so fast, how to clean vinyl, wood, and aluminum without damage, and how often a 28037 fence really needs to be done.",
+    intro: [
+      "Fence washing in Denver, NC is one of those maintenance jobs that gets pushed to the bottom of the list until the algae has already taken over. The wood starts with a green haze on the north side. The vinyl panels that used to look crisp turn gray. The aluminum picks up rust streaks at every screw and rail. None of it is hard to reverse with the right approach, but once it sets in, a garden hose and some dish soap will not get the job done.",
+      "This guide walks through why Denver fences get dirty so fast, how to match the cleaning method to the fence material, how often a 28037 fence should be washed, the warning signs that mean it is time to act, and when it makes sense to call a local pro instead of going the DIY route.",
+    ],
+    sections: [
+      {
+        heading: "Why Denver, NC fences green up faster than you expect",
+        paragraphs: [
+          "Denver sits in a humid pocket of Lincoln County right off Lake Norman, and that climate is tough on fences in ways that drier markets never see. A few local factors stack up and accelerate the problem:",
+        ],
+        bullets: [
+          "Lake Norman humidity. The lake keeps ambient moisture high, especially overnight and on mornings after rain. Algae and mildew thrive in steady damp, and a fence panel on the shaded north side of a Denver lot stays wet long enough for biological growth to anchor and spread fast.",
+          "Heavy spring pollen. Denver's pollen season drops a thick yellow coat on every outdoor surface. On horizontal fence rails it mixes with morning dew and dries into a grimy film that feeds mold through the spring and summer months.",
+          "Red-clay splatter. Every hard rain washes fine clay off our soil and onto the lower sections of any fence that borders a bed or a lawn. The clay stains light-colored vinyl and painted wood a dull pink-orange that does not rinse off with plain water.",
+          "Oak and pine debris. The mature hardwoods and loblolly pines shading older Denver lots like Westport, Sailview, and East Lincoln drop tannin-heavy leaves, acorns, and needles that pile against the fence and leave dark staining where they sit.",
+          "Shade and moisture lock. A fence bordering a yard with heavy tree canopy or backing up to the woods can stay damp for days after rain, which gives moss and mildew far more time to establish than a fence in full sun.",
+        ],
+      },
+      {
+        heading: "Vinyl, wood, and aluminum: matching the method to the material",
+        paragraphs: [
+          "Fence washing is not one-size-fits-all. The right approach depends on what the fence is made of, and using the wrong method can cause damage that costs more to fix than a cleaning ever would.",
+          "Vinyl fencing holds up well to a soft wash. Low pressure combined with a biodegradable cleaning solution kills the algae and mildew at the biological root so they do not come back in six weeks. High pressure on vinyl can crack panels and force water behind the face, so a soft wash is the right call every time.",
+          "Wood fencing needs the most care. The grain is open enough that too much pressure raises the surface, splinters the wood, and drives moisture into cracks that promote rot. A soft wash at the correct dilution cleans the growth off without changing the surface or pushing water where it should not go. Painted or stained wood needs even more caution because the wrong chemistry strips the finish faster than the weather would.",
+          [
+            "Aluminum and chain-link fencing are typically the most forgiving, but they develop their own issues: surface oxidation on aluminum and rust staining at fasteners and joints on galvanized chain-link. A targeted treatment and a low-pressure rinse clear both without harming the metal or the surrounding concrete and pavers. For the full breakdown of how we handle each fence type, see our ",
+            { text: "fence washing service page", href: "/services/fence-washing" },
+            ".",
+          ],
+        ],
+      },
+      {
+        heading: "How often should you wash your fence in Denver?",
+        paragraphs: [
+          "For most Denver homes, washing the fence once a year is the right baseline. Annual cleaning keeps algae, mildew, and pollen paste from building into the deeper staining and biological growth that take real effort to reverse. It also lets you spot soft spots, cracked panels, or loose posts before they become structural problems.",
+          "Fences in shaded yards, especially those backing up to woods or running behind a lot with heavy oak and pine canopy, tend to need cleaning every six to nine months. Shade and moisture grow moss and algae faster than open, sunny sections, and a missed cleaning on a heavily shaded fence can mean double the work the next time.",
+          [
+            "For most homeowners, the easiest approach is to have the fence washed at the same visit as a house washing or driveway cleaning. The crews are already set up, and the cost per surface drops when jobs are combined. If you are not sure what your fence needs, we are happy to take a look during a ",
+            { text: "free estimate", href: "/contact" },
+            ".",
+          ],
+        ],
+      },
+      {
+        heading: "Warning signs your Denver fence needs cleaning now",
+        paragraphs: [
+          "You do not have to wait for the calendar. These are the signs we most often see on Denver fences that are overdue for a wash:",
+        ],
+        bullets: [
+          "A green or black haze spreading across any panel, rail, or post, usually starting on the north-facing side first.",
+          "Gray or brown discoloration on white or light-colored vinyl that does not come off with a damp cloth.",
+          "Moss patches forming at the base of posts or in the corners where rails meet panels.",
+          "Dark tannin staining below where leaves or pine needles have been piling against the fence line.",
+          "Pink-orange clay film on the lower sections of any fence that borders a lawn or planting bed.",
+          "Rust streaks running down aluminum or chain-link rails from screws, brackets, or wire ties.",
+          "Wood fence boards that feel slimy or soft to the touch, which means the growth has been there long enough to start working on the wood fiber itself.",
+        ],
+      },
+      {
+        heading: "DIY versus hiring a local pro",
+        paragraphs: [
+          "A single-story vinyl fence with easy yard access is a reasonable DIY project if you have the right equipment and stay off the high-pressure settings. The risk climbs fast with wood fencing, where too much pressure or the wrong nozzle leaves permanent scarring in the grain, and with taller sections where reaching the tops safely from a ladder is harder than it looks.",
+          [
+            "Getting the chemistry right also matters. Too weak a mix and the algae is back within a month. Too strong without proper prep and runoff can scorch lawn edges or pool on plant beds below the fence line. A local pro brings the correct concentration for the material, the right pressure for each section, and the knowledge to protect the beds and hardscape during the job. Our ",
+            { text: "before and after gallery", href: "/before-after" },
+            " shows how much difference a proper soft wash makes on a green-stained vinyl or weathered wood fence.",
+          ],
+        ],
+      },
+      {
+        heading: "What our Denver fence washing includes",
+        paragraphs: [
+          [
+            "Our ",
+            { text: "fence washing service", href: "/services/fence-washing" },
+            " is a complete soft wash of both faces of the fence: every panel, post, and rail. We wet down the beds and lawn along the fence line before applying any chemistry, apply our biodegradable cleaning solution to all surfaces, let it dwell long enough to kill the growth at the root, and rinse the fence and the surrounding area. Wood fences get a specially dialed-in mix that cleans without raising the grain or stripping existing stain or sealant.",
+          ],
+          [
+            "We are a locally owned company based right here in Denver, and we work the 28037 ZIP every week. A lot of homeowners have us handle the fence, gutters, and siding in one visit so the whole exterior comes back to looking sharp at the same time. For the full picture of how we serve the area, see our ",
+            { text: "Denver, NC service page", href: "/areas/denver-nc" },
+            ". To get an exact number before any work starts, ",
+            { text: "request a free estimate", href: "/contact" },
+            " and we will walk the property with you with no pressure and no contracts.",
+          ],
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does fence washing cost in Denver, NC?",
+        answer:
+          "Pricing depends on the fence material, the linear footage, and how much biological buildup has developed. We give every Denver homeowner a free, no-obligation estimate so you know the exact number before we start. Call 704-917-9649 or request a quote online.",
+      },
+      {
+        question: "Will soft washing damage my vinyl or wood fence?",
+        answer:
+          "No. Soft washing uses low pressure and a biodegradable cleaning solution matched to the fence material. High pressure is what damages fences: it cracks vinyl, raises wood grain, and strips paint or stain from treated surfaces. We use soft washing on all fence types we service.",
+      },
+      {
+        question: "How often should I wash my fence in Denver?",
+        answer:
+          "Once a year is the right baseline for most homes. Fences in shaded back yards, or those backing up to woods or a lot with heavy tree canopy, tend to need cleaning every six to nine months because shade and moisture grow algae and moss faster than in open, sunny areas.",
+      },
+      {
+        question: "Can you clean a fence that has been painted or stained?",
+        answer:
+          "Yes. We adjust the cleaning solution and pressure for painted and stained wood fences so the finish is preserved. If a painted wood fence has been left long enough that the paint is already peeling or soft, we will tell you honestly what to expect before any work starts.",
+      },
+    ],
+  },
 ];
 
 /** All blog post slugs. */
