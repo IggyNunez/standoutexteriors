@@ -1452,6 +1452,146 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  // ── Post 12 ─────────────────────────────────────────────────────────────
+  {
+    slug: "exterior-home-services-denver-nc",
+    title: "Exterior Home Services in Denver, NC: A Homeowner's Guide",
+    metaDescription:
+      "A local rundown of the exterior home services a Denver, NC home needs, from house washing to roof, gutter, and driveway cleaning, and how often to schedule each.",
+    h1: "Exterior Home Services in Denver, NC: What Your Home Needs and When",
+    publishedAt: "2026-07-13",
+    targetKeyword: "exterior home services denver nc",
+    heroImage: "/assets/team/ridge-driveway-surface-cleaner-action.webp",
+    heroImageAlt:
+      "Ridge Curwood pressure washing a concrete driveway outside a Denver NC home",
+    eyebrow: "Exterior Home Services Guide",
+    heroSubline:
+      "A practical, local overview of the exterior services a Denver home actually needs, why our lake climate makes them necessary, and a simple schedule to keep the whole property looking sharp.",
+    intro: [
+      "Owning a home in Denver, NC means keeping up with an exterior that our climate works hard against. Between the humidity lifting off Lake Norman, the heavy pollen and tannin from mature oaks and pines, and the red-clay runoff that stains every hard surface, a Denver home gathers algae, grime, and mineral staining faster than homes in drier parts of the state. Left alone, that buildup does more than look bad. It shortens the life of your roof, siding, gutters, and concrete.",
+      "This guide is a plain-English overview of the exterior home services a typical 28037 property needs, why each one matters here specifically, and a simple seasonal schedule you can follow so nothing slips through the cracks. Think of it as a map to everything a Denver home requires to stay in good shape year after year.",
+    ],
+    sections: [
+      {
+        heading: "Why Denver, NC homes need regular exterior care",
+        paragraphs: [
+          "Denver sits in a humid, tree-heavy pocket of Lincoln County right off the west side of Lake Norman, and that combination is unusually hard on a home's exterior. A few local conditions drive most of the work:",
+        ],
+        bullets: [
+          "Lake Norman humidity. Steady moisture off the water feeds algae, mold, and mildew on siding, roofs, fences, and concrete, especially on north-facing walls and shaded lots near Westport and the shoreline.",
+          "Heavy pollen and tannin. Denver's spring pollen coats everything in a yellow film, and the oaks around East Lincoln and Verdict Ridge drop tannin-heavy leaves and acorns that stain painted wood, stucco, and pavers.",
+          "Red-clay runoff. Our clay-heavy soil washes onto driveways, walkways, and the lower sections of siding and fencing, leaving a stubborn pink-orange stain that plain water will not lift.",
+          "Pine needle buildup. Loblolly pines shed needles year round, clogging gutters and piling into roof valleys where they hold moisture against the shingles and feed growth.",
+        ],
+      },
+      {
+        heading: "The core exterior services a Denver home needs",
+        paragraphs: [
+          "Most Denver homes need the same handful of services on a rotating basis. Here is what each one does and why it matters here:",
+          [
+            "House washing. A low-pressure soft wash clears the algae and mildew our lake humidity grows on siding. It is the single service that changes a home's curb appeal the most. Our ",
+            { text: "house washing service", href: "/services/house-washing" },
+            " safely handles vinyl, brick, stucco, and Hardie plank.",
+          ],
+          [
+            "Roof cleaning. The dark streaks on Denver roofs are a living organism, not dirt, and it feeds on the shingles themselves. A ",
+            { text: "soft-wash roof cleaning", href: "/services/roof-cleaning" },
+            " kills the growth without stripping granules or voiding your warranty, which extends the life of the roof you already have.",
+          ],
+          [
+            "Gutter cleaning. Year-round pine needles and oak debris clog Denver gutters fast, and overflow rots fascia and saturates the foundation. Our ",
+            { text: "gutter cleaning and brightening", href: "/services/gutter-cleaning" },
+            " clears the troughs, flushes the downspouts, and brightens the streaked faces.",
+          ],
+          [
+            "Driveway and concrete cleaning. Red-clay film, mold, and tannin stain concrete and pavers. A ",
+            { text: "driveway cleaning", href: "/services/driveway-cleaning" },
+            " with a commercial surface cleaner pulls those stains out of the pores for an even, stripe-free finish.",
+          ],
+          [
+            "Window, fence, and paver care. Rounding out the list, ",
+            { text: "window cleaning", href: "/services/window-cleaning" },
+            ", ",
+            { text: "fence washing", href: "/services/fence-washing" },
+            ", and ",
+            { text: "paver cleaning and sealing", href: "/services/paver-cleaning" },
+            " keep the rest of the property from falling behind the house itself.",
+          ],
+        ],
+      },
+      {
+        heading: "A simple exterior maintenance schedule for Denver homes",
+        paragraphs: [
+          "You do not need to do everything at once. Spreading the work across the year keeps each job smaller and cheaper. Here is a baseline schedule that works for most 28037 homes:",
+        ],
+        bullets: [
+          "Spring, after the pollen drops. House washing and window cleaning to clear the yellow film, plus a gutter cleaning to catch what winter and spring debris left behind.",
+          "Summer. Driveway, walkway, and paver cleaning while the weather is dry and stains lift most easily. A good time for fence washing too.",
+          "Fall, after the leaves come down. A second gutter cleaning is the most important fall task, since clogged gutters over winter cause the most damage.",
+          "Every two to five years. Roof cleaning, sooner for homes close to the water or under heavy oak and pine cover where algae returns faster.",
+        ],
+      },
+      {
+        heading: "Why bundling services in one visit makes sense",
+        paragraphs: [
+          "The homeowners who keep their exteriors looking sharp with the least hassle almost always bundle. When a crew is already set up on your property with water hooked up and equipment staged, adding the gutters to a house wash, or the fence to a driveway cleaning, costs far less than booking each job as a separate trip.",
+          [
+            "Bundling also gets the whole exterior back in sync. A freshly washed house looks even better next to a clean driveway and clear windows, and a roof cleaning paired with a house wash resets the two surfaces that most define curb appeal. Our ",
+            { text: "before and after gallery", href: "/before-after" },
+            " shows what that full reset looks like on real Denver homes.",
+          ],
+        ],
+      },
+      {
+        heading: "DIY versus hiring a local pro",
+        paragraphs: [
+          "Plenty of Denver homeowners handle the simpler jobs themselves, and for a one-story ranch with an open driveway and easy access, that can work out fine. The trouble starts with the services where the wrong method causes real damage: high pressure on siding or a roof strips finish and voids warranties, a point-tip wand leaves permanent stripes across concrete, and a ladder on a two-story lake lot is a genuine fall risk.",
+          "A pro brings the right method for each surface, the chemistry to kill growth at the root instead of just wetting it, and the equipment to do it safely. For the handful of low, simple surfaces, DIY is reasonable. For roofs, second-story siding, and stained concrete, hiring it out usually costs less than the rentals, chemicals, and the do-over.",
+        ],
+      },
+      {
+        heading: "One local company for the whole exterior",
+        paragraphs: [
+          [
+            "Stand Out Exterior Cleaning is a locally owned company based right here in Denver, and we work the 28037 ZIP every week. Rather than juggling a different contractor for each surface, most of our clients have us handle the whole exterior, from a ",
+            { text: "full house wash", href: "/services/house-washing" },
+            " to the roof, gutters, driveway, windows, and fence. You can see the complete list on our ",
+            { text: "services page", href: "/services" },
+            ", and the full background on how we serve the area on our ",
+            { text: "Denver, NC service page", href: "/areas/denver-nc" },
+            ".",
+          ],
+          [
+            "If you are not sure where to start or what your home needs most, we are happy to walk the property with you and lay out a plan. ",
+            { text: "Request a free estimate", href: "/contact" },
+            " and we will give you an honest assessment and an exact number before any work starts, with no pressure and no contracts.",
+          ],
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "What exterior home services do you offer in Denver, NC?",
+        answer:
+          "We handle the full exterior: house washing, roof cleaning, gutter cleaning and brightening, driveway and concrete cleaning, window cleaning, fence washing, paver cleaning and sealing, brick cleaning, and commercial pressure washing. Most Denver homeowners bundle several services into one visit.",
+      },
+      {
+        question: "How often should I have my Denver home's exterior cleaned?",
+        answer:
+          "As a baseline, house washing once a year, gutters twice a year, driveway and concrete once a year, and roof cleaning every two to five years. Homes close to Lake Norman or under heavy tree cover usually need the shorter end of each range because humidity and shade speed up algae growth.",
+      },
+      {
+        question: "Can I book more than one service at the same time?",
+        answer:
+          "Yes, and it is usually the smart move. Bundling services like a house wash, gutter cleaning, and driveway cleaning into one visit lowers the cost per surface since the crew is already set up on site. We will put together a combined quote for whatever your home needs.",
+      },
+      {
+        question: "Do you offer free estimates for exterior services in Denver?",
+        answer:
+          "Yes. We give every Denver homeowner a free, no-obligation estimate. We walk the property, recommend what actually needs doing, and give you an exact number before any work starts. Call 704-917-9649 or request a quote online.",
+      },
+    ],
+  },
 ];
 
 /** All blog post slugs. */
