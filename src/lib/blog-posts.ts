@@ -1592,6 +1592,121 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  // ── Post 13 ─────────────────────────────────────────────────────────────
+  {
+    slug: "window-cleaning-mooresville-nc",
+    title: "Window Cleaning in Mooresville, NC | Stand Out Exterior",
+    metaDescription:
+      "Professional window cleaning in Mooresville, NC - pure-water system, no streaks. Interior and exterior. Free estimate: 704-917-9649.",
+    h1: "Window Cleaning in Mooresville, NC: Streak-Free Results for Lake Norman Homes",
+    publishedAt: "2026-07-13",
+    targetKeyword: "window cleaning mooresville nc",
+    heroImage: "/assets/team/ridge-window-cleaning-squeegee-inside.webp",
+    heroImageAlt:
+      "Professional window cleaning on a Mooresville, NC home near Lake Norman",
+    eyebrow: "Mooresville, NC Window Cleaning",
+    heroSubline:
+      "Pure-water window cleaning for lakefront homes in The Point, Bridgeport, Morrison Plantation, and every neighborhood we serve around Lake Norman.",
+    intro: [
+      "If your Mooresville windows are spotted, hazy, or streaked with lake dust and spring pollen, you are looking at a problem that gets worse every season. Homes near Lake Norman pick up mineral deposits, oak tannin, and a fine airborne mist of lake particles on glass surfaces much faster than inland properties. That film makes rooms darker, dulls the view, and accelerates wear on frames and seals. Window cleaning in Mooresville, NC restores the clarity you paid for and protects your glass from long-term buildup.",
+      [
+        "Stand Out Exterior Cleaning serves Mooresville homeowners with a pure-water window cleaning system that leaves zero residue - no spots, no streaks, no smears. Whether you are in ",
+        { text: "The Point, Bridgeport, or along Brawley School Road", href: "/areas/mooresville-nc" },
+        ", our crew brings the right tools and the right approach for lakefront and neighborhood homes alike.",
+      ],
+      "Here is everything you need to know: what drives the dirt in Mooresville, how pure-water cleaning works, and when to schedule for the best results.",
+    ],
+    sections: [
+      {
+        heading: "Why Mooresville Windows Get Dirty Faster Than Inland Homes",
+        paragraphs: [
+          "Mooresville's location along the western shore of Lake Norman creates window-cleaning conditions that homeowners moving from other parts of North Carolina often underestimate. The lake raises local humidity year round, and that constant moisture encourages mineral film on glass - especially on south- and west-facing windows that see afternoon sun glinting off the water.",
+          "Three things make Mooresville windows particularly demanding:",
+        ],
+        bullets: [
+          "Hard-water irrigation spray. Sprinkler systems in neighborhoods like Morrison Plantation and Bridgeport use well water with high mineral content. Every irrigation cycle deposits a ring of calcium and lime on the glass closest to the lawn.",
+          "Oak and pine pollen. Brawley School Road and The Point are lined with mature hardwoods that shed heavy pollen loads in spring. The yellow film bonds to glass within days and needs more than a garden hose to lift.",
+          "Humidity-fed biofilm. Lake Norman moisture encourages algae and biofilm on glass in shaded corners and north-facing exposures, leaving a greenish haze that thickens with every passing season.",
+        ],
+      },
+      {
+        heading: "How Our Pure-Water Window Cleaning Process Works",
+        paragraphs: [
+          "Pure water is water that has been passed through a deionization filter until virtually every dissolved mineral is removed. When that water hits glass and dries, it leaves nothing behind - no calcium ring, no streaks, no residue. It is the standard method for high-end residential window cleaning because the results last longer and look better than the traditional squeegee-and-soap approach.",
+          "We use a water-fed pole system that reaches second and third story windows safely without ladders leaning against the frame or siding. The soft brush agitates any buildup on the glass, the pure water rinses it clean, and each pane dries to a spot-free finish. For interior windows, we switch to a professional squeegee with a microfiber finish wipe so the glass is polished on both sides.",
+        ],
+      },
+      {
+        heading: "Full-Service Interior and Exterior Window Cleaning",
+        paragraphs: [
+          "Most homeowners start with exterior cleaning and then notice their view is still not great because the inside is just as dirty. We offer full interior and exterior cleaning in a single visit so both sides are polished at once.",
+          "Interior cleaning uses a high-quality squeegee and detail cloth, leaving the glass dry with no water on sills or floors. Screens come down, get wiped on both sides, and go back up. Tracks get vacuumed clear of debris so they slide smoothly. Frames and sills are wiped down as part of the standard service - nothing gets skipped.",
+          [
+            "You can see the full list of what is included on our ",
+            { text: "window cleaning service page", href: "/services/window-cleaning" },
+            ". We match the scope to what each Mooresville home actually needs rather than a one-size-fits-all package.",
+          ],
+        ],
+      },
+      {
+        heading: "When to Schedule Window Cleaning in Mooresville",
+        paragraphs: [
+          "Timing your window cleaning around Mooresville's seasons makes a real difference in how long the results hold and how much buildup you are starting with.",
+        ],
+        bullets: [
+          "Late April or May. After the oak and pine pollen season winds down, this is the highest-impact time of year. The pollen film is at its heaviest and a post-pollen clean resets every pane at once.",
+          "September or October. Before the holiday entertaining season and before cooler weather raises condensation on glass, a fall cleaning keeps the home looking sharp through year end.",
+          "Before listing your home for sale. Clean windows are one of the highest-ROI exterior details before a sale - they make rooms look larger and the facade look crisper without a renovation.",
+          "After any major storm. Blown debris, mud spatter, and wind-driven lake mist leave residue that should be cleaned before it dries and bonds permanently to the glass.",
+        ],
+      },
+      {
+        heading: "What to Expect from a Mooresville Window Cleaning Visit",
+        paragraphs: [
+          "Every visit starts with a quick walk around the property so we know what we are working with - screen condition, frame type, number of stories, and any special-access points like sunrooms or atrium windows. We give you an exact scope and price before any work starts.",
+          [
+            "Our ",
+            { text: "before and after gallery", href: "/before-after" },
+            " shows what a full exterior reset looks like on real Lake Norman area homes. The difference clean windows make to a property's look is something that is hard to appreciate until you see it side by side.",
+          ],
+          [
+            "Mooresville homeowners consistently rate us five stars for responsiveness, care, and results. You can read their reviews on our ",
+            { text: "reviews page", href: "/reviews" },
+            ", and when you are ready to schedule, ",
+            { text: "request a free estimate", href: "/contact" },
+            " online or call 704-917-9649. We will give you an honest assessment and an exact number with no pressure and no contracts.",
+          ],
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How often should Mooresville lakefront homes get windows cleaned?",
+        answer:
+          "Waterfront homes on Lake Norman typically need two cleanings per year - one after spring pollen and one in the fall before the holidays. Interior Mooresville neighborhoods like Morrison Plantation and Brawley School Road can often manage with one annual cleaning unless irrigated lawn sprinklers spray the glass regularly.",
+      },
+      {
+        question: "Do you clean interior windows in Mooresville, NC?",
+        answer:
+          "Yes. We offer full interior and exterior cleaning in a single visit. Interior windows are cleaned with a professional squeegee and microfiber detail cloth, screens are wiped on both sides, and tracks are vacuumed clear.",
+      },
+      {
+        question: "What is pure-water window cleaning?",
+        answer:
+          "Pure-water cleaning uses water filtered to nearly zero dissolved minerals. When it dries on glass it leaves nothing behind - no spots, no streaks, no calcium rings. We use a water-fed pole system that keeps ladders off your siding and reaches upper stories safely.",
+      },
+      {
+        question: "Is pure-water cleaning safe for my window frames?",
+        answer:
+          "Yes. The water-fed pole brush is soft and the pure water is chemical-free, so it is safe on all frame types - vinyl, painted wood, aluminum, and fiberglass. It is gentler on frames than traditional soap-and-squeegee methods.",
+      },
+      {
+        question: "How much does window cleaning cost in Mooresville, NC?",
+        answer:
+          "Pricing depends on the number of windows, how many stories, and whether you want interior cleaning included. Most Mooresville homes run between $150 and $350 for exterior only and $200 to $450 for interior and exterior. We give every homeowner a free, no-obligation estimate before any work starts. Call 704-917-9649 or request a quote online.",
+      },
+    ],
+  },
 ];
 
 /** All blog post slugs. */
