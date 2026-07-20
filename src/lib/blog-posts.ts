@@ -1832,6 +1832,137 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  // ── Post 15 ─────────────────────────────────────────────────────────────
+  // NOTE: images skipped - OPENAI_API_KEY was not set in the build environment.
+  {
+    slug: "roof-cleaning-cornelius-nc",
+    title: "Roof Cleaning in Cornelius, NC | Stand Out Exterior",
+    metaDescription:
+      "Black streaks on your Cornelius roof? A local guide to soft washing, how often to clean, and why Lake Norman humidity and lakefront living accelerate algae growth.",
+    h1: "Roof Cleaning in Cornelius, NC: What Local Homeowners Need to Know",
+    publishedAt: "2026-07-20",
+    targetKeyword: "roof cleaning cornelius nc",
+    heroImage: "/assets/team/ridge-roof-cleaning-aerial.webp",
+    heroImageAlt:
+      "Aerial view of a soft-washed asphalt shingle roof on a Cornelius NC home near Lake Norman with algae streaks removed",
+    eyebrow: "Roof Cleaning Guide",
+    heroSubline:
+      "A practical, local look at why Cornelius roofs streak and grow algae faster near the water, how soft washing clears it safely, and how often a 28031 home should be cleaned.",
+    intro: [
+      "If you own a home in Cornelius, NC - especially anywhere near The Peninsula or along Jetton Road - take a look at your roof from the street the next time you pull in. The dark streaks running down the north-facing slopes and the greenish patches spreading near the ridge are not dirt and they are not aging shingles. They are a living organism, and in the humid microclimate around Lake Norman, they grow faster than most homeowners expect.",
+      "This guide explains what is actually growing on Cornelius roofs, why 28031 properties near the water are especially prone to it, how soft washing clears the growth safely without touching your warranty, how often a Cornelius home should be cleaned, and when it makes sense to hand the job to a local pro instead of climbing up there yourself.",
+    ],
+    sections: [
+      {
+        heading: "Why Cornelius roofs grow black streaks and algae faster near the water",
+        paragraphs: [
+          "The dark streaks spreading across roofs throughout Cornelius and the wider Lake Norman corridor are almost always caused by a cyanobacterium called Gloeocapsa magma. It arrives as airborne spores, settles on asphalt shingles, and feeds on the limestone filler in the shingle mat. Left alone, it spreads from a few thin streaks to near-full coverage within a few seasons. Several local conditions speed that up significantly in the 28031 area:",
+        ],
+        bullets: [
+          "Lake Norman humidity. Cornelius sits on a narrow strip of land between the lake and I-77, and the water keeps ambient moisture elevated year round. Homes in The Peninsula and along Jetton Road sit closest to the lake and see the highest algae growth rates, but even properties a mile inland feel the humidity effect throughout the warmer months.",
+          "Shade from mature hardwoods. Older lots near Ramsey Creek Park and along Catawba Avenue sit under established oaks and pines. Shaded roof sections stay wet far longer after a rain than sun-exposed slopes, giving spores more time to anchor and spread before the surface finally dries.",
+          "North-facing slopes. The north side of any roof gets the least direct sun and dries slowest, which is why the black streaks almost always appear there first. On custom homes that face the water, the shaded rear slope can go from clean to heavily stained within a single rainy season.",
+          "Complex rooflines. Many Cornelius custom builds in The Peninsula and Antiquity have multiple roof planes, valleys, and dormers. Each low spot collects pine needles and leaf debris that hold moisture against the shingles and feed growth where debris piles up.",
+          "Year-round spore circulation. The combination of humid lake air and mature canopy keeps Gloeocapsa spores circulating even through mild Cornelius winters, so unlike colder climates, the roof never gets a true dormant period to slow the spread.",
+        ],
+      },
+      {
+        heading: "Soft washing versus pressure washing a Cornelius roof",
+        paragraphs: [
+          "The single most important thing to understand before any roof cleaning is that high-pressure washing damages shingles. The protective layer on an asphalt shingle is a coating of ceramic granules bonded to the mat. A pressure washer blasts those granules off in seconds, shortening the roof's functional lifespan and voiding most manufacturer warranties. No legitimate cleaning company should offer pressure washing on an asphalt or architectural shingle roof.",
+          [
+            "Soft washing uses low-pressure delivery to apply a biodegradable cleaning solution - typically a sodium hypochlorite blend - that kills algae, lichen, and moss at the biological root rather than blasting the surface. Once dead, the growth rinses away cleanly with a gentle pass. The shingles stay intact, the granules stay in place, and the warranty stays valid. Soft washing is the method recommended by the Asphalt Roofing Manufacturers Association, and it is the only method we use on every Cornelius roof we service. You can read through the full process on our ",
+            { text: "roof cleaning service page", href: "/services/roof-cleaning" },
+            ".",
+          ],
+        ],
+      },
+      {
+        heading: "How often should you clean your roof in Cornelius?",
+        paragraphs: [
+          "For most Cornelius homes, a roof cleaning every two to three years keeps algae and moss from getting a serious foothold. On that schedule the biological film never builds deep enough to stain the shingle mat itself, and each subsequent cleaning stays straightforward.",
+          "If your home sits in The Peninsula, on or near the Lake Norman shoreline, or under significant tree canopy, plan on the shorter end of that range - every one to two years. Near-water properties see consistently higher ambient humidity, which means faster biological growth on every exterior surface, the roof included.",
+          [
+            "If you can already see green or black growth from the street, the roof is behind schedule and cleaning sooner protects your shingle warranty and slows the spread. If you are not sure what your roof needs, we are happy to take a look during a ",
+            { text: "free estimate", href: "/contact" },
+            " and give you a straight answer before any work is scheduled.",
+          ],
+        ],
+      },
+      {
+        heading: "Warning signs your Cornelius roof needs cleaning now",
+        paragraphs: [
+          "You do not have to wait for the calendar. These are the signs we see most often on Cornelius roofs that have gone too long between cleanings:",
+        ],
+        bullets: [
+          "Dark streaks or black discoloration running down the slope, usually starting on the north-facing sections and spreading toward the ridge over one to two seasons.",
+          "Green, fuzzy moss patches forming in shaded roof valleys, near the gutters, or around a chimney or skylight.",
+          "A gray or chalky overall look across sections that were darker and more uniform when the shingles were newer.",
+          "Visible growth concentrating where debris collects, including around any pipe boot, roof penetration, or low-slope transition near a dormer.",
+          "Shingle granules collecting in the gutters and downspouts, a sign the surface is wearing faster than normal.",
+        ],
+      },
+      {
+        heading: "Why it matters for Cornelius lakefront homes",
+        paragraphs: [
+          "A streaked roof is not just an aesthetic problem. Gloeocapsa magma feeds on the shingle limestone itself, and moss holds moisture against the roof deck and wedges shingles apart as it grows. Both effects shorten the functional life of the roof. A replacement on a Cornelius custom home runs well into five figures, so a periodic cleaning that adds years to the shingles already in place is some of the cheapest protection a lakefront homeowner can buy.",
+          [
+            "The same humidity and shade that streak the roof tend to green up the rest of the exterior at the same pace. If the roof is already stained, the siding usually is not far behind. A lot of Cornelius homeowners pair a roof cleaning with a ",
+            { text: "professional house washing", href: "/services/house-washing" },
+            " to reset the whole exterior in one visit. Our ",
+            { text: "before and after gallery", href: "/before-after" },
+            " shows what that full reset looks like on real Lake Norman area homes.",
+          ],
+        ],
+      },
+      {
+        heading: "DIY versus hiring a local pro",
+        paragraphs: [
+          "Cleaning your own roof is possible for a confident homeowner with the right chemistry and a ground-level delivery system, but it carries real risk. Walking a wet, algae-covered roof is slippery, and a fall from even a single-story pitch is a serious injury. On the steep and complex rooflines common on waterfront custom homes in The Peninsula and Antiquity, the margin for error essentially disappears.",
+          "Getting the chemistry right also matters. Too weak a solution and the algae is back within a few months. Too strong without proper prep and the runoff can scorch landscaping or pool in gutters and damage downspout coatings. A local pro brings the correct concentration, the right delivery pressure, and the experience to protect plants, gutters, and downspouts during the job.",
+        ],
+      },
+      {
+        heading: "What our Cornelius roof cleaning includes",
+        paragraphs: [
+          [
+            "Our ",
+            { text: "roof cleaning service", href: "/services/roof-cleaning" },
+            " uses a low-pressure soft wash applied in overlapping passes so every section of the roof gets treated evenly. We pre-rinse the landscaping and gutters before application, apply our biodegradable cleaning blend, let it dwell to kill the growth at the root, and rinse the roof, gutters, and plant beds below. We are a locally owned company based in Denver, NC, and we serve Cornelius and the 28031 ZIP every week, from modest ranches near NC-115 to the tall lakefront rooflines along Jetton Road.",
+          ],
+          [
+            "Full details about how we serve the Cornelius area are on our ",
+            { text: "Cornelius, NC service page", href: "/areas/cornelius-nc" },
+            ". If you want an honest assessment from someone who has been on a few hundred Lake Norman area roofs, ",
+            { text: "request a free estimate", href: "/contact" },
+            " and we will give you a straight answer and an exact number before any work starts.",
+          ],
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does roof cleaning cost in Cornelius, NC?",
+        answer:
+          "Price depends on the size and pitch of the roof and how much growth has built up. We give every Cornelius homeowner a free, no-obligation estimate so you know the exact number before we start. Call 704-917-9649 or request a quote online.",
+      },
+      {
+        question: "Will soft washing damage my shingles or void my warranty?",
+        answer:
+          "No. Soft washing uses low pressure and a biodegradable cleaning solution, not a high-pressure wand. High-pressure washing is what strips shingle granules and voids manufacturer warranties. Soft washing is the method the Asphalt Roofing Manufacturers Association recommends, and it is the only method we use on every roof job.",
+      },
+      {
+        question: "How long does a roof cleaning last in Cornelius?",
+        answer:
+          "Most Cornelius roofs stay clean for two to three years after a soft wash. Homes in The Peninsula or under heavy tree canopy near Lake Norman may see regrowth start within one to two years due to higher ambient humidity and longer damp periods after rain. We will tell you what schedule fits your specific roof.",
+      },
+      {
+        question: "What are the black streaks on my Cornelius roof?",
+        answer:
+          "Almost always Gloeocapsa magma, a cyanobacterium that grows in the limestone filler of asphalt shingles. It arrives as airborne spores and spreads in a dark biological film. The streaks are common across the entire Lake Norman area because the lake keeps ambient humidity high enough for algae to thrive on most roof surfaces year-round.",
+      },
+    ],
+  },
 ];
 
 /** All blog post slugs. */
