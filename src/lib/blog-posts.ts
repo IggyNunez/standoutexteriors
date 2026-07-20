@@ -1707,6 +1707,131 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  // ── Post 13 ─────────────────────────────────────────────────────────────
+  {
+    slug: "house-washing-sherrills-ford-nc",
+    title: "House Washing in Sherrills Ford, NC: A Homeowner's Guide",
+    metaDescription:
+      "Why Sherrills Ford, NC siding goes green so fast on the west shore, how soft washing safely clears algae and mildew, how often to wash, and when to hire a pro.",
+    h1: "House Washing in Sherrills Ford, NC: What Local Homeowners Need to Know",
+    publishedAt: "2026-07-20",
+    targetKeyword: "house washing sherrills ford nc",
+    heroImage: "/assets/team/ridge-house-washing-brick-side.webp",
+    heroImageAlt:
+      "Soft washing a home exterior in Sherrills Ford NC, removing algae and mildew from the siding",
+    eyebrow: "House Washing Guide",
+    heroSubline:
+      "A practical, local look at why Sherrills Ford siding goes green so fast on the west shore, how soft washing clears it without harming your panels, and how often a lake-area home should be washed.",
+    intro: [
+      "Sherrills Ford is one of the fastest-growing corners of the west shore, and a lot of its homes are still new enough that the siding looked spotless the day the family moved in. Then a couple of humid seasons pass, and the north wall quietly goes green. It creeps in so gradually that most homeowners do not notice until they back down the driveway one afternoon and really look at the house from the street.",
+      "The west side of Lake Norman gets the same lake humidity as Denver, just across the county line in Catawba County, and that moisture is hard on siding. This guide walks through what actually dirties a Sherrills Ford home, why soft washing is the only safe way to clean most of it, how often a 28673 property should be washed, and when it makes sense to hand the job to a local pro instead of renting a machine.",
+    ],
+    sections: [
+      {
+        heading: "Why Sherrills Ford siding gets dirty faster than you expect",
+        paragraphs: [
+          "Sherrills Ford sits on the west shore of Lake Norman in a humid, tree-heavy pocket of Catawba County, and that mix grows algae and mildew on siding faster than most homeowners plan for. A few local conditions stack up against the exterior:",
+        ],
+        bullets: [
+          "West-shore lake humidity. The lake keeps the air damp, especially on lots near the water in Northview Harbour, Bayshore, and the coves off Hager Creek. Algae and mildew thrive in steady moisture, and a Sherrills Ford summer is close to ideal growing weather.",
+          "Heavy tree cover. Many of the older lots along the original NC-150 corridor sit under mature oaks and pines. Shaded elevations stay damp for days after a rain, which gives algae the time it needs to anchor and spread before the wall dries out.",
+          "New-construction residue. Fast-growing subdivisions like Mountain Creek and Northview Harbour leave homes with mortar haze on brick fronts, stucco overspray, and a film of construction dust that sets a staining base for pollen and algae to build on.",
+          "North-facing walls. The north side of any home gets the least sun and dries the slowest, which is why the green almost always shows up there first and spreads fastest.",
+          "Red-clay dust and pollen. Runoff off our iron-rich clay soil and the heavy spring pollen drop both settle into the texture of siding and trim, where they mix with moisture into a grimy film.",
+        ],
+      },
+      {
+        heading: "Soft washing versus pressure washing your siding",
+        paragraphs: [
+          "The single most important thing to know before cleaning any Sherrills Ford home is that pressure washing and soft washing are two different tools for two different jobs. Pointing a pressure washer at vinyl, Hardie plank, or stucco is one of the fastest ways to turn a cleaning into a repair bill.",
+          "Pressure washing uses high-force water to physically blast grime off hard, durable surfaces like concrete and pavers. On siding, that same force cracks vinyl, drives water behind the panels and into the wall cavity, strips paint off wood trim, and can blow holes through stucco. It also only knocks the surface growth off. The root structure survives, so the algae is back within weeks.",
+          [
+            "Soft washing uses low-pressure delivery to apply a biodegradable cleaning solution that kills algae, mold, and mildew at the root before a gentle rinse clears the dead growth away. Because it is killed rather than just displaced, it does not come back in a month. Our ",
+            { text: "house washing service", href: "/services/house-washing" },
+            " cleans every siding type found in Sherrills Ford on that basis, vinyl, brick, stucco, Hardie plank, and painted wood.",
+          ],
+        ],
+      },
+      {
+        heading: "How often should you wash your house in Sherrills Ford?",
+        paragraphs: [
+          "For most Sherrills Ford homes, once a year is the right baseline. An annual soft wash keeps the biological film from building deep enough to stain the siding itself, and it costs a small fraction of what it takes to repaint or replace siding that has been left to degrade for years.",
+          "If your home sits close to the water, backs up to woods, or has any elevation in heavy shade, plan on every nine months. Damp, low-sun walls recolonize faster than open, sunny ones, and missing a single cleaning in a shaded spot is what turns a routine wash into a slower two-pass job.",
+          [
+            "If you are not sure what your home needs, we are happy to take a look during a ",
+            { text: "free estimate", href: "/contact" },
+            " and give you an honest read on the schedule that fits your specific property.",
+          ],
+        ],
+      },
+      {
+        heading: "New construction? Do not wait to wash",
+        paragraphs: [
+          "Sherrills Ford has more new construction than almost any market we serve, and new homes have their own cleaning needs that a lot of owners do not expect in the first year or two. Brick fronts often carry a haze of mortar residue from the build, stucco and trim can hold overspray, and paver and stamped-concrete driveways start collecting red-clay runoff before the landscaping is even finished.",
+          [
+            "Mortar haze in particular is worth catching early, because the longer it sits the more it bonds to the brick and the harder it is to remove. A first-year exterior wash resets all of it at once and gives the algae and pollen nothing to build on. Our full rundown of how we serve the west shore, including the newer subdivisions, is on our ",
+            { text: "Sherrills Ford, NC service page", href: "/areas/sherrills-ford-nc" },
+            ".",
+          ],
+        ],
+      },
+      {
+        heading: "Warning signs your siding needs a wash now",
+        paragraphs: [
+          "You do not have to wait for the calendar. These are the signs we see most often on Sherrills Ford homes that have gone too long between washes:",
+        ],
+        bullets: [
+          "Green or black streaking on north-facing walls and in the corners where two elevations meet.",
+          "A yellow or gray film on horizontal trim, window sills, and porch ceilings that does not rinse off with a garden hose.",
+          "Dark tiger striping on the gutter faces, the vertical streaks left by oxidation and runoff dripping down from the trough.",
+          "Soft, fuzzy green patches on brick joints near the foundation, where moisture wicks up from the soil.",
+          "Any visible mold or mildew on the soffits or fascia, which can spread into the wood if it is left alone.",
+          "Mortar haze or a chalky construction film still clinging to a newer brick or stucco elevation.",
+        ],
+      },
+      {
+        heading: "What our Sherrills Ford house washing includes",
+        paragraphs: [
+          [
+            "Our ",
+            { text: "house washing service", href: "/services/house-washing" },
+            " is a complete soft wash of every siding surface: vinyl, brick, stucco, Hardie plank, and painted wood. We pre-rinse the landscaping before applying any chemistry, apply our biodegradable cleaning solution to all elevations, let it dwell long enough to kill the growth at the root, then rinse the house and the plant beds below. We are a locally owned company based in Denver, NC, about twelve minutes from Sherrills Ford, and we work the 28673 ZIP every week.",
+          ],
+          [
+            "Most homeowners have us handle the gutters at the same visit. Gutter faces pick up the same tiger striping as siding, and a clogged trough spills water right back onto freshly washed walls the next time it rains, so our ",
+            { text: "gutter cleaning and brightening service", href: "/services/gutter-cleaning" },
+            " pairs naturally with any house wash. The same lake humidity that greens the siding also streaks the roof, so it is worth having us check that while we are out, since a soft-wash ",
+            { text: "roof cleaning", href: "/services/roof-cleaning" },
+            " uses the same gentle approach. When you are ready, ",
+            { text: "request a free estimate", href: "/contact" },
+            " and we will walk the property with you and give you an exact number before any work starts.",
+          ],
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does house washing cost in Sherrills Ford, NC?",
+        answer:
+          "Pricing depends on the square footage, the number of stories, and how much biological buildup has developed. We give every Sherrills Ford homeowner a free, no-obligation estimate before any work starts. Call 704-917-9649 or request a quote online.",
+      },
+      {
+        question: "Can soft washing damage my vinyl, Hardie, or stucco siding?",
+        answer:
+          "No. Soft washing uses low pressure and a biodegradable cleaning solution, not a high-pressure wand. High pressure is what damages siding: it cracks vinyl, drives water behind panels, strips paint from wood, and can blow through stucco. Soft washing cleans the surface without any of those risks.",
+      },
+      {
+        question: "How long does a house wash last in Sherrills Ford?",
+        answer:
+          "Because soft washing kills algae and mildew at the root rather than just rinsing the surface, a wash typically stays clean for about a year. Homes close to the water or under heavy tree cover may see growth return a little sooner, and we will tell you what schedule makes sense for your specific home.",
+      },
+      {
+        question: "My home is new construction. Does it still need washing?",
+        answer:
+          "Often yes, and sooner than you might think. New Sherrills Ford homes frequently carry mortar haze on brick, overspray on stucco and trim, and construction film that stains over time. A first-year exterior wash removes all of it before it bonds and gives pollen and algae nothing to build on.",
+      },
+    ],
+  },
 ];
 
 /** All blog post slugs. */
