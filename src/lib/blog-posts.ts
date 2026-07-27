@@ -1963,6 +1963,140 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  // ── Post 16 ─────────────────────────────────────────────────────────────
+  {
+    slug: "pressure-washing-mooresville-nc",
+    title: "Pressure Washing in Mooresville, NC: A Homeowner's Guide",
+    metaDescription:
+      "What to pressure wash and what to soft wash on a Mooresville, NC home, how often lake humidity makes it worth doing, and when to hire a local pro.",
+    h1: "Pressure Washing in Mooresville, NC: What Local Homeowners Need to Know",
+    publishedAt: "2026-07-27",
+    targetKeyword: "pressure washing mooresville nc",
+    heroImage: "/assets/team/ridge-driveway-surface-cleaner-concrete.webp",
+    heroImageAlt:
+      "Ridge Curwood pressure washing a concrete driveway with a surface cleaner in Mooresville NC",
+    eyebrow: "Pressure Washing Guide",
+    heroSubline:
+      "A local, practical guide to pressure washing a Mooresville home: what to blast, what to soft wash instead, and how often lake humidity makes it worth doing.",
+    intro: [
+      "Mooresville sits right on the biggest, busiest stretch of Lake Norman, and that address is hard on a home's exterior. The same water that makes The Point and Bridgeport such desirable places to live keeps the air damp nearly year round, and damp air is what algae, mildew, and clay film need to take hold. Give it a season or two and a bright concrete driveway turns dingy, a paver patio grows a slick green film in the joints, and the shaded side of the house goes gray.",
+      "Pressure washing is the fastest way to undo all of that, but only on the right surfaces. Used with the wrong technique or aimed at the wrong material, a pressure washer strips paint, cracks siding, and forces water where it does not belong. This guide breaks down what actually belongs under high pressure on a typical 28115 or 28117 property, what should be soft washed instead, how often our waterfront humidity makes cleaning worthwhile, and when it pays to hand the machine to a local pro.",
+    ],
+    sections: [
+      {
+        heading: "Why Mooresville homes need it more than inland homes",
+        paragraphs: [
+          "A home three or four miles inland and a home on the Brawley School Road peninsula can be built the same year by the same builder and age completely differently. The difference is the lake. Constant humidity lift off Lake Norman keeps every exterior surface damp longer after rain and dew, and that extra moisture is exactly what biological growth feeds on.",
+          "The waterfront neighborhoods feel it first. Siding, pool decks, and dock surfaces in The Point and Bridgeport grow algae roughly twice as fast as homes over near I-77. If your property backs up to the water or sits under the mature oak canopy along Brawley School Road and Morrison Plantation, plan on the exterior needing attention more often than a friend's place in a drier, more open part of Iredell County.",
+        ],
+      },
+      {
+        heading: "Pressure washing versus soft washing",
+        paragraphs: [
+          "The single most useful thing to understand before you clean anything is that pressure washing and soft washing are two different tools for two different jobs. Getting this backwards is how most homeowners end up paying for a repair.",
+          "Pressure washing uses high-force water to physically blast grime off hard, durable surfaces. It is the right call for concrete, brick pavers, and most stone. Soft washing uses low pressure plus a biodegradable cleaning solution that kills algae, mold, and mildew at the root, then rinses gently. It is the right call for anything water can damage or get behind: siding, roofs, painted wood, and stucco.",
+          "The rule that keeps Mooresville homeowners out of trouble: if it is horizontal and made of concrete or stone, you can usually pressure wash it. If it is vertical and part of the house itself, it almost always wants a soft wash instead.",
+        ],
+      },
+      {
+        heading: "What pressure washing fixes on a Mooresville property",
+        paragraphs: [
+          "Mooresville sits in Iredell County on clay-heavy soil beside a very humid lake, and that combination leaves a specific set of stains on hard surfaces. A commercial surface cleaner, run in overlapping passes rather than with a point-tip wand, handles all of them:",
+        ],
+        bullets: [
+          "Red-clay staining. Our soil runs off in every storm and tints concrete a stubborn pink-orange that works into the pores of the slab, so it has to be pulled out, not just rinsed.",
+          "Algae and mildew on shaded concrete. North-facing driveways, back patios, and walkways under tree cover grow a slick green-black film that gets dangerously slippery when wet.",
+          "Slick dock and boat-slip biofilm. Concrete and composite decking on slips grows a fall-hazard film. It cleans up without harsh runoff into the water when the right chemistry and pressure are used.",
+          "Pool deck buildup. Stamped and travertine surrounds in The Point and Bridgeport collect chlorine residue and organic growth that dull the finish.",
+          "Oak tannin and pollen paste. The mature hardwoods along Brawley and Morrison Plantation drop leaves and acorns that rot into dark stains, and heavy spring pollen settles into paver joints and stamped concrete as a grimy film.",
+        ],
+      },
+      {
+        heading: "How often should you pressure wash in Mooresville?",
+        paragraphs: [
+          "For most Mooresville homes, an annual cleaning of the concrete and hard surfaces is the right baseline. Once a year keeps the clay film, algae, and tannin from building into the deeper stains that take real effort to remove.",
+          [
+            "If your driveway sits in heavy shade, backs up to woods, or is close to the water, plan on cleaning every six to eight months. Shade and lake humidity grow biofilm faster, and that is doubly true for the shaded joints of a paver patio or pool deck. The same logic drives the ",
+            {
+              text: "driveway and concrete cleaning",
+              href: "/services/driveway-cleaning",
+            },
+            " we do most often around here: the shadier and closer to the water, the faster it comes back.",
+          ],
+          [
+            "Siding and roofs run on a longer schedule. A soft wash of the house once a year and a ",
+            { text: "roof cleaning", href: "/services/roof-cleaning" },
+            " every two to three years is usually enough, with waterfront and heavily shaded homes landing at the more frequent end of that range.",
+          ],
+        ],
+      },
+      {
+        heading: "Surfaces you should never pressure wash",
+        paragraphs: [
+          "This is the part that saves homeowners the most money, because the damage from pressure washing the wrong surface is rarely cheap to fix. Keep the high-pressure wand off these:",
+        ],
+        bullets: [
+          "Roof shingles. High pressure strips the protective granules off asphalt shingles and voids most manufacturer warranties. Roofs need a soft wash, the method the shingle makers actually recommend.",
+          "Vinyl, Hardie, and wood siding. Pressure can crack vinyl, drive water behind the panels, and strip paint off wood trim. Siding gets a low-pressure soft wash instead.",
+          "Stucco and dryvit. The texture is far more fragile than it looks, and a wand can blow holes straight through it.",
+          "Windows and screens. High pressure breaks seals and bends frames. Glass gets cleaned with a pure-water system instead.",
+          "Old or soft brick and mortar joints. Aged masonry needs the right chemistry and a careful touch, not brute force that erodes the mortar.",
+        ],
+      },
+      {
+        heading: "DIY versus hiring a local pro",
+        paragraphs: [
+          "Plenty of Mooresville homeowners rent a machine and clean their own driveway, and for a flat, open slab in good shape that can work out fine. The trouble starts in three places: a point-tip wand leaves visible stripes across the concrete that a surface cleaner avoids, the wrong nozzle etches lines into the slab that never come out, and the temptation to turn that same pressure on siding or a roof leads to real damage.",
+          [
+            "A pro brings a commercial surface cleaner that scrubs the whole slab evenly, the right chemistry to lift clay and kill algae at the root instead of just wetting it, and the judgment to know which surfaces get pressure and which get a soft wash. For a lakefront property with a paver pool deck, a dock, and a house that also needs washing, hiring it out usually costs less than the rental, the chemicals, and the do-over. Our ",
+            { text: "before and after gallery", href: "/before-after" },
+            " shows how far a proper job takes a Mooresville property.",
+          ],
+        ],
+      },
+      {
+        heading: "What our Mooresville pressure washing includes",
+        paragraphs: [
+          [
+            "We cross the bridge into Mooresville almost daily, and the 28117 corridor along Brawley School Road is one of our busiest service zones. For hard surfaces, we pre-treat the area to break down clay, algae, and oil, run a commercial surface cleaner in overlapping passes for an even, stripe-free finish, hand-detail the edges and cracks, and flush the whole perimeter. Paver patios and pool decks get joint re-sanding as part of a full ",
+            { text: "paver cleaning and sealing", href: "/services/paver-cleaning" },
+            " when they need it. For the house itself, we switch to a ",
+            { text: "soft wash", href: "/services/house-washing" },
+            " that safely clears the algae and mildew our lake humidity grows on siding.",
+          ],
+          [
+            "Most homeowners have us handle the whole exterior in one visit: driveway, walkways, and pool deck under pressure, siding and roof by soft wash. If you want the full picture of how we serve the area, see our ",
+            { text: "Mooresville, NC service page", href: "/areas/mooresville-nc" },
+            ", or request a ",
+            { text: "free estimate", href: "/contact" },
+            " and we will walk the property with you and give you an exact number before any work starts.",
+          ],
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does pressure washing cost in Mooresville, NC?",
+        answer:
+          "It depends on the surfaces involved, the square footage, and how much buildup there is. A driveway alone is very different from a full exterior package with a pool deck, siding, and a roof. We give every Mooresville homeowner a free, no-obligation estimate, so you know the exact number before we start. Call 704-917-9649 or request a quote online.",
+      },
+      {
+        question: "Is pressure washing safe for my siding and roof?",
+        answer:
+          "High pressure is not safe for siding, roofs, stucco, or windows. Those surfaces should be soft washed, which uses low pressure plus a cleaning solution that removes algae and mildew without forcing water behind panels or stripping shingle granules. We reserve true high pressure for concrete, pavers, and other hard surfaces.",
+      },
+      {
+        question: "How often should I pressure wash my driveway in Mooresville?",
+        answer:
+          "Once a year is the right baseline for most homes. If your driveway sits in heavy shade, backs up to woods, or is close to Lake Norman, every six to eight months keeps the algae and red-clay staining from setting in deeper.",
+      },
+      {
+        question: "Can you clean pool decks and boat slips near Lake Norman?",
+        answer:
+          "Yes. Stamped and travertine pool decks and concrete or composite boat slips both grow a slick, slippery film in our lake humidity. We clean them with the right pressure and chemistry so the surface comes back clean without harsh runoff into the water or damage to the finish.",
+      },
+    ],
+  },
 ];
 
 /** All blog post slugs. */
