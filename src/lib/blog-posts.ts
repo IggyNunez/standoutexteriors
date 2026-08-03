@@ -2097,6 +2097,141 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  // ── Post 17 ─────────────────────────────────────────────────────────────
+  {
+    slug: "house-washing-denver-nc",
+    title: "House Washing in Denver, NC: A Local Homeowner's Guide",
+    metaDescription:
+      "Green streaks on your Denver, NC siding? A local guide to soft washing vinyl, brick, and Hardie, how often to wash, and why lake humidity speeds algae growth.",
+    h1: "House Washing in Denver, NC: What Local Homeowners Need to Know",
+    publishedAt: "2026-08-03",
+    targetKeyword: "house washing denver nc",
+    heroImage: "/assets/team/ridge-house-washing-brick-side.webp",
+    heroImageAlt:
+      "Ridge Curwood soft washing the brick and vinyl exterior of a home in Denver NC, removing algae and mildew",
+    eyebrow: "House Washing Guide",
+    heroSubline:
+      "A practical, local look at why Denver siding goes green so fast, how soft washing clears it without damaging your panels, and how often a lake-area home should be washed.",
+    intro: [
+      "Denver, NC is home base for us, so we drive these neighborhoods every week, and the pattern is always the same. A home looks fine from the driveway, the algae builds in slowly, and then you park across the street one afternoon and realize the whole north side has gone green. Siding is the largest surface on your house and the first thing a visitor sees, yet it is the exterior job homeowners put off the longest.",
+      "This guide walks through what actually dirties siding in the 28037 area, why our lake humidity and tree cover grow algae faster than inland towns, the difference between soft washing and pressure washing that keeps you from cracking a panel, how often a Denver home should be washed, and when it makes sense to hand the job to a local pro.",
+    ],
+    sections: [
+      {
+        heading: "Why Denver, NC siding goes green so fast",
+        paragraphs: [
+          "Denver sits in a humid, tree-heavy pocket of Lincoln County right off Lake Norman, and that mix is hard on siding. What you see as green or black staining is a living film of algae, mold, and mildew feeding on the surface. A few local factors stack up faster than most homeowners expect:",
+        ],
+        bullets: [
+          "Lake Norman humidity. Damp air off the water keeps siding wet long after a rain, especially on lots within a mile or two of the shoreline near Westport and Sailview. Algae thrives on steady moisture, and a Denver summer is close to ideal growing weather.",
+          "Heavy tree cover. Many lots around East Lincoln and Verdict Ridge sit under mature oaks and pines. Shaded, north-facing walls dry the slowest, which is why the green almost always starts there and spreads fastest.",
+          "Spring pollen. Denver's pollen season coats every surface in a fine yellow film. On siding and trim it mixes with moisture and sticks, turning into a grimy paste that feeds mold and mildew.",
+          "Red-clay splash. Rain kicks our clay soil up onto the lower courses of siding and the foundation, leaving a stubborn pink-orange staining that a garden hose will not touch.",
+          "Mixed materials. Newer subdivisions like Smithstone and Trilogy run vinyl and Hardie plank, while Verdict Ridge and older East Lincoln homes have painted brick and cedar shake. Each holds biological film differently and needs the right chemistry, not more pressure.",
+        ],
+      },
+      {
+        heading: "Soft washing versus pressure washing siding",
+        paragraphs: [
+          "The single most important thing to understand before you clean any Denver home is that pressure washing and soft washing are two different tools for two different jobs. Pointing a pressure washer at siding is one of the fastest ways to turn a cleaning into a repair bill.",
+          "Pressure washing uses high-force water to blast grime off hard, durable surfaces like concrete driveways and pavers. On vinyl siding, Hardie plank, stucco, or painted wood, that same force cracks panels, drives water behind the siding into the wall cavity, and strips paint off trim. It also only knocks the algae off the surface without killing the root, so the green is back within weeks.",
+          [
+            "Soft washing uses low-pressure delivery to apply a biodegradable cleaning solution that kills algae, mold, and mildew at the root, then rinses gently. Because the growth is dead and not just displaced, it stays gone far longer. Our ",
+            { text: "house washing service", href: "/services/house-washing" },
+            " cleans every siding type found in Denver on that basis: vinyl, brick, stucco, Hardie plank, and cedar shake.",
+          ],
+        ],
+      },
+      {
+        heading: "How often should you wash your house in Denver?",
+        paragraphs: [
+          "For most Denver homes, once a year is the right baseline. An annual soft wash keeps the biological film from building deep enough to stain the siding material itself, and it costs far less than replacing panels or repainting trim that has been allowed to degrade for years.",
+          "If your home sits close to the water, backs up to woods, or faces north on any large elevation, plan on every nine months. Shaded, damp walls recolonize faster than open, sun-exposed ones, and missing a single cleaning on a shaded spot is what turns a routine wash into a slow two-pass job.",
+          [
+            "Newer, more open lots in subdivisions like Trilogy or Smithstone can sometimes stretch to a full year everywhere, but the shaded back elevations still tend to green up first. If you are not sure what your home needs, we are happy to take a look during a ",
+            { text: "free estimate", href: "/contact" },
+            ".",
+          ],
+        ],
+      },
+      {
+        heading: "Warning signs your Denver siding needs washing now",
+        paragraphs: [
+          "You do not have to wait for the calendar. These are the signs we see most often on Denver homes that have gone too long between washes:",
+        ],
+        bullets: [
+          "Green or black streaking on north-facing walls and in the corners where two elevations meet.",
+          "A yellow or gray film on horizontal trim, window sills, and porch ceilings that will not rinse off with a garden hose.",
+          "Soft, fuzzy green patches on brick joints near the foundation, where moisture wicks up from the clay soil.",
+          "Dark tiger striping on gutter faces, the vertical streaks left by oxidation and runoff dripping down from the trough.",
+          "Visible mold or mildew on soffits and fascia, which can spread into the wood trim if it is left untreated.",
+        ],
+      },
+      {
+        heading: "Why it matters for Lake Norman area homes",
+        paragraphs: [
+          "A green house is not just an eyesore. The algae and mildew growing on siding hold moisture against the surface, and over time that traps damp against caulk lines, trim, and the wall behind the panels. On painted wood and cedar shake it accelerates rot. On vinyl it works into the texture until the staining will not come off at all and the panel has to be replaced.",
+          [
+            "The same humidity and shade that green up the siding tend to streak the roof and clog the gutters too. If the siding is stained, the ",
+            { text: "roof", href: "/services/roof-cleaning" },
+            " usually is not far behind, so a lot of Denver homeowners reset the whole exterior in one visit. Overflowing, clogged gutters also spill water right back onto freshly washed siding, which is why a ",
+            { text: "gutter cleaning and brightening", href: "/services/gutter-cleaning" },
+            " pairs naturally with any house wash.",
+          ],
+        ],
+      },
+      {
+        heading: "DIY versus hiring a local pro",
+        paragraphs: [
+          "Plenty of Denver homeowners own a pressure washer and are tempted to point it at the siding. On a single-story ranch a careful homeowner can rinse loose surface dirt, but the two things that actually matter, the right chemistry and the right pressure, are exactly what a consumer machine gets wrong. Too much pressure cracks panels and forces water behind them, and plain water without the cleaning solution leaves the algae root alive to come right back.",
+          [
+            "A pro brings a true soft-wash setup: low pressure, a biodegradable solution mixed to the correct strength for each material, and the reach to safely clean second-story elevations from the ground instead of off a ladder leaned against wet siding. For most homes past a simple one-story, hiring it out is the smarter and cheaper call once you factor in the equipment, the chemicals, and the risk of a do-over. Our ",
+            { text: "before and after gallery", href: "/before-after" },
+            " shows how much a proper soft wash changes a Denver home.",
+          ],
+        ],
+      },
+      {
+        heading: "What our Denver house washing includes",
+        paragraphs: [
+          [
+            "Our ",
+            { text: "house washing service", href: "/services/house-washing" },
+            " is a complete soft wash of every siding surface: vinyl, brick, stucco, Hardie plank, painted wood, and cedar shake. We wet down the landscaping before applying any chemistry, apply our biodegradable cleaning solution to all elevations, let it dwell long enough to kill the growth at the root, and rinse the house and the plant beds below. We are a locally owned company based right here in Denver, working the 28037 ZIP every week, from modest ranches in Smithstone to lakefront homes near the shoreline.",
+          ],
+          [
+            "If you want the full background on how we serve the area, see our ",
+            { text: "Denver, NC service page", href: "/areas/denver-nc" },
+            ". If you just want an honest look from someone who has washed a few hundred Denver homes, ",
+            { text: "request a free estimate", href: "/contact" },
+            " and we will walk the property with you and give you an exact number with no pressure and no contracts.",
+          ],
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does house washing cost in Denver, NC?",
+        answer:
+          "Pricing depends on the square footage, the number of stories, the siding type, and how much biological buildup has developed. We give every Denver homeowner a free, no-obligation estimate before any work starts. Call 704-917-9649 or request a quote online.",
+      },
+      {
+        question: "Can soft washing damage my vinyl, Hardie, or cedar siding?",
+        answer:
+          "No. Soft washing uses low pressure and a biodegradable cleaning solution, not a high-pressure wand. High pressure is what damages siding: it cracks vinyl, drives water behind panels, and strips paint from wood and cedar. Soft washing cleans the surface safely and kills the algae at the root so it stays gone longer.",
+      },
+      {
+        question: "How often should I wash my house in Denver?",
+        answer:
+          "Once a year is the right baseline for most Denver homes. If your home sits near Lake Norman, under heavy tree cover, or has large north-facing walls, every nine months keeps the algae and mildew from setting in deeper on the shaded, damp elevations that green up first.",
+      },
+      {
+        question: "Do I need to be home for a house washing?",
+        answer:
+          "Not necessarily. As long as we have access to all sides of the home and an outdoor water source, we can complete the soft wash while you are away and send before and after photos when we finish. We will confirm the details when we schedule the job.",
+      },
+    ],
+  },
 ];
 
 /** All blog post slugs. */
