@@ -2355,6 +2355,132 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  // -- Post 19 ---------------------------------------------------------------
+  // NOTE: images skipped - OPENAI_API_KEY was not set in the build environment.
+  {
+    slug: "gutter-cleaning-mooresville-nc",
+    title: "Gutter Cleaning in Mooresville, NC | Stand Out Exterior",
+    metaDescription:
+      "How often to clean gutters in Mooresville, NC? A local guide to oak pollen, lake humidity, and waterfront challenges. Free estimates. 704-917-9649.",
+    h1: "Gutter Cleaning in Mooresville, NC: What Local Homeowners Need to Know",
+    publishedAt: "2026-08-10",
+    targetKeyword: "gutter cleaning mooresville nc",
+    heroImage: "/assets/team/ridge-gutter-cleaning-bucket.webp",
+    heroImageAlt:
+      "Ridge Curwood cleaning gutters by hand on a Mooresville NC home near Lake Norman",
+    eyebrow: "Gutter Cleaning Guide",
+    heroSubline:
+      "A practical, local look at why Mooresville gutters clog twice as fast near the water, how often to clean, and the warning signs you should not ignore.",
+    intro: [
+      "If you own a home in Mooresville, NC, your gutters are doing some of the hardest work of any in the Lake Norman area. Between the mature oak canopy along Brawley School Road and Morrison Plantation, the heavy spring pollen, and the steady humidity the lake pushes into the air year-round, Mooresville gutters fill up faster than those in drier, more inland parts of Iredell County.",
+      "This guide walks through why Mooresville gutters clog the way they do, how often a 28115 or 28117 home should be cleaned, the warning signs that mean it is time to act, and when it makes more sense to hire a local crew than to climb a ladder yourself.",
+    ],
+    sections: [
+      {
+        heading: "Why Mooresville, NC gutters clog faster than most",
+        paragraphs: [
+          "Mooresville sits at the southern tip of Lake Norman, and the combination of waterfront humidity, mature tree cover, and clay-heavy soil creates conditions that work against a gutter system from multiple directions at once. A few local factors stack up:",
+        ],
+        bullets: [
+          "Oak and hardwood canopy. The established hardwoods along Brawley School Road, Langtree Road, and the older neighborhoods near Lake Davidson shed leaves and acorns in volume each fall. Inside a gutter, wet leaves compress into a dense mat that water cannot drain through.",
+          "Spring pollen. Mooresville's pollen season coats everything in a fine yellow film. Inside a gutter, that film mixes with moisture and grit and turns into a sticky paste that clogs the outlet and downspout.",
+          "Lake Norman humidity. Damp air off the water keeps gutter debris wet rather than letting it dry out and blow away. Wet organic debris breaks down into sludge, and that sludge is what grows the weeds and algae you sometimes see sprouting from a neglected trough.",
+          "Pine needles. Loblolly pines shed needles year-round, not just in fall. Properties near the water in The Point, Bridgeport, and along the Brawley corridor pick up needles from nearby lakeside canopy. Needles knit together into a mat that diverts water over the front edge of the gutter.",
+          "Red-clay grit. Roof runoff carries fine clay sediment off shingles and settles it into the low spots and downspout elbows where it slowly chokes flow.",
+        ],
+      },
+      {
+        heading: "How often should you clean gutters in Mooresville?",
+        paragraphs: [
+          "For most Mooresville homes, cleaning twice a year is the right baseline: once in late spring after the oak flowers and pollen finish dropping, and once in late fall after the leaves come down. That schedule keeps the system clear through the two seasons that clog it the most.",
+          "Waterfront homes in The Point and Bridgeport, or properties under heavy pine and oak canopy along the Brawley School corridor, often need three cleanings a year. Near-water lots see more airborne debris and keep it wetter for longer, so the gutters fill faster between scheduled visits.",
+          [
+            "If you are not sure what your property needs, we are happy to take a look during a ",
+            { text: "free estimate", href: "/contact" },
+            ". We work Mooresville every week and can give you a straight read on how your specific lot and tree cover affect the cleaning schedule.",
+          ],
+        ],
+      },
+      {
+        heading: "Warning signs your Mooresville gutters need attention now",
+        paragraphs: [
+          "You do not have to wait for the calendar. These are the signs we see most often on Mooresville homes that have gone too long between cleanings:",
+        ],
+        bullets: [
+          "Water sheeting over the front edge of the trough during a rain instead of running to the downspout.",
+          "Sagging or separation from the fascia, a sign the trough is heavy with wet debris.",
+          "Dark vertical streaks on the gutter faces, sometimes called tiger striping, which means overflow has been occurring repeatedly.",
+          "Seedlings, weeds, or moss growing out of the gutter line.",
+          "Shingle granules collecting in the troughs and downspouts.",
+          "Pooling water or erosion in the flower beds directly below the gutters.",
+        ],
+      },
+      {
+        heading: "Why it matters for Lake Norman waterfront homes",
+        paragraphs: [
+          "A clogged gutter is not a cosmetic problem. When water cannot reach the downspout, it spills over the back edge of the trough and runs down the fascia, where it rots wood trim and can work its way into the soffit. Over time that overflow saturates the soil at the foundation, which is especially damaging on Mooresville's clay-heavy ground that already holds water after heavy rain.",
+          [
+            "Overflowing gutters also dump water directly onto siding, which speeds up the algae and mildew growth that Lake Norman humidity already encourages. If your gutter faces are streaked and your siding has gone green, pairing a cleaning with a ",
+            { text: "professional house washing", href: "/services/house-washing" },
+            " resets the whole exterior at once. The same pine needles and oak debris that clog gutters also tend to pile up on the roof, feeding the black streaks a ",
+            { text: "soft-wash roof cleaning", href: "/services/roof-cleaning" },
+            " clears safely without touching your warranty.",
+          ],
+        ],
+      },
+      {
+        heading: "DIY versus hiring a local pro",
+        paragraphs: [
+          "Plenty of Mooresville homeowners clean their own single-story gutters, and that is a reasonable call if you are comfortable on a ladder and have a safe, level place to set it. The trouble starts on two-story homes, the steep lake-lot grades common near The Point and Bridgeport, and the tall rooflines on custom builds along Brawley and Langtree, where placing a ladder safely becomes difficult and a fall is a real risk.",
+          "A pro also does more than scoop. We flush every downspout to confirm it actually drains, check for sagging hangers, and bag the debris so it does not end up back in your beds. Waterfront homes in particular have long rooflines and complex gutter runs that make the safety and thoroughness of a professional crew especially worthwhile.",
+        ],
+      },
+      {
+        heading: "What our Mooresville gutter cleaning includes",
+        paragraphs: [
+          [
+            "Our ",
+            {
+              text: "gutter cleaning and brightening service",
+              href: "/services/gutter-cleaning",
+            },
+            " is a complete reset for your system. We hand-clear all debris from the troughs, flush every downspout until it runs clear, and bag everything we pull out. We also brighten oxidized, tiger-striped gutter faces so the outside of the trough looks new again, not just the inside.",
+          ],
+          [
+            "We serve Mooresville and the 28115 and 28117 ZIPs every week, from the waterfront neighborhoods in The Point and Bridgeport to Morrison Plantation and the homes along Brawley School Road. For the full background on how we serve the area, see our ",
+            { text: "Mooresville, NC service page", href: "/areas/mooresville-nc" },
+            ". While we are already out there, many homeowners also have us check the roof, since the same debris that clogs gutters tends to pile up in roof valleys and feed ",
+            { text: "roof algae and moss", href: "/services/roof-cleaning" },
+            ". To get an exact number before any work starts, ",
+            { text: "request a free estimate", href: "/contact" },
+            " and we will walk the property with you with no pressure and no contracts.",
+          ],
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does gutter cleaning cost in Mooresville, NC?",
+        answer:
+          "Pricing depends on the size of the home, the number of stories, and how much debris has built up. Waterfront homes and properties under heavy tree canopy tend to accumulate more, so we always walk the property and give every Mooresville homeowner a free, no-obligation estimate before any work starts. Call 704-917-9649 or request a quote online.",
+      },
+      {
+        question: "Do you clean gutters on two-story homes in Mooresville?",
+        answer:
+          "Yes. We are equipped to safely clean gutters on single-story and two-story homes, including the tall rooflines and steep lake-lot grades common on waterfront properties in The Point, Bridgeport, and along the Brawley School corridor.",
+      },
+      {
+        question: "When is the best time of year to clean gutters in Mooresville?",
+        answer:
+          "Late spring, after the oak flowers and pollen finish dropping, and late fall, after the leaves come down, are the two most important windows for most Mooresville homes. Properties under heavy pine canopy or close to the water often need a third cleaning during the year since pine needles drop year-round and lake humidity keeps debris from drying out.",
+      },
+      {
+        question: "Can you brighten stained or streaked gutter faces?",
+        answer:
+          "Yes. Our service includes gutter face brightening, which removes the oxidized dark streaks, sometimes called tiger striping, that build up on the outside of aluminum gutters. The faces come out looking close to new, not just the troughs inside.",
+      },
+    ],
+  },
 ];
 
 /** All blog post slugs. */
