@@ -2481,6 +2481,140 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  // ── Post 22 ─────────────────────────────────────────────────────────────
+  {
+    slug: "pressure-washing-huntersville-nc",
+    title: "Pressure Washing in Huntersville, NC: A Local Guide",
+    metaDescription:
+      "What to pressure wash and what to soft wash on a Huntersville, NC home, how often, HOA compliance, and the local pollen and humidity that make it necessary.",
+    h1: "Pressure Washing in Huntersville, NC: What to Clean and How Often",
+    publishedAt: "2026-08-10",
+    targetKeyword: "pressure washing huntersville nc",
+    heroImage: "/assets/team/ridge-driveway-surface-cleaner-action.webp",
+    heroImageAlt:
+      "Ridge Curwood pressure washing a concrete driveway with a surface cleaner in a Huntersville NC neighborhood",
+    eyebrow: "Pressure Washing Guide",
+    heroSubline:
+      "A local, practical guide to pressure washing a Huntersville home: what to blast, what to soft wash instead, how HOA deadlines factor in, and how often to clean.",
+    intro: [
+      "Pressure washing in Huntersville, NC covers a lot of ground, from the concrete driveway that has gone gray to the vinyl siding that just earned a letter from the HOA. The trouble is that the phrase gets used for two very different jobs, and homeowners who rent a machine and treat every surface the same way often trade one problem for a worse one: cracked vinyl, striped concrete, or water driven behind the siding.",
+      "This guide breaks down what actually belongs under high pressure on a typical 28078 property, what should be soft washed instead, how our Mecklenburg County pollen and humidity make regular cleaning worthwhile, and how to stay ahead of the appearance covenants that most Huntersville neighborhoods enforce.",
+    ],
+    sections: [
+      {
+        heading: "Pressure washing versus soft washing",
+        paragraphs: [
+          "The single most important thing to understand before you clean any exterior surface is that pressure washing and soft washing are two different tools for two different jobs. Getting this wrong is how most Huntersville homeowners damage their own homes.",
+          "Pressure washing uses high-force water to physically blast grime off hard, durable surfaces. It is the right call for concrete driveways, brick pavers, and most stone. Soft washing uses low pressure plus a biodegradable cleaning solution that kills algae, mold, and mildew at the root, then rinses gently. It is the right call for anything water can damage or get behind: vinyl and Hardie siding, roofs, painted wood, and stucco.",
+          "The rule of thumb that keeps homeowners out of trouble is simple. If it is horizontal and made of concrete or stone, you can usually pressure wash it. If it is vertical and part of the house itself, it almost always wants a soft wash instead.",
+        ],
+      },
+      {
+        heading: "What pressure washing fixes on a Huntersville home",
+        paragraphs: [
+          "Huntersville sits in a humid, tree-heavy corner of Mecklenburg County, and that combination leaves a specific set of stains on hard surfaces. Pressure washing, done with a surface cleaner rather than a point-tip wand, handles all of them:",
+        ],
+        bullets: [
+          "Mold and mildew on shaded concrete. North-facing driveways and back patios under the mature canopy near Latta Plantation grow a slick green-black film that gets dangerously slippery when wet.",
+          "Pollen paste. Mecklenburg's heavy spring pollen settles into the texture of stamped concrete and paver joints and turns into a grimy film that feeds mildew.",
+          "Leaf and acorn tannin. The established oaks along Gilead Road and the older Northstone lots drop debris that rots into dark tannin stains on patios and walkways.",
+          "Oil, rust, and tire marks. Driveways and garage aprons collect drips and scuffs that need targeted pre-treatment before the pressure pass.",
+          "New-construction film. Fresh builds in Rosedale and north Huntersville often leave concrete film on paver driveways from the build-out that a surface cleaner pulls back off.",
+        ],
+      },
+      {
+        heading: "HOA compliance: what Huntersville neighborhoods expect",
+        paragraphs: [
+          "This is the part most Huntersville homeowners actually need. Skybrook, Northstone, and Wynfield run active appearance-compliance programs, and a 30-day letter for a stained driveway or algae-streaked siding is common. The fine schedule in most Mecklenburg HOAs escalates if the property is not brought into compliance before the reinspection.",
+          [
+            "The important thing to know is that the fix is rarely the same tool for the whole house. A flagged driveway wants high pressure and a surface cleaner. Flagged siding wants a low-pressure ",
+            { text: "soft wash", href: "/services/house-washing" },
+            ", not a pressure washer, because high pressure on vinyl or Hardie is what creates a second, more expensive problem. We schedule around those deadlines so there is time to clean and dry before the reinspection date. Full details on how we serve the area are on our ",
+            { text: "Huntersville, NC service page", href: "/areas/huntersville-nc" },
+            ".",
+          ],
+        ],
+      },
+      {
+        heading: "How often should you pressure wash in Huntersville?",
+        paragraphs: [
+          "For most Huntersville homes, an annual cleaning of the concrete and hard surfaces is the right baseline. Once a year keeps the pollen film, mold, and tannin from building into the deeper stains that take real effort to remove, and it keeps the HOA satisfied at the same time.",
+          [
+            "If your driveway sits in heavy shade, backs up to a wooded lot near Latta Plantation, or is close to a busy road like NC-115 or Gilead Road, plan on cleaning every six to eight months. Shade and moisture grow mold faster, and road grit accelerates everything. The same logic applies to the ",
+            {
+              text: "driveway and concrete cleaning",
+              href: "/services/driveway-cleaning",
+            },
+            " we do most often out here: the shadier and lower the spot, the faster it comes back.",
+          ],
+          "Siding and roofs run on a longer schedule. A soft wash of the house once a year and a roof cleaning every two to five years is usually enough, with heavily shaded and near-wooded homes landing at the more frequent end of that range.",
+        ],
+      },
+      {
+        heading: "Surfaces you should never pressure wash",
+        paragraphs: [
+          "This is the part that saves homeowners the most money, because the damage from pressure washing the wrong surface is rarely cheap to fix. Keep the high-pressure wand off these:",
+        ],
+        bullets: [
+          "Roof shingles. High pressure strips the protective granules off asphalt shingles and voids most manufacturer warranties. Roofs need a soft wash, the method the shingle makers actually recommend.",
+          "Vinyl and Hardie siding. Pressure can crack vinyl, drive water behind the panels, and strip paint off wood trim. Siding gets a low-pressure soft wash.",
+          "Stucco and dryvit. The texture is far more fragile than it looks, and a wand can blow holes straight through it.",
+          "Windows and screens. High pressure breaks seals and bends frames. Glass gets cleaned with a pure-water system instead.",
+          "Older or soft brick and aged mortar joints. Brick near the Latta corridor can develop efflorescence, and brute force pushes that salt bloom deeper and erodes the mortar. Aged masonry needs the right chemistry and a careful touch.",
+        ],
+      },
+      {
+        heading: "DIY versus hiring a local pro",
+        paragraphs: [
+          "Plenty of Huntersville homeowners rent a machine and clean their own driveway, and for a flat, open slab in good shape that can work out fine. The trouble starts in three places: a point-tip wand leaves visible stripes across the concrete that a surface cleaner avoids, the wrong nozzle etches lines into the slab that never come out, and the temptation to turn that same pressure on siding or a roof leads to real damage and, on an HOA property, a bigger repair than the stain you started with.",
+          [
+            "A pro brings a commercial surface cleaner that scrubs the whole slab evenly, the right chemistry to lift pollen film and kill mold at the root instead of just wetting it, and the judgment to know which surfaces get pressure and which get a soft wash. Our ",
+            { text: "before and after gallery", href: "/before-after" },
+            " shows how much difference an even, stripe-free pass makes on a Huntersville driveway.",
+          ],
+        ],
+      },
+      {
+        heading: "What our Huntersville pressure washing includes",
+        paragraphs: [
+          [
+            "We are a locally owned company based in Denver, NC, a short drive from Huntersville, and we work the 28078 ZIP every week. For hard surfaces, we pre-treat the area to break down pollen film, mold, and oil, run a commercial surface cleaner in overlapping passes for an even, stripe-free finish, hand-detail the edges and cracks, and flush the whole perimeter so debris ends up in the street instead of your garage. For the house itself, we switch to a soft wash that safely clears the algae and mildew our humidity grows on siding, and for aged or hazed brick we use a masonry detergent rather than brute force. Our ",
+            { text: "paver cleaning and sealing", href: "/services/paver-cleaning" },
+            " and ",
+            { text: "roof cleaning", href: "/services/roof-cleaning" },
+            " round out the full exterior when you want it all done in one visit.",
+          ],
+          [
+            "Most homeowners have us handle the whole exterior at once: driveway and walkways under pressure, siding and roof by soft wash. If you are staring at an HOA letter or just want an exact number before we start, ",
+            { text: "request a free estimate", href: "/contact" },
+            " and we will walk the property with you and give you a quote with no pressure and no contracts.",
+          ],
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does pressure washing cost in Huntersville, NC?",
+        answer:
+          "It depends on the surfaces involved, the square footage, and how much buildup there is. A driveway alone is very different from a full exterior package with siding and a roof. We give every Huntersville homeowner a free, no-obligation estimate, so you know the exact number before we start. Call 704-917-9649 or request a quote online.",
+      },
+      {
+        question: "Will pressure washing satisfy my HOA in Huntersville?",
+        answer:
+          "In nearly every case, yes, as long as the right method is used on each surface. A stained driveway gets high pressure and a surface cleaner, while flagged siding gets a low-pressure soft wash. We know the Skybrook, Northstone, and Wynfield standards and schedule the job so there is buffer time before your reinspection deadline.",
+      },
+      {
+        question: "Is pressure washing safe for my siding and roof?",
+        answer:
+          "High pressure is not safe for siding, roofs, stucco, or windows. Those surfaces should be soft washed, which uses low pressure plus a cleaning solution that removes algae and mildew without forcing water behind panels or stripping shingle granules. We reserve true high pressure for concrete, pavers, and other hard surfaces.",
+      },
+      {
+        question: "How often should I pressure wash my driveway in Huntersville?",
+        answer:
+          "Once a year is the right baseline for most homes. If your driveway sits in heavy shade, backs up to woods near Latta Plantation, or is close to a busy road like NC-115 or Gilead Road, every six to eight months keeps the mold and pollen staining from setting in deeper.",
+      },
+    ],
+  },
 ];
 
 /** All blog post slugs. */
