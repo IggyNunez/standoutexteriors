@@ -2481,6 +2481,114 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  // ── Post 23 ─────────────────────────────────────────────────────────────
+  {
+    slug: "driveway-cleaning-mooresville-nc",
+    title: "Driveway Cleaning in Mooresville, NC: A Local Guide",
+    metaDescription:
+      "Pollen, red clay, and lake humidity turn Mooresville, NC driveways grimy fast. A local guide to cleaning concrete, stamped pavers, and when to call a pro.",
+    h1: "Driveway Cleaning in Mooresville, NC: What Local Homeowners Need to Know",
+    publishedAt: "2026-08-17",
+    targetKeyword: "driveway cleaning mooresville nc",
+    heroImage: "/assets/team/ridge-driveway-spray-rinse.webp",
+    heroImageAlt:
+      "Ridge Curwood rinsing a clean concrete driveway in a Mooresville NC neighborhood",
+    eyebrow: "Driveway Cleaning Guide",
+    heroSubline:
+      "A practical, local look at why Mooresville driveways stain so fast, how often to clean them, and the care that stamped concrete and pavers actually need.",
+    intro: [
+      "Driveways in Mooresville, NC take a harder beating than most homeowners expect. Between the heavy spring pollen rolling off the mature oaks along Brawley School Road, the red-clay runoff that stains concrete at the edges of every lot, and the humidity that lifts off Lake Norman and keeps surfaces damp long enough for mold to take hold, a Mooresville driveway can go from clean to visibly dirty before the season even turns. Driveway cleaning in Mooresville, NC is less a once-in-a-while project and more a routine that keeps concrete looking sharp and prevents stains from setting in for good.",
+      "This guide covers the specific local conditions that dirty Mooresville driveways fastest, how often to clean, what a professional cleaning actually includes, and the surfaces that need a careful approach rather than brute force.",
+    ],
+    sections: [
+      {
+        heading: "Why Mooresville driveways are so hard to keep clean",
+        paragraphs: [
+          "Mooresville sits at the intersection of a few conditions that hit driveways especially hard:",
+        ],
+        bullets: [
+          "Spring pollen. Mecklenburg and Iredell County pollen coats everything from March through May. On concrete, that fine powder mixes with dew and hardens into a film that feeds mold and mildew all summer if you leave it.",
+          "Lake Norman humidity. Even miles from the shoreline, moisture off the lake keeps concrete damp long after rain stops. Mold and mildew establish faster here than on drier inland pavement.",
+          "Red-clay runoff. Mooresville's soil is iron-rich, and every heavy rain carries rust-toned water across driveways and into low spots. Let it dry and it bonds to the concrete surface, leaving an orange-pink tint at the edges and in every crack.",
+          "Algae on shaded sections. The large canopy oaks along Brawley School Road and the wooded lots in Morrison Plantation keep north-facing driveways shaded and damp, which is exactly what algae needs to get established quickly.",
+          "Tire marks and oil. Driveways around Lake Norman see heavy vehicle use, and oil drips and tire marks burning into a concrete apron are among the most common things we pre-treat before a cleaning.",
+        ],
+      },
+      {
+        heading: "How often should you clean your Mooresville driveway?",
+        paragraphs: [
+          [
+            "For most Mooresville homes, once a year is the right baseline. A thorough ",
+            { text: "driveway cleaning", href: "/services/driveway-cleaning" },
+            " in early summer - after pollen season finishes and before the heat bakes stains in - handles the worst of the buildup and keeps concrete looking sharp going into fall.",
+          ],
+          "If your driveway sits under heavy tree cover - common along the older stretches of Brawley School Road or on the wooded lots in Morrison Plantation and Bridgeport - plan on two cleanings a year. The combination of shade, humidity, and decaying leaf debris keeps mold coming back faster than it does on open, sun-exposed slabs.",
+          "Waterfront homes in The Point and along Jetton Road deal with higher ambient humidity year-round. Those properties often go on a twice-yearly schedule because the moisture never fully leaves the surface, and a single cleaning in the fall ends up undone before spring even arrives.",
+        ],
+      },
+      {
+        heading: "Stamped concrete and pavers: why the method matters",
+        paragraphs: [
+          "Many of Mooresville's newer builds and lakefront homes use stamped concrete or paver driveways. These look sharp when clean and terrible when stained, but they need a more careful approach than a plain slab.",
+          "Stamped concrete has texture and a sealer on top. A pressure wand at full output can strip that sealer, bleach the color, or cut visible etched lines across the pattern that cannot be fixed without re-stamping. The right tool is a surface cleaner - a spinning disc attachment that delivers even, controlled pressure over the whole surface - paired with a detergent matched to the stain type.",
+          [
+            "Paver driveways have joints filled with polymeric sand that holds pavers in place and blocks weeds. High-pressure wand cleaning blows that sand out and leaves the pavers loose. The right approach is a surface cleaner, then re-sanding the joints, and optionally a sealer to lock in color and slow weed re-establishment. Our full ",
+            { text: "paver cleaning, sanding, and sealing", href: "/services/paver-cleaning" },
+            " service covers the complete process from first rinse to finished seal.",
+          ],
+        ],
+      },
+      {
+        heading: "What a professional driveway cleaning actually includes",
+        paragraphs: [
+          "Most homeowners picture a wand and high pressure, but professional driveway cleaning is a few steps more complete. Here is what a typical job looks like on a Mooresville property:",
+        ],
+        bullets: [
+          "Pre-treatment. Oil stains, rust spots, and any organic growth - mold, algae, clay - get a targeted detergent applied first so the chemistry does the heavy lifting before the surface cleaner even touches the slab.",
+          "Surface cleaner pass. We run a commercial surface cleaner across the entire driveway in overlapping passes for an even, streak-free finish. This is what avoids the stripe lines that a point-tip wand leaves.",
+          "Edge detail. The surface cleaner cannot reach tight spots against the garage door, curb cuts, and landscaping borders. We hand-detail those sections with a wand at the right standoff distance.",
+          "Perimeter flush. Everything we pull off the slab flushes to the street drain so debris water does not back up into flower beds or push under the garage door.",
+        ],
+      },
+      {
+        heading: "DIY driveway cleaning versus hiring a professional in Mooresville",
+        paragraphs: [
+          "Many Mooresville homeowners own or rent a consumer pressure washer, and for basic maintenance on a flat, uncoated slab in good shape it can be a reasonable starting point. The trouble comes up in predictable situations.",
+          "Consumer wands leave visible stripe lines across concrete. The stripes come from the edge of the spray pattern carrying more force than the center, and they get more obvious once the slab dries and you step back. A surface cleaner eliminates that entirely. On stamped concrete or pavers, the wrong nozzle and angle can strip sealer, etch the pattern, or blow joint sand out permanently. For red-clay stains, the chemistry matters as much as the pressure - the wrong detergent does nothing useful, and the right one makes the difference between one pass and four.",
+          [
+            "If you want to see the difference a professional surface cleaner and pre-treatment makes on a real Mooresville driveway, our ",
+            { text: "before and after gallery", href: "/before-after" },
+            " has plenty of examples. If you would rather just get a number and a date, visit our ",
+            { text: "Mooresville, NC service page", href: "/areas/mooresville-nc" },
+            " and request a free estimate - we will be out to look at the property and give you an exact quote before any work starts.",
+          ],
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does driveway cleaning cost in Mooresville, NC?",
+        answer:
+          "It depends on the slab size, whether it is stamped or plain concrete, how much staining has built up, and whether you are adding paver re-sanding or sealing. We give every Mooresville homeowner a free, no-obligation estimate before any work starts. Call 704-917-9649 or fill out our online contact form to get a number.",
+      },
+      {
+        question: "Can you clean stamped concrete driveways in Mooresville?",
+        answer:
+          "Yes. Stamped concrete is one of the most common requests we get from Mooresville homeowners, especially on newer lakefront builds in The Point and Bridgeport. We use a surface cleaner and the right detergent for stamped surfaces - not a direct wand - to protect the sealer and the pattern underneath.",
+      },
+      {
+        question: "How do you remove red-clay stains from a concrete driveway?",
+        answer:
+          "Red clay bonds to concrete quickly once it dries. We pre-treat with an iron-reactive detergent that breaks the bond before running the surface cleaner. For older, set-in stains, a spot treatment or second pass handles what the first pass does not fully lift. We do not use bleach on concrete - it does not work on clay and can discolor the slab.",
+      },
+      {
+        question:
+          "Do you clean driveways in Bridgeport, The Point, and Morrison Plantation?",
+        answer:
+          "Yes. We work across all of Mooresville's neighborhoods, including Bridgeport, The Point, Morrison Plantation, and the Brawley School Road corridor. Call 704-917-9649 or message us online if you are not sure whether we service your specific address - we cover a wide area and are likely already working nearby.",
+      },
+    ],
+  },
   // ── Post 22 ─────────────────────────────────────────────────────────────
   {
     slug: "pressure-washing-huntersville-nc",
