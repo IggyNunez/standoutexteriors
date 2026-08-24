@@ -2723,6 +2723,141 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  // ── Post 22 ─────────────────────────────────────────────────────────────
+  {
+    slug: "roof-cleaning-huntersville-nc",
+    title: "Roof Cleaning in Huntersville, NC: A Homeowner's Guide",
+    metaDescription:
+      "Black streaks on your Huntersville, NC roof? A local guide to soft washing, HOA rules, and why Mecklenburg humidity and shade grow roof algae so fast.",
+    h1: "Roof Cleaning in Huntersville, NC: What Local Homeowners Need to Know",
+    publishedAt: "2026-08-24",
+    targetKeyword: "roof cleaning huntersville nc",
+    heroImage: "/assets/team/ridge-roof-cleaning-aerial.webp",
+    heroImageAlt:
+      "Aerial view of a soft-washed asphalt shingle roof in Huntersville NC with black algae streaks removed",
+    eyebrow: "Roof Cleaning Guide",
+    heroSubline:
+      "A practical, local look at why Huntersville roofs streak so fast, how soft washing clears the growth without harming your shingles, and how to stay ahead of the HOA.",
+    intro: [
+      "If you own a home in Huntersville, NC, take a look at your roof from the street the next time you pull in. If you see dark streaks running down the slope, or green and black patches spreading across the shingles, you are looking at a living problem, not just dirt. It creeps in slowly, then seems to take over a whole section of roof in a couple of wet seasons. In a covenant neighborhood, your HOA often notices before you do.",
+      "This guide explains what is actually growing on Huntersville roofs, why this corner of Mecklenburg County is so hard on shingles, how soft washing clears the growth safely, how often a 28078 home should be cleaned, and when it makes sense to hand the job to a local pro instead of climbing up there yourself.",
+    ],
+    sections: [
+      {
+        heading: "Why Huntersville, NC roofs streak and grow algae so fast",
+        paragraphs: [
+          "The dark streaks you see on roofs all over Huntersville are almost always a cyanobacterium called Gloeocapsa magma. It arrives on the wind as airborne spores, settles on asphalt shingles, and feeds on the limestone filler in the shingle mat. Left alone, it spreads from a few thin streaks to most of the roof within a handful of seasons. Several local conditions speed that up:",
+        ],
+        bullets: [
+          "Mecklenburg County humidity. Damp, warm summers keep roof surfaces from drying out between storms, which is close to ideal growing weather for algae and moss.",
+          "HOA-era construction materials. Skybrook, Northstone, and Wynfield were built largely in the 2000s with standard asphalt shingle roofs, and those roofs are now well into the age where algae takes hold and shows.",
+          "Heavy tree canopy. Mature oaks along Gilead Road and the older lots near Latta Plantation shade north-facing roof sections, so they stay wet long after a rain and give spores more time to anchor.",
+          "North-facing slopes. The north side of any roof gets the least sun and dries the slowest, which is why the streaks almost always start there and spread fastest.",
+          "Pine needle and leaf buildup. Debris that collects in valleys and along the ridge holds moisture against the shingles and feeds growth right where it piles up.",
+        ],
+      },
+      {
+        heading: "Soft washing versus pressure washing a roof",
+        paragraphs: [
+          "The single most important thing to know about roof cleaning is that high-pressure washing damages shingles. The protective layer on an asphalt shingle is a coating of ceramic granules bonded to the mat, and a pressure washer strips those granules off in seconds. That shortens the life of the roof and voids most manufacturer warranties. It is not a risk worth taking to clean a roof.",
+          [
+            "Soft washing uses low-pressure delivery to apply a biodegradable cleaning solution that kills the algae, lichen, and moss at the root instead of blasting the surface. Once the growth is dead, it rinses away cleanly and the next rain or two finishes the job. The shingles stay intact and the warranty stays valid. It is the method the Asphalt Roofing Manufacturers Association recommends, and the only one we use on Huntersville roofs. Our full ",
+            { text: "roof cleaning service page", href: "/services/roof-cleaning" },
+            " walks through the complete process.",
+          ],
+        ],
+      },
+      {
+        heading: "HOA compliance: what Huntersville neighborhoods expect",
+        paragraphs: [
+          "This is the part that catches the most Huntersville homeowners off guard. Skybrook, Northstone, and Wynfield run active appearance-compliance programs, and a streaked, algae-stained roof is exactly the kind of thing that draws a 30-day notice. The fine schedule in most Mecklenburg HOAs escalates if the property is not brought into compliance before the reinspection.",
+          [
+            "We schedule around those deadlines. When a Huntersville homeowner calls with a notice in hand, we prioritize the appointment so there is time to clean the roof and let it fully lighten before the reinspection date. We work the 28078 ZIP every week and know what each neighborhood's compliance team looks for. Full details on how we serve the area are on our ",
+            { text: "Huntersville, NC service page", href: "/areas/huntersville-nc" },
+            ". If you need to move quickly, ",
+            { text: "contact us", href: "/contact" },
+            " and we will get you scheduled fast.",
+          ],
+        ],
+      },
+      {
+        heading: "How often should you clean your roof in Huntersville?",
+        paragraphs: [
+          "For most Huntersville homes, a roof cleaning every two to four years keeps algae and moss from getting a serious foothold. On that schedule the biological film never builds deep enough to stain the shingle mat itself, and each later cleaning stays straightforward.",
+          "If your home sits under heavy tree cover near Latta Plantation, faces north on the main roof plane, or backs up to a wooded lot, plan on the shorter end of that range, every two years. Shaded, damp roof sections recolonize faster than open, sun-exposed ones.",
+          [
+            "Homes in an active HOA neighborhood have another reason to stay ahead of it: cleaning on a schedule is far cheaper and less stressful than reacting to a violation letter with a deadline attached. If you can already see green or black growth from the street, the roof is overdue. Our ",
+            { text: "before and after gallery", href: "/before-after" },
+            " shows how dramatically a proper soft wash changes a roof.",
+          ],
+        ],
+      },
+      {
+        heading: "Warning signs your Huntersville roof needs cleaning",
+        paragraphs: [
+          "You do not have to wait for the calendar or for an HOA letter. These are the signs we see most often on Huntersville roofs that have gone too long between cleanings:",
+        ],
+        bullets: [
+          "Dark streaks or black discoloration running down the slope, usually starting on the north-facing sections.",
+          "Green, fuzzy moss patches in shaded valleys, near the gutters, or around a chimney or skylight.",
+          "A gray, chalky look across sections that were darker and more uniform when the shingles were newer.",
+          "Visible growth concentrating where leaves and pine needles collect, including valleys and roof penetrations.",
+          "Shingle granules collecting in the gutters and downspouts, a sign the surface is wearing.",
+          "An HOA 30-day letter that specifically calls out the roof. That is the most unambiguous signal, and the clock is already running.",
+        ],
+      },
+      {
+        heading: "DIY versus hiring a local pro",
+        paragraphs: [
+          "Cleaning your own roof is possible for a confident homeowner with the right chemistry and a ground-level delivery system, but it carries real risk. Walking a wet, algae-covered roof is slippery, and a fall from even a single-story pitch is a serious injury. On the steep rooflines and two-story homes common across Huntersville subdivisions, the margin for error essentially disappears.",
+          [
+            "Getting the chemistry right matters just as much. Too weak a mix and the algae is back within months. Too strong without proper prep and the runoff can scorch landscaping or pool in the gutters. A local pro brings the correct concentration, the right delivery pressure, and the judgment to protect plants, gutters, and downspouts during the job. The same humidity and shade that streak the roof tend to green up the rest of the exterior too, so a lot of homeowners pair roof cleaning with a ",
+            { text: "professional house washing", href: "/services/house-washing" },
+            " to reset the whole home at once.",
+          ],
+        ],
+      },
+      {
+        heading: "What our Huntersville roof cleaning includes",
+        paragraphs: [
+          [
+            "Our ",
+            { text: "roof cleaning service", href: "/services/roof-cleaning" },
+            " is a low-pressure soft wash applied in overlapping passes so every section of the roof gets treated evenly. We pre-rinse the landscaping and gutters before application, apply our biodegradable cleaning blend, let it dwell to kill the growth at the root, then rinse the roof, gutters, and plant beds below. We are a locally owned company based in Denver, NC, just fifteen minutes away, and we work Huntersville every week, from Skybrook and Northstone to the newer builds up around Rosedale.",
+          ],
+          [
+            "Most homeowners have us handle the gutters at the same visit, since the debris that feeds roof algae also clogs the troughs right below it. Our ",
+            { text: "gutter cleaning and brightening service", href: "/services/gutter-cleaning" },
+            " pairs naturally with any roof wash. If you want an exact number before we start, ",
+            { text: "request a free estimate", href: "/contact" },
+            " and we will walk the property with you and give you a straight assessment with no pressure and no contracts.",
+          ],
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does roof cleaning cost in Huntersville, NC?",
+        answer:
+          "Price depends on the size and pitch of the roof and how much growth has built up. We give every Huntersville homeowner a free, no-obligation estimate, so you know the exact number before we start. Call 704-917-9649 or request a quote online.",
+      },
+      {
+        question: "Will soft washing damage my shingles or void my warranty?",
+        answer:
+          "No. Soft washing uses low pressure and a biodegradable cleaning solution, not a high-pressure wand. High-pressure washing is what strips shingle granules and voids manufacturer warranties. Soft washing is the method the Asphalt Roofing Manufacturers Association recommends, and it is the only method we use on every roof job.",
+      },
+      {
+        question: "Will a roof cleaning satisfy my HOA in Huntersville?",
+        answer:
+          "In nearly every case, yes. Soft washing removes the algae streaks and black discoloration that compliance teams in Skybrook, Northstone, and Wynfield flag. We know the 28078 neighborhoods and their standards, and we schedule the job so there is buffer time for the roof to fully lighten before your reinspection deadline.",
+      },
+      {
+        question: "How long does a roof cleaning last in Huntersville?",
+        answer:
+          "Most Huntersville roofs stay clean for two to four years after a soft wash. Homes under heavy tree cover near Latta Plantation or with north-facing main slopes may see regrowth start within two years because of the longer damp periods after rain. We will tell you what schedule makes sense for your specific roof.",
+      },
+    ],
+  },
 ];
 
 /** All blog post slugs. */
