@@ -32,7 +32,7 @@ async function fetchAll() {
     const params = new URLSearchParams({
       engine: "google_maps_reviews",
       data_id: DATA_ID,
-      sort_by: "ratingHigh",
+      sort_by: "newestFirst",
       api_key: API_KEY,
     });
     if (nextPageToken) params.set("next_page_token", nextPageToken);
