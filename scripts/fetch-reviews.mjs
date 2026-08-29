@@ -20,7 +20,14 @@
  * Re-run any time you want fresh reviews (monthly is plenty).
  */
 
-import { writeFileSync, mkdirSync, readFileSync, existsSync } from "node:fs";
+import {
+  writeFileSync,
+  mkdirSync,
+  readFileSync,
+  existsSync,
+  readdirSync,
+  unlinkSync,
+} from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import crypto from "node:crypto";
@@ -134,7 +141,7 @@ async function fetchAllReviews(dataId) {
     const params = new URLSearchParams({
       engine: "google_maps_reviews",
       data_id: dataId,
-      sort_by: "ratingHigh",
+      sort_by: "newestFirst",
       api_key: API_KEY,
     });
     if (nextPageToken) params.set("next_page_token", nextPageToken);
@@ -218,6 +225,29 @@ async function normalizeAndLocalize(raw) {
   return normalized;
 }
 
+// ── Step 4: Drop image files nothing points at any more ───────────────
+// Google rotates the token inside its review-photo URLs, so the same picture
+// hashes to a new filename on a later run and the old file is left behind.
+// Without this the directory grows by a full photo set on every refresh.
+function pruneOrphans(reviews) {
+  const referenced = new Set();
+  for (const r of reviews) {
+    if (r.avatar) referenced.add(r.avatar.split("/").pop());
+    for (const photo of r.photos) referenced.add(photo.src.split("/").pop());
+  }
+
+  let removed = 0;
+  for (const dir of [PHOTOS_DIR, AVATARS_DIR]) {
+    if (!existsSync(dir)) continue;
+    for (const file of readdirSync(dir)) {
+      if (referenced.has(file)) continue;
+      unlinkSync(join(dir, file));
+      removed++;
+    }
+  }
+  console.log(`[reviews] pruned ${removed} orphaned image file${removed === 1 ? "" : "s"}`);
+}
+
 // ── Main ─────────────────────────────────────────────────────────────
 async function main() {
   try {
@@ -249,6 +279,8 @@ async function main() {
       ) + "\n",
       "utf-8",
     );
+
+    pruneOrphans(normalized);
 
     const withPhotos = normalized.filter((r) => r.photos.length > 0).length;
     console.log(
