@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { useRouter } from "next/navigation";
 import { m as motion, useInView } from 'framer-motion';
 import { PHONE, PHONE_HREF, EMAIL, ADDRESS, SERVICES, CTA_STATS } from "@/lib/constants";
 import { getAttribution, describeAttribution } from "@/lib/attribution";
@@ -13,9 +12,8 @@ const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 export default function ContactForm() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "0px 0px -50px 0px" });
-  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "error">("idle");
   const [source, setSource] = useState("");
-  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -60,14 +58,24 @@ export default function ContactForm() {
         body: JSON.stringify(data),
       });
       if (res.ok) {
-        setStatus("success");
         form.reset();
         // Stage the conversion and hand off to /thank-you, which fires it on
         // page load. Firing on a real page view (rather than inline here) is
         // what Google's tag diagnostics expect to see, and it gives us a URL
         // we can actually test and point a conversion action at.
         stagePendingConversion({ formSource: "contact-page", email, phone });
-        router.push("/thank-you");
+
+        // Deliberately a full page load, not router.push(). A hard navigation
+        // guarantees the URL actually changes and that gtag.js initializes
+        // fresh on /thank-you, which is what makes the conversion show up in
+        // Google's own diagnostics. The staged record lives in sessionStorage
+        // so it survives the reload.
+        //
+        // Status stays "sending" so the button keeps reading "Sending..."
+        // right up to the navigation. Setting "success" here would flash the
+        // old inline "Thank you!" message and make it look like the redirect
+        // never happened.
+        window.location.assign("/thank-you");
       } else {
         setStatus("error");
       }
@@ -348,11 +356,6 @@ export default function ContactForm() {
                   {status === "sending" ? "Sending..." : "Send Request"}
                 </button>
 
-                {status === "success" && (
-                  <p className="text-center text-green-600 text-[0.82rem] font-semibold">
-                    Thank you! We&apos;ll get back to you shortly.
-                  </p>
-                )}
                 {status === "error" && (
                   <p className="text-center text-red-500 text-[0.82rem] font-semibold">
                     Something went wrong. Please call us at {PHONE}.

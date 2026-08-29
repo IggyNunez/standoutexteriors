@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { PHONE, SERVICES } from "@/lib/constants";
 import { getAttribution, describeAttribution } from "@/lib/attribution";
 import { stagePendingConversion } from "@/lib/conversion";
@@ -21,8 +20,7 @@ import type { LeadFormData } from "@/types";
  *    reached /api/lead) — never on a page view.
  */
 export default function QuoteForm() {
-  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
-  const router = useRouter();
+  const [status, setStatus] = useState<"idle" | "sending" | "error">("idle");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -61,12 +59,16 @@ export default function QuoteForm() {
         body: JSON.stringify(data),
       });
       if (res.ok) {
-        setStatus("success");
         form.reset();
         // Stage the conversion, then hand off to /thank-you which fires it
         // on page load. See src/lib/conversion.ts for why.
         stagePendingConversion({ formSource: "get-quote-landing", email, phone });
-        router.push("/thank-you");
+
+        // Full page load rather than router.push(), so the URL definitely
+        // changes and gtag.js initializes fresh on /thank-you. Status stays
+        // "sending" so the button never flashes a success message that would
+        // look like the redirect failed.
+        window.location.assign("/thank-you");
       } else {
         setStatus("error");
       }
