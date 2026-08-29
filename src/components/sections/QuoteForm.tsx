@@ -1,14 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { PHONE, PHONE_HREF, SERVICES } from "@/lib/constants";
+import { useRouter } from "next/navigation";
+import { PHONE, SERVICES } from "@/lib/constants";
+import { getAttribution, describeAttribution } from "@/lib/attribution";
+import { stagePendingConversion } from "@/lib/conversion";
 import type { LeadFormData } from "@/types";
-
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-  }
-}
 
 /**
  * QuoteForm — the conversion form for the dedicated, UNLINKED ad landing page.
@@ -25,6 +22,7 @@ declare global {
  */
 export default function QuoteForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -34,16 +32,25 @@ export default function QuoteForm() {
     // Honeypot — humans won't see/fill this; bots usually will.
     const company = (form.elements.namedItem("company") as HTMLInputElement | null)?.value ?? "";
 
+    const email = (form.elements.namedItem("email") as HTMLInputElement).value;
+    const phone = (form.elements.namedItem("phone") as HTMLInputElement).value;
+
+    // Real measured attribution (gclid, campaign, keyword) captured when the
+    // visitor landed. See src/lib/attribution.ts.
+    const attribution = getAttribution();
+
     const data: LeadFormData & { company?: string } = {
       firstName: (form.elements.namedItem("firstName") as HTMLInputElement).value,
       lastName: (form.elements.namedItem("lastName") as HTMLInputElement).value,
-      email: (form.elements.namedItem("email") as HTMLInputElement).value,
-      phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
+      email,
+      phone,
       address: (form.elements.namedItem("address") as HTMLInputElement).value,
       service: (form.elements.namedItem("service") as HTMLSelectElement).value,
-      // Hard-stamped: this page is only reachable from the ad.
-      source: "Google Ads — /get-quote landing",
+      // Hard-stamped: this page is only reachable from the ad. The measured
+      // campaign/keyword data gets prepended when it is available.
+      source: describeAttribution(attribution, "Google Ads, /get-quote landing"),
       message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+      attribution,
       company,
     };
 
@@ -56,12 +63,10 @@ export default function QuoteForm() {
       if (res.ok) {
         setStatus("success");
         form.reset();
-        // Fire the Google Ads conversion — ONLY on confirmed success.
-        if (typeof window !== "undefined" && typeof window.gtag === "function") {
-          window.gtag("event", "conversion", {
-            send_to: "AW-10894480187/8sSpCLHUkoAcELum8soo",
-          });
-        }
+        // Stage the conversion, then hand off to /thank-you which fires it
+        // on page load. See src/lib/conversion.ts for why.
+        stagePendingConversion({ formSource: "get-quote-landing", email, phone });
+        router.push("/thank-you");
       } else {
         setStatus("error");
       }
@@ -70,26 +75,9 @@ export default function QuoteForm() {
     }
   };
 
-  if (status === "success") {
-    return (
-      <div className="card-frost p-8 text-center">
-        <div className="w-16 h-16 rounded-full bg-green-500 mx-auto mb-5 flex items-center justify-center">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-            <polyline points="20 6 9 17 4 12" />
-          </svg>
-        </div>
-        <h3 className="font-[family-name:var(--font-display)] text-2xl font-bold uppercase text-blue-900 mb-2">
-          Request received!
-        </h3>
-        <p className="text-[0.95rem] text-gray-700 mb-4">
-          Thanks — Ridge will personally get back to you with your free estimate, usually within a few hours.
-        </p>
-        <a href={PHONE_HREF} className="text-orange-500 font-bold text-[0.95rem]">
-          Need it sooner? Call {PHONE}
-        </a>
-      </div>
-    );
-  }
+  // NOTE: on success we navigate to /thank-you, so there is deliberately no
+  // inline success card here any more. The thank-you page is what fires the
+  // Google Ads conversion.
 
   return (
     <form onSubmit={handleSubmit} className="card-frost p-6 md:p-8 space-y-5">

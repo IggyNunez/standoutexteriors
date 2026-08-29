@@ -107,6 +107,29 @@ export interface CityDetail {
   metaDescription: string;
 }
 
+/**
+ * Measured ad attribution captured from the landing URL and persisted for
+ * 90 days. Populated by src/lib/attribution.ts, forwarded with every lead so
+ * the notification email can name the exact campaign and keyword.
+ */
+export interface LeadAttribution {
+  utm_source?: string;
+  utm_medium?: string;
+  utm_campaign?: string;
+  utm_term?: string;
+  utm_content?: string;
+  utm_id?: string;
+  /** Google Ads click ID. Its presence is proof the lead came from an ad. */
+  gclid?: string;
+  gbraid?: string;
+  wbraid?: string;
+  msclkid?: string;
+  fbclid?: string;
+  landingPage?: string;
+  referrer?: string;
+  capturedAt?: string;
+}
+
 export interface LeadFormData {
   firstName: string;
   lastName: string;
@@ -117,6 +140,8 @@ export interface LeadFormData {
   /** "How did you find us?" attribution field for marketing analytics */
   source?: string;
   message?: string;
+  /** Machine-measured ad attribution, independent of what the visitor said */
+  attribution?: LeadAttribution;
 }
 
 export interface LeadApiResponse {

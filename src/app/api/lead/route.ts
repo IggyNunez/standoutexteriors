@@ -49,6 +49,51 @@ function esc(v: string | undefined | null): string {
     .replace(/'/g, "&#39;");
 }
 
+/**
+ * Render the measured ad-attribution block. Only appears when the lead
+ * actually carried tracking params, so organic leads keep a clean email.
+ *
+ * A present `gclid` (or gbraid/wbraid) is hard proof the lead came from a
+ * paid click, independent of what Google Ads reports on its own dashboard.
+ */
+function buildAttributionHtml(lead: LeadFormData): string {
+  const a = lead.attribution;
+  if (!a) return "";
+
+  const clickId = a.gclid ?? a.gbraid ?? a.wbraid ?? a.msclkid;
+  const rows: [string, string | undefined][] = [
+    ["Source", a.utm_source],
+    ["Medium", a.utm_medium],
+    ["Campaign", a.utm_campaign],
+    ["Keyword / term", a.utm_term],
+    ["Ad / content", a.utm_content],
+    ["Click ID", clickId],
+    ["Landing page", a.landingPage],
+    ["Referrer", a.referrer],
+  ];
+  const filled = rows.filter(([, v]) => Boolean(v));
+  if (filled.length === 0) return "";
+
+  const paidBadge = clickId
+    ? `<div style="display:inline-block;background:#00A651;color:#ffffff;font-size:11px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:12px;">Paid click confirmed</div>`
+    : "";
+
+  return `<tr><td style="padding:12px 32px 8px 32px;">
+          <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:#2B7DE9;font-weight:700;margin-bottom:10px;">Ad Attribution</div>
+          ${paidBadge}
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+            ${filled
+              .map(
+                ([label, value]) => `<tr>
+              <td style="padding:5px 0;font-size:12px;color:#64748b;width:120px;vertical-align:top;">${esc(label)}</td>
+              <td style="padding:5px 0;font-size:13px;color:#0A2E5C;word-break:break-all;">${esc(value)}</td>
+            </tr>`,
+              )
+              .join("")}
+          </table>
+        </td></tr>`;
+}
+
 /** Build the HTML lead notification email. */
 function buildHtml(lead: LeadFormData) {
   const fullName = `${lead.firstName} ${lead.lastName}`.trim();
@@ -112,6 +157,8 @@ function buildHtml(lead: LeadFormData) {
           <div style="font-size:14px;line-height:1.7;color:#1f2937;background:#f8fafc;border-left:3px solid #00A651;padding:14px 18px;border-radius:6px;white-space:pre-wrap;">${esc(lead.message)}</div>
         </td></tr>` : ""}
 
+        ${buildAttributionHtml(lead)}
+
         <!-- Quick actions -->
         <tr><td style="padding:20px 32px 24px 32px;">
           <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:#2B7DE9;font-weight:700;margin-bottom:10px;">Quick Actions</div>
@@ -147,6 +194,15 @@ function buildText(lead: LeadFormData) {
   if (lead.address) lines.push(`Address: ${lead.address}`);
   if (lead.service) lines.push(`Service: ${lead.service}`);
   if (lead.source) lines.push(`Source:  ${lead.source}`);
+  const a = lead.attribution;
+  if (a) {
+    const clickId = a.gclid ?? a.gbraid ?? a.wbraid ?? a.msclkid;
+    if (clickId) lines.push(`Click ID: ${clickId} (paid click confirmed)`);
+    if (a.utm_campaign) lines.push(`Campaign: ${a.utm_campaign}`);
+    if (a.utm_term) lines.push(`Keyword: ${a.utm_term}`);
+    if (a.utm_content) lines.push(`Ad:      ${a.utm_content}`);
+    if (a.landingPage) lines.push(`Landing: ${a.landingPage}`);
+  }
   if (lead.message) {
     lines.push(``, `Message:`, lead.message);
   }
@@ -219,6 +275,9 @@ export async function POST(request: Request) {
       phone: body.phone,
       service: body.service,
       source: body.source,
+      gclid: body.attribution?.gclid ?? body.attribution?.gbraid ?? body.attribution?.wbraid,
+      campaign: body.attribution?.utm_campaign,
+      term: body.attribution?.utm_term,
       verdict: spam.verdict,
       score: spam.score,
       reasons: spam.reasons,

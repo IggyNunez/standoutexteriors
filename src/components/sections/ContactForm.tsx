@@ -1,23 +1,21 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import { m as motion, useInView } from 'framer-motion';
 import { PHONE, PHONE_HREF, EMAIL, ADDRESS, SERVICES, CTA_STATS } from "@/lib/constants";
+import { getAttribution, describeAttribution } from "@/lib/attribution";
+import { stagePendingConversion } from "@/lib/conversion";
 import type { LeadFormData } from "@/types";
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
-
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-  }
-}
 
 export default function ContactForm() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "0px 0px -50px 0px" });
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [source, setSource] = useState("");
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -34,15 +32,24 @@ export default function ContactForm() {
         ? `Other - ${sourceOther.trim()}`
         : sourceValue;
 
+    const email = (form.elements.namedItem("email") as HTMLInputElement).value;
+    const phone = (form.elements.namedItem("phone") as HTMLInputElement).value;
+
+    // Ad attribution captured on landing (see src/lib/attribution.ts). This
+    // survives internal navigation, so a visitor who clicks the ad, reads two
+    // service pages, then submits still carries their gclid and campaign.
+    const attribution = getAttribution();
+
     const data: LeadFormData & { company?: string } = {
       firstName: (form.elements.namedItem("firstName") as HTMLInputElement).value,
       lastName: (form.elements.namedItem("lastName") as HTMLInputElement).value,
-      email: (form.elements.namedItem("email") as HTMLInputElement).value,
-      phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
+      email,
+      phone,
       address: (form.elements.namedItem("address") as HTMLInputElement).value,
       service: (form.elements.namedItem("service") as HTMLSelectElement).value,
-      source: combinedSource,
+      source: describeAttribution(attribution, combinedSource),
       message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+      attribution,
       company,
     };
 
@@ -55,15 +62,12 @@ export default function ContactForm() {
       if (res.ok) {
         setStatus("success");
         form.reset();
-        // Fire the Google Ads "Form Submission" conversion. Only on a
-        // confirmed res.ok (a real lead that reached /api/lead), so it
-        // tracks genuine submissions, not page views or failed sends.
-        // Tag is loaded globally in layout.tsx (AW-10894480187).
-        if (typeof window !== "undefined" && typeof window.gtag === "function") {
-          window.gtag("event", "conversion", {
-            send_to: "AW-10894480187/8sSpCLHUkoAcELum8soo",
-          });
-        }
+        // Stage the conversion and hand off to /thank-you, which fires it on
+        // page load. Firing on a real page view (rather than inline here) is
+        // what Google's tag diagnostics expect to see, and it gives us a URL
+        // we can actually test and point a conversion action at.
+        stagePendingConversion({ formSource: "contact-page", email, phone });
+        router.push("/thank-you");
       } else {
         setStatus("error");
       }

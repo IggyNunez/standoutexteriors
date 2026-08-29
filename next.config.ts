@@ -85,8 +85,11 @@ const nextConfig: NextConfig = {
       ...legacy("free-quote", "/contact"),
       ...legacy("special-offer", "/contact"),
       ...legacy("privacy-policy", "/privacy"),
-      // Old WP thank-you page — redirect to contact so the backlink/juice is preserved
-      ...legacy("thank-you", "/contact"),
+
+      // NOTE: /thank-you is NOT redirected any more. It is now a real page
+      // (src/app/thank-you/page.tsx) and it is where the Google Ads lead
+      // conversion fires. Redirecting it away silently killed every
+      // conversion that depended on landing there.
     ];
   },
 };

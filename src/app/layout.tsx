@@ -5,6 +5,8 @@ import { LocalBusinessJsonLd, WebSiteJsonLd } from "@/components/seo/JsonLd";
 import Nav from "@/components/layout/Nav";
 import Footer from "@/components/layout/Footer";
 import MotionProvider from "@/components/layout/MotionProvider";
+import AttributionCapture from "@/components/analytics/AttributionCapture";
+import { GOOGLE_ADS_ID } from "@/lib/conversion";
 import "./globals.css";
 
 const bebasNeue = Bebas_Neue({
@@ -124,24 +126,43 @@ export default function RootLayout({
       <body className="antialiased">
         <LocalBusinessJsonLd />
         <WebSiteJsonLd />
+        {/* Captures gclid / UTM params on landing and stores them for 90 days
+            so the lead form can report the exact campaign and keyword. */}
+        <AttributionCapture />
+
         <MotionProvider>
           <Nav />
           {children}
           <Footer />
         </MotionProvider>
 
-        {/* Google Ads global site tag. The lead-form conversion fires from
-            ContactForm.tsx on a successful /api/lead submission. Loaded
-            afterInteractive so it never blocks the LCP hero. */}
+        {/* Google Ads global site tag.
+            The lead conversion fires from /thank-you on page load, after a
+            confirmed form submission (see src/lib/conversion.ts).
+
+            conversion_linker writes the _gcl_aw cookie that carries the
+            gclid from the ad click through to the conversion. Without it,
+            a visitor who clicks the ad and then navigates before converting
+            is invisible to Google Ads. It defaults on, but we set it
+            explicitly so nobody removes it by accident.
+
+            allow_enhanced_conversions lets the thank-you page pass a hashed
+            email and phone with the conversion, which recovers matches that
+            cookie-based tracking misses. It also has to be switched on for
+            the conversion action inside the Google Ads UI. */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-10894480187"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
           strategy="afterInteractive"
         />
         <Script id="google-ads-gtag" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
+window.gtag = gtag;
 gtag('js', new Date());
-gtag('config', 'AW-10894480187');`}
+gtag('config', '${GOOGLE_ADS_ID}', {
+  conversion_linker: true,
+  allow_enhanced_conversions: true
+});`}
         </Script>
       </body>
     </html>
