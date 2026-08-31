@@ -10,6 +10,7 @@
     "compress-images": "node scripts/compress-before-after.mjs",
     "compress-team": "node scripts/compress-team-photos.mjs",
     "compress-service-ba": "node scripts/compress-service-ba.mjs",
+    "compress-heavy-assets": "node scripts/compress-heavy-assets.mjs",
     "generate-favicon": "node scripts/generate-favicon.mjs"
   },
   "dependencies": {

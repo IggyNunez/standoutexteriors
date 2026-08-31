@@ -60,3 +60,6 @@ brand-guide.pdf
 
 # Claude Code local config, worktrees, and caches
 .claude/
+
+# Pre-compression backups of heavy assets (local revert only, never deployed)
+.asset-originals/
