@@ -3124,6 +3124,130 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  // ── Post 25 ─────────────────────────────────────────────────────────────
+  // NOTE: Images skipped - OpenAI API blocked by egress proxy in build environment.
+  {
+    slug: "gutter-cleaning-sherrills-ford-nc",
+    title: "Gutter Cleaning in Sherrills Ford, NC | Stand Out Exterior",
+    metaDescription:
+      "Sherrills Ford, NC gutter cleaning by the local team that lives on Lake Norman. Northview Harbour, Mountain Creek, and NC-150 homes. Free estimates. 704-917-9649.",
+    h1: "Gutter Cleaning in Sherrills Ford, NC: What Lake Norman Homeowners Need to Know",
+    publishedAt: "2026-08-31",
+    targetKeyword: "gutter cleaning sherrills ford nc",
+    heroImage: "/assets/team/ridge-gutter-cleaning-ladder-roof.webp",
+    heroImageAlt:
+      "Ridge Curwood cleaning gutters on a rooftop near Lake Norman in Sherrills Ford, NC",
+    eyebrow: "Sherrills Ford, NC",
+    heroSubline:
+      "Lake Norman humidity, heavy leaf drop, and fast-growing moss make gutters a maintenance priority on the west shore. Here is what the local team recommends.",
+    intro: [
+      "Sherrills Ford is one of the fastest-growing communities on the west shore of Lake Norman, and it brings a specific set of exterior challenges that inland homes simply do not face. The lake humidity keeps organic material wet longer. Mature hardwoods along NC-150 drop heavy pollen in spring and thick leaf loads every fall. And the construction boom in Northview Harbour and Mountain Creek means a lot of new homeowners are getting their first real look at what clogged gutters actually do to a house.",
+      [
+        "If you have not had your gutters cleaned this year, late summer is the right time to schedule before fall leaf season hits in earnest. Below we walk through why Sherrills Ford gutters clog faster than most, what to look for, and what our ",
+        { text: "gutter cleaning and brightening service", href: "/services/gutter-cleaning" },
+        " covers from start to finish.",
+      ],
+    ],
+    sections: [
+      {
+        heading: "Why gutters fill up fast on the Lake Norman west shore",
+        paragraphs: [
+          "The west shore of Lake Norman sees the same high-humidity conditions as Denver and Cornelius, but Sherrills Ford's older, heavier tree cover along NC-150 and the newer lots carved out of wooded land in Northview Harbour create a particular load on a gutter system every season.",
+        ],
+        bullets: [
+          "Heavy hardwood canopy. The mature oaks and hickories along the original NC-150 corridor drop an enormous volume of leaves, acorns, and seed pods every fall. Inside a gutter that debris rots into a sodden sludge that presses against the fascia and blocks the trough from front to back.",
+          "Pine needles from surrounding stands. Loblolly pine needles knit together into a dense mat inside the gutter channel. Water runs right over the mat rather than channeling to the downspout, and the mat holds moisture that softens the wood below.",
+          "Lake humidity keeps debris wet. Unlike inland areas where leaf debris dries out and partially blows away, west-shore gutters stay damp after rain. Wet debris compacts tighter, weighs more per linear foot, and grows the algae and moss that work into fascia boards over time.",
+          "Construction dust on newer lots. Homes in Northview Harbour and Mountain Creek that are a few years old have had construction grit, overspray, and red-clay sediment washing off the roof and collecting at the low points of the gutter trough and inside downspout elbows.",
+          "Moss in shaded sections. Lots with tight tree canopy stay damp long enough for moss to establish inside the gutter channel and on north-facing roof sections. Moss blocks the trough and holds moisture against every surface it touches.",
+        ],
+      },
+      {
+        heading: "Warning signs your Sherrills Ford gutters need cleaning now",
+        paragraphs: [
+          "You do not have to wait for a scheduled cleaning to know something is wrong. These are the signs we see most often on Sherrills Ford homes that have gone too long between cleanings:",
+        ],
+        bullets: [
+          "Water sheeting over the front lip of the gutter during rain instead of flowing to the downspout.",
+          "Sagging or pulling away from the fascia - a sign the channel is holding a heavy load of packed, wet debris.",
+          "Tiger striping on the gutter face - dark vertical streaks caused by overflow dripping down the outside of the trough.",
+          "Seedlings or moss sprouting from the gutter line, which means debris has been sitting long enough to support root growth.",
+          "Pooling water or soil erosion directly below the gutters at the foundation line.",
+          "Dark staining on the fascia boards behind the gutter, which means overflow has been running between the trough and the wood.",
+          "Downspout that drains slowly or backs up after a moderate rain.",
+        ],
+      },
+      {
+        heading: "What our Sherrills Ford gutter cleaning service includes",
+        paragraphs: [
+          "Our standard gutter cleaning covers the complete job. We hand-clear every debris load from the gutter channel, bag it, and remove it from your property so nothing ends up in your beds or on your lawn. Then we flush every downspout to confirm the water flows freely from the top of the run to the discharge point at grade.",
+          "For homes where oxidation has left dark tiger stripes on the outside face of the gutter, we offer gutter brightening as an add-on. Brightening removes that oxidation staining and restores the gutter face to its original white or beige finish, which makes a significant difference in curb appeal.",
+          [
+            "We send before and after photos when the job is complete so you can see the difference without having to climb a ladder yourself. Check our ",
+            { text: "before and after gallery", href: "/before-after" },
+            " to see what a full gutter cleaning and brightening looks like on homes similar to yours, and read what ",
+            { text: "Sherrills Ford and Lake Norman homeowners say", href: "/reviews" },
+            " about the service.",
+          ],
+        ],
+        bullets: [
+          "Hand-clearing all debris from every gutter channel",
+          "Bagging and hauling off all debris - nothing left on the property",
+          "Flushing every downspout and confirming clear flow at the outlet",
+          "Checking hanger alignment and flagging any loose or sagging sections",
+          "Gutter face brightening available as an add-on (removes tiger stripes)",
+          "Before and after photos sent at job completion",
+        ],
+      },
+      {
+        heading: "How often should Sherrills Ford homeowners clean their gutters?",
+        paragraphs: [
+          "The right frequency depends on your lot. Most homes in Sherrills Ford should schedule a gutter cleaning at least once per year - ideally in late fall after the leaves have finished dropping so you head into the winter and spring rain season with clear channels.",
+          "Homes on wooded lots along NC-150 or under heavy canopy in Island Forks and Bayshore typically need two cleanings per year: one in late spring to clear the pollen and pine needle load, and one in November after the deciduous leaves come down. If you have mature pines directly over the roofline, those needles mat the gutter channel steadily from spring through fall and a third inspection is not unusual.",
+          [
+            "Newer homes in Northview Harbour and Mountain Creek on less canopied lots may stay clear on a single annual cleaning, but the construction sediment buildup in the first few years can surprise owners who skip the first-year check. We will give you an honest read on your specific situation when we provide your ",
+            { text: "free estimate", href: "/contact" },
+            ". The goal is not to oversell extra visits - it is to give you the schedule that protects your fascia and foundation.",
+          ],
+        ],
+      },
+      {
+        heading: "Schedule your fall gutter cleaning in Sherrills Ford",
+        paragraphs: [
+          "The best window for gutter cleaning on the west shore of Lake Norman is late fall - after the last hard frost browns the remaining leaves but before the heaviest winter rain and any ice load arrives. In the Sherrills Ford area that usually means late November into mid-December. Booking early keeps you off the backlog when the season gets busy.",
+          [
+            "We are a local business based in Denver, NC, about 12 minutes from Sherrills Ford, and we service the 28673 ZIP every week. Call us at 704-917-9649 or ",
+            { text: "request a free estimate online", href: "/contact" },
+            ". For a full look at everything we do in the Sherrills Ford area, visit our ",
+            { text: "Sherrills Ford service area page", href: "/areas/sherrills-ford-nc" },
+            ".",
+          ],
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does gutter cleaning cost in Sherrills Ford, NC?",
+        answer:
+          "Most residential gutter cleanings in the Sherrills Ford area run between $120 and $250 depending on linear footage, the number of stories, and how compacted the debris is. Gutter brightening is priced separately as an add-on. We give every homeowner a free estimate so you know the exact number before we schedule.",
+      },
+      {
+        question: "How often should I clean my gutters near Lake Norman?",
+        answer:
+          "Once per year is the minimum for most homes. Wooded lots on the west shore - especially along NC-150 or under heavy oak and pine canopy in Island Forks and Bayshore - typically need two cleanings per year, one in late spring and one in late fall. We will tell you what makes sense for your specific property when we provide your free estimate.",
+      },
+      {
+        question: "Do you clean gutters on steep or two-story homes in Sherrills Ford?",
+        answer:
+          "Yes. We use ladders and standoff stabilizers on two-story and taller homes and take care not to contact gutters in ways that bend or pull the hangers. For homes with especially steep or tall rooflines we walk you through the access plan before we start.",
+      },
+      {
+        question: "What is gutter brightening and do I need it?",
+        answer:
+          "Gutter brightening removes the dark vertical oxidation streaks - often called tiger stripes - that form on the outside face of aluminum gutters over time. It is not required as part of a basic cleaning, but it makes a noticeable difference in curb appeal if your gutters are white or beige and showing heavy dark streaking. Ask us about adding it when you book.",
+      },
+    ],
+  },
 ];
 
 /** All blog post slugs. */
