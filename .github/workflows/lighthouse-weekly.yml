@@ -11,6 +11,20 @@ name: Weekly Lighthouse
 #
 # If any score drops below its threshold, the job fails → GitHub emails
 # me automatically about the failure, on top of the weekly digest.
+#
+# Thresholds live in .lighthouserc.json (JSON, so it can't hold comments —
+# the reasoning goes here instead).
+#
+# Best Practices is capped at 0.75, NOT the 0.85 the other categories get.
+# Every page scores exactly 78 and always will: the Google Ads tag sets
+# third-party cookies (googleads.g.doubleclick.net, google.com/ccm/collect),
+# which fails two audits worth 6 weight points. Confirmed by running
+# Lighthouse directly against production. Those cookies are how conversion
+# attribution works, so the only way to score 100 again is to delete the
+# conversion tracking. Don't "fix" this by raising the threshold back — a
+# permanently-failing check trains you to ignore the digest, which is how a
+# real regression slips through. If Best Practices ever drops BELOW 75,
+# something genuinely new has broken.
 # ─────────────────────────────────────────────────────────────────────
 
 on:
