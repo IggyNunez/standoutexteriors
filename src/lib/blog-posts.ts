@@ -2992,6 +2992,138 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  // ── Post 25 ─────────────────────────────────────────────────────────────
+  {
+    slug: "roof-cleaning-sherrills-ford-nc",
+    title: "Roof Cleaning in Sherrills Ford, NC: A Homeowner's Guide",
+    metaDescription:
+      "Black streaks on your Sherrills Ford, NC roof? A local guide to soft washing, how often to clean, and why west-shore humidity and tree cover speed up algae.",
+    h1: "Roof Cleaning in Sherrills Ford, NC: What Local Homeowners Need to Know",
+    publishedAt: "2026-08-31",
+    targetKeyword: "roof cleaning sherrills ford nc",
+    heroImage: "/assets/team/ridge-roof-cleaning-aerial-full.webp",
+    heroImageAlt:
+      "Aerial view of a soft-washed asphalt shingle roof in Sherrills Ford NC with black algae streaks removed",
+    eyebrow: "Roof Cleaning Guide",
+    heroSubline:
+      "A practical, local look at why Sherrills Ford roofs streak and grow moss so fast, how soft washing clears it without harming your shingles, and how often to clean on the west shore.",
+    intro: [
+      "If you own a home in Sherrills Ford, NC, take a look at your roof from the driveway the next time you pull in. Dark streaks running down the slope, or green and black patches spreading across the shingles, are not just dirt or age. They are a living problem, and out here on the west shore of Lake Norman they take hold fast, then seem to cover a whole section of roof in a couple of wet seasons.",
+      "This guide explains what is actually growing on Sherrills Ford roofs, why this stretch of Catawba County is so hard on shingles, how soft washing clears the growth without damaging the roof, how often a 28673 home should be cleaned, and when it makes sense to hand the job to a local pro instead of climbing up there yourself.",
+    ],
+    sections: [
+      {
+        heading: "Why Sherrills Ford, NC roofs streak and grow moss so fast",
+        paragraphs: [
+          "The dark streaks you see on roofs all over Sherrills Ford and the west side of Lake Norman are almost always a cyanobacterium called Gloeocapsa magma. It rides in on the wind as airborne spores, settles on the shingles, and feeds on the limestone filler in the shingle mat. Left alone it spreads from a few thin streaks to most of the roof within a handful of seasons. Several local conditions speed that up:",
+        ],
+        bullets: [
+          "West-shore lake humidity. The west side of Lake Norman gets the same steady moisture as Denver and Cornelius, especially on lots near Bayshore, Island Forks, and Hager Creek. Algae and moss love damp air, and a Catawba County summer is close to ideal growing weather.",
+          "Heavy tree cover along NC-150. Many of the older lots on the original NC-150 corridor sit under mature hardwood and pine canopy. Shaded roof sections stay wet for days after a rain, giving spores far more time to anchor and spread.",
+          "North-facing slopes. The north side of any roof gets the least sun and dries the slowest, which is why the streaks almost always start there and grow fastest.",
+          "Pine needle buildup. Needles that collect in valleys and along the ridge trap moisture against the shingles and feed growth right where the debris piles up.",
+          "Cedar shake and moss. Some Sherrills Ford homes still have cedar shake roofs, which hold moisture and grow moss readily. Cedar needs a gentler soft-wash mix than asphalt so the wood is not bleached.",
+        ],
+      },
+      {
+        heading: "Soft washing versus pressure washing a roof",
+        paragraphs: [
+          "The single most important thing to know about roof cleaning is that high-pressure washing damages shingles. The protective layer on an asphalt shingle is a coating of ceramic granules bonded to the mat, and a pressure washer strips those granules off in seconds. That shortens the life of the roof and voids most manufacturer warranties. It is simply not a risk worth taking to clean a roof.",
+          [
+            "Soft washing uses low-pressure delivery to apply a biodegradable cleaning solution that kills the algae, lichen, and moss at the root instead of blasting the surface. Once the growth is dead, it rinses away cleanly and the next rain or two finishes the job. The shingles stay intact and the warranty stays valid. It is the method the Asphalt Roofing Manufacturers Association recommends, and the only one we use on Sherrills Ford roofs. Our full ",
+            { text: "roof cleaning service page", href: "/services/roof-cleaning" },
+            " walks through the complete process.",
+          ],
+        ],
+      },
+      {
+        heading: "How often should you clean your roof in Sherrills Ford?",
+        paragraphs: [
+          "For most Sherrills Ford homes, a roof cleaning every two to three years keeps algae and moss from getting a serious foothold. On that schedule the biological film never builds deep enough to stain the shingle mat itself, and each later cleaning stays straightforward.",
+          "If your home sits close to the water, on or near the west shore in Northview Harbour, Bayshore, or one of the smaller coves, plan on the shorter end of that range, every one to two years. Near-water lots see consistently higher humidity, which means faster growth on every exterior surface, the roof included.",
+          [
+            "Homes tucked under the heavy tree cover along NC-150 are in the same camp. If you can already see green or black growth from the street, the roof is overdue, and cleaning sooner protects the shingle warranty and slows the spread. If you are not sure what your roof needs, we are happy to take a look during a ",
+            { text: "free estimate", href: "/contact" },
+            ".",
+          ],
+        ],
+      },
+      {
+        heading: "Warning signs your Sherrills Ford roof needs cleaning",
+        paragraphs: [
+          "You do not have to wait for the calendar. These are the signs we see most often on Sherrills Ford roofs that have gone too long between cleanings:",
+        ],
+        bullets: [
+          "Dark streaks or black discoloration running down the slope, usually starting on the north-facing sections.",
+          "Green, fuzzy moss patches in shaded valleys, near the gutters, or around a chimney or skylight.",
+          "A gray, chalky look across sections that were darker and more uniform when the shingles were newer.",
+          "Visible growth concentrating where pine needles and leaves collect, including valleys and roof penetrations.",
+          "Shingle granules collecting in the gutters and downspouts, a sign the surface is wearing.",
+        ],
+      },
+      {
+        heading: "Why it matters for west-shore Lake Norman homes",
+        paragraphs: [
+          "A streaked roof is not just an eyesore. Gloeocapsa magma feeds on the shingle itself, and moss holds moisture against the deck and wedges shingles apart as it grows, both of which shorten the life of the roof. A roof replacement on an average Sherrills Ford home runs many thousands of dollars, so a periodic cleaning that adds years to the shingles you already have is some of the cheapest protection available.",
+          [
+            "The same humidity and shade that streak the roof tend to green up the rest of the exterior too. If the roof is stained, the siding is usually not far behind, so a lot of Sherrills Ford homeowners pair roof cleaning with a ",
+            { text: "professional house washing", href: "/services/house-washing" },
+            " to reset the whole exterior at once. The pine needles that feed roof algae also clog gutters, so it is worth checking those while the crew is up there.",
+          ],
+        ],
+      },
+      {
+        heading: "DIY versus hiring a local pro",
+        paragraphs: [
+          "Cleaning your own roof is possible for a confident homeowner with the right chemistry and a ground-level delivery system, but it carries real risk. Walking a wet, algae-covered roof is slippery, and a fall from even a single-story pitch is a serious injury. On the steep rooflines and two-story homes common on the newer builds in Northview Harbour and Mountain Creek, the margin for error essentially disappears.",
+          [
+            "Getting the chemistry right matters just as much. Too weak a mix and the algae is back within months. Too strong without proper prep and the runoff can scorch landscaping or pool in the gutters. A local pro brings the correct concentration, the right delivery pressure, and the judgment to protect plants, gutters, and downspouts during the job. For most homes past a simple one-story ranch, hiring it out is the smarter call. Our ",
+            { text: "before and after gallery", href: "/before-after" },
+            " shows how dramatically a proper soft wash changes a roof.",
+          ],
+        ],
+      },
+      {
+        heading: "What our Sherrills Ford roof cleaning includes",
+        paragraphs: [
+          [
+            "Our ",
+            { text: "roof cleaning service", href: "/services/roof-cleaning" },
+            " is a low-pressure soft wash applied in overlapping passes so every section of the roof gets treated evenly. We pre-rinse the landscaping and gutters before application, apply our biodegradable cleaning blend, let it dwell to kill the growth at the root, then rinse the roof, gutters, and plant beds below. We are a locally owned company based just across the water in Denver, about 12 minutes away, and we work the 28673 ZIP every week, from new construction in Northview Harbour to older lots along NC-150.",
+          ],
+          [
+            "If you want the full background on how we serve the area, see our ",
+            { text: "Sherrills Ford, NC service page", href: "/areas/sherrills-ford-nc" },
+            ". If you just want an honest look from someone who has been on a few hundred west-shore roofs, ",
+            { text: "request a free estimate", href: "/contact" },
+            " and we will give you a straight assessment and an exact number before any work starts.",
+          ],
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does roof cleaning cost in Sherrills Ford, NC?",
+        answer:
+          "Price depends on the size and pitch of the roof and how much growth has built up. We give every Sherrills Ford homeowner a free, no-obligation estimate, so you know the exact number before we start. Call 704-917-9649 or request a quote online.",
+      },
+      {
+        question: "Will soft washing damage my shingles or void my warranty?",
+        answer:
+          "No. Soft washing uses low pressure and a biodegradable cleaning solution, not a high-pressure wand. High-pressure washing is what strips shingle granules and voids manufacturer warranties. Soft washing is the method the Asphalt Roofing Manufacturers Association recommends, and it is the only method we use on every roof job.",
+      },
+      {
+        question: "How long does a roof cleaning last in Sherrills Ford?",
+        answer:
+          "Most Sherrills Ford roofs stay clean for two to three years after a soft wash. Homes near the west shore or under the heavy tree cover along NC-150 may see regrowth start within one to two years because of the higher humidity and longer damp periods after rain. We will tell you what schedule makes sense for your specific roof.",
+      },
+      {
+        question: "Do you clean cedar shake roofs in Sherrills Ford?",
+        answer:
+          "Yes. Cedar shake holds moisture and grows moss readily, so it needs a gentler soft-wash mix than asphalt to clear the growth without bleaching the wood. We adjust the chemistry to the roof material on every job.",
+      },
+    ],
+  },
 ];
 
 /** All blog post slugs. */
