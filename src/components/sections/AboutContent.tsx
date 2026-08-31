@@ -1,11 +1,48 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import Link from "next/link";
 import { m as motion, useInView, useScroll, useTransform } from 'framer-motion';
 import { PHONE, PHONE_HREF, COMPANY_NAME } from "@/lib/constants";
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
+
+/**
+ * The About page's decorative background video (`about-video.mp4`, ~8 MB) is
+ * only ever shown at 20-25% opacity behind text — it adds ambiance, nothing
+ * more. Left unguarded it was the single biggest drag on the /about Lighthouse
+ * score (58): an 8 MB autoplay download in the mobile critical path.
+ *
+ * This hook mirrors the Hero's strategy:
+ *   1. NEVER load the video on mobile — the dark gradient panel stands on its
+ *      own, so mobile devices skip the download entirely.
+ *   2. On desktop, wait for page load + browser idle before fetching it, so it
+ *      stays out of the critical request chain (no LCP/FCP impact).
+ */
+function useDeferredDesktopVideo(): boolean {
+  const [enabled, setEnabled] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 768px)");
+    if (!mq.matches) return; // mobile: never load the video
+    const start = () => {
+      const ric = (window as Window & {
+        requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
+      }).requestIdleCallback;
+      if (ric) {
+        ric(() => setEnabled(true), { timeout: 2000 });
+      } else {
+        setTimeout(() => setEnabled(true), 1200);
+      }
+    };
+    if (document.readyState === "complete") {
+      start();
+    } else {
+      window.addEventListener("load", start, { once: true });
+      return () => window.removeEventListener("load", start);
+    }
+  }, []);
+  return enabled;
+}
 
 const TRUST_PILLS = [
   { icon: "💧", label: "Soft & Pressure Wash" },
@@ -32,6 +69,7 @@ const VALUES = [
 export default function AboutContent() {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: "0px 0px -100px 0px" });
+  const showVideo = useDeferredDesktopVideo();
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -54,11 +92,15 @@ export default function AboutContent() {
           className="relative overflow-hidden"
           style={{ background: "linear-gradient(160deg, #061e38 0%, #0A2E5C 60%, #0d3870 100%)" }}
         >
-          {/* Parallax video, dimmed */}
+          {/* Parallax video, dimmed. Desktop-only + deferred to idle so the
+              ~8 MB file never touches the critical request chain (see
+              useDeferredDesktopVideo). Until then the gradient panel shows. */}
           <motion.div className="absolute inset-0 h-[120%]" style={{ y: imgY }}>
-            <video autoPlay muted loop playsInline className="w-full h-full object-cover opacity-25">
-              <source src="/assets/about-video.mp4" type="video/mp4" />
-            </video>
+            {showVideo && (
+              <video autoPlay muted loop playsInline preload="none" className="w-full h-full object-cover opacity-25">
+                <source src="/assets/about-video.mp4" type="video/mp4" />
+              </video>
+            )}
           </motion.div>
 
           {/* Water shimmer blobs */}
@@ -309,10 +351,15 @@ export default function AboutContent() {
           className="relative overflow-hidden"
           style={{ minHeight: "55vw", background: "linear-gradient(160deg, #061e38 0%, #0A2E5C 100%)" }}
         >
+          {/* Mobile never loads the video (useDeferredDesktopVideo stays false
+              below 768px) — the gradient panel carries the section on its own,
+              saving mobile users the full ~8 MB download. */}
           <motion.div className="absolute inset-0 h-[120%]" style={{ y: imgY }}>
-            <video autoPlay muted loop playsInline className="w-full h-full object-cover opacity-20">
-              <source src="/assets/about-video.mp4" type="video/mp4" />
-            </video>
+            {showVideo && (
+              <video autoPlay muted loop playsInline preload="none" className="w-full h-full object-cover opacity-20">
+                <source src="/assets/about-video.mp4" type="video/mp4" />
+              </video>
+            )}
           </motion.div>
 
           {/* Bottom wave into white */}
