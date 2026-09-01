@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { COMPANY_NAME, EMAIL } from "@/lib/constants";
+import { COMPANY_NAME, EMAIL, SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
   description: `Terms of service for ${COMPANY_NAME}.`,
+  alternates: { canonical: `${SITE_URL}/terms` },
 };
 
 export default function TermsPage() {
