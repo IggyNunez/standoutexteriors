@@ -3250,6 +3250,118 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "gutter-cleaning-cornelius-nc",
+    title: "Gutter Cleaning in Cornelius, NC | Stand Out Exterior",
+    metaDescription:
+      "Why Cornelius, NC gutters fill fast near Lake Norman, how often to clean them in 28031, and the warning signs you cannot afford to miss. Free estimates.",
+    h1: "Gutter Cleaning in Cornelius, NC: What Local Homeowners Need to Know",
+    publishedAt: "2026-09-07",
+    targetKeyword: "gutter cleaning cornelius nc",
+    heroImage: "/assets/team/ridge-gutter-cleaning-ladder-roof.webp",
+    heroImageAlt:
+      "Stand Out Exterior technician cleaning a clogged gutter from a ladder on a home in Cornelius NC",
+    eyebrow: "Gutter Cleaning Guide",
+    heroSubline:
+      "A practical, local look at why Cornelius gutters clog so fast near Lake Norman, how often to clean them in 28031, and when to call a pro.",
+    intro: [
+      "Cornelius sits on a narrow neck of Mecklenburg County wrapped by Lake Norman on three sides, and that address is as hard on gutters as it is beautiful. The humidity that drifts off the water, combined with the canopy of mature oaks shading so many lots along Jetton Road and The Peninsula, means debris does not dry out and blow away - it packs in wet, holds moisture, and quietly becomes a serious problem for downspouts, fascia boards, and the foundation below.",
+      "This guide covers how often to clean gutters in the 28031 area, the local conditions that make Cornelius maintenance more demanding than most, the warning signs worth acting on right away, and when it makes sense to call a pro instead of climbing a ladder yourself.",
+    ],
+    sections: [
+      {
+        heading: "Why Cornelius, NC gutters clog faster than most",
+        paragraphs: [
+          "Gutter cleaning in Cornelius is more than a once-a-year item on most properties because the local environment is genuinely hard on gutter systems. Several conditions stack up at once:",
+        ],
+        bullets: [
+          "Lake Norman humidity. Three sides of lake mean the air stays damp for most of the year. Wet debris never dries and blows out on its own - it compacts into dense mats that are far harder to flush than loose leaves.",
+          "Oak tannin and heavy leaf drop. The mature oaks along Jetton Road, throughout The Peninsula, and in Robbins Park shed large leaf loads and acorns each fall. That material decomposes into a thick, dark sludge that settles into downspout elbows and catches.",
+          "Spring pollen. The yellow pollen blanket that covers 28031 each April settles into the gutter channel, mixes with grit washed off the shingles, and turns into a paste that blocks the downspout inlet.",
+          "Pine needles. Loblolly and longleaf pines on older lots near Catawba Avenue and the I-77 corridor drop needles year round. They knit together into a mat that water runs over instead of through.",
+          "Pool and roof runoff. Homes in Antiquity with elevated pool decks carry chlorine residue into the gutters whenever it rains. Over time that residue degrades joint sealant and stains the gutter face with the dark oxidation tiger stripes common on aluminum systems.",
+        ],
+      },
+      {
+        heading: "How often should you clean gutters in Cornelius?",
+        paragraphs: [
+          "For most Cornelius homes, twice a year is the right baseline: once in late spring after the oak flowers and pollen finish dropping, and again in late fall after the leaf season. That schedule keeps the system clear through the two heaviest clogging periods.",
+          "Waterfront and heavily wooded lots need more attention. If your home sits close to the water in The Peninsula or Northview Harbour, or is tucked under heavy tree canopy, plan on three visits a year or at minimum a mid-season check in early summer. Near-water humidity keeps debris wet far longer and lets it compact faster than on an inland property.",
+          [
+            "Newer builds in Antiquity and Robbins Park with fewer mature trees close to the roofline may get by with one thorough cleaning a year, but a quick inspection before the late-summer storm season is still a smart precaution. If you are not sure what your property needs, we are happy to take a look during a ",
+            { text: "free estimate", href: "/contact" },
+            ".",
+          ],
+        ],
+      },
+      {
+        heading: "Warning signs your gutters need attention now",
+        paragraphs: [
+          "You do not have to wait for the calendar. These are the signs we see most often on Cornelius homes that have gone too long between cleanings:",
+        ],
+        bullets: [
+          "Water overflowing the front edge of the gutter channel during rain - a clear sign the trough or downspout inlet is blocked.",
+          "Dark streaks or staining on the fascia board directly below the gutter, which means water has been backing up and sitting against the wood.",
+          "Sagging sections anywhere along the run, caused by the weight of standing water and compacted debris pulling on the gutter hangers.",
+          "Plants or grass sprouting from the gutter trough - any soil and seed that wash in will take root given the moisture levels near Lake Norman.",
+          "Pooling water against the foundation or in a crawlspace after heavy rain, often traced to a blocked downspout emptying close to the house instead of away from it.",
+        ],
+      },
+      {
+        heading: "What clogged gutters cost Cornelius homeowners",
+        paragraphs: [
+          "A clogged gutter is easy to put off because the damage it causes is slow and mostly hidden. By the time it becomes obvious, the repair bill is typically far larger than a periodic cleaning would have been.",
+          "Standing water in a blocked channel adds real weight to the hangers and the fascia behind them. Over a season or two that load pulls hangers loose and begins to rot the wood. Fascia replacement on a two-story home in The Peninsula or Antiquity runs into real money. Water that overflows at the splash block and pools against the foundation can work into the slab, a crawlspace, or a finished basement - remediation costs that dwarf what routine gutter cleaning would have run across many years.",
+          [
+            "The same humidity and shade that pack a gutter tend to grow algae on the fascia and siding as well. Many Cornelius homeowners combine a gutter service with a ",
+            { text: "professional house washing", href: "/services/house-washing" },
+            " to address both problems in a single visit and get the whole exterior back to looking sharp.",
+          ],
+        ],
+      },
+      {
+        heading: "What our Cornelius gutter cleaning includes",
+        paragraphs: [
+          [
+            "Our ",
+            { text: "gutter cleaning service", href: "/services/gutter-cleaning" },
+            " covers the full system, not just the sections that are easy to reach from a standard ladder. We remove debris from the channel by hand and by flushing, clear every downspout from top to bottom, and inspect each hanger and joint while we are up there. If a downspout is blocked at an underground extension we locate and flush the blockage. We also offer gutter face brightening to remove the oxidation tiger stripes that form on painted aluminum gutters, which is a common sight on Cornelius homes after several wet seasons near the lake.",
+          ],
+          [
+            "We are a locally owned company based in Denver, about 10 minutes from most of Cornelius, and we work the 28031 ZIP every week - The Peninsula, Antiquity, Robbins Park, and the Jetton Road corridor. If you want to see real before-and-after results from local jobs, our ",
+            { text: "before and after gallery", href: "/before-after" },
+            " is worth a look. For the full picture of what we offer in this area, visit our ",
+            { text: "Cornelius, NC service page", href: "/areas/cornelius-nc" },
+            ". To get an exact price for your gutters, ",
+            { text: "request a free estimate", href: "/contact" },
+            " and we will get back to you quickly.",
+          ],
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does gutter cleaning cost in Cornelius, NC?",
+        answer:
+          "Cost depends on the linear footage, the number of downspouts, how clogged the system is, and whether gutter brightening or minor hanger repairs are needed. We give every Cornelius homeowner a free, no-obligation estimate so you know the exact number before we start. Call 704-917-9649 or request a quote online.",
+      },
+      {
+        question: "How often should I clean my gutters in Cornelius?",
+        answer:
+          "Twice a year is the right baseline for most homes in 28031 - once in late spring and once in late fall. Homes in The Peninsula, near the waterfront, or under heavy tree cover often need three visits because the high humidity keeps debris wet and packing faster than on drier inland properties.",
+      },
+      {
+        question: "Do you clean gutters in The Peninsula and Antiquity?",
+        answer:
+          "Yes. We work throughout Cornelius every week, including The Peninsula, Antiquity, Robbins Park, and the Jetton Road corridor. We are based in Denver, about 10 minutes away, so we know these neighborhoods well and response times are fast.",
+      },
+      {
+        question: "Can clogged gutters damage my foundation?",
+        answer:
+          "Yes. A blocked downspout redirects overflow toward the foundation instead of away from it. Over time that pooling can work into a slab, a crawlspace, or a finished basement. Keeping gutters clear and downspouts discharging well away from the house is one of the simplest and cheapest ways to protect your foundation.",
+      },
+    ],
+  },
 ];
 
 /** All blog post slugs. */
