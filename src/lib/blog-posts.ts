@@ -3124,6 +3124,132 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "pressure-washing-cornelius-nc",
+    title: "Pressure Washing in Cornelius, NC: A Homeowner's Guide",
+    metaDescription:
+      "What to pressure wash and what to soft wash on a Cornelius, NC home, how often Lake Norman humidity makes it worth doing, and when to hire a local pro.",
+    h1: "Pressure Washing in Cornelius, NC: What Local Homeowners Need to Know",
+    publishedAt: "2026-09-07",
+    targetKeyword: "pressure washing cornelius nc",
+    heroImage: "/assets/team/ridge-driveway-surface-cleaner-action.webp",
+    heroImageAlt:
+      "Ridge Curwood pressure washing a concrete driveway with a surface cleaner in Cornelius NC",
+    eyebrow: "Pressure Washing Guide",
+    heroSubline:
+      "A local, practical guide to pressure washing a Cornelius home: what to blast, what to soft wash instead, and how often lake humidity makes it worth doing.",
+    intro: [
+      "Cornelius sits on a narrow neck of Mecklenburg County wrapped by Lake Norman on three sides, and that address is beautiful and hard on a home's exterior in equal measure. The lake that makes The Peninsula and the Jetton Road corridor so desirable keeps the air damp for most of the year, and damp air is exactly what algae, mildew, and red-clay film need to take hold. Give it a season or two and a bright driveway turns dingy, a paver patio grows a slick green film in the joints, and the shaded north side of the house goes gray.",
+      "Pressure washing is the fastest way to undo all of that, but only on the right surfaces. Aimed at the wrong material or used with the wrong technique, a pressure washer strips paint, cracks siding, and drives water where it does not belong. This guide breaks down what actually belongs under high pressure on a typical 28031 property, what should be soft washed instead, how often our waterfront humidity makes cleaning worthwhile, and when it pays to hand the machine to a local pro.",
+    ],
+    sections: [
+      {
+        heading: "Pressure washing versus soft washing",
+        paragraphs: [
+          "The single most important thing to understand before you clean any exterior surface is that pressure washing and soft washing are two different tools for two different jobs. Getting this wrong is how most homeowners end up damaging their own homes.",
+          "Pressure washing uses high-force water to physically blast grime off hard, durable surfaces. It is the right call for concrete, brick pavers, and most stone. Soft washing uses low pressure plus a biodegradable cleaning solution that kills algae, mold, and mildew at the root, then rinses gently. It is the right call for anything water can damage or get behind: siding, roofs, painted wood, and stucco.",
+          "The rule of thumb that keeps Cornelius homeowners out of trouble is simple. If it is horizontal and made of concrete or stone, you can usually pressure wash it. If it is vertical and part of the house itself, it almost always wants a soft wash instead.",
+        ],
+      },
+      {
+        heading: "What pressure washing fixes on a Cornelius home",
+        paragraphs: [
+          "Cornelius homes carry a very specific set of stains, driven by clay soil, mature trees, and near-constant lake moisture. Pressure washing, done with a surface cleaner rather than a point-tip wand, handles all of them:",
+        ],
+        bullets: [
+          "Red-clay staining. Piedmont clay runs off in every storm and tints concrete a stubborn pink-orange. The clay works into the pores of the slab, so a surface cleaner has to pull it out, not just rinse the top.",
+          "Mold and mildew on shaded concrete. North- and west-facing driveways, back patios, and walkways in The Peninsula grow a slick green-black film that gets dangerously slippery when wet.",
+          "Pool deck algae in Antiquity. Stamped and travertine pool decks collect chlorine residue and organic growth in the texture, and both come up with the right approach.",
+          "Oak tannin along Jetton Road. The mature oaks that shade so many lots drop leaves and acorns that rot into dark tannin stains on patios, pavers, and porch floors.",
+          "Pollen paste. Heavy spring pollen settles into the texture of stamped concrete and paver joints and turns into a grimy film that holds water.",
+        ],
+      },
+      {
+        heading: "How often should you pressure wash in Cornelius?",
+        paragraphs: [
+          "For most Cornelius homes, an annual cleaning of the concrete and hard surfaces is the right baseline. Once a year keeps the clay film, mold, and tannin from building into the deeper stains that take real effort to remove.",
+          [
+            "Waterfront and heavily shaded homes need it more often. If your driveway or pool deck sits close to the lake in The Peninsula, backs up to woods, or stays damp in the shade, plan on cleaning every six to eight months. The same logic applies to the ",
+            {
+              text: "driveway and concrete cleaning",
+              href: "/services/driveway-cleaning",
+            },
+            " we do most often out here: the shadier and lower the spot, the faster the growth comes back.",
+          ],
+          [
+            "Paver patios and pool decks are their own case. Beyond a surface clean, the joints benefit from re-sanding and sealing so algae cannot root in the gaps again, which is what our ",
+            { text: "paver cleaning and sealing", href: "/services/paver-cleaning" },
+            " service is built for. Siding and roofs run on a longer schedule: a soft wash of the house once a year and a roof cleaning every two to five years is usually enough.",
+          ],
+        ],
+      },
+      {
+        heading: "Surfaces you should never pressure wash",
+        paragraphs: [
+          "This is the part that saves homeowners the most money, because damage from pressure washing the wrong surface is rarely cheap to fix. Keep the high-pressure wand off these:",
+        ],
+        bullets: [
+          "Roof shingles. High pressure strips the protective granules off asphalt shingles and voids most manufacturer warranties. Roofs need a soft wash, the method the shingle makers actually recommend.",
+          "Vinyl, Hardie, and wood siding. Pressure can crack panels, drive water behind them, and strip paint off wood trim. Siding gets a low-pressure soft wash.",
+          "Stone veneer and mixed elevations. Cornelius custom homes often combine stone, hardiplank, and painted wood on one wall, and each surface needs its own method rather than one blast of pressure.",
+          "Stucco and dryvit. The texture is far more fragile than it looks, and a wand can blow holes straight through it.",
+          "Windows and screens. High pressure breaks seals and bends frames. Glass gets cleaned with a pure-water system instead.",
+        ],
+      },
+      {
+        heading: "The Peninsula, Antiquity, and the Jetton Road corridor",
+        paragraphs: [
+          "Cornelius packs a lot of high-value, mixed-material homes into a small footprint, and the waterfront neighborhoods take the hardest beating from lake humidity. In The Peninsula, north- and west-facing siding grows algae almost year round, so those homes do best on a steady annual soft-wash rotation rather than a one-time cleaning.",
+          [
+            "Because so many of these homes mix stone, stucco, hardiplank, and painted trim on a single elevation, the cleaning method has to change as we move across the house. That is a soft wash for the delicate materials and true pressure only on the hard, horizontal surfaces below. If your siding has gone green or your porch ceiling is streaked with tannin, pairing the hard-surface work with a ",
+            { text: "professional house washing", href: "/services/house-washing" },
+            " gets the whole exterior back to looking sharp in one visit.",
+          ],
+        ],
+      },
+      {
+        heading: "What our Cornelius pressure washing includes",
+        paragraphs: [
+          [
+            "We are a locally owned company that works the 28031 ZIP every week, from Jetton Road out to Antiquity and Robbins Park. For hard surfaces, we pre-treat the area to break down clay, mold, and oil, run a commercial surface cleaner in overlapping passes for an even, stripe-free finish, hand-detail the edges and cracks, and flush the whole perimeter so debris ends up in the street instead of your garage. For the house itself, we switch to a ",
+            { text: "soft wash", href: "/services/house-washing" },
+            " that safely clears the algae and mildew our lake humidity grows on siding.",
+          ],
+          [
+            "Most homeowners have us handle the whole exterior in one visit: driveway, walkways, and pool deck under pressure, siding and ",
+            { text: "roof", href: "/services/roof-cleaning" },
+            " by soft wash. If you want the full picture of how we serve the area, see our ",
+            { text: "Cornelius, NC service page", href: "/areas/cornelius-nc" },
+            ", or request a ",
+            { text: "free estimate", href: "/contact" },
+            " and we will walk the property with you and give you an exact number before any work starts.",
+          ],
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does pressure washing cost in Cornelius, NC?",
+        answer:
+          "It depends on the surfaces involved, the square footage, and how much buildup there is. A driveway alone is very different from a full exterior package with siding, a pool deck, and a roof. We give every Cornelius homeowner a free, no-obligation estimate, so you know the exact number before we start. Call 704-917-9649 or request a quote online.",
+      },
+      {
+        question: "Is pressure washing safe for my siding and roof?",
+        answer:
+          "High pressure is not safe for siding, roofs, stucco, stone veneer, or windows. Those surfaces should be soft washed, which uses low pressure plus a cleaning solution that removes algae and mildew without forcing water behind panels or stripping shingle granules. We reserve true high pressure for concrete, pavers, and other hard surfaces.",
+      },
+      {
+        question: "How often should I pressure wash my driveway in Cornelius?",
+        answer:
+          "Once a year is the right baseline for most homes. If your driveway or pool deck sits close to the lake in The Peninsula, backs up to woods, or stays shaded and damp, every six to eight months keeps the mold and red-clay staining from setting in deeper.",
+      },
+      {
+        question: "Do you clean pool decks and paver patios in Cornelius?",
+        answer:
+          "Yes. We soft wash stamped and travertine pool decks to lift chlorine residue and algae without etching the finish, and we deep clean paver patios. For pavers we can also re-sand and seal the joints so growth does not root back in, which keeps them cleaner far longer than a rinse alone.",
+      },
+    ],
+  },
 ];
 
 /** All blog post slugs. */
