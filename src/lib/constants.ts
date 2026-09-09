@@ -183,8 +183,11 @@ export const SERVICES: ServiceCard[] = [
     label: "Commercial",
     title: "Church & Steeple Cleaning",
     description: "Specialized exterior cleaning for churches, steeples, siding, walkways, and stairs. Soft-wash chemistry that kills mold at the root so your congregation stays safe and your building looks its best.",
-    image: "/assets/team/ridge-ladder-gutter-upward.webp",
-    imageAlt: "Exterior church cleaning in Denver NC",
+    // Real steeple job, Sept 2026. Replaces a generic gutter photo that had
+    // nothing to do with churches. 1600x1200 matches the card's 4/3 box
+    // exactly, so nothing important gets cropped out.
+    image: "/assets/church/church-steeple-truck-wide.webp",
+    imageAlt: "Stand Out Exterior Cleaning washing a church steeple in Denver NC",
     icon: "building",
     bullets: [
       "Steeples, siding, and high-elevation cleaning",

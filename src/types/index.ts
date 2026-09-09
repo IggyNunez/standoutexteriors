@@ -46,6 +46,20 @@ export interface ServiceDetail {
   related: string[];
   /** Optional surfaces / materials we handle for this service */
   surfaces?: string[];
+  /**
+   * Optional real job photos for this service. Rendered as a gallery on the
+   * detail page only when present, so services without photos are unchanged.
+   * These are our own job-site shots, not stock, which is the whole point:
+   * a church board wants to see a steeple we actually cleaned.
+   */
+  gallery?: {
+    src: string;
+    alt: string;
+    /** Short line shown under the photo. Keep it factual. */
+    caption: string;
+    /** Controls grid span. "wide" takes two columns on desktop. */
+    orientation?: "tall" | "wide" | "square";
+  }[];
 }
 
 export interface ProcessStep {
