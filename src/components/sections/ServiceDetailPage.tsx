@@ -920,6 +920,106 @@ function Process({ detail, service }: Props) {
 /* ─────────────────────────────────────────────────────────────────── */
 /*                      FAQ accordion                                   */
 /* ─────────────────────────────────────────────────────────────────── */
+/* ─────────────────────────────────────────────────────────────────── */
+/*                      Real job gallery                                */
+/* ─────────────────────────────────────────────────────────────────── */
+/**
+ * Renders `detail.gallery` when a service has real job photos, and nothing
+ * at all when it doesn't, so every other service page is untouched.
+ *
+ * Sits between Process and FAQ deliberately: the page argues what the
+ * service is, then how we do it, then shows the proof, then handles
+ * objections. Proof lands better after the method than before it.
+ */
+function JobGallery({ detail, service }: Props) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "0px 0px -80px 0px" });
+
+  if (!detail.gallery?.length) return null;
+
+  return (
+    <section ref={ref} className="bg-canvas py-24 md:py-28">
+      <div className="max-w-[1300px] mx-auto px-[clamp(20px,4vw,80px)]">
+        <div className="text-center mb-14">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+          >
+            <span className="section-eyebrow text-blue-500">Real Job, Not Stock</span>
+          </motion.div>
+          <motion.h2
+            className="section-title mt-3 mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.1 }}
+          >
+            {service.title} in Action
+          </motion.h2>
+          <motion.div
+            className="w-16 h-[2px] mx-auto"
+            initial={{ scaleX: 0 }}
+            animate={isInView ? { scaleX: 1 } : {}}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            style={{ transformOrigin: "center", background: "#00A651" }}
+          />
+        </div>
+
+        {/* items-start stops a square tile from being stretched to match the
+            taller "wide" tile sharing its grid row, which would leave a strip
+            of empty card background under the photo. */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 items-start">
+          {detail.gallery.map((shot, i) => {
+            const isWide = shot.orientation === "wide";
+            return (
+              <motion.figure
+                key={shot.src}
+                initial={{ opacity: 0, y: 24 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 0.1 + (i % 3) * 0.08, duration: 0.55, ease: EASE }}
+                className={`group relative rounded-2xl overflow-hidden bg-blue-900/5 border border-blue-900/10 ${
+                  isWide ? "sm:col-span-2" : ""
+                }`}
+              >
+                <div
+                  className="relative w-full"
+                  style={{
+                    aspectRatio:
+                      shot.orientation === "tall"
+                        ? "3 / 4"
+                        : shot.orientation === "wide"
+                          ? "16 / 10"
+                          : "1 / 1",
+                  }}
+                >
+                  <Image
+                    src={shot.src}
+                    alt={shot.alt}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                  />
+                  {/* Bottom fade so the caption stays readable against a
+                      bright sky, which every one of these shots has. */}
+                  <div
+                    className="absolute inset-x-0 bottom-0 h-[45%] pointer-events-none"
+                    style={{
+                      background:
+                        "linear-gradient(to top, rgba(6,20,40,0.88) 0%, rgba(6,20,40,0.35) 45%, transparent 100%)",
+                    }}
+                  />
+                  <figcaption className="absolute inset-x-0 bottom-0 p-5 text-[0.82rem] leading-snug text-white font-medium">
+                    {shot.caption}
+                  </figcaption>
+                </div>
+              </motion.figure>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function FaqSection({ detail, service }: Props) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "0px 0px -80px 0px" });
@@ -1223,6 +1323,7 @@ export default function ServiceDetailPage({ service, detail }: Props) {
       <Hero service={service} detail={detail} />
       <BodyCopy service={service} detail={detail} />
       <Process service={service} detail={detail} />
+      <JobGallery service={service} detail={detail} />
       <FaqSection service={service} detail={detail} />
       <RelatedServices service={service} detail={detail} />
       <FinalCTA service={service} />

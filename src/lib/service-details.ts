@@ -921,6 +921,50 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
       },
     ],
     related: ["commercial-pressure-washing", "roof-cleaning", "house-washing"],
+    /**
+     * Real steeple job, shot on site September 2026. Ordered to tell the
+     * story: the problem, the work, then the proof. The two before/after
+     * frames are the ones that actually close a church board, so they land
+     * last where they are remembered.
+     */
+    gallery: [
+      {
+        src: "/assets/church/church-steeple-algae-before.webp",
+        alt: "Stand Out crew member looking up at a church steeple streaked with green algae in Denver NC",
+        caption: "Algae and mold streaking down a white steeple, before treatment",
+        orientation: "tall",
+      },
+      {
+        src: "/assets/church/church-steeple-softwash-closeup.webp",
+        alt: "Soft wash spray treating a mold-covered church steeple from an extension ladder",
+        caption: "Low-pressure soft wash doing the work, no scrubbing, no damage",
+        orientation: "tall",
+      },
+      {
+        src: "/assets/church/church-steeple-softwash-spray.webp",
+        alt: "Stand Out technician on a ladder soft washing the upper steeple of a brick church",
+        caption: "Reaching the full height of the steeple safely from a ladder",
+        orientation: "tall",
+      },
+      {
+        src: "/assets/church/church-steeple-truck-wide.webp",
+        alt: "Stand Out Exterior Cleaning truck parked at a brick church while a technician washes the steeple",
+        caption: "Our rig on site, working around the congregation's schedule",
+        orientation: "wide",
+      },
+      {
+        src: "/assets/church/church-steeple-before-after.webp",
+        alt: "Before and after of a church steeple, grey and streaked on the left, bright white on the right",
+        caption: "Before and after, same steeple, same day",
+        orientation: "square",
+      },
+      {
+        src: "/assets/church/church-steeple-before-after-wide.webp",
+        alt: "Wider before and after of a church steeple and roofline after soft washing",
+        caption: "The gold cross detailing readable again once the mold is gone",
+        orientation: "square",
+      },
+    ],
   },
 
   "christmas-lights": {
