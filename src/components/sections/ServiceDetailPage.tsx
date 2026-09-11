@@ -6,6 +6,7 @@ import Link from "next/link";
 import { m as motion, useInView, AnimatePresence } from 'framer-motion';
 import type { ServiceCard, ServiceDetail } from "@/types";
 import { PHONE, PHONE_HREF, SERVICES } from "@/lib/constants";
+import QuoteForm from "@/components/sections/QuoteForm";
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
@@ -280,8 +281,8 @@ function Hero({ service, detail }: Props) {
           />
         ))}
 
-      <div className="relative z-[1] max-w-[1920px] mx-auto px-[clamp(20px,4vw,80px)] grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-        <div className="md:col-span-7 lg:col-span-6">
+      <div className="relative z-[1] max-w-[1920px] mx-auto px-[clamp(20px,4vw,80px)] grid grid-cols-1 lg:grid-cols-12 gap-10 xl:gap-14 items-center">
+        <div className="lg:col-span-7 xl:col-span-6">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -400,7 +401,7 @@ function Hero({ service, detail }: Props) {
             className="flex flex-wrap gap-3"
           >
             <Link
-              href="/contact"
+              href="#hero-quote"
               className="px-8 py-3.5 bg-orange-500 text-white text-[0.72rem] font-extrabold tracking-[0.08em] uppercase rounded-full hover:bg-orange-700 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(255,107,53,0.3)] transition-all duration-300"
             >
               Get a Free Estimate
@@ -425,6 +426,30 @@ function Hero({ service, detail }: Props) {
             </a>
           </motion.div>
         </div>
+        {/* Right column: the estimate form, on the page instead of one click
+            away on /contact. Each service page is effectively a landing page
+            for its own keyword, so the form belongs where the visitor already
+            is. Beside the headline from lg up; below it on smaller screens,
+            where the "Get a Free Estimate" button jumps down to it.
+            The service is preselected, and the lead is tagged with this page
+            so Ridge can see which page converted. */}
+        <motion.div
+          id="hero-quote"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.35, duration: 0.7, ease: EASE }}
+          className="lg:col-span-5 xl:col-start-8 scroll-mt-28"
+        >
+          <p className="mb-3 text-center text-white text-[0.78rem] font-bold uppercase tracking-[0.1em] drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
+            Get Your Free Estimate
+          </p>
+          <QuoteForm
+            source={`Website, ${service.title} page`}
+            formSource={`service-hero:${service.slug}`}
+            defaultService={service.title}
+            compact
+          />
+        </motion.div>
       </div>
     </section>
   );

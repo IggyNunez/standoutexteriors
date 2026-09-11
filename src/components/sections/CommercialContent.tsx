@@ -4,6 +4,7 @@ import { useRef } from "react";
 import Link from "next/link";
 import { m as motion, useInView } from 'framer-motion';
 import { PHONE, PHONE_HREF, COMPANY_NAME } from "@/lib/constants";
+import QuoteForm from "@/components/sections/QuoteForm";
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
@@ -158,8 +159,8 @@ export default function CommercialContent() {
           </svg>
         </div>
 
-        <div className="relative z-[5] max-w-[1920px] mx-auto px-[clamp(20px,4vw,80px)]">
-          <div className="max-w-[760px]">
+        <div className="relative z-[5] max-w-[1920px] mx-auto px-[clamp(20px,4vw,80px)] grid grid-cols-1 lg:grid-cols-12 gap-10 xl:gap-14 items-center">
+          <div className="lg:col-span-7 xl:col-span-6 max-w-[760px]">
 
             {/* Eyebrow */}
             <motion.div
@@ -233,7 +234,7 @@ export default function CommercialContent() {
               className="flex flex-wrap gap-4"
             >
               <Link
-                href="/contact"
+                href="#hero-quote"
                 className="px-8 py-3.5 bg-orange-500 text-white text-[0.72rem] font-extrabold tracking-[0.08em] uppercase rounded-full hover:bg-orange-700 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(255,107,53,0.4)] transition-all duration-300"
               >
                 Get A Free Estimate
@@ -249,6 +250,27 @@ export default function CommercialContent() {
               </a>
             </motion.div>
           </div>
+          {/* Right column: the estimate form, on the page rather than one
+              click away on /contact. Beside the headline from lg up, below
+              it on smaller screens where "Get A Free Estimate" jumps to it.
+              Preselects commercial and tags the lead with this page. */}
+          <motion.div
+            id="hero-quote"
+            initial={{ opacity: 0, y: 20 }}
+            animate={heroInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.35, duration: 0.7, ease: EASE }}
+            className="lg:col-span-5 xl:col-start-8 scroll-mt-28"
+          >
+            <p className="mb-3 text-center text-white text-[0.78rem] font-bold uppercase tracking-[0.1em] drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
+              Get Your Free Estimate
+            </p>
+            <QuoteForm
+              source="Website, Commercial page"
+              formSource="commercial-hero"
+              defaultService="Commercial Pressure Washing"
+              compact
+            />
+          </motion.div>
         </div>
       </section>
 
