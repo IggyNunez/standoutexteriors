@@ -3491,6 +3491,130 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "window-cleaning-cornelius-nc",
+    title: "Window Cleaning in Cornelius, NC: A Homeowner's Guide",
+    metaDescription:
+      "Why Cornelius, NC windows film over fast, how pure-water cleaning gets glass spot-free, and when to hire a local pro in 28031.",
+    h1: "Window Cleaning in Cornelius, NC: What Homeowners Should Know",
+    publishedAt: "2026-09-14",
+    targetKeyword: "window cleaning Cornelius NC",
+    heroImage: "/assets/team/ridge-window-cleaning-sunroom.webp",
+    heroImageAlt:
+      "Ridge Curwood cleaning sunroom windows on a Cornelius NC home near Lake Norman",
+    eyebrow: "Window Cleaning Guide",
+    heroSubline:
+      "A local look at why Cornelius windows cloud over so quickly, why pure-water cleaning beats a spray bottle, and how often a home in 28031 should really be done.",
+    intro: [
+      "In Cornelius, clean windows are harder to keep than most homeowners expect. Between the lake humidity that rolls in off Lake Norman, the pollen drop from the heavy tree cover around The Peninsula and Antiquity, and the sprinkler overspray that hits every ground-floor pane through the summer, glass in the 28031 ZIP picks up a film that a paper towel just smears around. For waterfront homes along Jetton Road or tucked inside Robbins Park, the combination of moisture, pollen, and afternoon sun on west-facing glass can make windows look cloudy within weeks of a DIY cleaning.",
+      "This guide covers what actually dirties windows in Cornelius, why hard-water spotting is such a stubborn local problem, how a professional pure-water system gets glass truly spot-free, how often a Cornelius home should be cleaned, and when it makes more sense to hand the job to a pro than to climb a ladder yourself.",
+    ],
+    sections: [
+      {
+        heading: "Why Cornelius, NC windows cloud over so fast",
+        paragraphs: [
+          "Cornelius sits right on the southern shore of Lake Norman, and that waterfront location creates a specific set of conditions that work against clean glass:",
+        ],
+        bullets: [
+          "Lake humidity and morning condensation. The moisture coming off Lake Norman keeps the glass damp longer than homes inland, giving pollen and airborne dust more time to bond before the glass dries. The Peninsula and the Jetton Road corridor see this most.",
+          "Heavy spring pollen. The oaks and pines around Antiquity and Robbins Park coat every pane in a yellow-green film through April and May. Once the morning dew cycles through it, that pollen dries into a streaky haze that a damp cloth just smears.",
+          "Sprinkler and hard-water spotting. The irrigation that keeps Cornelius yards green also throws mineral-rich tap water onto lower panes every cycle, leaving cloudy white rings that do not wipe off without the right treatment.",
+          "Afternoon sun on west-facing glass. Many Cornelius homes face the lake or face west, so every streak and water spot lights up in the late afternoon, which is exactly when guests and neighbors notice.",
+          "Road dust and construction grit. Ongoing development along Catawba Avenue and near the I-77 interchange puts fine dust into the air that settles into the tracks and corners of every window on a busy street.",
+        ],
+      },
+      {
+        heading: "Pure water versus a squeegee and a bottle",
+        paragraphs: [
+          "The reason a store-bought cleaner and a rag never quite finish the job comes down to what is left behind. Spray cleaners contain soaps and surfactants that leave a thin residue at the edges of each pane, and that residue attracts dust and dries into the streaks you see the next sunny morning. On top of that, tap water carries dissolved minerals that dry into spots the instant the glass air-dries.",
+          "A professional pure-water system solves both problems at once. Ordinary water is run through reverse-osmosis and deionization filters until its total dissolved solids reading is essentially zero. That purified water is scrubbed across the glass with a soft brush on a carbon-fiber extension pole, then rinsed. Because there are no minerals and no soap in the rinse water, the glass dries completely on its own with no spots, no streaks, and no residue along the edges to trap the next round of lake pollen.",
+          [
+            "It is also safer than a ladder job. The extension poles reach second and third-story windows from the ground, so there is no ladder propped against a two-story wall on the uneven grade common around The Peninsula and Robbins Park. Our full ",
+            { text: "window cleaning service", href: "/services/window-cleaning" },
+            " uses this pure-water method on every exterior pane, with a traditional microfiber and squeegee finish on interior glass.",
+          ],
+        ],
+      },
+      {
+        heading: "How often should you clean windows in Cornelius?",
+        paragraphs: [
+          "For most Cornelius homes, twice a year is the right baseline: once in late spring to clear off the pollen and oak flowers, and once in the fall to wash away summer dust and the mildew film that forms in the rubber seals and frames through our humid season. That schedule keeps the glass clear through the two periods that dirty it the most.",
+          "If your home sits on a waterfront lot, runs irrigation near the glass, backs up to heavy tree cover in Antiquity or The Peninsula, or is subject to HOA curb-appeal standards, plan on three cleanings a year. The lake humidity and sprinkler overspray put hard-water spotting back on the glass faster than on drier inland homes, and catching it before the deposits etch into the surface keeps each cleaning straightforward.",
+          [
+            "Not sure what your windows need? We are happy to take a look during a ",
+            { text: "free estimate", href: "/contact" },
+            " with no pressure and no contracts.",
+          ],
+        ],
+      },
+      {
+        heading: "Warning signs your windows are overdue",
+        paragraphs: [
+          "You do not have to wait for the calendar. These are the signs we see most often on Cornelius homes that have gone too long between cleanings:",
+        ],
+        bullets: [
+          "A gray or yellow haze that only shows when afternoon sun hits the glass at a low angle - common on west-facing lake-view windows.",
+          "Hard, cloudy rings or spots from sprinkler overspray that do not wipe off with a damp cloth.",
+          "Pollen so thick in April and May that the glass looks frosted from a distance.",
+          "Green or black mildew building up in the rubber seals and along the bottom edge of the frames.",
+          "Grit and dead bugs packed into the bottom tracks, especially on homes near Catawba Avenue or along the greenways.",
+          "Streaks that reappear within a day of a DIY cleaning - a sign of soap residue or mineral spotting coming through.",
+        ],
+      },
+      {
+        heading: "Why clean glass matters for Cornelius homes",
+        paragraphs: [
+          "Clean windows are not only about the view. The mineral deposits left by sprinkler overspray and lake moisture are mildly abrasive. If they sit on the glass through enough wet and dry cycles they can begin to etch the surface permanently. Caught early, that spotting rinses away cleanly. Left for years, it can become a haze no cleaning will fully remove - regular maintenance quietly protects the glass itself.",
+          [
+            "The same pollen and humidity that films your windows tends to green up the siding and gutters at the same pace. A lot of Cornelius homeowners find it makes sense to pair a window cleaning with a ",
+            { text: "professional house washing", href: "/services/house-washing" },
+            " so the whole exterior looks finished in one visit. See our ",
+            { text: "before and after gallery", href: "/before-after" },
+            " to get an idea of what that kind of combined clean looks like on area homes.",
+          ],
+        ],
+      },
+      {
+        heading: "What our Cornelius window cleaning includes",
+        paragraphs: [
+          [
+            "Our ",
+            { text: "window cleaning service", href: "/services/window-cleaning" },
+            " is a full pure-water exterior wash of every pane and frame, with the interior glass finished by microfiber and squeegee when you book interior and exterior. We brush and rinse the exterior with spot-free purified water, wipe the frames and sills, and clean tracks and wipe screens on request so the whole window feels new, not just the glass.",
+          ],
+          [
+            "We are based in Denver, about 10 minutes from Cornelius, and we work the 28031 ZIP every week, from townhomes near Birkdale to two-story lake-view fronts in The Peninsula and Antiquity. For a full picture of how we serve the area, visit our ",
+            { text: "Cornelius, NC service page", href: "/areas/cornelius-nc" },
+            ". To get an exact number before any work starts, ",
+            { text: "request a free estimate", href: "/contact" },
+            " and we will walk the property with you.",
+          ],
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does window cleaning cost in Cornelius, NC?",
+        answer:
+          "It depends on the number of windows, the number of stories, and whether you want exterior only or interior and exterior together. We give every Cornelius homeowner a free, no-obligation estimate so you know the exact number before we start. Call 704-917-9649 or request a quote online.",
+      },
+      {
+        question: "Why is pure-water cleaning better than soap and a squeegee?",
+        answer:
+          "Pure water has no minerals to dry into spots and no soap to leave a residue at the edges of the glass, so the windows dry completely streak-free. The extension poles also let us reach second-story windows safely from the ground instead of leaning a ladder against the house.",
+      },
+      {
+        question: "How often should I clean my windows in Cornelius?",
+        answer:
+          "Twice a year is the right baseline for most homes - once in late spring after the pollen and once in fall. Homes on the waterfront in The Peninsula, with irrigation near the glass, or in HOA communities where curb appeal is enforced often benefit from a third cleaning because lake humidity and sprinkler spotting rebuild faster.",
+      },
+      {
+        question: "Can you service gated communities like The Peninsula?",
+        answer:
+          "Yes. We work in gated communities throughout Cornelius and the Lake Norman area regularly. Just let us know at booking and we will coordinate gate access with you so there are no delays on the day of the job.",
+      },
+    ],
+  },
 ];
 
 /** All blog post slugs. */
