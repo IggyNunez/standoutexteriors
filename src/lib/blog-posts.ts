@@ -3615,6 +3615,121 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "house-washing-cornelius-nc",
+    title: "House Washing in Cornelius, NC | Stand Out Exterior",
+    metaDescription:
+      "Why Cornelius, NC siding goes green so fast, how soft washing clears it safely from vinyl, Hardie, and stone homes in 28031, and when to call a local pro. 704-917-9649.",
+    h1: "House Washing in Cornelius, NC: What Local Homeowners Need to Know",
+    publishedAt: "2026-09-21",
+    targetKeyword: "house washing cornelius nc",
+    heroImage: "/assets/team/ridge-house-washing-brick-side.webp",
+    heroImageAlt:
+      "Soft washing a home exterior in Cornelius NC, removing algae and mildew from lakefront siding",
+    eyebrow: "House Washing Guide",
+    heroSubline:
+      "A practical look at why Cornelius siding goes green faster than inland homes, how soft washing clears it without damaging your panels, and how often a lake-area home really needs it.",
+    intro: [
+      "House washing in Cornelius, NC is one of those jobs that is easy to postpone. The siding looks fine from the driveway, the algae creeps in a little at a time, and it is usually not until you walk the far side of the house or look up at a shaded gable that you notice the whole elevation has gone gray-green. On a Lake Norman lot, that film builds faster than most homeowners expect.",
+      "Cornelius sits on some of the most valuable waterfront in the Charlotte metro, and the same lake humidity that makes The Peninsula and Jetton Road so desirable also feeds algae and mildew on siding year round. This guide walks through what makes Cornelius siding dirty, why soft washing is the right method for the mix of materials on 28031 homes, how often to wash, and when it makes sense to hand the job to a local pro.",
+    ],
+    sections: [
+      {
+        heading: "Why Cornelius siding gets dirty faster than inland homes",
+        paragraphs: [
+          "Cornelius homes sit inside a pocket of near-constant lake humidity, and that moisture is what lets algae and mildew take hold on siding that would stay clean much longer a few miles inland. A handful of local factors stack up:",
+        ],
+        bullets: [
+          "Waterfront humidity. Homes in The Peninsula and along the Jetton Road corridor sit right on Lake Norman. North- and west-facing walls stay damp long enough for algae to anchor, and they recolonize within months of a rinse-only cleaning.",
+          "Mixed siding materials. Cornelius custom homes often carry stone veneer, Hardie plank, stucco, and painted wood on a single elevation. Each surface holds biological film differently, and each needs a different cleaning approach.",
+          "Mature oak tannin. The big oaks along Jetton Road and near Robbins Park drop tannin and pollen that stain painted shutters, porch ceilings, and light-colored siding when they mix with moisture.",
+          "Shaded lots near the water. Established tree canopy in Antiquity and the older Peninsula streets keeps elevations from drying out, giving mold and mildew more hours a day to grow.",
+          "Pool-deck and patio spray. Homes with pools throughout 28031 pick up chlorine residue and organic growth on nearby walls, which compounds the algae problem on lower siding.",
+        ],
+      },
+      {
+        heading: "Soft washing versus pressure washing your siding",
+        paragraphs: [
+          "The single most important thing to understand before cleaning any Cornelius home is that pressure washing and soft washing are two different tools for two different jobs. Aiming a pressure washer at siding is one of the fastest ways to turn a cleaning into a repair bill.",
+          "Pressure washing uses high-force water to blast material off a surface. On a concrete driveway or a paver patio, that is exactly right. On vinyl, Hardie plank, stucco, stone veneer, or painted wood, high pressure cracks panels, drives water behind the siding into the wall cavity, and strips paint. It also only knocks the surface growth off, so the algae grows back within weeks because the root was never killed.",
+          [
+            "Soft washing uses low-pressure delivery to apply a biodegradable cleaning solution that kills algae, mold, and mildew at the root, then a gentle rinse carries the dead growth away. It does not return in six weeks because it is dead, not just displaced. Our ",
+            { text: "house washing service", href: "/services/house-washing" },
+            " handles every siding type found on Cornelius homes on that basis: vinyl, Hardie plank, stucco, brick, stone veneer, and painted wood.",
+          ],
+        ],
+      },
+      {
+        heading: "How often should you wash your house in Cornelius?",
+        paragraphs: [
+          "For most 28031 homes, once a year is the right baseline. An annual soft wash stops the biological film from building deep enough to stain the siding material itself, and it costs far less than repairing or replacing panels on a home that has been left to degrade for several years.",
+          "Waterfront homes need more. Siding in The Peninsula and along Jetton Road that faces north or west toward the lake grows algae roughly twice as fast as inland walls, so those elevations often do better on a nine-month rotation. If your home sits under heavy tree cover or backs up to a wooded lot, plan on the shorter interval too, since shaded surfaces recolonize the fastest.",
+          [
+            "The difference between a freshly washed Cornelius home and a neglected one is visible from the street. Our ",
+            { text: "before and after gallery", href: "/before-after" },
+            " shows lake-area homes that went from green-streaked to clean in a single visit.",
+          ],
+        ],
+      },
+      {
+        heading: "Warning signs your Cornelius siding needs cleaning now",
+        paragraphs: [
+          "You do not have to wait for the calendar. These are the signals we most often see on Cornelius homes that are past due for a wash:",
+        ],
+        bullets: [
+          "Green or black streaking on north- and west-facing walls, especially the elevations that face the water.",
+          "Gray or yellow film on horizontal trim, window sills, and porch ceilings that a garden hose will not rinse off.",
+          "Dark vertical tiger striping running down gutter faces from oxidation and roof runoff.",
+          "Soft, fuzzy green patches on stone veneer joints and brick near the foundation, where moisture wicks up from the soil.",
+          "Mold or mildew on soffits and fascia boards, which can spread into the wood trim if it is left untreated.",
+          "A pool deck or patio wall that has started to darken with organic growth near the splash line.",
+        ],
+      },
+      {
+        heading: "What our Cornelius house washing includes",
+        paragraphs: [
+          [
+            "Our ",
+            { text: "house washing service", href: "/services/house-washing" },
+            " is a complete soft wash of every siding surface on the home: vinyl, Hardie plank, stucco, brick, stone veneer, and painted wood. We wet down the landscaping before any chemistry goes on, apply our biodegradable cleaning solution to all elevations, let it dwell long enough to kill the growth at the root, then rinse the house and the plant beds below. We are a locally owned company based in Denver, NC, and we work the Cornelius market regularly. You can see the full picture of how we serve the area on our ",
+            { text: "Cornelius, NC service page", href: "/areas/cornelius-nc" },
+            ".",
+          ],
+          [
+            "Most Cornelius homeowners have us handle the roof and gutters in the same visit. The same lake humidity that greens up siding feeds ",
+            { text: "roof algae and black streaks", href: "/services/roof-cleaning" },
+            ", and clogged gutters spill water back onto freshly cleaned siding the next time it rains, so our ",
+            { text: "gutter cleaning and brightening service", href: "/services/gutter-cleaning" },
+            " pairs naturally with any house wash. If you want an exact number before we start, ",
+            { text: "request a free estimate", href: "/contact" },
+            " and we will walk the property with you and give you a quote with no pressure and no contracts.",
+          ],
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does house washing cost in Cornelius, NC?",
+        answer:
+          "Pricing depends on the square footage, the number of stories, the mix of siding materials, and how much biological buildup has developed. We give every Cornelius homeowner a free, no-obligation estimate before any work starts. Call 704-917-9649 or request a quote online.",
+      },
+      {
+        question: "Can soft washing damage my vinyl, Hardie, or stone siding?",
+        answer:
+          "No. Soft washing uses low pressure and a biodegradable cleaning solution rather than a high-pressure wand. High pressure is what damages siding: it cracks vinyl, drives water behind panels, and strips paint. Soft washing cleans vinyl, Hardie plank, stucco, brick, and stone veneer without those risks.",
+      },
+      {
+        question: "How often should a waterfront Cornelius home be washed?",
+        answer:
+          "Homes in The Peninsula and along Jetton Road that face the lake grow algae about twice as fast as inland walls, so a nine-month rotation often works better than annual for the north- and west-facing elevations. Homes set back from the water are usually fine once a year.",
+      },
+      {
+        question: "Do you service gated and waterfront communities in Cornelius?",
+        answer:
+          "Yes. We work in gated communities and on waterfront lots throughout Cornelius and the Lake Norman area regularly. Let us know at booking and we will coordinate gate or dock access so there are no delays on the day of the job.",
+      },
+    ],
+  },
 ];
 
 /** All blog post slugs. */
