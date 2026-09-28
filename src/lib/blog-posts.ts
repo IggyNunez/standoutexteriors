@@ -3855,6 +3855,124 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "pressure-washing-sherrills-ford-nc",
+    title: "Pressure Washing in Sherrills Ford, NC: A Local Guide",
+    metaDescription:
+      "What to pressure wash and what to soft wash on a Sherrills Ford, NC home, how often the west-shore lake humidity makes it worth doing, and when to call a pro.",
+    h1: "Pressure Washing in Sherrills Ford, NC: What Local Homes Need",
+    publishedAt: "2026-09-28",
+    targetKeyword: "pressure washing sherrills ford nc",
+    heroImage: "/assets/team/ridge-driveway-surface-cleaner-action.webp",
+    heroImageAlt:
+      "Ridge Curwood pressure washing a concrete driveway with a surface cleaner in Sherrills Ford NC",
+    eyebrow: "Pressure Washing Guide",
+    heroSubline:
+      "A local, practical guide to pressure washing a Sherrills Ford home: what to blast, what to soft wash instead, and how often our west-shore lake humidity makes it worth doing.",
+    intro: [
+      "Sherrills Ford has grown faster than almost any town on the west side of Lake Norman, and a lot of that growth is new construction that arrives already needing a clean. Between the mortar haze on fresh brick, the red-clay runoff that finds every stamped driveway, and the same west-shore humidity that grows algae on Denver and Cornelius homes, a Sherrills Ford property picks up grime quickly. A pressure washer is the fastest way to take years off the look of that home, but only when it is pointed at the right surface.",
+      "This guide breaks down what actually belongs under high pressure on a typical 28673 property, what should be soft washed instead, how often our local conditions make cleaning worthwhile, and when it pays to hand the machine to someone who does this every day.",
+    ],
+    sections: [
+      {
+        heading: "Pressure washing versus soft washing",
+        paragraphs: [
+          "Before you clean any exterior surface, understand that pressure washing and soft washing are two different tools for two different jobs. Mixing them up is how most homeowners end up damaging their own homes.",
+          "Pressure washing uses high-force water to physically blast grime off hard, durable surfaces like concrete, brick pavers, and most stone. Soft washing uses low pressure plus a biodegradable cleaning solution that kills algae, mold, and mildew at the root, then rinses gently. It is the right call for anything water can damage or get behind: siding, roofs, painted wood, and stucco.",
+          "The rule of thumb that keeps Sherrills Ford homeowners out of trouble: if it is horizontal and made of concrete or stone, you can usually pressure wash it. If it is vertical and part of the house itself, it almost always wants a soft wash instead.",
+        ],
+      },
+      {
+        heading: "What pressure washing fixes on a Sherrills Ford home",
+        paragraphs: [
+          "Sherrills Ford sits in Catawba County on the west shore of Lake Norman, a mix of brand-new subdivisions and older wooded lots along the original NC-150 corridor. That combination leaves a very specific set of stains on hard surfaces, and a surface cleaner handles all of them:",
+        ],
+        bullets: [
+          "Red-clay staining. Iron-rich clay washes off landscaped beds and roadway edges in every storm and tints concrete a stubborn pink-orange. Stamped driveways in Island Forks and Bayshore hold it in every low spot of the pattern.",
+          "Mold and mildew on shaded concrete. North-facing driveways, back patios, and walkways under the heavy tree canopy along NC-150 grow a slick green-black film that gets dangerously slippery when wet.",
+          "New-construction residue. Fresh builds in Northview Harbour and Mountain Creek often arrive with drywall dust, mortar splatter, and concrete slurry left on driveways and walkways.",
+          "Leaf and tannin drip. Mature oaks on the older lots drop debris that rots into dark tannin stains on patios and pavers.",
+          "Pollen paste. Spring pollen settles into the texture of stamped concrete and paver joints and turns into a grimy film.",
+        ],
+      },
+      {
+        heading: "How often should you pressure wash in Sherrills Ford?",
+        paragraphs: [
+          "For most Sherrills Ford homes, an annual cleaning of the concrete and hard surfaces is the right baseline. Once a year keeps the clay film, mold, and tannin from building into the deeper stains that take real effort to remove.",
+          [
+            "If your driveway sits in heavy shade, backs up to woods, or runs close to NC-150, plan on cleaning every six to eight months. Shade and moisture grow mold faster, and road grit accelerates everything. The same logic applies to the ",
+            {
+              text: "driveway and concrete cleaning",
+              href: "/services/driveway-cleaning",
+            },
+            " we do most often out here: the shadier and lower the spot, the faster it comes back.",
+          ],
+          "Siding and roofs run on a longer schedule. A soft wash of the house once a year, and biannual for north-facing walls near the water, plus a roof cleaning every one to two years on the tree-shaded lots, is usually right for the west shore.",
+        ],
+      },
+      {
+        heading: "Surfaces you should never pressure wash",
+        paragraphs: [
+          "This is the part that saves homeowners the most money, because damage from pressure washing the wrong surface is rarely cheap to fix. Keep the high-pressure wand off these:",
+        ],
+        bullets: [
+          "Roof shingles. High pressure strips the protective granules off asphalt shingles and voids most manufacturer warranties. Roofs need a soft wash, the method the shingle makers actually recommend.",
+          "Vinyl, Hardie, and wood siding. Pressure can crack vinyl, drive water behind the panels, and strip paint off wood trim. Siding gets a low-pressure soft wash.",
+          "Stucco and dryvit. The texture is far more fragile than it looks, and a wand can blow holes straight through it.",
+          "Windows and screens. High pressure breaks seals and bends frames. Glass gets cleaned with a pure-water system instead.",
+          "Cedar shake and soft brick. The older lots along NC-150 still have cedar shake and aged masonry that need chemistry and a careful touch, not brute force that erodes the wood or mortar.",
+        ],
+      },
+      {
+        heading: "DIY versus hiring a local pro",
+        paragraphs: [
+          "Plenty of Sherrills Ford homeowners rent a machine and clean their own driveway, and for a flat, open slab in good shape that can work out fine. The trouble starts in three places: a point-tip wand leaves visible stripes across the concrete that a surface cleaner avoids, the wrong nozzle etches lines into the slab that never come out, and the temptation to turn that same pressure on siding or a roof leads to real damage.",
+          "A pro brings a commercial surface cleaner that scrubs the whole slab evenly, the right chemistry to lift clay and kill mold at the root instead of just wetting it, and the judgment to know which surfaces get pressure and which get a soft wash. For a small driveway that is reasonable to DIY. Once you are dealing with a stamped driveway, a stained patio, and a house that also needs washing, hiring it out usually costs less than the rental, the chemicals, and the do-over.",
+        ],
+      },
+      {
+        heading: "What our Sherrills Ford pressure washing includes",
+        paragraphs: [
+          [
+            "We are a locally owned company based in Denver, just about 12 minutes from Sherrills Ford, and we work the west shore every week. For hard surfaces, we pre-treat the area to break down clay, mold, and oil, run a commercial surface cleaner in overlapping passes for an even, stripe-free finish, hand-detail the edges and cracks, and flush the whole perimeter so debris ends up in the street instead of your garage. For the house itself, we switch to a ",
+            { text: "soft wash", href: "/services/house-washing" },
+            " that safely clears the algae and mildew our lake humidity grows on siding.",
+          ],
+          [
+            "Most homeowners have us handle the whole exterior in one visit: driveway and walkways under pressure, siding and ",
+            { text: "roof", href: "/services/roof-cleaning" },
+            " by soft wash. If you want the full picture of how we serve the area, see our ",
+            { text: "Sherrills Ford, NC service page", href: "/areas/sherrills-ford-nc" },
+            ", or request a ",
+            { text: "free estimate", href: "/contact" },
+            " and we will walk the property with you and give you an exact number before any work starts.",
+          ],
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does pressure washing cost in Sherrills Ford, NC?",
+        answer:
+          "It depends on the surfaces involved, the square footage, and how much buildup there is. A driveway alone is very different from a full exterior package with siding and a roof. We give every Sherrills Ford homeowner a free, no-obligation estimate, so you know the exact number before we start. Call 704-917-9649 or request a quote online.",
+      },
+      {
+        question: "Do you clean up new construction in Northview Harbour and Mountain Creek?",
+        answer:
+          "Yes. New builds on the west shore often arrive with mortar haze on brick, stucco overspray, and concrete left with drywall dust. We use the right masonry chemistry to remove mortar haze before it bonds permanently, and a surface cleaner to reset the driveway and walkways.",
+      },
+      {
+        question: "Is pressure washing safe for my siding and roof?",
+        answer:
+          "High pressure is not safe for siding, roofs, stucco, cedar shake, or windows. Those surfaces should be soft washed, which uses low pressure plus a cleaning solution that removes algae and mildew without forcing water behind panels or stripping shingle granules. We reserve true high pressure for concrete, pavers, and other hard surfaces.",
+      },
+      {
+        question: "How often should I pressure wash my driveway in Sherrills Ford?",
+        answer:
+          "Once a year is the right baseline for most homes. If your driveway sits in heavy shade, backs up to woods, or is near NC-150, every six to eight months keeps the mold and red-clay staining from setting in deeper.",
+      },
+    ],
+  },
 ];
 
 /** All blog post slugs. */
