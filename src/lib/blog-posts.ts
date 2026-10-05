@@ -4083,6 +4083,127 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  // -- Driveway cleaning, Sherrills Ford -------------------------------------
+  // NOTE: images skipped - OPENAI_API_KEY was not set in the build environment.
+  {
+    slug: "driveway-cleaning-sherrills-ford-nc",
+    title: "Driveway Cleaning in Sherrills Ford, NC | Stand Out Exterior",
+    metaDescription:
+      "Stamped concrete and red-clay runoff make Sherrills Ford, NC driveways stain fast. A local guide to surface cleaning, how often, and when to call a pro.",
+    h1: "Driveway Cleaning in Sherrills Ford, NC: A Local Homeowner's Guide",
+    publishedAt: "2026-10-05",
+    targetKeyword: "driveway cleaning sherrills ford nc",
+    heroImage: "/assets/team/ridge-driveway-surface-cleaner-concrete.webp",
+    heroImageAlt:
+      "Ridge Curwood running a commercial surface cleaner across a concrete driveway in Sherrills Ford NC",
+    eyebrow: "Driveway Cleaning Guide",
+    heroSubline:
+      "Why west-shore driveways in the 28673 ZIP stain so quickly, how a surface cleaner lifts red clay without leaving stripes, and how often a Sherrills Ford driveway needs a reset.",
+    intro: [
+      "Sherrills Ford has grown faster than almost any town in Catawba County, and most of that growth has landed on the west shore of Lake Norman in the form of new stamped-concrete and broom-finish driveways. Those surfaces look spotless the day the builder hands over the keys, then start collecting red-clay runoff, mold, and pollen within the first season.",
+      "This guide covers what actually stains driveways in the 28673 area, how a commercial surface cleaner removes that buildup without the stripe marks a rented wand leaves behind, how often west-shore conditions make a cleaning worthwhile, and when it makes sense to call a local pro instead of renting a machine.",
+    ],
+    sections: [
+      {
+        heading: "Why Sherrills Ford driveways stain so quickly",
+        paragraphs: [
+          "The west shore of Lake Norman sits on the same iron-rich, clay-heavy soil as our home base in Denver, and it shares the same lake humidity. On a new driveway, that combination goes to work fast. A few local factors stand out:",
+        ],
+        bullets: [
+          "Red-clay runoff. Every heavy rain washes fine Catawba County clay off bare lots and newly graded yards and spreads it across the slab. On the new construction common in Northview Harbour and Mountain Creek, there is often still exposed soil around the home, so the clay film builds up faster here than on an established lot with mature turf.",
+          "Lake humidity and mold. The west shore stays damp overnight and well into the morning. North-facing driveways and sections shaded by the heavy tree cover along the original NC-150 corridor hold that moisture long enough for a slick green-black mold film to take hold, and that film turns dangerously slippery when wet.",
+          "Stamped-concrete texture. The decorative stamped driveways in Island Forks and Bayshore have deep grooves and a textured surface that trap clay, pollen, and organic debris far more readily than a smooth broom finish. A garden hose rinses the high spots and leaves the low ones packed with grime.",
+          "Spring pollen and oak tannin. Pollen settles into the texture of the concrete, gets wet, and dries to a grimy paste, while tannin from the mature oaks on older Hager Creek lots soaks into untreated concrete and darkens it over several seasons.",
+        ],
+      },
+      {
+        heading: "Pressure washing versus soft washing: what your driveway needs",
+        paragraphs: [
+          "It helps to know what high pressure does and does not do before you aim a machine at anything. Pressure washing uses high-force water to lift loose and embedded grime off durable hardscape like concrete, brick, and stone. Run through a commercial surface cleaner, it is exactly the right tool for a driveway, a back patio, and walkways.",
+          "What it is wrong for is the house itself. A pressure wand aimed at vinyl siding, Hardie plank, painted wood, stucco, or roof shingles can crack panels, force water into wall cavities, strip paint, and blow the protective granules off a shingle. Every exterior surface on a Sherrills Ford home is either a pressure-wash job or a soft-wash job, and the whole trick is knowing which is which.",
+          [
+            "The rule that saves west-shore homeowners the most money is simple: horizontal hardscape gets pressure, the house gets a soft wash. Our ",
+            { text: "house washing service", href: "/services/house-washing" },
+            " covers how the low-pressure side works on siding, and the ",
+            { text: "before and after gallery", href: "/before-after" },
+            " shows how different the two jobs really are.",
+          ],
+        ],
+      },
+      {
+        heading: "How often should you clean a driveway in Sherrills Ford?",
+        paragraphs: [
+          "For most Sherrills Ford homes, an annual driveway cleaning is the right baseline. Once a year keeps the red-clay film, mold, and tannin from working deep enough into the surface pores that removal turns into a multi-pass job with stronger chemistry.",
+          "If your driveway sits under the heavy canopy along NC-150, backs up to a wooded lot, or still has exposed soil nearby from recent construction, plan on every six to eight months. Shade holds moisture on the slab longer after each rain, which speeds up mold growth, and loose clay from a bare lot keeps reloading the surface between visits.",
+          [
+            "Stamped concrete and pavers warrant a slightly tighter eye. The textured grooves and joint sand trap debris, and a joint that stays clogged for a few seasons starts to sink and shift. If you are not sure what schedule your driveway needs, we are glad to take a look during a ",
+            { text: "free estimate", href: "/contact" },
+            ".",
+          ],
+        ],
+      },
+      {
+        heading: "Warning signs your driveway is overdue",
+        paragraphs: [
+          "You do not have to wait for the calendar. These are the signs we see most often on west-shore driveways that have gone too long between cleanings:",
+        ],
+        bullets: [
+          "A pink-orange or gray film across the slab that will not rinse off with a garden hose.",
+          "Dark, slick patches in the shaded sections near tree canopy or a north-facing garage that feel slippery underfoot when wet.",
+          "Green or black mold creeping inward from the expansion joints and slab edges.",
+          "A stuck pollen paste that appeared after the first spring rain and never fully washed away.",
+          "Grime packed into the low grooves of a stamped surface while the high spots look clean.",
+          "Stamped or paver joints that have started to sink or separate, a sign debris has worked the joint sand loose.",
+        ],
+      },
+      {
+        heading: "DIY versus hiring a local pro",
+        paragraphs: [
+          "Plenty of Sherrills Ford homeowners rent a pressure washer and take on the driveway themselves, and for a simple flat slab in good shape that can be a fine weekend project. The trouble starts with the wrong nozzle. A point-tip wand leaves visible stripes across the concrete that do not fade, and too much pressure on soft or new concrete can etch permanent lines into the surface. On stamped concrete the risk is higher, because the same pressure that cleans a broom finish can chip the decorative coating or blow out sealer.",
+          "A local pro brings a commercial surface cleaner that scrubs the full slab width in even overlapping passes, the right chemistry to pre-treat clay and kill mold at the root rather than just wetting it, and the judgment to know where pressure belongs and where a soft touch is called for. For a standard driveway in Northview Harbour, DIY is reasonable. Once stamped concrete, paver sections, or a house that also needs cleaning enter the picture, hiring it out usually saves both time and money.",
+        ],
+      },
+      {
+        heading: "What our Sherrills Ford driveway cleaning includes",
+        paragraphs: [
+          [
+            "Our ",
+            { text: "driveway cleaning service", href: "/services/driveway-cleaning" },
+            " is a full reset for any concrete, stamped, or paver surface. We pre-treat the slab with biodegradable chemistry to break down the red clay, kill mold at the root, and loosen oil and tire residue before any pressure touches the surface. Then we run a commercial surface cleaner in overlapping passes for a stripe-free finish, detail the edges, garage apron, and expansion joints by hand, and flush the perimeter so debris ends up in the street instead of your landscaping.",
+          ],
+          [
+            "We are a locally owned company based in Denver, about 12 minutes from the west shore, and we work the 28673 ZIP every week from Northview Harbour and Mountain Creek to the older lots along NC-150. For the full picture of how we serve the area, see our ",
+            { text: "Sherrills Ford, NC service page", href: "/areas/sherrills-ford-nc" },
+            ". Most homeowners have us check the siding while we are on-site, since the same clay, mold, and pollen that stain a driveway tend to green up the north wall at the same pace. To get an exact number before any work starts, ",
+            { text: "request a free estimate", href: "/contact" },
+            " and we will walk the property with you, no pressure and no contracts.",
+          ],
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does driveway cleaning cost in Sherrills Ford, NC?",
+        answer:
+          "Pricing depends on the square footage, the surface type (broom-finish concrete, stamped concrete, or pavers), and how much buildup there is. We give every Sherrills Ford homeowner a free, no-obligation estimate before any work begins. Call 704-917-9649 or request a quote online.",
+      },
+      {
+        question: "What causes the pink-orange stain on my Sherrills Ford driveway?",
+        answer:
+          "That color almost always comes from red-clay runoff. Catawba County's iron-rich clay washes off bare lots and newly graded yards in every rainstorm and settles into the pores of the concrete. Standard rinsing pushes the surface layer around without pulling the clay out. A commercial surface cleaner with the right pre-treatment removes it properly.",
+      },
+      {
+        question: "Can you clean a stamped-concrete driveway without damaging it?",
+        answer:
+          "Yes. Stamped concrete needs a lighter touch than a plain broom finish because high pressure can chip the decorative coating or strip the sealer. We use a surface cleaner at a controlled pressure with the right pre-treatment, and we can reseal the surface after cleaning if the existing sealer has worn thin.",
+      },
+      {
+        question: "How long does a driveway cleaning take in Sherrills Ford?",
+        answer:
+          "Most standard driveways take 45 to 90 minutes. Larger slabs, stamped sections with grime packed into the grooves, or driveways with heavy clay or tannin staining take a bit longer. We give you a realistic time estimate with your quote.",
+      },
+    ],
+  },
 ];
 
 /** All blog post slugs. */
