@@ -12,7 +12,13 @@ export const NAV_LINKS: NavLink[] = [
 
 export const PHONE = "704-917-9649";
 export const PHONE_HREF = "tel:+17049179649";
-export const EMAIL = "info@standoutexterior.com";
+// Ridge's real inbox. The domain has no MX records, so mail to
+// info@standoutexterior.com bounces: a customer reported exactly that on a
+// paid lead (she had driveway photos to send and the email came back).
+// Switch this back to a branded address only once the domain can actually
+// receive mail. This constant feeds the footer, contact page, thank-you
+// page, privacy, terms, and the LocalBusiness schema Google reads.
+export const EMAIL = "standoutexterior@gmail.com";
 export const STREET_ADDRESS = "7238 Windy Pine Cir";
 export const ADDRESS = "Denver, NC 28037";
 export const SITE_URL = "https://www.standoutexterior.com";
